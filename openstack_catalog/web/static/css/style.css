@@ -1,0 +1,74 @@
+html, body {
+    font-family: 'PT Sans', arial, sans-serif;
+    font-size: 14px;
+    height: 100%;
+    color: #41454d;
+    margin: 0;
+}
+
+a {
+    color: #D32F1A;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #F00;
+}
+
+p {
+    font-size: 15px;
+    color: #41454D;
+    font-style: normal;
+    margin: 6px 0px 15px 0px;
+}
+
+div.page {
+    margin: 0 auto;
+}
+
+h2 {
+    font-family: 'PT Sans Narrow', 'Arial Narrow', arial, sans-serif;
+    font-size: 23px;
+    font-weight: normal;
+    font-style: normal;
+    margin-bottom: 10px;
+    color: #a41200;
+    text-shadow: 1px 1px 0 #fff;
+}
+
+h3 {
+    font-family: 'PT Sans Narrow', 'Arial Narrow', arial, sans-serif;
+    font-size: 19px;
+    font-weight: normal;
+    font-style: normal;
+    margin-bottom: 10px;
+    color: #a41200;
+}
+
+h4 {
+    font-family: 'PT Sans Narrow', 'Arial Narrow', arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    margin-top: 0.1em;
+    margin-bottom: 0.5em;
+    color: #a41200;
+}
+div.drops {
+    height: 60px;
+    margin-top: 10px;
+}
+
+div.drop label {
+    color: #909cb5;
+}
+
+.drop {
+    height: 30px;
+    float: left;
+    margin-right: 20px;
+}
+
+.drop label {
+    display: block;
+}

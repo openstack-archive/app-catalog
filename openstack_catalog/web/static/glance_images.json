@@ -1,0 +1,30 @@
+{
+    "images": [
+	{
+	    "image_name": "Ubuntu 12.04 base image",
+	    "provided_by":
+	    {
+		"name" : "Serg Melikan",
+		"href" : "mailto:smelikan@mirantis.com",
+		"company" : "Mirantis"
+	    },
+	    "description": "Base Ubuntu image version 12.04 LTS",
+	    "format": "QCOW2",
+	    "supported_by": "Mirantis",
+	    "license": "GPL 2.0"
+	},
+	{
+	    "image_name": "Fedora 20",
+	    "provided_by":
+	    {
+		"name" : "Paul Cormier",
+		"href" : "mailto:pcormier@redhat.com",
+		"company" : "Red Hat"
+	    },
+	    "description": "Base Fedora 20 image",
+	    "format": "QCOW2",
+	    "supported_by": "Red Hat",
+	    "license": "GPL 2.0"
+	}	
+    ]
+}

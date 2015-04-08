@@ -1,0 +1,199 @@
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+  <head profile="http://gmpg.org/xfn/11">
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <title>Market place</title>
+    
+    <meta name="description" content="OpenStack market place">
+    
+    <meta name="keywords" content="openstack, glance images, heat templates, murano applications">
+
+    <link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.11.4/themes/cupertino/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.datatables/1.10.4/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/select2/3.5.2/select2.css">
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.datatables/1.10.4/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/select2/3.5.2/select2.min.js"></script>
+    <script type="text/javascript" src="//ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.timeago/1.4.1/jquery.timeago.js"></script>
+
+    <script type="text/javascript" src="static/js/mp.js"></script>
+    
+    <script type="text/javascript">
+      $(function() { initMarketPlace (); });
+      $(document).ready(function () {} );
+    </script>
+
+  </head>
+
+  <body>
+    <div id="content">
+
+      <div class="page">
+	
+	<div id="tabs">
+	  <ul>
+            <li><a href="#glance-images"> Glance Images </a></li>
+	    <li><a href="#heat-templates"> Heat Templates </a></li>
+	    <li><a href="#murano-apps"> Murano Apps </a></li>
+	  </ul>
+	  
+          <div id="glance-images">
+	    
+	    <div class="drops">
+
+              <div class="drop">
+		<label for="glance_supported_by" title="Vendor">Supported by</label>
+		<input type="hidden" id="glance_supported_by" style="width:240px" data-placeholder="Any vendor"/>
+              </div>
+
+	    </div>
+
+	    <div style="margin-top: 2em; margin-bottom: 2em">
+              <table id="glance_images_table" class="display">
+		<thead>
+		  <tr>
+                    <th>Image name</th>
+                    <th>Provided by</th>
+                    <th>Description</th>
+                    <th>Format</th>
+                    <th>Supported by</th>
+                    <th>License</th>
+		  </tr>
+		</thead>
+              </table>
+	    </div>
+	    
+	  </div>
+	  
+	  <div id="heat-templates">
+	    
+	    <div class="drops">
+
+              <div class="drop">
+		<label for="heat_supported_by" title="Vendor">Supported by</label>
+		<input type="hidden" id="heat_supported_by" style="width:240px" data-placeholder="Any vendor"/>
+              </div>
+
+              <div class="drop">
+		<label for="heat_release" title="OpenStack Release">Release</label>
+		<input type="hidden" id="heat_release" style="width:240px" data-placeholder="Any release"/>
+              </div>
+
+	    </div>
+
+	    <div style="margin-top: 2em; margin-bottom: 2em">
+              <table id="heat_templates_table" class="display">
+		<thead>
+		  <tr>
+                    <th>Template name</th>
+                    <th>Provided by</th>
+                    <th>Description</th>
+                    <th>Release</th>
+                    <th>Format</th>
+                    <th>Supported by</th>
+                    <th>License</th>
+		  </tr>
+		</thead>
+              </table>
+	    </div>
+
+	  </div>
+	  
+	  <div id="murano-apps">
+	    
+	    <div class="drops">
+
+              <div class="drop">
+		<label for="murano_supported_by" title="Vendor">Supported by</label>
+		<input type="hidden" id="murano_supported_by" style="width:240px" data-placeholder="Any vendor"/>
+              </div>
+
+              <div class="drop">
+		<label for="murano_release" title="OpenStack Release">Release</label>
+		<input type="hidden" id="murano_release" style="width:240px" data-placeholder="Any release"/>
+              </div>
+
+	    </div>
+
+	    <div style="margin-top: 2em; margin-bottom: 2em">
+              <table id="murano_apps_table" class="display">
+		<thead>
+		  <tr>
+                    <th>Package name</th>
+                    <th>Provided by</th>
+                    <th>Description</th>
+                    <th>Release</th>
+                    <th>Format</th>
+                    <th>Supported by</th>
+                    <th>License</th>
+		  </tr>
+		</thead>
+              </table>
+	    </div>
+
+	  </div>
+
+	</div>
+	
+	<div id="info_dialog" title="Details">
+          <div id="info_container"></div>
+	</div>
+
+	<script id="image_info_template" type="text/x-jquery-tmpl">
+
+          <h2>${image_name} (${format})</h2>
+          <div><span class="label">Supported by</span> <span class="value">${supported_by}</span></div>
+          <div><span class="label">Description:</span> <span class="value">${description}</span></div>
+
+          <h3>Author</h3>
+          <div><span class="label">Contact:
+	    </span><a href="${provided_by.href}" <span class="value">${provided_by.name}</span> </a></div>
+          <div><span class="label">Company:</span> <span class="value">${provided_by.company}</span></div>
+
+	</script>
+
+	<script id="template_info_template" type="text/x-jquery-tmpl">
+
+          <h2>${template_name} (${format})</h2>
+          <div><span class="label">Supported by</span> <span class="value">${supported_by}</span></div>
+          <div><span class="label">Description:</span> <span class="value">${description}</span></div>
+          <div><span class="label">Available in Releases:</span> <span class="value">${release_html}</span></div>
+
+          <h3>Author</h3>
+          <div><span class="label">Contact:
+	    </span><a href="${provided_by.href}" <span class="value">${provided_by.name}</span> </a></div>
+          <div><span class="label">Company:</span> <span class="value">${provided_by.company}</span></div>
+
+	</script>
+
+	<script id="application_info_template" type="text/x-jquery-tmpl">
+
+          <h2>${package_name} (${format})</h2>
+
+          <h3>Description</h3>
+          <div><span class="value">${description}</span></div>
+
+          <h3>Supported OpenStack Releases</h3>
+          <div><span class="value">${release_html}</span></div>
+
+          <h3>Support</h3>
+          <div><span class="label">Supported by:</span> <span class="value">${supported_by}</span></div>
+
+          <h3>Author</h3>
+          <div><span class="label">Contact:
+	    </span><a href="${provided_by.href}" <span class="value">${provided_by.name}</span> </a></div>
+          <div><span class="label">Company:</span> <span class="value">${provided_by.company}</span></div>
+
+	</script>
+      </div>
+
+      <div id="dummy"></div>
+
+    </div>
+  </body>
+</html>
