@@ -1,0 +1,110 @@
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "PT Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+body {
+  padding-top: 133px;
+  padding-bottom: 30px;
+}
+a {
+    color: #30739c;
+}
+.masthead {
+    background: #fff;
+}
+.masthead h1 {
+    display: inline-block;
+    border-left: 1px solid #ccc;
+    padding-left: 20px;
+    margin-left: 20px;
+    height: 33px;
+    line-height: 33px;
+    font-size: 21px;
+    color: #264d69;
+}
+.navbar {
+    margin: 0;
+    border-radius: 0;
+    border: none:
+}
+.navbar-brand {
+    width: 136px;
+    height: 33px;
+    background: url(../images/openstack-logo.png) no-repeat;
+    display: block;
+    padding: 0;
+    margin: 20px 0;
+}
+.navbar-inverse {
+    background: #edf2f7;
+    border: none;
+    padding: 10px 0;
+}
+.navbar-inverse .navbar-nav>li>a {
+    color: #486278;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-family: "PT Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-transform: uppercase;
+}
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.open>a {
+    background: #fff;
+    box-shadow: none;
+     color: #486278;
+}
+.navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+    background: #fff;
+     color: #486278;
+}
+.filters {
+    margin-bottom: 15px;
+}
+.filters #supported-by {
+    margin-right: 20px;
+}
+.form-inline label {
+    margin-right: 3px;
+}
+.table th {
+    font-weight: 400;
+    color: #30739c;
+}
+.table tr td:first-child {
+    font-weight: 700;
+}
+.content {
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    padding: 25px 0;
+}
+.btn {
+    border-radius: 0;
+}
+a.details {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: .9em;
+}
+a.details i {
+    background: #30739c;
+    color: #fff;
+    display: inline-block;
+    padding: 2px 3px;
+    border-radius: 4px;
+}
+.navbar-fixed-top {
+    z-index: 0;
+}
+.dataTables_filter {
+    margin-top: -42px;
+    margin-right: -140px;
+}
+div .dataTables_wrapper .dataTables_length {
+    float: right;
+}
+.dataTables_filter input {
+    width: 70%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}

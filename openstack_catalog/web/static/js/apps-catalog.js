@@ -74,20 +74,8 @@ function showInfo (template_id, info) {
 }
 
 function setupInfoHandler (table_id, element_id, template_id, info) {
-    $("#info_dialog").dialog({
-        autoOpen: false,
-        width: "70%",
-        modal: true,
-        buttons: {
-            Close: function () {
-                $(this).dialog("close");
-            }
-        },
-        close: function () {
-        }
-    });
-
-    $("#" + table_id).on("click", "#" + element_id, function (event) {
+    info.details = "<a id=\"element_id_" + element_id + "\" href=\"#\" class=\"details\"><i class=\"fa fa-ellipsis-h\"></i> Details</a>";
+    $("#" + table_id).on("click", "#element_id_" + element_id, function (event) {
         event.preventDefault();
         event.stopPropagation();
 
@@ -136,13 +124,14 @@ function populate_table (table_id, table_column_names, tableData)
     if (table_id) {
         $("#" + table_id).dataTable({
 	    "aLengthMenu": [
-                [10, 25, 50, -1],
-                [10, 25, 50, "All"]
+                [5, 10, 25, 50, -1],
+                [5, 10, 25, 50, "All"]
 	    ],
 	    "bDestroy": true,
 	    "iDisplayLength": -1,
 	    "bAutoWidth": false,
 	    "bPaginate": true,
+	    "pagingType": "full_numbers",
 	    "aaData": tableData,
 	    "aoColumns": tableColumns
         });
@@ -156,19 +145,11 @@ function show_glance_images ()
     var ops = getUrlVars ();
     var tableData = filterData (glance_images["images"], ops);
 
-    var table_column_names = ["image_name_html", "provided_by_html", "description", "format", "supported_by", "license"];
-    var table_id = "glance_images_table";
+    var table_column_names = ["image_name", "description", "format", "supported_by", "license", "details"];
+    var table_id = "glance-images-table";
 
     for (var i = 0; i < tableData.length; i++) {
-
-        tableData[i].image_name_html = "<a href=\"#\" title=\"Show details\">" + tableData[i].image_name + "</a>";
-        tableData[i].image_name_html = "<div id=\"image_" + i + "\">" + tableData[i].image_name_html + "</div>";
-
-        setupInfoHandler (table_id, "image_" + i, "image_info_template", tableData[i]);
-
-        tableData[i].provided_by_html = "<a href=\"" + tableData[i].provided_by.href +
-	    "\" title=\"Show details\">" + tableData[i].provided_by.name + "</a> " +
-	    "[" + tableData[i].provided_by.company + "]";
+        setupInfoHandler (table_id, i, "image-info-template", tableData[i]);
     }
 
     populate_table (table_id, table_column_names, tableData);
@@ -181,20 +162,12 @@ function show_heat_templates ()
     var ops = getUrlVars ();
     var tableData = filterData (heat_templates["templates"], ops);
 
-    var table_column_names = ["template_name_html", "provided_by_html", "description", "release_html", "format", "supported_by", "license"];
-    var table_id = "heat_templates_table";
+    var table_column_names = ["template_name", "description", "release_html", "format", "supported_by", "license", "details"];
+    var table_id = "heat-templates-table";
 
     for (var i = 0; i < tableData.length; i++) {
-
-        tableData[i].template_name_html = "<a href=\"#\" title=\"Show details\">" + tableData[i].template_name + "</a>";
-        tableData[i].template_name_html = "<div id=\"template_" + i + "\">" + tableData[i].template_name_html + "</div>";
-
-        setupInfoHandler (table_id, "template_" + i, "template_info_template", tableData[i]);
-	
-        tableData[i].provided_by_html = "<a href=\"" + tableData[i].provided_by.href +
-	    "\" title=\"Show details\">" + tableData[i].provided_by.name + "</a> " +
-	    "[" + tableData[i].provided_by.company + "]";
 	tableData[i].release_html = tableData[i].release.join (", ");
+        setupInfoHandler (table_id, i, "template-info-template", tableData[i]);
     }
 
     populate_table (table_id, table_column_names, tableData);
@@ -207,52 +180,76 @@ function show_murano_apps ()
     var ops = getUrlVars ();
     var tableData = filterData (murano_apps["applications"], ops);
 
-    var table_column_names = ["package_name_html", "provided_by_html", "description", "release_html", "format", "supported_by", "license"];
-    var table_id = "murano_apps_table";
+    var table_column_names = ["package_name", "description", "release_html", "format", "supported_by", "license", "details"];
+    var table_id = "murano-apps-table";
 
     for (var i = 0; i < tableData.length; i++) {
-
-        tableData[i].package_name_html = "<a href=\"#\" title=\"Show details\">" + tableData[i].package_name + "</a>";
-        tableData[i].package_name_html = "<div id=\"package_" + i + "\">" + tableData[i].package_name_html + "</div>";
-
-        setupInfoHandler (table_id, "package_" + i, "application_info_template", tableData[i]);
-
-        tableData[i].provided_by_html = "<a href=\"" + tableData[i].provided_by.href +
-	    "\" title=\"Show details\">" + tableData[i].provided_by.name + "</a> " +
-	    "[" + tableData[i].provided_by.company + "]";
 	tableData[i].release_html = tableData[i].release.join (", ");
+        setupInfoHandler (table_id, i, "application-info-template", tableData[i]);
     }
 
     populate_table (table_id, table_column_names, tableData);
 }
 
-function initMarketPlace ()
+function initTabs ()
 {
-    var tab_idx = 0;
+    var tabs_list = $("#navbar")[0].children;
+    var selected_tab_name = null;
     var options = getUrlVars ();
     if ("tab" in options) {
-        var tabs_list = $("#tabs")[0].children[0].children;
-        for (var i = 0; i < tabs_list.length; ++i)
-	    if (tabs_list[i].children[0].hash.substring (1) == options["tab"]) {
-		tab_idx = i;
+        for (var i = 0; i < tabs_list.length; ++i) {
+	    var tab_name = tabs_list[i].children[0].hash.substring (1);
+	    if (tab_name == options["tab"]) {
+		selected_tab_name = tab_name;
+		tabs_list[i].className = "active";
 		break;
 	    }
+	}
     }
     
-    $( "#tabs" ).tabs({
-        activate: function( event, ui ) {
-	    update_url ({ tab : ui.newTab.context.hash.substring (1) });
-        },
-        active: tab_idx,
+    if (selected_tab_name == null) {
+	selected_tab_name = tabs_list[0].children[0].hash.substring (1);
+	tabs_list[0].className = "active";
+    }
+    
+    $( ".content" ).hide ();
+    $( "#" + selected_tab_name ).show ();
+    
+    $( "ul.nav > li > a" ).on("click", function (event) { event.preventDefault(); });
+    $( "ul.nav > li" ).click (function (event) {
+	var tab_name = this.children[0].hash.substring (1);
+	$( "ul.nav > li" ).removeClass ("active");
+	this.className = "active";
+	$( ".content" ).hide ();
+	$( "#" + tab_name ).show ();
+	update_url ({ tab : tab_name });
     });
     
+}
+
+function initMarketPlace ()
+{
+    initTabs ();
+    
+    $("#info_dialog").dialog({
+        autoOpen: false,
+        width: "70%",
+        modal: true,
+        buttons: {
+            Close: function () {
+                $(this).dialog("close");
+            }
+        },
+        close: function () { }
+    });
+
     $.ajax({
         url: make_uri("static/glance_images.json"),
         dataType: "json",
 
         success: function (data) {
 	    glance_images = data;
-	    initSingleSelector ("glance_supported_by", "supported_by", glance_images["images"], show_glance_images);
+	    initSingleSelector ("glance-supported-by", "supported_by", glance_images["images"], show_glance_images);
 	    show_glance_images ();
         }
     });      
@@ -263,8 +260,8 @@ function initMarketPlace ()
 
         success: function (data) {
 	    heat_templates = data;
-	    initSingleSelector ("heat_supported_by", "supported_by", heat_templates["templates"], show_heat_templates);
-	    initSingleSelector ("heat_release", "release", heat_templates["templates"], show_heat_templates);
+	    initSingleSelector ("heat-supported-by", "supported_by", heat_templates["templates"], show_heat_templates);
+	    initSingleSelector ("heat-release", "release", heat_templates["templates"], show_heat_templates);
 	    show_heat_templates ();
         }
     });      
@@ -275,10 +272,9 @@ function initMarketPlace ()
 
         success: function (data) {
 	    murano_apps = data;
-	    initSingleSelector ("murano_supported_by", "supported_by", murano_apps["applications"], show_murano_apps);
-	    initSingleSelector ("murano_release", "release", murano_apps["applications"], show_murano_apps);
+	    initSingleSelector ("murano-supported-by", "supported_by", murano_apps["applications"], show_murano_apps);
+	    initSingleSelector ("murano-release", "release", murano_apps["applications"], show_murano_apps);
 	    show_murano_apps ();
         }
-    });      
-    
+    });
 }
