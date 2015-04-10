@@ -100,16 +100,12 @@ a.details i {
 .navbar-fixed-top {
     z-index: 0;
 }
-.dataTables_filter {
-    -margin-top: -42px;
-    -margin-right: -140px;
-}
 .dataTables_wrapper {
     z-index: 0;
     top: -27px;
 }
-div .dataTables_wrapper .dataTables_length {
-    float: right;
+.dataTables_length {
+    float: right !important;
 }
 .dataTables_filter {
     margin: 0 20px 20px 0;
@@ -119,19 +115,12 @@ div .dataTables_wrapper .dataTables_length {
     border: 1px solid #ccc;
     border-radius: 4px;
 }
-.ui-dialog-titlebar-close {
-    margin-top: 0 !important;
-}
 .ui-widget-overlay {
     background-image: none !important;
     background: #000 !important;
     opacity: 0.6 !important;
 }
-.ui-widget-header {
-    background: none !important;
-    border: none !important;
-}
-.ui-dialog-title {
+.ui-dialog-titlebar {
     display: none;
 }
 .ui-dialog h2 {
