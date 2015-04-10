@@ -58,11 +58,12 @@ a {
     background: #fff;
      color: #486278;
 }
-.filters {
-    margin-bottom: 15px;
-}
 .filters #supported-by {
     margin-right: 20px;
+}
+.filters {
+    z-index: 5;
+    position: relative;
 }
 .form-inline label {
     margin-right: 3px;
@@ -73,6 +74,9 @@ a {
 }
 .table tr td:first-child {
     font-weight: 700;
+}
+.table tr td:last-child {
+    white-space: nowrap;
 }
 .content {
     font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -97,14 +101,55 @@ a.details i {
     z-index: 0;
 }
 .dataTables_filter {
-    margin-top: -42px;
-    margin-right: -140px;
+    -margin-top: -42px;
+    -margin-right: -140px;
+}
+.dataTables_wrapper {
+    z-index: 0;
+    top: -27px;
 }
 div .dataTables_wrapper .dataTables_length {
     float: right;
+}
+.dataTables_filter {
+    margin: 0 20px 20px 0;
 }
 .dataTables_filter input {
     width: 70%;
     border: 1px solid #ccc;
     border-radius: 4px;
+}
+.ui-dialog-titlebar-close {
+    margin-top: 0 !important;
+}
+.ui-widget-overlay {
+    background-image: none !important;
+    background: #000 !important;
+    opacity: 0.6 !important;
+}
+.ui-widget-header {
+    background: none !important;
+    border: none !important;
+}
+.ui-dialog-title {
+    display: none;
+}
+.ui-dialog h2 {
+    margin-top: 0;
+    color: #30739c;
+}
+.ui-dialog h3 {
+    color: #2a4e68;
+}
+.ui-widget-content {
+    background-image: none !important;
+}
+.ui-state-default {
+    background: none !important;
+    border: 1px solid #999 !important;
+    color: #666 !important;
+}
+.ui-dialog .label {
+    font-size: 100% !important;
+    color: #000 !important;
 }
