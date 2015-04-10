@@ -1,4 +1,4 @@
 [gerrit]
 host=review.openstack.org
 port=29418
-project=stackforge/catalog.git
+project=stackforge/apps-catalog.git
