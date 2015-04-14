@@ -52,7 +52,10 @@ a {
 .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.open>a {
     background: #fff;
     box-shadow: none;
-     color: #486278;
+    color: #486278;
+}
+.navbar-inverse .navbar-nav>li>a:focus {
+    color: #486278;
 }
 .navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
     background: #fff;
