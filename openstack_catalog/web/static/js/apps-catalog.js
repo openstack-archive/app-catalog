@@ -122,21 +122,30 @@ function populate_table (table_id, table_column_names, tableData)
     }    
 }
 
-function showInfo (template_id, info) {
-    $("#info_container").empty();
-    $("#" + template_id).tmpl(info).appendTo("#info_container");
-    $("#info_dialog").dialog("open");
+function showInfoDialog (tab, info) {
+    $("#info-container").empty();
+    $("#" + tab + "-info").tmpl(info).appendTo("#info-container");
+    $("#info-dialog").dialog("open");
     $("button").focus ();
 }
 
-function setupInfoHandler (table_id, element_id, template_id, info) {
-    info.name_html = "<a id=\"element_id_" + element_id + "\" href=\"#\" title=\"Show details\">" + info.name_html + "</a>";
+function showInfoPage (tab, info)
+{
+    $("#info-content").empty();
+    $("#" + tab + "-info").tmpl(info).appendTo("#info-content");
+    $( ".content" ).hide ();
+    $( "#info-page" ).show ();
+    update_url ({ tab : tab, asset : info.name});
+}
 
-    $("#" + table_id).on("click", "#element_id_" + element_id, function (event) {
+function setupInfoHandler (tab, element_id, info) {
+    info.name_html = "<a id=\"" + tab +"-" + element_id + "\" href=\"#\" title=\"Show details\">" + info.name + "</a>";
+
+    $("#" + tab + "-table").on("click", "#" + tab + "-" + element_id, function (event) {
         event.preventDefault();
         event.stopPropagation();
 
-        showInfo (template_id, info);
+        showInfoPage (tab, info);
     });
 }
 
@@ -191,23 +200,38 @@ function initTabs ()
     $( ".content" ).hide ();
     $( "#" + selected_tab_name ).show ();
     
-    $( "ul.nav > li > a" ).on("click", function (event) { event.preventDefault(); });
-    $( "ul.nav > li" ).click (function (event) {
+    $( "ul.nav > li > a" ).on("click", function (event) {
+	event.preventDefault();
+    });
+    $( "ul.nav > li" ).on("click", function (event) {
 	var tab_name = this.children[0].hash.substring (1);
 	$( "ul.nav > li" ).removeClass ("active");
 	this.className = "active";
 	$( ".content" ).hide ();
 	$( "#" + tab_name ).show ();
-	update_url ({ tab : tab_name });
+	update_url ({ tab : tab_name, asset: "" });
     });
     
+}
+
+function show_asset (tab, tableData)
+{
+    var options = getUrlVars ();
+    if ((tab == options["tab"]) && ("asset" in options)) {
+	for (var i = 0; i < tableData.length; ++i)
+	    if (tableData[i].name == options["asset"]) {
+		showInfoPage (tab, tableData[i]);
+		return (false);
+	    }
+    }
+    return (true);
 }
 
 function initMarketPlace ()
 {
     initTabs ();
     
-    $("#info_dialog").dialog({
+    $("#info-dialog").dialog({
         autoOpen: false,
         width: "70%",
         modal: true,
@@ -227,11 +251,12 @@ function initMarketPlace ()
 	    glance_images = data;
 	    var tableData = glance_images["images"];
 	    for (var i = 0; i < tableData.length; i++) {
-		tableData[i].name_html = tableData[i].image_name;
-		setupInfoHandler ("glance-images-table", i, "image-info-template", tableData[i]);
+		tableData[i].name = tableData[i].image_name;
+		setupInfoHandler ("glance-images", i, tableData[i]);
 	    }
 	    
 	    initSingleSelector ("glance-supported-by", "supported_by", tableData, show_glance_images);
+	    show_asset ("glance-images", tableData);
 	    show_glance_images ();
         }
     });      
@@ -245,12 +270,14 @@ function initMarketPlace ()
 	    var tableData = heat_templates["templates"];
 	    for (var i = 0; i < tableData.length; i++) {
 		tableData[i].release_html = tableData[i].release.join (", ");
-		tableData[i].name_html = tableData[i].template_name;
-		setupInfoHandler ("heat-templates-table", i, "template-info-template", tableData[i]);
+		tableData[i].name = tableData[i].template_name;
+		setupInfoHandler ("heat-templates", i, tableData[i]);
 	    }
 	    
 	    initSingleSelector ("heat-supported-by", "supported_by", tableData, show_heat_templates);
 	    initSingleSelector ("heat-release", "release", tableData, show_heat_templates);
+	    
+	    show_asset ("heat-templates", tableData);
 	    show_heat_templates ();
         }
     });      
@@ -264,12 +291,13 @@ function initMarketPlace ()
 	    var tableData = murano_apps["applications"];
 	    for (var i = 0; i < tableData.length; i++) {
 		tableData[i].release_html = tableData[i].release.join (", ");
-		tableData[i].name_html = tableData[i].application_name;
-		setupInfoHandler ("murano-apps-table", i, "application-info-template", tableData[i]);
+		tableData[i].name = tableData[i].application_name;
+		setupInfoHandler ("murano-apps", i, tableData[i]);
 	    }
 	    
 	    initSingleSelector ("murano-supported-by", "supported_by", tableData, show_murano_apps);
 	    initSingleSelector ("murano-release", "release", tableData, show_murano_apps);
+	    show_asset ("murano-apps", tableData);
 	    show_murano_apps ();
         }
     });
