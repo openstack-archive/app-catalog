@@ -193,10 +193,8 @@ function initTabs ()
     }
     
     if (selected_tab_name == null) {
-	selected_tab_name = tabs_list[0].children[0].hash.substring (1);
 	$( "#landing-page" ).show ();
-    } else {
-	$( ".content" ).hide ();
+    } else if (!("asset" in options)) {
 	$( "#" + selected_tab_name ).show ();
     }
     
@@ -302,4 +300,10 @@ function initMarketPlace ()
 	    show_murano_apps ();
         }
     });
+}
+
+function show_landing_page ()
+{
+    $( ".content" ).hide ();
+    $( "#landing-page" ).show ();
 }
