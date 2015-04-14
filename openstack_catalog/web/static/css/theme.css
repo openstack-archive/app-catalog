@@ -194,3 +194,6 @@ h1 {
     font-size: 100% !important;
     color: #000 !important;
 }
+.masthead h1 a:active, .masthead h1 a:focus {
+    text-decoration: none;
+}
