@@ -178,38 +178,12 @@ function show_murano_apps ()
 
 function initTabs ()
 {
-    var tabs_list = $("#navbar")[0].children;
-    var selected_tab_name = null;
-    var options = getUrlVars ();
-    if ("tab" in options) {
-        for (var i = 0; i < tabs_list.length; ++i) {
-	    var tab_name = tabs_list[i].children[0].hash.substring (1);
-	    if (tab_name == options["tab"]) {
-		selected_tab_name = tab_name;
-		tabs_list[i].className = "active";
-		break;
-	    }
-	}
-    }
-    
-    if (selected_tab_name == null) {
-	$( "#landing-page" ).show ();
-    } else if (!("asset" in options)) {
-	$( "#" + selected_tab_name ).show ();
-    }
-    
     $( "ul.nav > li > a" ).on("click", function (event) {
-	event.preventDefault();
+        event.preventDefault ();
     });
     $( "ul.nav > li" ).on("click", function (event) {
-	var tab_name = this.children[0].hash.substring (1);
-	$( "ul.nav > li" ).removeClass ("active");
-	this.className = "active";
-	$( ".content" ).hide ();
-	$( "#" + tab_name ).show ();
-	update_url ({ tab : tab_name, asset: "" });
+	update_url ({ tab : this.children[0].hash.substring (1), asset: "" });
     });
-    
 }
 
 function show_asset (tab, tableData)
@@ -219,14 +193,13 @@ function show_asset (tab, tableData)
 	for (var i = 0; i < tableData.length; ++i)
 	    if (tableData[i].name == options["asset"]) {
 		showInfoPage (tab, tableData[i]);
-		return (false);
 	    }
     }
-    return (true);
 }
 
 function initMarketPlace ()
 {
+    navigate ();
     initTabs ();
     $( ".inner" ).matchHeight ();
     
@@ -302,8 +275,36 @@ function initMarketPlace ()
     });
 }
 
-function show_landing_page ()
+function navigate ()
 {
+    var tabs_list = $("#navbar")[0].children;
+    var selected_tab_name = null;
+    var options = getUrlVars ();
+    
+    $( "ul.nav > li" ).removeClass ("active");
+    if ("tab" in options) {
+        for (var i = 0; i < tabs_list.length; ++i) {
+	    var tab_name = tabs_list[i].children[0].hash.substring (1);
+	    if (tab_name == options["tab"]) {
+		selected_tab_name = tab_name;
+		if (!("asset" in options)) 
+		    tabs_list[i].className = "active";
+		break;
+	    }
+	}
+    }
+    
     $( ".content" ).hide ();
-    $( "#landing-page" ).show ();
-}
+    
+    if (selected_tab_name == null) {
+	$( "#landing-page" ).show ();
+    } else if ("asset" in options) {
+	show_asset ("murano-apps", murano_apps["applications"]);
+	show_asset ("heat-templates", heat_templates["templates"]);
+	show_asset ("glance-images", glance_images["images"]);
+    } else {
+	$( "#" + selected_tab_name ).show ();
+    }
+} 
+
+window.onhashchange = navigate

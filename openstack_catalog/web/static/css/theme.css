@@ -197,3 +197,8 @@ h1 {
 .masthead h1 a:active, .masthead h1 a:focus {
     text-decoration: none;
 }
+.featured h3 {
+    color: #3597da;
+    font-weight: 700;
+}
+ 
