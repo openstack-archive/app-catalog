@@ -194,11 +194,11 @@ function initTabs ()
     
     if (selected_tab_name == null) {
 	selected_tab_name = tabs_list[0].children[0].hash.substring (1);
-	tabs_list[0].className = "active";
+	$( "#landing-page" ).show ();
+    } else {
+	$( ".content" ).hide ();
+	$( "#" + selected_tab_name ).show ();
     }
-    
-    $( ".content" ).hide ();
-    $( "#" + selected_tab_name ).show ();
     
     $( "ul.nav > li > a" ).on("click", function (event) {
 	event.preventDefault();
@@ -230,6 +230,7 @@ function show_asset (tab, tableData)
 function initMarketPlace ()
 {
     initTabs ();
+    $( ".inner" ).matchHeight ();
     
     $("#info-dialog").dialog({
         autoOpen: false,

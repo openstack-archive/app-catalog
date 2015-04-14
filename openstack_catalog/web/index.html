@@ -20,7 +20,6 @@
     <!-- Custom styles for this template -->
     <link href="static/css/theme.css" rel="stylesheet" type="text/css">
     <link href="//cdn.jsdelivr.net/fontawesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="//fonts.googleapis.com/css?family=PT+Sans:400,700,400italic" rel="stylesheet" type="text/css">
     <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,400,700" rel="stylesheet" type="text/css">
 
     <link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.11.4/themes/cupertino/jquery-ui.css">
@@ -58,9 +57,9 @@
 	<div class="container">
           <div class="navbar-collapse collapse">
             <ul id="navbar" class="nav navbar-nav">
-              <li><a href="#glance-images">Glance Images</a></li>
-              <li><a href="#heat-templates">Heat Templates</a></li>
               <li><a href="#murano-apps">Murano packages</a></li>
+              <li><a href="#heat-templates">Heat Templates</a></li>
+              <li><a href="#glance-images">Glance Images</a></li>
             </ul>
           </div>
 	</div>
@@ -70,114 +69,210 @@
     
     <div class="container" role="main">
 
-      <!-- Main jumbotron for a primary marketing message or call to action -->
-      
+      <!-- Main jumbotron for a primary marketing message or call to
+      action -->
+
+      <div id="landing-page" class="content" style="display:none">
+	
+        <h1>The OpenStack Asset Catalog will help you make applications available on your cloud. </h1>
+	<div class="row featured">
+	  
+          <div class="col-md-2 col-sm-6">
+            <h3>Featured Apps</h3>
+            <p>(Requires OpenStack)</p>
+          </div>
+          <div class="col-md-2 col-sm-6">
+            <div class="inner murano">
+              <img src="static/images/logo-kubernetes.png">
+              <p>Kubernetes</p>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-6">
+            <div class="inner murano">
+              <img src="static/images/logo-redis.png">
+              <p>Redis</p>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-6">
+            <div class="inner glance">
+              <img src="static/images/logo-pivotal.png">
+              <p>Pivotal Cloud Foundry Dev Environment</p>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-6">
+            <div class="inner glance">
+              <img src="static/images/logo-lamp.png">
+              <p>LAMP Dev Environment</p>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-6">
+            <div class="inner heat">
+              <img src="static/images/logo-wordpress.png">
+              <p>Wordpress</p>
+            </div>
+          </div>
+	</div>
+        <p><strong>Don't have OpenStack yet?</strong></p>
+        <p>Get over to the <a href="https://www.openstack.org/marketplace/" target="_blank">OpenStack Marketplace</a> and find the best way to build your cloud. Once you have a cloud come back to the OpenStack Asset Catalog to make your cloud sing with applications.</p>
+        
+        <div class="row">
+	  
+          <div class="col-md-4 bluebox">
+            <div class="inner">
+              <h2>Murano Packages</h2>
+              <img src="static/images/openstack-logo.png">
+              <p>In Murano Packages you will find complete applications, simple and clustered, ready to deploy into your cloud. To use them:</p>            
+              <ol>
+                <li>Verify that you have Murano installed</li>
+                <li>Browse the list and find the app package you want</li>
+                <li>Copy the name of the app package</li>
+                <li>In Horizon navigate to the Application Catalog &gt; Packages page and Click Download Package</li>
+		<li>Paste the app package name, and click Download</li>
+		<li>You can now deploy the app into your cloud using Horizon or the <a href="https://github.com/stackforge/python-muranoclient">Murano client</a></li>
+	      </ol>
+	    </div>
+	  </div>
+	  
+	  <div class="col-md-4 bluebox">
+	    <div class="inner">
+	      <h2>Heat Templates</h2>
+	      <img src="static/images/openstack-logo.png" class="text-center">
+	      <p>In Heat Templates you will find templates for creating complete stacks in your cloud. To use them:</p>            
+	      <ol>
+		<li>Browse the list and find the one you want</li>
+		<li>Copy URL for the image file</li>
+		<li>Use the <a href="http://docs.openstack.org/cli-reference/content/glanceclient_commands.html" target="_blank">Glance client</a> to add it to your cloud with the --copy-from option, or add the image from Horizon by specifying the URL as the image location.</li>
+		<li>Use Nova to launch a vm from the new image
+		</li>
+	      </ol>
+	    </div>
+	  </div>
+	  
+	  <div class="col-md-4 bluebox">
+	    <div class="inner">
+	      <h2>Glance Images</h2>
+	      <img src="static/images/openstack-logo.png">
+	      <p>In Glance Images you will find a library of preconfigured images ready to launch virtual machines on your cloud. To use them:</p>            
+	      <ol>
+		<li>Browse the list and find the one you want</li>
+		<li>Download the template yaml file to your local machine</li>
+		<li>Use Horizon to add the template to Heat </li>
+		<li>Use the <a href="http://docs.openstack.org/cli-reference/content/heatclient_commands.html" target="_blank">Heat client</a> to create a stack</li>
+	      </ol>
+	    </div>
+	  </div>
+	  
+	</div>
+	
+      </div>
+
+
       <div id="glance-images" class="content" style="display:none">
 	
-        <div class="row filters">
-          <div class="col-md-6">
-            <form class="form-inline">
+	<div class="row filters">
+	  <div class="col-md-6">
+	    <form class="form-inline">
               <div class="form-group">
-                <label>Supported by</label>
+		<label>Supported by</label>
 		<input type="hidden" id="glance-supported-by"
 		       style="width:10em" data-placeholder="Any vendor"/>
               </div>
-            </form>
-          </div>
-        </div>
+	    </form>
+	  </div>
+	</div>
 	
 	<div class="row">
-          <div class="col-md-12">
-            <table id="glance-images-table" class="table table-striped">
+	  <div class="col-md-12">
+	    <table id="glance-images-table" class="table table-striped">
               <thead>
 		<tr>
-                  <th>Image&nbsp;Name</th>
-                  <th>Description</th>
-                  <th>Format</th>
-                  <th>Supported&nbsp;by</th>
-                  <th>License</th>
+		  <th>Image&nbsp;Name</th>
+		  <th>Description</th>
+		  <th>Format</th>
+		  <th>Supported&nbsp;by</th>
+		  <th>License</th>
 		</tr>
               </thead>
-            </table>
-          </div>
+	    </table>
+	  </div>
 	</div>
 
       </div>
 
       <div id="heat-templates" class="content" style="display:none">
 	
-        <div class="row filters">
-          <div class="col-md-6">
-            <form class="form-inline">
+	<div class="row filters">
+	  <div class="col-md-6">
+	    <form class="form-inline">
               <div class="form-group">
-                <label>Supported by</label>
+		<label>Supported by</label>
 		<input type="hidden" id="heat-supported-by"
 		       style="width:10em" data-placeholder="Any vendor"/>
               </div>
 	      &nbsp;
               <div class="form-group">
-                <label>Release</label>
+		<label>Release</label>
 		<input type="hidden" id="heat-release"
 		       style="width:10em" data-placeholder="Any release"/>
               </div>
-            </form>
-          </div>
-        </div>
+	    </form>
+	  </div>
+	</div>
 	
 	<div class="row">
-          <div class="col-md-12">
-            <table id="heat-templates-table" class="table table-striped">
+	  <div class="col-md-12">
+	    <table id="heat-templates-table" class="table table-striped">
               <thead>
 		<tr>
-                  <th>Template&nbsp;Name</th>
-                  <th>Description</th>
-                  <th>Release</th>
-                  <th>Format</th>
-                  <th>Supported&nbsp;by</th>
-                  <th>License</th>
+		  <th>Template&nbsp;Name</th>
+		  <th>Description</th>
+		  <th>Release</th>
+		  <th>Format</th>
+		  <th>Supported&nbsp;by</th>
+		  <th>License</th>
 		</tr>
               </thead>
-            </table>
-          </div>
+	    </table>
+	  </div>
 	</div>
 
       </div>
 
       <div id="murano-apps" class="content" style="display:none">
 	
-        <div class="row filters">
-          <div class="col-md-6">
-            <form class="form-inline">
+	<div class="row filters">
+	  <div class="col-md-6">
+	    <form class="form-inline">
               <div class="form-group">
-                <label>Supported by</label>
+		<label>Supported by</label>
 		<input type="hidden" id="murano-supported-by"
 		       style="width:10em" data-placeholder="Any vendor"/>
               </div>
 	      &nbsp;
               <div class="form-group">
-                <label>Release</label>
+		<label>Release</label>
 		<input type="hidden" id="murano-release"
 		       style="width:10em" data-placeholder="Any release"/>
               </div>
-            </form>
-          </div>
-        </div>
+	    </form>
+	  </div>
+	</div>
 	
 	<div class="row">
-          <div class="col-md-12">
-            <table id="murano-apps-table" class="table table-striped">
+	  <div class="col-md-12">
+	    <table id="murano-apps-table" class="table table-striped">
               <thead>
 		<tr>
-                  <th>Package&nbsp;Name</th>
-                  <th>Description</th>
-                  <th>Release</th>
-                  <th>Format</th>
-                  <th>Supported&nbsp;by</th>
-                  <th>License</th>
+		  <th>Package&nbsp;Name</th>
+		  <th>Description</th>
+		  <th>Release</th>
+		  <th>Format</th>
+		  <th>Supported&nbsp;by</th>
+		  <th>License</th>
 		</tr>
               </thead>
-            </table>
-          </div>
+	    </table>
+	  </div>
 	</div>
 
       </div>
@@ -187,11 +282,11 @@
     <div id="info-dialog" title="Details">
       <div id="info-container"></div>
     </div>
-    
+
     <div id="info-page" class="content">
       <div class="container">
 	<div class="row">
-          <div class="col-md-12">
+	  <div class="col-md-12">
 	    <div id="info-content"></div>
 	  </div>
 	</div>
@@ -206,16 +301,16 @@
     <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.datatables/1.10.4/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/select2/3.5.2/select2.min.js"></script>
     <script type="text/javascript" src="//ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
-    <script type="text/javascript"
-	    src="//cdn.jsdelivr.net/jquery.timeago/1.4.1/jquery.timeago.js"></script>
-    
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.timeago/1.4.1/jquery.timeago.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.6.0/jquery.matchHeight-min.js"></script>
+
     <script type="text/javascript" src="static/js/apps-catalog.js"></script>
-    
+
     <script type="text/javascript">
       $(function() { initMarketPlace (); });
       $(document).ready(function () { ; } );
     </script>
-    
+
     <script id="glance-images-info" type="text/x-jquery-tmpl">
 
       <h2>${image_name} (${format})</h2>

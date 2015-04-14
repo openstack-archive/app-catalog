@@ -1,6 +1,6 @@
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "PT Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 body {
   padding-top: 133px;
@@ -46,7 +46,7 @@ a {
     padding-bottom: 10px;
     border-radius: 5px;
     margin-right: 10px;
-    font-family: "PT Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
     text-transform: uppercase;
 }
 .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.open>a {
@@ -56,7 +56,7 @@ a {
 }
 .navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
     background: #fff;
-     color: #486278;
+    color: #486278;
 }
 .filters #supported-by {
     margin-right: 20px;
@@ -97,8 +97,60 @@ a.details i {
     padding: 2px 3px;
     border-radius: 4px;
 }
+.bluebox .inner {
+    background-color: #edf2f7;
+    padding: 20px;
+     margin: 20px 0;
+}
+.bluebox h2 {
+    margin-top: 0;
+    color: #3597da;
+    font-size: 24px;
+}
+.bluebox img {
+    margin: 20px auto;
+    text-align: center;
+}
+.featured {
+}
+.featured .inner {
+    padding: 15px;
+    border: 1px #ccc solid;
+    border-radius: 4px;
+    text-align: center;
+     margin: 20px 0 ;
+}
+.featured img {
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+.featured .inner p {
+    margin-bottom: 0;
+    font-size: .9em;
+}
+.featured h3 {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+h1 { 
+    color: #2A4E68;
+    font-weight: 300;
+    font-size: 28px;
+}
+.featured .glance {
+    background: url(../images/featured-corner-glance.png) no-repeat;
+    background-position: top right;
+}
+.featured .heat {
+    background: url(../images/featured-corner-heat.png) no-repeat;
+    background-position: top right;
+}
+.featured .murano {
+    background: url(../images/featured-corner-murano.png) no-repeat;
+    background-position: top right;
+}
 .navbar-fixed-top {
-    z-index: 0;
+    z-index: 1;
 }
 .dataTables_wrapper {
     z-index: 0;
