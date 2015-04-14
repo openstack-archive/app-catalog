@@ -204,4 +204,6 @@ h1 {
     color: #3597da;
     font-weight: 700;
 }
- 
+.form-group {
+    margin-left: 15px;
+}

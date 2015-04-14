@@ -18,8 +18,8 @@
 	    "template_name": "OpenShift",
 	    "provided_by":
 	    {
-		"name" : "Paul Cormier",
-		"href" : "mailto:pcormier@redhat.com",
+		"name" : "Steve Baker",
+		"href" : "mailto:sbaker@redhat.com",
 		"company" : "Red Hat"
 	    },
 	    "description": "OpenShift template for OpenShift cluster",

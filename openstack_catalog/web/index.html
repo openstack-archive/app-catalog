@@ -50,7 +50,7 @@
     <!-- Fixed navbar -->
     <div class="masthead navbar-fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="http://openstack.org" target="_blank"></a>
+        <a class="navbar-brand" href="https://www.openstack.org" target="_blank"></a>
 	<h1><a href="#">Asset Catalog</a></h1>
       </div>
       
@@ -164,6 +164,28 @@
 	  </div>
 	  
 	</div>
+
+	<div class="row">
+	  <p><strong>Contributing to the OpenStack Asset Catalog</strong></p>
+	  <p>
+	    The asset catalog is built from the JSON files found in the
+	    <a href="https://github.com/stackforge/apps-catalog" target="_blank">repository</a>.
+	    Consistent with other OpenStack projects, additions to the
+	    catalog take the form of git commits and reviewed with Gerrit
+	    prior to being merged.  Detailed instructions for adding to
+	    the JSON file can be found in the
+	    <a href="https://github.com/stackforge/apps-catalog/blob/master/README.rst" target="_blank">
+	      README.md</a> file in the repository as well as on the
+	    <a href="https://wiki.openstack.org/wiki/Apps-catalog" target="_blank">
+	      OpenStack wiki</a>.
+	  </p>
+	  <p>
+	    Binary assets are stored in a file-based CDN.  Binary assets
+	    (Murano zip files and Glance images) are scanned for
+	    viruses/malware with Symantec Endpoint Protection for Linux
+	    before being added to the catalog.
+	  </p>
+	</div>
 	
       </div>
 
@@ -210,7 +232,7 @@
 		<input type="hidden" id="heat-supported-by"
 		       style="width:10em" data-placeholder="Any vendor"/>
               </div>
-	      &nbsp;
+	      
               <div class="form-group">
 		<label>Release</label>
 		<input type="hidden" id="heat-release"
@@ -249,7 +271,7 @@
 		<input type="hidden" id="murano-supported-by"
 		       style="width:10em" data-placeholder="Any vendor"/>
               </div>
-	      &nbsp;
+	      
               <div class="form-group">
 		<label>Release</label>
 		<input type="hidden" id="murano-release"
@@ -278,21 +300,19 @@
 
       </div>
 
-    </div> 
-
-    <div id="info-dialog" title="Details">
-      <div id="info-container"></div>
-    </div>
-
-    <div id="info-page" class="content">
-      <div class="container">
+      <div id="info-page" class="content">
 	<div class="row">
 	  <div class="col-md-12">
 	    <div id="info-content"></div>
 	  </div>
 	</div>
       </div>
-    </div>
+
+      <div id="info-dialog" title="Details">
+	<div id="info-container"></div>
+      </div>
+
+    </div> 
 
     <!-- core JavaScript
     ================================================== -->
