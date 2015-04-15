@@ -76,3 +76,21 @@ class TestOpenstack_catalog(testtools.TestCase):
         self._verify_json_by_schema(
             'openstack_catalog/web/static/murano_apps.json',
             'openstack_catalog/web/static/murano_apps.schema.json')
+
+    def test_heat_templates_duplicate_keys(self):
+        self._verify_json_duplicate_keys(
+            'openstack_catalog/web/static/heat_templates.json')
+
+    def test_heat_templates_schema_conformance(self):
+        self._verify_json_by_schema(
+            'openstack_catalog/web/static/heat_templates.json',
+            'openstack_catalog/web/static/heat_templates.schema.json')
+
+    def test_glance_images_duplicate_keys(self):
+        self._verify_json_duplicate_keys(
+            'openstack_catalog/web/static/glance_images.json')
+
+    def test_glance_images_schema_conformance(self):
+        self._verify_json_by_schema(
+            'openstack_catalog/web/static/glance_images.json',
+            'openstack_catalog/web/static/glance_images.schema.json')

@@ -1,7 +1,7 @@
 {
     "templates": [
 	{
-	    "template_name": "Wordpress",
+	    "name": "Wordpress",
 	    "provided_by":
 	    {
 		"name" : "Max Mazur",
@@ -15,7 +15,7 @@
 	    "license": "Apache 2.0"
 	},
 	{
-	    "template_name": "OpenShift",
+	    "name": "OpenShift",
 	    "provided_by":
 	    {
 		"name" : "Steve Baker",

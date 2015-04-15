@@ -1,8 +1,8 @@
 {
     "applications": [
 	{
+            "name": "Worpress v 2.1",
 	    "package_name": "io.murano.apps.wordpress",
-            "application_name": "Worpress v 2.1",
 	    "provided_by":
 	    {
 		"name" : "Georgy Okrokvertskhov",
@@ -22,15 +22,15 @@
             }
 	},
 	{
+            "name": "Murano Kubernetes",
 	    "package_name": "io.murano.apps.kubernetes",
-            "application_name": "Murano Kubernetes",
 	    "provided_by":
 	    {
 		"name" : "Jeff Dean",
-		"href" : "mailto:jeff@google.com",
+		"href" : "https://www.google.com/#q=jeff%20dean",
 		"company" : "Google"
 	    },
-	    "description": "Installs Wordpress in a single VM",
+	    "description": "Kubernetes simple mode",
 	    "release": ["Juno", "Kilo"],
 	    "format": "bundle",
 	    "supported_by": "Google",

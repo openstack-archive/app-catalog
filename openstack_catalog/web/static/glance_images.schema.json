@@ -1,21 +1,17 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
     "type": "object",
-    "required": ["applications"],
+    "required": ["images"],
     "properties": {
         "applications": {
             "type": "array",
             "items": {
                 "type": "object",
-		"required": [ "name", "package_name", "provided_by", "description", "release", "format", "supported_by", "license"],
+		"required": ["name", "provided_by", "description", "format", "supported_by", "license"],
                 "additionalProperties": true,
                 "properties": {
                     "name": {
                         "type": "string"
-                    },
-                    "package_name": {
-                        "type": "string",
-                        "pattern": "^[a-z][a-z0-9_-]+(\\.[a-z0-9_-]+)*$"
                     },
                     "provided_by": {
                         "type": "object",
@@ -37,15 +33,8 @@
                     "description": {
                         "type": "string"
                     },
-                    "release": {
-                        "type": "array",
-                        "items": {
-			    "enum": [ "Austin", "Bexar", "Cactus", "Diablo", "Essex", "Folsom", "Grizzly", "Havana", "Icehouse", "Juno", "Kilo", "Liberty" ]
-                        },
-                        "minItems": 1
-                    },
                     "format": {
-                        "enum": [ "package", "bundle" ]
+                        "enum": [ "QCOW2", "VMDK" ]
                     },
                     "supported_by": {
                         "type": "string"

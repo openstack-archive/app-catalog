@@ -223,7 +223,6 @@ function initMarketPlace ()
 	    glance_images = data;
 	    var tableData = glance_images["images"];
 	    for (var i = 0; i < tableData.length; i++) {
-		tableData[i].name = tableData[i].image_name;
 		setupInfoHandler ("glance-images", i, tableData[i]);
 	    }
 	    
@@ -242,7 +241,6 @@ function initMarketPlace ()
 	    var tableData = heat_templates["templates"];
 	    for (var i = 0; i < tableData.length; i++) {
 		tableData[i].release_html = tableData[i].release.join (", ");
-		tableData[i].name = tableData[i].template_name;
 		setupInfoHandler ("heat-templates", i, tableData[i]);
 	    }
 	    
@@ -263,7 +261,6 @@ function initMarketPlace ()
 	    var tableData = murano_apps["applications"];
 	    for (var i = 0; i < tableData.length; i++) {
 		tableData[i].release_html = tableData[i].release.join (", ");
-		tableData[i].name = tableData[i].application_name;
 		setupInfoHandler ("murano-apps", i, tableData[i]);
 	    }
 	    

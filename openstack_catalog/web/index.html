@@ -334,7 +334,7 @@
 
     <script id="glance-images-info" type="text/x-jquery-tmpl">
 
-      <h2>${image_name} (${format})</h2>
+      <h2>${name} (${format})</h2>
       <div><span class="label">Supported by</span> <span class="value">${supported_by}</span></div>
       <div><span class="label">Description:</span> <span class="value">${description}</span></div>
 
@@ -347,7 +347,7 @@
 
     <script id="heat-templates-info" type="text/x-jquery-tmpl">
 
-      <h2>${template_name} (${format})</h2>
+      <h2>${name} (${format})</h2>
       <div><span class="label">Supported by</span> <span class="value">${supported_by}</span></div>
       <div><span class="label">Description:</span> <span class="value">${description}</span></div>
       <div><span class="label">Available in Releases:</span> <span class="value">${release_html}</span></div>
@@ -361,7 +361,8 @@
 
     <script id="murano-apps-info" type="text/x-jquery-tmpl">
 
-      <h2>${package_name} (${format})</h2>
+      <h2>${name} (${format})</h2>
+      <input type="text" value="${package_name}">
 
       <h3>Description</h3>
       <div><span class="value">${description}</span></div>

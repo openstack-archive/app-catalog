@@ -14,11 +14,11 @@
 	    "license": "GPL 2.0"
 	},
 	{
-	    "image_name": "Fedora 20",
+	    "name": "Fedora 20",
 	    "provided_by":
 	    {
-		"name" : "Paul Cormier",
-		"href" : "mailto:pcormier@redhat.com",
+		"name" : "Steve Baker",
+		"href" : "mailto:sbaker@redhat.com",
 		"company" : "Red Hat"
 	    },
 	    "description": "Base Fedora 20 image",
