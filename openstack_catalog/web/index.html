@@ -11,7 +11,7 @@
     <meta name="description" content="OpenStack market place">
     <meta name="keywords" content="openstack, glance images, heat templates, murano applications">
     <meta name="author" content="Mirantis on behalf of OpenStack Foundation">
-    
+
     <title>OpenStack Application Catalog</title>
 
     <!-- Bootstrap core CSS -->
@@ -25,7 +25,7 @@
     <link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.11.4/themes/cupertino/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.datatables/1.10.4/css/jquery.dataTables.min.css">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/select2/3.5.2/select2.css">
-    
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -34,7 +34,7 @@
        </head>
 
   <body role="document">
-    
+
     <!-- Google Tag Manager -->
     <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-K2J65K"
 		      height="0" width="0"
@@ -46,14 +46,14 @@
       '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
       })(window,document,'script','dataLayer','GTM-K2J65K');</script>
     <!-- End Google Tag Manager -->
-    
+
     <!-- Fixed navbar -->
     <div class="masthead navbar-fixed-top">
       <div class="container">
         <a class="navbar-brand" href="https://www.openstack.org" target="_blank"></a>
 	<h1><a href="#">Asset Catalog</a></h1>
       </div>
-      
+
       <nav class="navbar navbar-inverse">
 	<div class="container">
           <div class="navbar-collapse collapse">
@@ -65,19 +65,19 @@
           </div>
 	</div>
       </nav>
-      
+
     </div>
-    
+
     <div class="container" role="main">
 
       <!-- Main jumbotron for a primary marketing message or call to
       action -->
 
       <div id="landing-page" class="content" style="display:none">
-	
+
         <h1>The OpenStack Asset Catalog will help you make applications available on your cloud. </h1>
 	<div class="row featured">
-	  
+
           <div class="col-md-2 col-sm-6">
             <h3>Featured Apps</h3>
             <p>(Requires OpenStack)</p>
@@ -115,14 +115,14 @@
 	</div>
         <p><strong>Don't have OpenStack yet?</strong></p>
         <p>Get over to the <a href="https://www.openstack.org/marketplace/" target="_blank">OpenStack Marketplace</a> and find the best way to build your cloud. Once you have a cloud come back to the OpenStack Asset Catalog to make your cloud sing with applications.</p>
-        
+
         <div class="row">
-	  
+
           <div class="col-md-4 bluebox">
             <div class="inner">
               <h2>Murano Packages</h2>
               <img src="static/images/openstack-logo.png">
-              <p>In Murano Packages you will find complete applications, simple and clustered, ready to deploy into your cloud. To use them:</p>            
+              <p>In Murano Packages you will find complete applications, simple and clustered, ready to deploy into your cloud. To use them:</p>
               <ol>
                 <li>Verify that you have Murano installed</li>
                 <li>Browse the list and find the app package you want</li>
@@ -133,36 +133,36 @@
 	      </ol>
 	    </div>
 	  </div>
-	  
+
 	  <div class="col-md-4 bluebox">
 	    <div class="inner">
 	      <h2>Heat Templates</h2>
 	      <img src="static/images/openstack-logo.png" class="text-center">
-	      <p>In Heat Templates you will find templates for creating complete stacks in your cloud. To use them:</p>            
+	      <p>In Heat Templates you will find templates for creating complete stacks in your cloud. To use them:</p>
 	      <ol>
-		<li>Browse the list and find the one you want</li>
-		<li>Copy URL for the image file</li>
-		<li>Use the <a href="http://docs.openstack.org/cli-reference/content/glanceclient_commands.html" target="_blank">Glance client</a> to add it to your cloud with the --copy-from option, or add the image from Horizon by specifying the URL as the image location.</li>
-		<li>Use Nova to launch a vm from the new image
-		</li>
+    <li>Browse the list and find the one you want</li>
+    <li>Download the template yaml file to your local machine</li>
+    <li>Use Horizon to add the template to Heat </li>
+    <li>Use the <a href="http://docs.openstack.org/cli-reference/content/heatclient_commands.html" target="_blank">Heat client</a> to create a stack</li>
 	      </ol>
 	    </div>
 	  </div>
-	  
+
 	  <div class="col-md-4 bluebox">
 	    <div class="inner">
 	      <h2>Glance Images</h2>
 	      <img src="static/images/openstack-logo.png">
-	      <p>In Glance Images you will find a library of preconfigured images ready to launch virtual machines on your cloud. To use them:</p>            
+	      <p>In Glance Images you will find a library of preconfigured images ready to launch virtual machines on your cloud. To use them:</p>
 	      <ol>
-		<li>Browse the list and find the one you want</li>
-		<li>Download the template yaml file to your local machine</li>
-		<li>Use Horizon to add the template to Heat </li>
-		<li>Use the <a href="http://docs.openstack.org/cli-reference/content/heatclient_commands.html" target="_blank">Heat client</a> to create a stack</li>
+    <li>Browse the list and find the one you want</li>
+    <li>Copy URL for the image file</li>
+    <li>Use the <a href="http://docs.openstack.org/cli-reference/content/glanceclient_commands.html" target="_blank">Glance client</a> to add it to your cloud with the --copy-from option, or add the image from Horizon by specifying the URL as the image location.</li>
+    <li>Use Nova to launch a vm from the new image
+    </li>
 	      </ol>
 	    </div>
 	  </div>
-	  
+
 	</div>
 
 	<div class="row">
@@ -186,12 +186,12 @@
 	    before being added to the catalog.
 	  </p>
 	</div>
-	
+
       </div>
 
 
       <div id="glance-images" class="content" style="display:none">
-	
+
 	<div class="row filters">
 	  <div class="col-md-6">
 	    <form class="form-inline">
@@ -203,7 +203,7 @@
 	    </form>
 	  </div>
 	</div>
-	
+
 	<div class="row">
 	  <div class="col-md-12">
 	    <table id="glance-images-table" class="table table-striped">
@@ -223,7 +223,7 @@
       </div>
 
       <div id="heat-templates" class="content" style="display:none">
-	
+
 	<div class="row filters">
 	  <div class="col-md-6">
 	    <form class="form-inline">
@@ -232,7 +232,7 @@
 		<input type="hidden" id="heat-supported-by"
 		       style="width:10em" data-placeholder="Any vendor"/>
               </div>
-	      
+
               <div class="form-group">
 		<label>Release</label>
 		<input type="hidden" id="heat-release"
@@ -241,7 +241,7 @@
 	    </form>
 	  </div>
 	</div>
-	
+
 	<div class="row">
 	  <div class="col-md-12">
 	    <table id="heat-templates-table" class="table table-striped">
@@ -262,7 +262,7 @@
       </div>
 
       <div id="murano-apps" class="content" style="display:none">
-	
+
 	<div class="row filters">
 	  <div class="col-md-6">
 	    <form class="form-inline">
@@ -271,7 +271,7 @@
 		<input type="hidden" id="murano-supported-by"
 		       style="width:10em" data-placeholder="Any vendor"/>
               </div>
-	      
+
               <div class="form-group">
 		<label>Release</label>
 		<input type="hidden" id="murano-release"
@@ -280,7 +280,7 @@
 	    </form>
 	  </div>
 	</div>
-	
+
 	<div class="row">
 	  <div class="col-md-12">
 	    <table id="murano-apps-table" class="table table-striped">
@@ -312,7 +312,7 @@
 	<div id="info-container"></div>
       </div>
 
-    </div> 
+    </div>
 
     <!-- core JavaScript
     ================================================== -->
@@ -324,7 +324,7 @@
     <script type="text/javascript" src="//ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.timeago/1.4.1/jquery.timeago.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.6.0/jquery.matchHeight-min.js"></script>
-    
+
     <script type="text/javascript" src="static/js/apps-catalog.js"></script>
 
     <script type="text/javascript">
@@ -349,7 +349,7 @@
       <div><span class="label">${key}:</span> <span class="value">${value}</span></div>
       {{/each}}
       {{/if}}
-      
+
     </script>
 
     <script id="heat-templates-info" type="text/x-jquery-tmpl">
@@ -363,14 +363,14 @@
       <div><span class="label">Contact:
 	</span><a href="${provided_by.href}"> <span class="value">${provided_by.name}</span> </a></div>
       <div><span class="label">Company:</span> <span class="value">${provided_by.company}</span></div>
-      
+
       {{if attributes }}
       <h3>Attributes</h3>
       {{each( key, value ) attributes }}
       <div><span class="label">${key}:</span> <span class="value">${value}</span></div>
       {{/each}}
       {{/if}}
-      
+
     </script>
 
     <script id="murano-apps-info" type="text/x-jquery-tmpl">
@@ -393,14 +393,14 @@
       <h3>Author</h3>
       <div><span class="label">Contact:	</span><a href="${provided_by.href}"> <span class="value">${provided_by.name}</span> </a></div>
       <div><span class="label">Company:</span> <span class="value">${provided_by.company}</span></div>
-      
+
       {{if attributes }}
       <h3>Attributes</h3>
       {{each( key, value ) attributes }}
       <div><span class="label">${key}:</span> <span class="value">${value}</span></div>
       {{/each}}
       {{/if}}
-      
+
     </script>
 
   </body>
