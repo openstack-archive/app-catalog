@@ -324,7 +324,7 @@
     <script type="text/javascript" src="//ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.timeago/1.4.1/jquery.timeago.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.6.0/jquery.matchHeight-min.js"></script>
-
+    
     <script type="text/javascript" src="static/js/apps-catalog.js"></script>
 
     <script type="text/javascript">
@@ -343,6 +343,13 @@
 	</span><a href="${provided_by.href}"> <span class="value">${provided_by.name}</span> </a></div>
       <div><span class="label">Company:</span> <span class="value">${provided_by.company}</span></div>
 
+      {{if attributes }}
+      <h3>Attributes</h3>
+      {{each( key, value ) attributes }}
+      <div><span class="label">${key}:</span> <span class="value">${value}</span></div>
+      {{/each}}
+      {{/if}}
+      
     </script>
 
     <script id="heat-templates-info" type="text/x-jquery-tmpl">
@@ -357,12 +364,22 @@
 	</span><a href="${provided_by.href}"> <span class="value">${provided_by.name}</span> </a></div>
       <div><span class="label">Company:</span> <span class="value">${provided_by.company}</span></div>
       
+      {{if attributes }}
+      <h3>Attributes</h3>
+      {{each( key, value ) attributes }}
+      <div><span class="label">${key}:</span> <span class="value">${value}</span></div>
+      {{/each}}
+      {{/if}}
+      
     </script>
 
     <script id="murano-apps-info" type="text/x-jquery-tmpl">
 
       <h2>${name} (${format})</h2>
-      <input type="text" value="${package_name}">
+      <div>
+	<span class="label">Package name:</span>
+	<input type="text" value="${package_name}" onfocus="this.select();" onmouseup="return false;">
+      </div>
 
       <h3>Description</h3>
       <div><span class="value">${description}</span></div>
@@ -376,6 +393,13 @@
       <h3>Author</h3>
       <div><span class="label">Contact:	</span><a href="${provided_by.href}"> <span class="value">${provided_by.name}</span> </a></div>
       <div><span class="label">Company:</span> <span class="value">${provided_by.company}</span></div>
+      
+      {{if attributes }}
+      <h3>Attributes</h3>
+      {{each( key, value ) attributes }}
+      <div><span class="label">${key}:</span> <span class="value">${value}</span></div>
+      {{/each}}
+      {{/if}}
       
     </script>
 

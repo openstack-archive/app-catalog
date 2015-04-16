@@ -207,3 +207,6 @@ h1 {
 .form-group {
     margin-left: 15px;
 }
+input[type=text] {
+    width: 250px;
+}
