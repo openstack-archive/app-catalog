@@ -140,11 +140,10 @@
 	      <img src="static/images/openstack-logo.png" class="text-center">
 	      <p>In Heat Templates you will find templates for creating complete stacks in your cloud. To use them:</p>            
 	      <ol>
-		<li>Browse the list and find the one you want</li>
-		<li>Copy URL for the image file</li>
-		<li>Use the <a href="http://docs.openstack.org/cli-reference/content/glanceclient_commands.html" target="_blank">Glance client</a> to add it to your cloud with the --copy-from option, or add the image from Horizon by specifying the URL as the image location.</li>
-		<li>Use Nova to launch a vm from the new image
-		</li>
+    <li>Browse the list and find the one you want</li>
+    <li>Download the template yaml file to your local machine</li>
+    <li>Use Horizon to add the template to Heat </li>
+    <li>Use the <a href="http://docs.openstack.org/cli-reference/content/heatclient_commands.html" target="_blank">Heat client</a> to create a stack</li>	
 	      </ol>
 	    </div>
 	  </div>
@@ -155,10 +154,11 @@
 	      <img src="static/images/openstack-logo.png">
 	      <p>In Glance Images you will find a library of preconfigured images ready to launch virtual machines on your cloud. To use them:</p>            
 	      <ol>
-		<li>Browse the list and find the one you want</li>
-		<li>Download the template yaml file to your local machine</li>
-		<li>Use Horizon to add the template to Heat </li>
-		<li>Use the <a href="http://docs.openstack.org/cli-reference/content/heatclient_commands.html" target="_blank">Heat client</a> to create a stack</li>
+    <li>Browse the list and find the one you want</li>
+    <li>Copy URL for the image file</li>
+    <li>Use the <a href="http://docs.openstack.org/cli-reference/content/glanceclient_commands.html" target="_blank">Glance client</a> to add it to your cloud with the --copy-from option, or add the image from Horizon by specifying the URL as the image location.</li>
+    <li>Use Nova to launch a vm from the new image
+    </li>
 	      </ol>
 	    </div>
 	  </div>
