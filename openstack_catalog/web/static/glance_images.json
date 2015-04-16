@@ -1,7 +1,7 @@
 {
     "images": [
 	{
-	    "image_name": "Ubuntu 12.04 base image",
+	    "name": "Ubuntu 12.04 base image",
 	    "provided_by":
 	    {
 		"name" : "Serg Melikan",
