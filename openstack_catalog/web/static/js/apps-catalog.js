@@ -135,8 +135,10 @@ function showInfoPage (tab, info)
     $("#" + tab + "-info").tmpl(info).appendTo("#info-content");
     $( ".content" ).hide ();
     $( "#info-page" ).show ();
-    $(this).replaceWith ($(this).html().replace (/https?:\/\/[^ \t\n\r]+/gi, '<a target="_blank" href="$&">$&</a>'));
     update_url ({ tab : tab, asset : info.name});
+    $(".value").replaceWith (function(idx, element) {
+        return element.replace (/https?:\/\/[^ \t\n\r]+/gi, '<a target="_blank" href="$&">$&</a>');
+    });
 }
 
 function setupInfoHandler (tab, element_id, info) {

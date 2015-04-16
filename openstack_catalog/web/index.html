@@ -79,8 +79,11 @@
 	<div class="row featured">
 
           <div class="col-md-2 col-sm-6">
-            <h3>Featured Apps</h3>
-            <p>(Requires OpenStack)</p>
+            <div class="inner title">
+              <img/>
+              <h3>Featured Apps</h3>
+              <p>(Requires OpenStack)</p>
+            </div>
           </div>
           <div class="col-md-2 col-sm-6">
             <div class="inner murano">
@@ -120,9 +123,15 @@
 
           <div class="col-md-4 bluebox">
             <div class="inner">
-              <h2>Murano Packages</h2>
-              <img src="static/images/openstack-logo.png">
-              <p>In Murano Packages you will find complete applications, simple and clustered, ready to deploy into your cloud. To use them:</p>
+              <a href="#tab=murano-apps">
+                <h2>Murano Packages</h2>
+                <img src="static/images/murano-diagram.png">
+              </a>
+              <p>
+                In Murano Packages you will find complete
+                applications, simple and clustered, ready to deploy
+                into your cloud. To use them:
+              </p>
               <ol>
                 <li>Verify that you have Murano installed</li>
                 <li>Browse the list and find the app package you want</li>
@@ -136,33 +145,46 @@
 
 	  <div class="col-md-4 bluebox">
 	    <div class="inner">
-	      <h2>Heat Templates</h2>
-	      <img src="static/images/openstack-logo.png" class="text-center">
-	      <p>In Heat Templates you will find templates for creating complete stacks in your cloud. To use them:</p>
+              <a href="#tab=heat-tamplates">
+	        <h2>Heat Templates</h2>
+	        <img src="static/images/heat-diagram.png"
+                     class="text-center">
+              </a>
+	      <p>
+                In Heat Templates you will find templates for creating
+                complete stacks in your cloud. To use them:
+              </p>
 	      <ol>
-    <li>Browse the list and find the one you want</li>
-    <li>Download the template yaml file to your local machine</li>
-    <li>Use Horizon to add the template to Heat </li>
-    <li>Use the <a href="http://docs.openstack.org/cli-reference/content/heatclient_commands.html" target="_blank">Heat client</a> to create a stack</li>
+                <li>Browse the list and find the one you want</li>
+                <li>Download the template yaml file to your local machine</li>
+                <li>Use Horizon to add the template to Heat </li>
+                <li>Use the <a href="http://docs.openstack.org/cli-reference/content/heatclient_commands.html" target="_blank">Heat client</a> to create a stack</li>
 	      </ol>
 	    </div>
 	  </div>
 
 	  <div class="col-md-4 bluebox">
 	    <div class="inner">
-	      <h2>Glance Images</h2>
-	      <img src="static/images/openstack-logo.png">
-	      <p>In Glance Images you will find a library of preconfigured images ready to launch virtual machines on your cloud. To use them:</p>
+              <a href="#tab=glance-images">
+	        <h2>Glance Images</h2>
+	        <img src="static/images/glance-diagram.png">
+              </a>
+              <br/><br/>
+	      <p>
+                In Glance Images you will find a library of
+                preconfigured images ready to launch virtual machines
+                on your cloud. To use them:
+              </p>
 	      <ol>
-    <li>Browse the list and find the one you want</li>
-    <li>Copy URL for the image file</li>
-    <li>Use the <a href="http://docs.openstack.org/cli-reference/content/glanceclient_commands.html" target="_blank">Glance client</a> to add it to your cloud with the --copy-from option, or add the image from Horizon by specifying the URL as the image location.</li>
-    <li>Use Nova to launch a vm from the new image
-    </li>
+                <li>Browse the list and find the one you want</li>
+                <li>Copy URL for the image file</li>
+                <li>Use the <a href="http://docs.openstack.org/cli-reference/content/glanceclient_commands.html" target="_blank">Glance client</a> to add it to your cloud with the --copy-from option, or add the image from Horizon by specifying the URL as the image location.</li>
+                <li>Use Nova to launch a vm from the new image
+                </li>
 	      </ol>
 	    </div>
 	  </div>
-
+          
 	</div>
 
 	<div class="row">

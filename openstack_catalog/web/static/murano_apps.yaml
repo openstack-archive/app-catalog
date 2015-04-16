@@ -22,7 +22,6 @@
       attributes: 
         Mirantis CI status: Passed [6 of 6] tests on OS Juno release
         Source URL: https://github.com/stackforge/murano-apps
-        Documentation: <a href="https://github.com/stackfroge/murano-apps">Docs</a>
     - 
       name: Murano Kubernetes
       package_name: io.murano.apps.kubernetes

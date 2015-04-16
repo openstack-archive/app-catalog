@@ -121,7 +121,7 @@ a.details i {
     border: 1px #ccc solid;
     border-radius: 4px;
     text-align: center;
-     margin: 20px 0 ;
+    margin: 20px 0;
 }
 .featured img {
     max-width: 100%;
@@ -134,6 +134,14 @@ a.details i {
 .featured h3 {
     font-size: 18px;
     text-transform: uppercase;
+    color: #fff !important;
+    text-align: left !important;
+}
+.title {
+    text-align: left;
+    color: #fff;
+    background: #3597da;
+    border: none;
 }
 h1 { 
     color: #2A4E68;
