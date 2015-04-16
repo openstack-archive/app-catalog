@@ -135,9 +135,7 @@ function showInfoPage (tab, info)
     $("#" + tab + "-info").tmpl(info).appendTo("#info-content");
     $( ".content" ).hide ();
     $( "#info-page" ).show ();
-    $('.value').each(function() {
-	$(this).replaceWith ($(this).html().replace (/https?:\/\/[^ \t\n\r]+/gi, '<a target="_blank" href="$&">$&</a>'));
-    });
+    $(this).replaceWith ($(this).html().replace (/https?:\/\/[^ \t\n\r]+/gi, '<a target="_blank" href="$&">$&</a>'));
     update_url ({ tab : tab, asset : info.name});
 }
 
@@ -218,12 +216,13 @@ function initMarketPlace ()
         close: function () { }
     });
 
-    $.ajax({
-        url: make_uri("static/glance_images.json"),
-        dataType: "json",
-
-        success: function (data) {
-	    glance_images = data;
+    $.ajax({ url: "static/glance_images.yaml" }).
+	done (function (data) {
+	    try {
+		glance_images = jsyaml.safeLoad (data);
+	    } catch (e) {
+		console.log ("Failed to load YAML\n" + data);
+	    }
 	    var tableData = glance_images["images"];
 	    for (var i = 0; i < tableData.length; i++) {
 		setupInfoHandler ("glance-images", i, tableData[i]);
@@ -232,15 +231,15 @@ function initMarketPlace ()
 	    initSingleSelector ("glance-supported-by", "supported_by", tableData, show_glance_images);
 	    show_asset ("glance-images", tableData);
 	    show_glance_images ();
-        }
-    });      
+	});      
 
-    $.ajax({
-        url: make_uri("static/heat_templates.json"),
-        dataType: "json",
-
-        success: function (data) {
-	    heat_templates = data;
+    $.ajax({ url: "static/heat_templates.yaml" }).
+	done (function (data) {
+	    try {
+		heat_templates = jsyaml.safeLoad (data);
+	    } catch (e) {
+		console.log ("Failed to load YAML\n" + data);
+	    }
 	    var tableData = heat_templates["templates"];
 	    for (var i = 0; i < tableData.length; i++) {
 		tableData[i].release_html = tableData[i].release.join (", ");
@@ -252,15 +251,15 @@ function initMarketPlace ()
 	    
 	    show_asset ("heat-templates", tableData);
 	    show_heat_templates ();
-        }
-    });      
+	});      
 
-    $.ajax({
-        url: make_uri("static/murano_apps.json"),
-        dataType: "json",
-
-        success: function (data) {
-	    murano_apps = data;
+    $.ajax({ url: "static/murano_apps.yaml" }).
+	done (function (data) {
+	    try {
+		murano_apps = jsyaml.safeLoad (data);
+	    } catch (e) {
+		console.log ("Failed to load YAML\n" + e);
+	    }
 	    var tableData = murano_apps["applications"];
 	    for (var i = 0; i < tableData.length; i++) {
 		tableData[i].release_html = tableData[i].release.join (", ");
@@ -271,8 +270,7 @@ function initMarketPlace ()
 	    initSingleSelector ("murano-release", "release", tableData, show_murano_apps);
 	    show_asset ("murano-apps", tableData);
 	    show_murano_apps ();
-        }
-    });
+	});
 }
 
 function navigate ()

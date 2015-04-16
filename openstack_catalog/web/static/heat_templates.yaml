@@ -1,0 +1,29 @@
+---
+  templates: 
+    - 
+      name: Wordpress
+      provided_by: 
+        name: Max Mazur
+        href: mailto:mmazur@mirantis.com
+        company: Mirantis
+      description: Wordpress HOT template to create a single node instance
+      release: 
+        - Icehouse
+        - Juno
+        - Kilo
+      format: HOT
+      supported_by: Mirantis
+      license: Apache 2.0
+    - 
+      name: OpenShift
+      provided_by: 
+        name: Steve Baker
+        href: mailto:sbaker@redhat.com
+        company: Red Hat
+      description: OpenShift template for OpenShift cluster
+      release: 
+        - Juno
+        - Kilo
+      format: HOT
+      supported_by: Red Hat
+      license: Apache 2.0

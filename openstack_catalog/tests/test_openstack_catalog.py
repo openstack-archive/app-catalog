@@ -20,22 +20,10 @@ Tests for `openstack_catalog` module.
 """
 
 import functools
-import json
-
 import jsonschema
 import six
 import testtools
-
-
-def dict_raise_on_duplicates(ordered_pairs):
-    """Reject duplicate keys."""
-    d = {}
-    for k, v in ordered_pairs:
-        if k in d:
-            raise ValueError("duplicate key: %s (value: %s)" % (k, v))
-        else:
-            d[k] = v
-    return d
+import yaml
 
 
 class TestOpenstack_catalog(testtools.TestCase):
@@ -51,16 +39,9 @@ class TestOpenstack_catalog(testtools.TestCase):
             return content_file.read()
 
     def _read_file(self, file_name):
-        return json.loads(self._read_raw_file(file_name))
+        return yaml.load(self._read_raw_file(file_name))
 
-    def _verify_json_duplicate_keys(self, file_name):
-        try:
-            json.loads(self._read_raw_file(file_name),
-                       object_pairs_hook=dict_raise_on_duplicates)
-        except ValueError as e:
-            self.fail(e)
-
-    def _verify_json_by_schema(self, file_name, schema):
+    def _verify_by_schema(self, file_name, schema):
         data = self._read_file(file_name)
         schema = self._read_file(schema)
         try:
@@ -68,29 +49,17 @@ class TestOpenstack_catalog(testtools.TestCase):
         except jsonschema.ValidationError as e:
             self.fail(e)
 
-    def test_murano_apps_duplicate_keys(self):
-        self._verify_json_duplicate_keys(
-            'openstack_catalog/web/static/murano_apps.json')
-
     def test_murano_apps_schema_conformance(self):
-        self._verify_json_by_schema(
-            'openstack_catalog/web/static/murano_apps.json',
-            'openstack_catalog/web/static/murano_apps.schema.json')
-
-    def test_heat_templates_duplicate_keys(self):
-        self._verify_json_duplicate_keys(
-            'openstack_catalog/web/static/heat_templates.json')
+        self._verify_by_schema(
+            'openstack_catalog/web/static/murano_apps.yaml',
+            'openstack_catalog/web/static/murano_apps.schema.yaml')
 
     def test_heat_templates_schema_conformance(self):
-        self._verify_json_by_schema(
-            'openstack_catalog/web/static/heat_templates.json',
-            'openstack_catalog/web/static/heat_templates.schema.json')
-
-    def test_glance_images_duplicate_keys(self):
-        self._verify_json_duplicate_keys(
-            'openstack_catalog/web/static/glance_images.json')
+        self._verify_by_schema(
+            'openstack_catalog/web/static/heat_templates.yaml',
+            'openstack_catalog/web/static/heat_templates.schema.yaml')
 
     def test_glance_images_schema_conformance(self):
-        self._verify_json_by_schema(
-            'openstack_catalog/web/static/glance_images.json',
-            'openstack_catalog/web/static/glance_images.schema.json')
+        self._verify_by_schema(
+            'openstack_catalog/web/static/glance_images.yaml',
+            'openstack_catalog/web/static/glance_images.schema.yaml')
