@@ -1,38 +1,120 @@
 ---
-  applications: 
+  applications:
+
     - 
-      name: Worpress v 2.1
-      package_name: io.murano.apps.wordpress
+      name: Docker Standalone Host
+      package_name: io.murano.apps.docker.DockerStandaloneHost
       provided_by: 
-        name: Georgy Okrokvertskhov
-        href: mailto:gokrokvertskhov@mirantis.com
+        name: Stan Lagun
+        href: "https://github.com/istalker2"
         company: Mirantis
       description: >
-                   Murano package for Worpress application. Installs a single
-                   VM Wordpress instance with HTTPs services. It can be
-                   connected to a separate instance of MySQL or PostgreDB
-                   databases.
+          Docker is an open platform for developers and sysadmins to build,
+          ship, and run distributed applications. Consisting of Docker Engine,
+          a portable, lightweight runtime and packaging tool, and Docker Hub,
+          a cloud service for sharing applications and automating workflows,
+          Docker enables apps to be quickly assembled from components and
+          eliminates the friction between development, QA, and production
+          environments.
       release: 
-        - Icehouse
-        - Juno
+        - Kilo
+      format: package
+      supported_by: Mirantis
+      license: Apache 2.0
+      attributes:
+        "Source URL": "https://github.com/stackforge/murano-apps"
+        Documentation: "https://github.com/stackforge/murano-apps/blob/master/Docker/Kubernetes/readme.md"
+
+    - 
+      name: Docker Interface Library
+      package_name: io.murano.apps.docker.Interfaces
+      provided_by: 
+        name: Stan Lagun
+        href: "https://github.com/istalker2"
+        company: Mirantis
+      description: >
+        The library provides all necessary interface for Docker and
+        Kubernetes applications
+      release: 
         - Kilo
       format: package
       supported_by: Mirantis
       license: Apache 2.0
       attributes: 
-        Mirantis CI status: Passed [6 of 6] tests on OS Juno release
-        Source URL: https://github.com/stackforge/murano-apps
+        "Source URL": "https://github.com/stackforge/murano-apps"
+        Documentation: "https://github.com/stackforge/murano-apps/blob/master/Docker/Kubernetes/readme.md"
     - 
-      name: Murano Kubernetes
-      package_name: io.murano.apps.kubernetes
+      name: Kubernetes Cluster
+      package_name: io.murano.apps.docker.kubernetes.KubernetesCluster
       provided_by: 
-        name: Jeff Dean
-        href: https://www.google.com/#q=jeff%20dean
-        company: Google
-      description: Kubernetes simple mode
+        name: Stan Lagun
+        href: "https://github.com/istalker2"
+        company: Mirantis
+      description: >
+        Kubernetes is an open source system for managing containerized
+        applications across multiple hosts, providing basic mechanisms
+        for deployment, maintenance, and scaling of applications.
       release: 
-        - Juno
         - Kilo
-      format: bundle
-      supported_by: Google
+      format: package
+      supported_by: Mirantis
       license: Apache 2.0
+      attributes: 
+        "Source URL": "https://github.com/stackforge/murano-apps"
+        Documentation: "https://github.com/stackforge/murano-apps/blob/master/Docker/Kubernetes/readme.md"
+    - 
+      name: Kubernetes static entities
+      package_name: io.murano.apps.docker.kubernetes.static.KubernetesEntities
+      provided_by: 
+        name: Stan Lagun
+        href: "https://github.com/istalker2"
+        company: Mirantis
+      description: >
+         Library provides kubernetes instances that can be constructed
+         from a JSON definition — Pod, Service and ReplicationController
+      release: 
+        - Kilo
+      format: package
+      supported_by: Mirantis
+      license: Apache 2.0
+      attributes: 
+        "Source URL": "https://github.com/stackforge/murano-apps"
+        Documentation: "https://github.com/stackforge/murano-apps/blob/master/Docker/Kubernetes/readme.md"
+    - 
+      name: Kubernetes Pod
+      package_name: io.murano.apps.docker.kubernetes.KubernetesPod
+      provided_by: 
+        name: Stan Lagun
+        href: "https://github.com/istalker2"
+        company: Mirantis
+      description: >
+         Kubernes Pod — A collection of containers which will be scheduled
+         onto the same node, which share and an IP and port space, and which
+         can be created/destroyed together.
+      release: 
+        - Kilo
+      format: package
+      supported_by: Mirantis
+      license: Apache 2.0
+      attributes: 
+        "Source URL": "https://github.com/stackforge/murano-apps"
+        Documentation: "https://github.com/stackforge/murano-apps/blob/master/Docker/Kubernetes/readme.md"
+    - 
+      name: Docker HTTPd
+      package_name: io.murano.apps.docker.DockerHTTPd
+      provided_by: 
+        name: Stan Lagun
+        href: "https://github.com/istalker2"
+        company: Mirantis
+      description: >
+        The Apache HTTP Server, colloquially called Apache, is a Web server
+        application notable for playing a key role in the initial growth of
+        the World Wide Web.
+      release: 
+        - Kilo
+      format: package
+      supported_by: Mirantis
+      license: Apache 2.0
+      attributes: 
+        "Source URL": "https://github.com/stackforge/murano-apps"
+        Documentation: "https://github.com/stackforge/murano-apps/blob/master/Docker/Kubernetes/readme.md"
