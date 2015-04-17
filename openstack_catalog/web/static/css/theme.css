@@ -64,10 +64,6 @@ a {
 .filters #supported-by {
     margin-right: 20px;
 }
-.filters {
-    z-index: 5;
-    position: relative;
-}
 .form-inline label {
     margin-right: 3px;
 }
@@ -160,8 +156,12 @@ h1 {
     background: url(../images/featured-corner-murano.png) no-repeat;
     background-position: top right;
 }
-.navbar-fixed-top {
+.filters {
     z-index: 1;
+    position: relative;
+}
+.navbar-fixed-top {
+    z-index: 2;
 }
 .dataTables_wrapper {
     z-index: 0;
