@@ -23,7 +23,7 @@
             type: string
           package_name: 
             type: string
-            pattern: "^[a-z][a-z0-9_-]+(\\.[a-z0-9_-]+)*$"
+            pattern: "^[a-zA-Z][a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)*$"
           provided_by: 
             type: object
             required: 
