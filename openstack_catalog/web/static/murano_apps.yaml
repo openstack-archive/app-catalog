@@ -1,10 +1,10 @@
 ---
   applications:
 
-    - 
+    -
       name: Docker Standalone Host
       package_name: io.murano.apps.docker.DockerStandaloneHost
-      provided_by: 
+      provided_by:
         name: Stan Lagun
         href: "https://github.com/istalker2"
         company: Mirantis
@@ -16,7 +16,7 @@
           Docker enables apps to be quickly assembled from components and
           eliminates the friction between development, QA, and production
           environments.
-      release: 
+      release:
         - Kilo
       format: package
       supported_by: Mirantis
@@ -25,28 +25,28 @@
         "Source URL": "https://github.com/stackforge/murano-apps"
         Documentation: "https://github.com/stackforge/murano-apps/blob/master/Docker/Kubernetes/readme.md"
 
-    - 
+    -
       name: Docker Interface Library
       package_name: io.murano.apps.docker.Interfaces
-      provided_by: 
+      provided_by:
         name: Stan Lagun
         href: "https://github.com/istalker2"
         company: Mirantis
       description: >
         The library provides all necessary interface for Docker and
         Kubernetes applications
-      release: 
+      release:
         - Kilo
       format: package
       supported_by: Mirantis
       license: Apache 2.0
-      attributes: 
+      attributes:
         "Source URL": "https://github.com/stackforge/murano-apps"
         Documentation: "https://github.com/stackforge/murano-apps/blob/master/Docker/Kubernetes/readme.md"
-    - 
+    -
       name: Kubernetes Cluster
       package_name: io.murano.apps.docker.kubernetes.KubernetesCluster
-      provided_by: 
+      provided_by:
         name: Stan Lagun
         href: "https://github.com/istalker2"
         company: Mirantis
@@ -54,36 +54,36 @@
         Kubernetes is an open source system for managing containerized
         applications across multiple hosts, providing basic mechanisms
         for deployment, maintenance, and scaling of applications.
-      release: 
+      release:
         - Kilo
       format: package
       supported_by: Mirantis
       license: Apache 2.0
-      attributes: 
+      attributes:
         "Source URL": "https://github.com/stackforge/murano-apps"
         Documentation: "https://github.com/stackforge/murano-apps/blob/master/Docker/Kubernetes/readme.md"
-    - 
+    -
       name: Kubernetes static entities
       package_name: io.murano.apps.docker.kubernetes.static.KubernetesEntities
-      provided_by: 
+      provided_by:
         name: Stan Lagun
         href: "https://github.com/istalker2"
         company: Mirantis
       description: >
          Library provides kubernetes instances that can be constructed
          from a JSON definition — Pod, Service and ReplicationController
-      release: 
+      release:
         - Kilo
       format: package
       supported_by: Mirantis
       license: Apache 2.0
-      attributes: 
+      attributes:
         "Source URL": "https://github.com/stackforge/murano-apps"
         Documentation: "https://github.com/stackforge/murano-apps/blob/master/Docker/Kubernetes/readme.md"
-    - 
+    -
       name: Kubernetes Pod
       package_name: io.murano.apps.docker.kubernetes.KubernetesPod
-      provided_by: 
+      provided_by:
         name: Stan Lagun
         href: "https://github.com/istalker2"
         company: Mirantis
@@ -91,18 +91,18 @@
          Kubernes Pod — A collection of containers which will be scheduled
          onto the same node, which share and an IP and port space, and which
          can be created/destroyed together.
-      release: 
+      release:
         - Kilo
       format: package
       supported_by: Mirantis
       license: Apache 2.0
-      attributes: 
+      attributes:
         "Source URL": "https://github.com/stackforge/murano-apps"
         Documentation: "https://github.com/stackforge/murano-apps/blob/master/Docker/Kubernetes/readme.md"
-    - 
+    -
       name: Docker HTTPd
       package_name: io.murano.apps.docker.DockerHTTPd
-      provided_by: 
+      provided_by:
         name: Stan Lagun
         href: "https://github.com/istalker2"
         company: Mirantis
@@ -110,11 +110,29 @@
         The Apache HTTP Server, colloquially called Apache, is a Web server
         application notable for playing a key role in the initial growth of
         the World Wide Web.
-      release: 
+      release:
         - Kilo
       format: package
       supported_by: Mirantis
       license: Apache 2.0
-      attributes: 
+      attributes:
+        "Source URL": "https://github.com/stackforge/murano-apps"
+        Documentation: "https://github.com/stackforge/murano-apps/blob/master/Docker/Kubernetes/readme.md"
+    -
+      name: Docker & Kubernes Bundle
+      package_name: docker_kubernetes
+      provided_by:
+        name: Stan Lagun
+        href: "https://github.com/istalker2"
+        company: Mirantis
+      description: >
+        Bundle consists of DockerStandaloneHost and KubernetesPod/Cluster,
+        required to build your onw Docker/Kuernetes-enabled applications
+      release:
+        - Kilo
+      format: bundle
+      supported_by: Mirantis
+      license: Apache 2.0
+      attributes:
         "Source URL": "https://github.com/stackforge/murano-apps"
         Documentation: "https://github.com/stackforge/murano-apps/blob/master/Docker/Kubernetes/readme.md"
