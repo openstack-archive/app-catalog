@@ -1,27 +1,43 @@
 ---
-  templates: 
-    - 
-      name: Wordpress
-      provided_by: 
-        name: Max Mazur
-        href: mailto:mmazur@mirantis.com
+  templates:
+    -
+      name: Hello World
+      provided_by:
+        name: ' '
+        href: mailto:support@mirantis.com
         company: Mirantis
-      description: Wordpress HOT template to create a single node instance
-      release: 
+      description: This is a hello world HOT template just defining a single compute server.
+      release:
         - Icehouse
         - Juno
         - Kilo
       format: HOT
       supported_by: Mirantis
       license: Apache 2.0
-    - 
+      attributes:
+        url: http://storage.catalog.mirantis.com/hot/hello_world.yaml
+    -
+      name: Wordpress
+      provided_by:
+        name: Max Mazur
+        href: mailto:mmazur@mirantis.com
+        company: Mirantis
+      description: Wordpress HOT template to create a single node instance
+      release:
+        - Icehouse
+        - Juno
+        - Kilo
+      format: HOT
+      supported_by: Mirantis
+      license: Apache 2.0
+    -
       name: OpenShift
-      provided_by: 
+      provided_by:
         name: Steve Baker
         href: mailto:sbaker@redhat.com
         company: Red Hat
       description: OpenShift template for OpenShift cluster
-      release: 
+      release:
         - Juno
         - Kilo
       format: HOT
