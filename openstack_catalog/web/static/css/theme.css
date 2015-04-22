@@ -127,11 +127,12 @@ a.details i {
     margin-bottom: 0;
     font-size: .9em;
 }
-.featured h3 {
+.title div {
     font-size: 18px;
     text-transform: uppercase;
-    color: #fff !important;
-    text-align: left !important;
+    color: #fff;
+    text-align: left;
+    font-weight: 700;
 }
 .title {
     text-align: left;
@@ -207,10 +208,6 @@ h1 {
 }
 .masthead h1 a:active, .masthead h1 a:focus {
     text-decoration: none;
-}
-.featured h3 {
-    color: #3597da;
-    font-weight: 700;
 }
 .form-group {
     margin-left: 15px;

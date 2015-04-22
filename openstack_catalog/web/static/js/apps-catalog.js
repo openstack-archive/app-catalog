@@ -204,7 +204,7 @@ function initMarketPlace ()
 {
     navigate ();
     initTabs ();
-    $( ".inner" ).matchHeight ();
+    $( "div.featured > div > div" ).matchHeight ();
     
     $("#info-dialog").dialog({
         autoOpen: false,
