@@ -1,6 +1,6 @@
 ---
-  images: 
-    - 
+  images:
+    -
       name: ubuntu14.04-x64-docker
       provided_by:
         name: Stan Lagun
@@ -13,13 +13,26 @@
       attributes:
         url: http://storage.catalog.mirantis.com/images/ubuntu14.04-x64-docker.qcow2
         hash: dd69232d1a745a7b237bd8d5e9e8485a
-    - 
+    -
       name: ubuntu14.04-x64-kubernetes
       provided_by:
         name: Stan Lagun
         href: mailto:slagun@mirantis.com
         company: Mirantis
       description: Base Ubuntu 14.04 with docker
+      format: QCOW2
+      supported_by: Mirantis
+      license: GPL 2.0
+      attributes:
+        url: http://storage.catalog.mirantis.com/images/ubuntu14.04-x64-kubernetes.qcow2
+        hash: e7a843811aab86040f672b1254037a7f
+    -
+      name: ubuntu14.04-x64
+      provided_by:
+        name: Sergey Kolekonov
+        href: mailto:skolekonov@mirantis.com
+        company: Mirantis
+      description: Base Ubuntu 14.04
       format: QCOW2
       supported_by: Mirantis
       license: GPL 2.0
