@@ -7,7 +7,7 @@
         href: mailto:slagun@mirantis.com
         company: Mirantis
       description: Base Ubuntu 14.04 with docker
-      format: QCOW2
+      format: qcow2
       supported_by: Mirantis
       license: GPL 2.0
       attributes:
