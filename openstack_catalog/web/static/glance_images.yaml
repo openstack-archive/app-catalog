@@ -26,3 +26,69 @@
       attributes:
         url: http://storage.catalog.mirantis.com/images/ubuntu14.04-x64-kubernetes.qcow2
         hash: e7a843811aab86040f672b1254037a7f
+    -
+      name: Ubuntu Trusty 14
+      provided_by:
+        name: Canonical
+        company: Canonical
+      description: Base Ubuntu 14.04 with cloud_init
+      format: QCOW2
+      attributes:
+        url: http://uec-images.ubuntu.com/trusty/current/trusty-server-cloudimg-amd64-disk1.img
+        hash: unknown
+    -
+      name: CentOS 6
+      provided_by:
+        name: CentOS
+        company: CentOS
+      description: Base CentOS 6 with cloud_init
+      format: QCOW2
+      attributes:
+        url: http://cloud.centos.org/centos/6/images/CentOS-6-x86_64-GenericCloud-20141129_01.qcow2
+        hash: f5729dd91bb45d3210a3bcc52534cc7307fbed4d01b0e7810533f727763c1038
+    -
+      name: CentOS 7
+      provided_by:
+        name: CentOS
+        company: CentOS
+      description: Base CentOS 7 with cloud_init
+      format: QCOW2
+      attributes:
+        url: http://cloud.centos.org/centos/7/images/CentOS-7-x86_64-GenericCloud.qcow2
+        hash: e324e3ab1d24a1bbf035ddb365e7f9058c0b454acf48d7aa15c5519fae5998ab
+    -
+      name: CirrOS
+      provided_by:
+        name: CirrOS
+        company: CirrOS
+      description: Tiny OS meant to run on a cloud
+      attributes:
+        url: http://download.cirros-cloud.net/0.3.3/cirros-0.3.3-x86_64-disk.img
+        hash: f11286e2bd317ee1a1d0469a6b182b33bda4af6f35ba224ca49d75752c81e20a
+    -
+      name: Fedora 21
+      provided_by: Fedora
+        name: Fedora
+        company: Fedora
+      description: Fedora 21 base image with cloud_init
+      attributes:
+        url: http://download.fedoraproject.org/pub/fedora/linux/releases/21/Cloud/Images/x86_64/Fedora-Cloud-Base-20141203-21.x86_64.qcow2
+        hash: 3a99bb89f33e3d4ee826c8160053cdb8a72c80cd23350b776ce73cd244467d86
+    -
+      name: Debian
+      provided_by: Debian
+        name: Debian
+        company: Debian
+      description: Debian base image with cloud_init
+      attributes:
+        url: http://cdimage.debian.org/cdimage/openstack/testing/debian-testing-openstack-amd64.qcow2
+        hash: unknown
+    -
+      name: Windows Server 2012 R2
+      provided by: Cloudbase
+        name: Cloudbase
+        company: Cloudbase
+      description: Windows Server 2012 R2 image with cloud_init
+      attributes:
+        url: http://www.cloudbase.it/ws2012r2/
+        hash: unknown
