@@ -92,3 +92,12 @@
       attributes:
         url: http://www.cloudbase.it/ws2012r2/
         hash: unknown
+    -
+      name: Test Image
+      provided_by:
+        name: John Doe
+        company: Example Inc
+      description: Lorem Ipsum
+      attributes:
+        url: http://www.rexample.it/test.qcow
+        hash: unknown
