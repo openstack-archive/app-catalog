@@ -103,6 +103,10 @@ function populate_table (table_id, table_column_names, tableData)
     var tableColumns = [];
     for (var i = 0; i < table_column_names.length; i++) {
         tableColumns.push({"mData": table_column_names[i]});
+        for (var j = 0; j < tableData.length; j++) {
+            if (!(table_column_names[i] in tableData[j]))
+                tableData[j][table_column_names[i]] = "";
+        }
     }
 
     if (table_id) {
