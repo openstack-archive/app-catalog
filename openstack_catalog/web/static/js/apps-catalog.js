@@ -48,7 +48,8 @@ function initSingleSelector(selector_id, property, dataSet, update_handler) {
 
     var result = [];
     for (var value in values)
-        result.push({"id": value, "text": value});
+        if (value)
+            result.push({"id": value, "text": value});
 
     $("#" + selector_id).
 	val (getUrlVars()[property]).
@@ -234,9 +235,9 @@ function initMarketPlace ()
 		setupInfoHandler ("glance-images", i, tableData[i]);
 	    }
 	    
-	    initSingleSelector ("glance-supported-by", "supported_by", tableData, show_glance_images);
 	    show_asset ("glance-images", tableData);
 	    show_glance_images ();
+	    initSingleSelector ("glance-supported-by", "supported_by", tableData, show_glance_images);
 	});      
 
     $.ajax({ url: "static/heat_templates.yaml" }).
@@ -252,11 +253,11 @@ function initMarketPlace ()
 		setupInfoHandler ("heat-templates", i, tableData[i]);
 	    }
 	    
-	    initSingleSelector ("heat-supported-by", "supported_by", tableData, show_heat_templates);
-	    initSingleSelector ("heat-release", "release", tableData, show_heat_templates);
-	    
 	    show_asset ("heat-templates", tableData);
 	    show_heat_templates ();
+
+	    initSingleSelector ("heat-supported-by", "supported_by", tableData, show_heat_templates);
+	    initSingleSelector ("heat-release", "release", tableData, show_heat_templates);
 	});      
 
     $.ajax({ url: "static/murano_apps.yaml" }).
@@ -272,11 +273,12 @@ function initMarketPlace ()
 		setupInfoHandler ("murano-apps", i, tableData[i]);
 	    }
 	    
-	    initSingleSelector ("murano-supported-by", "supported_by", tableData, show_murano_apps);
-	    initSingleSelector ("murano-release", "release", tableData, show_murano_apps);
 	    show_asset ("murano-apps", tableData);
 	    show_murano_apps ();
-	});
+
+	    initSingleSelector ("murano-supported-by", "supported_by", tableData, show_murano_apps);
+	    initSingleSelector ("murano-release", "release", tableData, show_murano_apps);
+        });
 }
 
 function navigate ()
