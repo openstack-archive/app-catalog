@@ -17,19 +17,42 @@
       attributes:
         url: http://storage.catalog.mirantis.com/hot/hello_world.yaml
     -
-      name: Wordpress
+      name: Gitlab CE
       provided_by:
-        name: Max Mazur
-        href: mailto:mmazur@mirantis.com
-        company: Mirantis
-      description: Wordpress HOT template to create a single node instance
+        name: Rackspace
+        company: Rackspace
+      description: >
+          This is a template to deploy Gitlab on a
+          single Linux server with OpenStack Heat.
+          This template uses chef-solo to configure the server.
       release:
         - Icehouse
         - Juno
         - Kilo
       format: HOT
-      supported_by: Mirantis
+      supported_by: Rackspace
       license: Apache 2.0
+      attributes:
+        url: https://github.com/rackspace-orchestration-templates/gitlab
+    -
+      name: Minecraft
+      provided_by:
+        name: Rackspace
+        company: Rackspace
+      description: >
+          This is a Heat template to deploy a
+          single Linux server running a Minecraft
+          server. The Minecraft server will be
+          setup leveraging Chef solo.
+      release:
+        - Icehouse
+        - Juno
+        - Kilo
+      format: HOT
+      supported_by: Rackspace
+      license: Apache 2.0
+      attributes:
+        url: https://github.com/rackspace-orchestration-templates/minecraft
     -
       name: OpenShift
       provided_by:
@@ -43,3 +66,5 @@
       format: HOT
       supported_by: Red Hat
       license: Apache 2.0
+      attributes:
+        url: https://github.com/openstack/heat-templates/tree/master/openshift-origin/centos65
