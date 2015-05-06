@@ -353,6 +353,10 @@
     <script id="glance-images-info" type="text/x-jquery-tmpl">
 
       <h2>${name} (${format})</h2>
+      <div>
+      <span class="label">glance image-create:</span>
+      <input type="text" value="glance image-create --copy-from ${attributes['url']} --disk-format ${format} --container-format bare --name '${name}'" onfocus="this.select();" onmouseup="return false;">
+      </div>
       <div><span class="label">Supported by</span> <span class="value">${supported_by}</span></div>
       <div><span class="label">Description:</span> <span class="value">${description}</span></div>
 
