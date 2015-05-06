@@ -353,7 +353,9 @@
     <script id="glance-images-info" type="text/x-jquery-tmpl">
 
       <h2>${name} (${format})</h2>
+      {{if supported_by}}
       <div><span class="label">Supported by</span> <span class="value">${supported_by}</span></div>
+      {{/if}}
       <div><span class="label">Description:</span> <span class="value">${description}</span></div>
 
       <h3>Author</h3>
@@ -373,7 +375,9 @@
     <script id="heat-templates-info" type="text/x-jquery-tmpl">
 
       <h2>${name} (${format})</h2>
+      {{if supported_by}}
       <div><span class="label">Supported by</span> <span class="value">${supported_by}</span></div>
+      {{/if}}
       <div><span class="label">Description:</span> <span class="value">${description}</span></div>
       <div><span class="label">Available in Releases:</span> <span class="value">${release_html}</span></div>
 
@@ -405,8 +409,10 @@
       <h3>Supported OpenStack Releases</h3>
       <div><span class="value">${release_html}</span></div>
 
+      {{if supported_by}}
       <h3>Support</h3>
       <div><span class="label">Supported by:</span> <span class="value">${supported_by}</span></div>
+      {{/if}}
 
       <h3>Author</h3>
       <div><span class="label">Contact:	</span><a href="${provided_by.href}"> <span class="value">${provided_by.name}</span> </a></div>
