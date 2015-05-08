@@ -62,6 +62,7 @@
         name: CirrOS
         company: CirrOS
       description: Tiny OS meant to run on a cloud
+      format: QCOW2
       attributes:
         url: http://download.cirros-cloud.net/0.3.3/cirros-0.3.3-x86_64-disk.img
         hash: f11286e2bd317ee1a1d0469a6b182b33bda4af6f35ba224ca49d75752c81e20a
@@ -71,6 +72,7 @@
         name: Fedora
         company: Fedora
       description: Fedora 21 base image with cloud_init
+      format: QCOW2
       attributes:
         url: http://download.fedoraproject.org/pub/fedora/linux/releases/21/Cloud/Images/x86_64/Fedora-Cloud-Base-20141203-21.x86_64.qcow2
         hash: 3a99bb89f33e3d4ee826c8160053cdb8a72c80cd23350b776ce73cd244467d86
@@ -80,6 +82,7 @@
         name: Debian
         company: Debian
       description: Debian base image with cloud_init
+      format: QCOW2
       attributes:
         url: http://cdimage.debian.org/cdimage/openstack/testing/debian-testing-openstack-amd64.qcow2
         hash: unknown
