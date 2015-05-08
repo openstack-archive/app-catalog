@@ -13,8 +13,6 @@
           - provided_by
           - description
           - format
-          - supported_by
-          - license
         additionalProperties: true
         properties: 
           name: 
@@ -40,10 +38,6 @@
             enum: 
               - QCOW2
               - VMDK
-          supported_by: 
-            type: string
-          license: 
-            type: string
           attributes: 
             type: object
             additionalProperties: true

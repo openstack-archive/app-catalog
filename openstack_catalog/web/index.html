@@ -12,7 +12,7 @@
     <meta name="keywords" content="openstack, glance images, heat templates, murano applications" />
     <meta name="author" content="Mirantis on behalf of OpenStack Foundation" />
 
-    <title>OpenStack Application Catalog</title>
+    <title>Community App Catalog</title>
 
     <link href="/static/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     
@@ -53,7 +53,7 @@
     <div class="masthead navbar-fixed-top">
       <div class="container">
         <a class="navbar-brand" href="https://www.openstack.org" target="_blank"></a>
-	<h1><a href="#">Application Catalog</a></h1>
+	<h1><a href="#">Community App Catalog <sup><small>&beta;</small></sup></a></h1>
       </div>
 
       <nav class="navbar navbar-inverse">
@@ -211,13 +211,7 @@
 
 	<div class="row">
 	  <div class="col-md-6 filters">
-	    <form class="form-inline">
-              <div class="form-group">
-		<label>Supported by</label>
-		<input type="hidden" id="glance-supported-by"
-		       style="width:10em" data-placeholder="Any vendor"/>
-              </div>
-	    </form>
+            &nbsp;
 	  </div>
 	</div>
 
@@ -229,8 +223,6 @@
 		  <th>Image&nbsp;Name</th>
 		  <th>Description</th>
 		  <th>Format</th>
-		  <th>Supported&nbsp;by</th>
-		  <th>License</th>
 		</tr>
               </thead>
 	    </table>
@@ -244,12 +236,6 @@
 	<div class="row">
 	  <div class="col-md-6 filters">
 	    <form class="form-inline">
-              <div class="form-group">
-		<label>Supported by</label>
-		<input type="hidden" id="heat-supported-by"
-		       style="width:10em" data-placeholder="Any vendor"/>
-              </div>
-
               <div class="form-group">
 		<label>Release</label>
 		<input type="hidden" id="heat-release"
@@ -268,8 +254,6 @@
 		  <th>Description</th>
 		  <th>Release</th>
 		  <th>Format</th>
-		  <th>Supported&nbsp;by</th>
-		  <th>License</th>
 		</tr>
               </thead>
 	    </table>
@@ -283,12 +267,6 @@
 	<div class="row">
 	  <div class="col-md-6 filters">
 	    <form class="form-inline">
-              <div class="form-group">
-		<label>Supported by</label>
-		<input type="hidden" id="murano-supported-by"
-		       style="width:10em" data-placeholder="Any vendor"/>
-              </div>
-
               <div class="form-group">
 		<label>Release</label>
 		<input type="hidden" id="murano-release"
@@ -307,8 +285,6 @@
 		  <th>Description</th>
 		  <th>Release</th>
 		  <th>Format</th>
-		  <th>Supported&nbsp;by</th>
-		  <th>License</th>
 		</tr>
               </thead>
 	    </table>
