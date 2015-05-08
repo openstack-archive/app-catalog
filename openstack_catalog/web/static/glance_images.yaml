@@ -1,6 +1,6 @@
 ---
-  images: 
-    - 
+  images:
+    -
       name: ubuntu14.04-x64-docker
       provided_by:
         name: Stan Lagun
@@ -13,7 +13,7 @@
       attributes:
         url: http://storage.catalog.mirantis.com/images/ubuntu14.04-x64-docker.qcow2
         hash: dd69232d1a745a7b237bd8d5e9e8485a
-    - 
+    -
       name: ubuntu14.04-x64-kubernetes
       provided_by:
         name: Stan Lagun
@@ -95,3 +95,15 @@
       attributes:
         url: http://www.cloudbase.it/ws2012r2/
         hash: unknown
+    -
+      name: Debian 8 x64 (pre-installed murano-agent)
+      provided_by:
+        name: Alexey Deryugin
+        href: mailto:aderyugin@mirantis.com
+        company: Mirantis, Inc.
+      description: Base Debian Jessie x64 image with murano-agent pre-installed
+      format: QCOW2
+      license: GPL 2.0
+      attributes:
+        url: http://storage.catalog.mirantis.com/images/debian-8-m-agent.qcow2
+        hash: c05398176ff18ca4d011b3550fa174e3
