@@ -1,0 +1,9 @@
+Verified+2: Jenkins
+Code-Review+2: Serg Melikyan <smelikyan@mirantis.com>
+Workflow+1: Serg Melikyan <smelikyan@mirantis.com>
+Code-Review+1: David Fishman <dfishman@mirantis.com>
+Submitted-by: Jenkins
+Submitted-at: Fri, 08 May 2015 08:25:34 +0000
+Reviewed-on: https://review.openstack.org/180314
+Project: stackforge/apps-catalog
+Branch: refs/heads/master
