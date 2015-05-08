@@ -136,3 +136,156 @@
       attributes:
         "Source URL": "https://github.com/stackforge/murano-apps"
         Documentation: "https://github.com/stackforge/murano-apps/blob/master/Docker/Kubernetes/readme.md"
+    -
+      name: Apache HTTP Server
+      package_name: io.murano.apps.apache.ApacheHttpServer
+      provided_by:
+        name: Murano Apps Repository
+        href: "https://github.com/openstack/murano-apps"
+        company: Mirantis, Inc.
+      description: >
+         The Apache HTTP Server, colloquially called Apache, is a Web server
+         application notable for playing a key role in the initial growth of
+         the World Wide Web. Originally based on the NCSA HTTPd server,
+         development of Apache began in early 1995 after work on the NCSA code
+         stalled.
+
+         Apache quickly overtook NCSA HTTPd as the dominant HTTP server, and
+         has remained the most popular HTTP server in use since April 1996.
+      release:
+        - Kilo
+      format: package
+      license: Apache 2.0
+      attributes:
+        "Package URL": "http://storage.catalog.mirantis.com/apps/io.murano.apps.apache.ApacheHttpServer.zip"
+        "Source URL": "https://github.com/openstack/murano-apps/tree/master/ApacheHTTPServer/package"
+    -
+      name: MySQL
+      package_name: io.murano.databases.MySql
+      provided_by:
+        name: Murano Apps Repository
+        href: "https://github.com/openstack/murano-apps"
+        company: Mirantis, Inc.
+      description: >
+         MySQL is a freely available open source Relational Database
+         Management System (RDBMS) that uses Structured Query Language (SQL).
+
+         SQL is the most popular language for adding, accessing and managing
+         content in a database. It is most noted for its quick processing,
+         proven reliability, ease and flexibility of use.
+      release:
+        - Kilo
+      format: package
+      license: Apache 2.0
+      attributes:
+        "Package URL": "http://storage.catalog.mirantis.com/apps/io.murano.databases.MySql.zip"
+        "Source URL": "https://github.com/openstack/murano-apps/tree/master/MySQL/package"
+    -
+      name: PostgreSql
+      package_name: io.murano.databases.PostgreSql
+      provided_by:
+        name: Murano Apps Repository
+        href: "https://github.com/openstack/murano-apps"
+        company: Mirantis, Inc.
+      description: >
+         PostgreSQL is a powerful, open source object-relational database
+         system. It has more than 15 years of active development and
+         a proven architecture that has earned it a strong reputation
+         for reliability, data integrity, and correctness.
+      release:
+        - Kilo
+      format: package
+      license: Apache 2.0
+      attributes:
+        "Package URL": "http://storage.catalog.mirantis.com/apps/io.murano.databases.PostgreSql.zip"
+        "Source URL": "https://github.com/openstack/murano-apps/tree/master/PostgreSQL/package"
+    -
+      name: SqlDatabase Library
+      package_name: io.murano.databases.SqlDatabase
+      provided_by:
+        name: Murano Apps Repository
+        href: "https://github.com/openstack/murano-apps"
+        company: Mirantis, Inc.
+      description: >
+         This is the interface defining API for different SQL - RDBMS databases
+      release:
+        - Kilo
+      format: package
+      license: Apache 2.0
+      attributes:
+        "Package URL": "http://storage.catalog.mirantis.com/apps/io.murano.databases.SqlDatabase.zip"
+        "Source URL": "https://github.com/openstack/murano-apps/tree/master/SQLDatabaseLibrary/package"
+    -
+      name: Apache Tomcat
+      package_name: io.murano.apps.apache.Tomcat
+      provided_by:
+        name: Murano Apps Repository
+        href: "https://github.com/openstack/murano-apps"
+        company: Mirantis, Inc.
+      description: >
+         Apache Tomcat is an open source software implementation of the Java Servlet and JavaServer Pages technologies.
+      release:
+        - Kilo
+      format: package
+      license: Apache 2.0
+      attributes:
+        "Package URL": "http://storage.catalog.mirantis.com/apps/io.murano.apps.apache.Tomcat.zip"
+        "Source URL": "https://github.com/openstack/murano-apps/tree/master/Tomcat/package"
+    -
+      name: WordPress
+      package_name: io.murano.apps.WordPress
+      provided_by:
+        name: Murano Apps Repository
+        href: "https://github.com/openstack/murano-apps"
+        company: Mirantis, Inc.
+      description: >
+         WordPress is a free and open source blogging tool and a content management system (CMS) based on PHP and MySQL.
+      release:
+        - Kilo
+      format: package
+      license: Apache 2.0
+      attributes:
+        "Package URL": "http://storage.catalog.mirantis.com/apps/io.murano.apps.WordPress.zip"
+        "Source URL": "https://github.com/openstack/murano-apps/tree/master/WordPress/package"
+    -
+      name: Zabbix Agent
+      package_name: io.murano.apps.ZabbixAgent
+      provided_by:
+        name: Murano Apps Repository
+        href: "https://github.com/openstack/murano-apps"
+        company: Mirantis, Inc.
+      description: >
+         Zabbix Agent is deployed on a monitoring target to actively monitor
+         local resources and applications (hard drives, memory, processor
+         statistics etc).
+
+         Zabbix is the ultimate open source availability and performance
+         monitoring solution. Zabbix offer advance monitoring, alerting, and
+         visualization features today which are missing in other monitoring
+         system, even some of the best commercial ones.
+      release:
+        - Kilo
+      format: package
+      license: Apache 2.0
+      attributes:
+        "Package URL": "http://storage.catalog.mirantis.com/apps/io.murano.apps.ZabbixAgent.zip"
+        "Source URL": "https://github.com/openstack/murano-apps/tree/master/ZabbixAgent/package"
+    -
+      name: Zabbix
+      package_name: io.murano.apps.ZabbixServer
+      provided_by:
+        name: Murano Apps Repository
+        href: "https://github.com/openstack/murano-apps"
+        company: Mirantis, Inc.
+      description: >
+         Zabbix is the ultimate open source availability and performance
+         monitoring solution. Zabbix offer advance monitoring, alerting, and
+         visualization features today which are missing in other monitoring
+         system, even some of the best commercial ones.
+      release:
+        - Kilo
+      format: package
+      license: Apache 2.0
+      attributes:
+        "Package URL": "http://storage.catalog.mirantis.com/apps/io.murano.apps.ZabbixServer.zip"
+        "Source URL": "https://github.com/openstack/murano-apps/tree/master/ZabbixServer/package"
