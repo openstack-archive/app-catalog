@@ -17,29 +17,81 @@
       attributes:
         url: http://storage.catalog.mirantis.com/hot/hello_world.yaml
     -
-      name: Wordpress
+      name: Gitlab CE
       provided_by:
-        name: Max Mazur
-        href: mailto:mmazur@mirantis.com
-        company: Mirantis
-      description: Wordpress HOT template to create a single node instance
+        name: Rackspace
+        company: Rackspace
+      description: >
+          This is a template to deploy Gitlab on a
+          single Linux server with OpenStack Heat.
+          This template uses chef-solo to configure the server.
+          More details on usage and options can be found at:
+          https://github.com/rackspace-orchestration-templates/gitlab
       release:
         - Icehouse
         - Juno
         - Kilo
       format: HOT
-      supported_by: Mirantis
+      supported_by: Rackspace
       license: Apache 2.0
+      attributes:
+        url: https://github.com/rackspace-orchestration-templates/gitlab/blob/master/gitlab.yaml
     -
-      name: OpenShift
+      name: Minecraft
+      provided_by:
+        name: Rackspace
+        company: Rackspace
+      description: >
+          This is a Heat template to deploy a
+          single Linux server running a Minecraft
+          server. The Minecraft server will be
+          setup leveraging Chef solo.
+          More details on usage and options can be found at:
+          https://github.com/rackspace-orchestration-templates/minecraft
+      release:
+        - Icehouse
+        - Juno
+        - Kilo
+      format: HOT
+      supported_by: Rackspace
+      license: Apache 2.0
+      attributes:
+        url: https://github.com/rackspace-orchestration-templates/minecraft/blob/master/minecraft-server.yaml
+    -
+      name: OpenShift-CentOS65
       provided_by:
         name: Steve Baker
         href: mailto:sbaker@redhat.com
         company: Red Hat
-      description: OpenShift template for OpenShift cluster
+      description: >
+          This is an OpenShift template for deploying an OpenShift
+          cluster on a CentOS 6.5 VM. More details on usage and
+          options can be found at:
+          https://github.com/openstack/heat-templates/tree/master/openshift-origin/centos65
       release:
         - Juno
         - Kilo
       format: HOT
       supported_by: Red Hat
       license: Apache 2.0
+      attributes:
+        url: https://github.com/openstack/heat-templates/blob/master/openshift-origin/centos65/OpenShift.yaml
+    -
+      name: OpenShift-F19
+      provided_by:
+        name: Steve Baker
+        href: mailto:sbaker@redhat.com
+        company: Red Hat
+      description: >
+          This is an OpenShift template for deploying an OpenShift
+          cluster on a Fedora 19 VM. More details on usage and
+          options can be found at:
+          https://github.com/openstack/heat-templates/tree/master/openshift-origin/F19
+      release:
+        - Juno
+        - Kilo
+      format: HOT
+      supported_by: Red Hat
+      license: Apache 2.0
+      attributes:
+        url: https://github.com/openstack/heat-templates/blob/master/openshift-origin/F19/hot-template/openshift/openshift.yaml
