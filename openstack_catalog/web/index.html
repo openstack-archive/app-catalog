@@ -12,7 +12,7 @@
     <meta name="keywords" content="openstack, glance images, heat templates, murano applications" />
     <meta name="author" content="Mirantis on behalf of OpenStack Foundation" />
 
-    <title>OpenStack Application Catalog</title>
+    <title>OpenStack Community Application Catalog</title>
 
     <link href="/static/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     
@@ -39,8 +39,8 @@
 
     <!-- Google Tag Manager -->
     <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-K2J65K"
-		      height="0" width="0"
-		      style="display:none;visibility:hidden"></iframe></noscript>
+                      height="0" width="0"
+                      style="display:none;visibility:hidden"></iframe></noscript>
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
       new Date().getTime(),event:'gtm.js'});var
       f=d.getElementsByTagName(s)[0],
@@ -53,11 +53,11 @@
     <div class="masthead navbar-fixed-top">
       <div class="container">
         <a class="navbar-brand" href="https://www.openstack.org" target="_blank"></a>
-	<h1><a href="#">Application Catalog</a></h1>
+        <h1><a href="#">[Beta] Community Application Catalog</a></h1>
       </div>
 
       <nav class="navbar navbar-inverse">
-	<div class="container">
+        <div class="container">
           <div class="navbar-collapse collapse">
             <ul id="navbar" class="nav navbar-nav">
               <li><a href="#murano-apps">Murano packages</a></li>
@@ -65,7 +65,7 @@
               <li><a href="#glance-images">Glance Images</a></li>
             </ul>
           </div>
-	</div>
+        </div>
       </nav>
 
     </div>
@@ -77,8 +77,8 @@
 
       <div id="landing-page" class="content" style="display:none">
 
-        <h1>The OpenStack Application Catalog will help you make applications available on your cloud. </h1>
-	<div class="row featured">
+        <h1>The OpenStack Community Application Catalog will help you make applications available on your cloud. </h1>
+        <div class="row featured">
 
           <div class="col-md-2 col-sm-6">
             <div class="inner title">
@@ -118,9 +118,9 @@
               <p>Wordpress</p>
             </div>
           </div>
-	</div>
+        </div>
         <p><strong>Don't have OpenStack yet?</strong></p>
-        <p>Get over to the <a href="https://www.openstack.org/marketplace/" target="_blank">OpenStack Marketplace</a> and find the best way to build your cloud. Once you have a cloud come back to the OpenStack Application Catalog to make your cloud sing with applications.</p>
+        <p>Get over to the <a href="https://www.openstack.org/marketplace/" target="_blank">OpenStack Marketplace</a> and find the best way to build your cloud. Once you have a cloud come back to the OpenStack Community Application Catalog to make your cloud sing with applications.</p>
 
         <div class="row">
 
@@ -140,193 +140,193 @@
                 <li>Browse the list and find the app package you want</li>
                 <li>Copy the name of the app package</li>
                 <li>In Horizon navigate to Murano &gt; Manage &gt; Package Definitions and click Import Package</li>
-		<li>Paste the app package name, and click Next</li>
-		<li>You can now deploy the app into your cloud using Horizon, by navigating to Application Catalog &gt; Environments, creating and deploying that environment.</li>
-	      </ol>
-	    </div>
-	  </div>
+        	<li>Paste the app package name, and click Next</li>
+        	<li>You can now deploy the app into your cloud using Horizon, by navigating to Community Application Catalog &gt; Environments, creating and deploying that environment.</li>
+              </ol>
+            </div>
+          </div>
 
-	  <div class="col-md-4 bluebox">
-	    <div class="inner">
+          <div class="col-md-4 bluebox">
+            <div class="inner">
               <a href="#tab=heat-templates">
-	        <h2>Heat Templates</h2>
-	        <img src="static/images/heat-diagram.png"
+                <h2>Heat Templates</h2>
+                <img src="static/images/heat-diagram.png"
                      class="text-center">
               </a>
-	      <p>
+              <p>
                 In Heat Templates you will find templates for creating
                 complete stacks in your cloud. To use them:
               </p>
-	      <ol>
+              <ol>
                 <li>Browse the list and find the one you want</li>
                 <li>Download the template yaml file to your local machine</li>
                 <li>Use Horizon to add the template to Heat </li>
                 <li>Use the <a href="http://docs.openstack.org/cli-reference/content/heatclient_commands.html" target="_blank">Heat client</a> to create a stack</li>
-	      </ol>
-	    </div>
-	  </div>
+              </ol>
+            </div>
+          </div>
 
-	  <div class="col-md-4 bluebox">
-	    <div class="inner">
+          <div class="col-md-4 bluebox">
+            <div class="inner">
               <a href="#tab=glance-images">
-	        <h2>Glance Images</h2>
-	        <img src="static/images/glance-diagram.png">
+                <h2>Glance Images</h2>
+                <img src="static/images/glance-diagram.png">
               </a>
               <br/><br/>
-	      <p>
+              <p>
                 In Glance Images you will find a library of
                 preconfigured images ready to launch virtual machines
                 on your cloud. To use them:
               </p>
-	      <ol>
+              <ol>
                 <li>Browse the list and find the one you want</li>
                 <li>Copy URL for the image file</li>
                 <li>Use the <a href="http://docs.openstack.org/cli-reference/content/glanceclient_commands.html" target="_blank">Glance client</a> to add it to your cloud with the --copy-from option, or add the image from Horizon by specifying the URL as the image location.</li>
                 <li>Use Nova to launch a vm from the new image
                 </li>
-	      </ol>
-	    </div>
-	  </div>
+              </ol>
+            </div>
+          </div>
           
-	</div>
+        </div>
 
-	<div class="row">
-	  <p><strong>Contributing to the OpenStack Application Catalog</strong></p>
-	  <p>
-	    The application catalog is built from the YAML files found in the
-	    <a href="https://github.com/stackforge/apps-catalog" target="_blank">repository</a>.
-	    Consistent with other OpenStack projects, additions to the
-	    catalog take the form of git commits which are reviewed with Gerrit
-	    prior to being merged.  Detailed instructions for adding to
-	    the YAML files can be found on the
-	    <a href="https://wiki.openstack.org/wiki/App-Catalog" target="_blank">
-	      OpenStack wiki</a>.
-	  </p>
-	</div>
+        <div class="row">
+          <p><strong>Contributing to the OpenStack Community Application Catalog</strong></p>
+          <p>
+            The application catalog is built from the YAML files found in the
+            <a href="https://github.com/stackforge/apps-catalog" target="_blank">repository</a>.
+            Consistent with other OpenStack projects, additions to the
+            catalog take the form of git commits which are reviewed with Gerrit
+            prior to being merged.  Detailed instructions for adding to
+            the YAML files can be found on the
+            <a href="https://wiki.openstack.org/wiki/App-Catalog" target="_blank">
+              OpenStack wiki</a>.
+          </p>
+        </div>
 
       </div>
 
 
       <div id="glance-images" class="content" style="display:none">
 
-	<div class="row">
-	  <div class="col-md-6 filters">
-	    <form class="form-inline">
+        <div class="row">
+          <div class="col-md-6 filters">
+            <form class="form-inline">
               <div class="form-group">
-		<label>Supported by</label>
-		<input type="hidden" id="glance-supported-by"
-		       style="width:10em" data-placeholder="Any vendor"/>
+        	<label>Supported by</label>
+        	<input type="hidden" id="glance-supported-by"
+        	       style="width:10em" data-placeholder="Any vendor"/>
               </div>
-	    </form>
-	  </div>
-	</div>
+            </form>
+          </div>
+        </div>
 
-	<div class="row">
-	  <div class="col-md-12">
-	    <table id="glance-images-table" class="table table-striped">
+        <div class="row">
+          <div class="col-md-12">
+            <table id="glance-images-table" class="table table-striped">
               <thead>
-		<tr>
-		  <th>Image&nbsp;Name</th>
-		  <th>Description</th>
-		  <th>Format</th>
-		  <th>Supported&nbsp;by</th>
-		  <th>License</th>
-		</tr>
+        	<tr>
+        	  <th>Image&nbsp;Name</th>
+        	  <th>Description</th>
+        	  <th>Format</th>
+        	  <th>Supported&nbsp;by</th>
+        	  <th>License</th>
+        	</tr>
               </thead>
-	    </table>
-	  </div>
-	</div>
+            </table>
+          </div>
+        </div>
 
       </div>
 
       <div id="heat-templates" class="content" style="display:none">
 
-	<div class="row">
-	  <div class="col-md-6 filters">
-	    <form class="form-inline">
+        <div class="row">
+          <div class="col-md-6 filters">
+            <form class="form-inline">
               <div class="form-group">
-		<label>Supported by</label>
-		<input type="hidden" id="heat-supported-by"
-		       style="width:10em" data-placeholder="Any vendor"/>
+        	<label>Supported by</label>
+        	<input type="hidden" id="heat-supported-by"
+        	       style="width:10em" data-placeholder="Any vendor"/>
               </div>
 
               <div class="form-group">
-		<label>Release</label>
-		<input type="hidden" id="heat-release"
-		       style="width:10em" data-placeholder="Any release"/>
+        	<label>Release</label>
+        	<input type="hidden" id="heat-release"
+        	       style="width:10em" data-placeholder="Any release"/>
               </div>
-	    </form>
-	  </div>
-	</div>
+            </form>
+          </div>
+        </div>
 
-	<div class="row">
-	  <div class="col-md-12">
-	    <table id="heat-templates-table" class="table table-striped">
+        <div class="row">
+          <div class="col-md-12">
+            <table id="heat-templates-table" class="table table-striped">
               <thead>
-		<tr>
-		  <th>Template&nbsp;Name</th>
-		  <th>Description</th>
-		  <th>Release</th>
-		  <th>Format</th>
-		  <th>Supported&nbsp;by</th>
-		  <th>License</th>
-		</tr>
+        	<tr>
+        	  <th>Template&nbsp;Name</th>
+        	  <th>Description</th>
+        	  <th>Release</th>
+        	  <th>Format</th>
+        	  <th>Supported&nbsp;by</th>
+        	  <th>License</th>
+        	</tr>
               </thead>
-	    </table>
-	  </div>
-	</div>
+            </table>
+          </div>
+        </div>
 
       </div>
 
       <div id="murano-apps" class="content" style="display:none">
 
-	<div class="row">
-	  <div class="col-md-6 filters">
-	    <form class="form-inline">
+        <div class="row">
+          <div class="col-md-6 filters">
+            <form class="form-inline">
               <div class="form-group">
-		<label>Supported by</label>
-		<input type="hidden" id="murano-supported-by"
-		       style="width:10em" data-placeholder="Any vendor"/>
+        	<label>Supported by</label>
+        	<input type="hidden" id="murano-supported-by"
+        	       style="width:10em" data-placeholder="Any vendor"/>
               </div>
 
               <div class="form-group">
-		<label>Release</label>
-		<input type="hidden" id="murano-release"
-		       style="width:10em" data-placeholder="Any release"/>
+        	<label>Release</label>
+        	<input type="hidden" id="murano-release"
+        	       style="width:10em" data-placeholder="Any release"/>
               </div>
-	    </form>
-	  </div>
-	</div>
+            </form>
+          </div>
+        </div>
 
-	<div class="row">
-	  <div class="col-md-12">
-	    <table id="murano-apps-table" class="table table-striped">
+        <div class="row">
+          <div class="col-md-12">
+            <table id="murano-apps-table" class="table table-striped">
               <thead>
-		<tr>
-		  <th>Package&nbsp;Name</th>
-		  <th>Description</th>
-		  <th>Release</th>
-		  <th>Format</th>
-		  <th>Supported&nbsp;by</th>
-		  <th>License</th>
-		</tr>
+        	<tr>
+        	  <th>Package&nbsp;Name</th>
+        	  <th>Description</th>
+        	  <th>Release</th>
+        	  <th>Format</th>
+        	  <th>Supported&nbsp;by</th>
+        	  <th>License</th>
+        	</tr>
               </thead>
-	    </table>
-	  </div>
-	</div>
+            </table>
+          </div>
+        </div>
 
       </div>
 
       <div id="info-page" class="content">
-	<div class="row">
-	  <div class="col-md-12">
-	    <div id="info-content"></div>
-	  </div>
-	</div>
+        <div class="row">
+          <div class="col-md-12">
+            <div id="info-content"></div>
+          </div>
+        </div>
       </div>
 
       <div id="info-dialog" title="Details">
-	<div id="info-container"></div>
+        <div id="info-container"></div>
       </div>
 
     </div>
@@ -360,7 +360,7 @@
 
       <h3>Author</h3>
       <div><span class="label">Contact:
-	</span><a href="${provided_by.href}"> <span class="value">${provided_by.name}</span> </a></div>
+        </span><a href="${provided_by.href}"> <span class="value">${provided_by.name}</span> </a></div>
       <div><span class="label">Company:</span> <span class="value">${provided_by.company}</span></div>
 
       {{if attributes }}
@@ -383,7 +383,7 @@
 
       <h3>Author</h3>
       <div><span class="label">Contact:
-	</span><a href="${provided_by.href}"> <span class="value">${provided_by.name}</span> </a></div>
+        </span><a href="${provided_by.href}"> <span class="value">${provided_by.name}</span> </a></div>
       <div><span class="label">Company:</span> <span class="value">${provided_by.company}</span></div>
 
       {{if attributes }}
@@ -399,8 +399,8 @@
 
       <h2>${name} (${format})</h2>
       <div>
-	<span class="label">Package name:</span>
-	<input type="text" value="${package_name}" onfocus="this.select();" onmouseup="return false;">
+        <span class="label">Package name:</span>
+        <input type="text" value="${package_name}" onfocus="this.select();" onmouseup="return false;">
       </div>
 
       <h3>Description</h3>
@@ -415,7 +415,7 @@
       {{/if}}
 
       <h3>Author</h3>
-      <div><span class="label">Contact:	</span><a href="${provided_by.href}"> <span class="value">${provided_by.name}</span> </a></div>
+      <div><span class="label">Contact:        </span><a href="${provided_by.href}"> <span class="value">${provided_by.name}</span> </a></div>
       <div><span class="label">Company:</span> <span class="value">${provided_by.company}</span></div>
 
       {{if attributes }}
