@@ -6,8 +6,8 @@
       package_name: io.murano.apps.docker.DockerStandaloneHost
       provided_by:
         name: Stan Lagun
-        href: "https://github.com/istalker2"
-        company: Mirantis
+        href: "mailto:slagun@mirantis.com"
+        company: Mirantis, Inc.
       description: >
           Docker is an open platform for developers and sysadmins to build,
           ship, and run distributed applications. Consisting of Docker Engine,
@@ -42,8 +42,8 @@
       package_name: io.murano.apps.docker.Interfaces
       provided_by:
         name: Stan Lagun
-        href: "https://github.com/istalker2"
-        company: Mirantis
+        href: "mailto:slagun@mirantis.com"
+        company: Mirantis, Inc.
       description: >
         Library package containing all base classes and interfaces for docker
         applications and docker hosts.
@@ -63,8 +63,8 @@
       package_name: io.murano.apps.docker.kubernetes.KubernetesCluster
       provided_by:
         name: Stan Lagun
-        href: "https://github.com/istalker2"
-        company: Mirantis
+        href: "mailto:slagun@mirantis.com"
+        company: Mirantis, Inc.
       description: >
         Kubernetes is an open source system for managing containerized
         applications across multiple hosts, providing basic mechanisms
@@ -99,8 +99,8 @@
       package_name: io.murano.apps.docker.kubernetes.KubernetesPod
       provided_by:
         name: Stan Lagun
-        href: "https://github.com/istalker2"
-        company: Mirantis
+        href: "mailto:slagun@mirantis.com"
+        company: Mirantis, Inc.
       description: >
         Application representing a Kubernetes Pod on a given Kubernetes Cluster
 
@@ -136,8 +136,8 @@
       name: Docker HTTPd
       package_name: io.murano.apps.docker.DockerHTTPd
       provided_by:
-        name: Murano Apps Repository
-        href: "https://github.com/openstack/murano-apps"
+        name: Dmitry Dovbii
+        href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
         The Apache HTTP Server, colloquially called Apache, is a Web server
@@ -160,8 +160,8 @@
       name: Apache HTTP Server
       package_name: io.murano.apps.apache.ApacheHttpServer
       provided_by:
-        name: Murano Apps Repository
-        href: "https://github.com/openstack/murano-apps"
+        name: Dmitry Dovbii
+        href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
          The Apache HTTP Server, colloquially called Apache, is a Web server
@@ -186,8 +186,8 @@
       name: MySQL
       package_name: io.murano.databases.MySql
       provided_by:
-        name: Murano Apps Repository
-        href: "https://github.com/openstack/murano-apps"
+        name: Dmitry Dovbii
+        href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
          MySQL is a freely available open source Relational Database
@@ -212,8 +212,8 @@
       name: PostgreSql
       package_name: io.murano.databases.PostgreSql
       provided_by:
-        name: Murano Apps Repository
-        href: "https://github.com/openstack/murano-apps"
+        name: Dmitry Dovbii
+        href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
          PostgreSQL is a powerful, open source object-relational database
@@ -236,8 +236,8 @@
       name: SqlDatabase Library
       package_name: io.murano.databases.SqlDatabase
       provided_by:
-        name: Murano Apps Repository
-        href: "https://github.com/openstack/murano-apps"
+        name: Dmitry Dovbii
+        href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
          Library package containing base interface for all SQL database
@@ -260,8 +260,8 @@
       name: Apache Tomcat
       package_name: io.murano.apps.apache.Tomcat
       provided_by:
-        name: Murano Apps Repository
-        href: "https://github.com/openstack/murano-apps"
+        name: Dmitry Dovbii
+        href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
          Apache Tomcat is an open source software implementation of the
@@ -286,8 +286,8 @@
       name: WordPress
       package_name: io.murano.apps.WordPress
       provided_by:
-        name: Murano Apps Repository
-        href: "https://github.com/openstack/murano-apps"
+        name: Dmitry Dovbii
+        href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
          WordPress is a free and open source blogging tool and a content management system (CMS) based on PHP and MySQL.
@@ -306,8 +306,8 @@
       name: Zabbix Agent
       package_name: io.murano.apps.ZabbixAgent
       provided_by:
-        name: Murano Apps Repository
-        href: "https://github.com/openstack/murano-apps"
+        name: Dmitry Dovbii
+        href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
          Zabbix Agent is deployed on a monitoring target to actively monitor
@@ -331,8 +331,8 @@
       name: Zabbix
       package_name: io.murano.apps.ZabbixServer
       provided_by:
-        name: Murano Apps Repository
-        href: "https://github.com/openstack/murano-apps"
+        name: Dmitry Dovbii
+        href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
          Zabbix is the ultimate open source availability and performance
@@ -353,8 +353,8 @@
       name: Docker Crate
       package_name: io.murano.apps.docker.DockerCrate
       provided_by:
-        name: Murano Apps Repository
-        href: "https://github.com/openstack/murano-apps"
+        name: Dmitry Dovbii
+        href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
         Crate is an Elastic SQL Data Store. Distributed by design,
@@ -375,8 +375,8 @@
       name: Docker Container
       package_name: io.murano.apps.docker.DockerApp
       provided_by:
-        name: Murano Apps Repository
-        href: "https://github.com/openstack/murano-apps"
+        name: Dmitry Dovbii
+        href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
         Application that can run any arbitrary docker container to deploy one of
@@ -400,8 +400,8 @@
       name: Docker GlassFish
       package_name: io.murano.apps.docker.DockerGlassFish
       provided_by:
-        name: Murano Apps Repository
-        href: "https://github.com/openstack/murano-apps"
+        name: Dmitry Dovbii
+        href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
         GlassFish is an open-source application server project started by
@@ -433,8 +433,8 @@
       name: Docker Grafana
       package_name: io.murano.apps.docker.DockerGrafana
       provided_by:
-        name: Murano Apps Repository
-        href: "https://github.com/openstack/murano-apps"
+        name: Dmitry Dovbii
+        href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
         Grafana is a leading open source applications for visualizing large-scale
@@ -466,8 +466,8 @@
       name: Docker HTTPd Site
       package_name: io.murano.apps.docker.DockerHTTPdSite
       provided_by:
-        name: Murano Apps Repository
-        href: "https://github.com/openstack/murano-apps"
+        name: Dmitry Dovbii
+        href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
         The Apache HTTP Server, colloquially called Apache, is a Web server
@@ -493,8 +493,8 @@
       name: Docker InfluxDB
       package_name: io.murano.apps.docker.DockerInfluxDB
       provided_by:
-        name: Murano Apps Repository
-        href: "https://github.com/openstack/murano-apps"
+        name: Dmitry Dovbii
+        href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
         InfluxDB is a time series, metrics, and analytics database. It’s written
@@ -517,8 +517,8 @@
       name: Docker Jenkins
       package_name: io.murano.apps.docker.DockerJenkins
       provided_by:
-        name: Murano Apps Repository
-        href: "https://github.com/openstack/murano-apps"
+        name: Dmitry Dovbii
+        href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
         Jenkins is an award-winning application that monitors executions of
@@ -550,8 +550,8 @@
       name: Docker MariaDB
       package_name: io.murano.apps.docker.DockerMariaDB
       provided_by:
-        name: Murano Apps Repository
-        href: "https://github.com/openstack/murano-apps"
+        name: Dmitry Dovbii
+        href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
         MariaDB is a community-developed fork of the MySQL relational database
@@ -581,8 +581,8 @@
       name: Docker MongoDB
       package_name: io.murano.apps.docker.DockerMongoDB
       provided_by:
-        name: Murano Apps Repository
-        href: "https://github.com/openstack/murano-apps"
+        name: Dmitry Dovbii
+        href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
         MongoDB (from “humongous”) is a cross-platform document-oriented database.
@@ -615,8 +615,8 @@
       name: Docker MySQL
       package_name: io.murano.apps.docker.DockerMySQL
       provided_by:
-        name: Murano Apps Repository
-        href: "https://github.com/openstack/murano-apps"
+        name: Dmitry Dovbii
+        href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
         MySQL is a freely available open source Relational Database Management
@@ -639,8 +639,8 @@
       name: Docker Nginx
       package_name: io.murano.apps.docker.DockerNginx
       provided_by:
-        name: Murano Apps Repository
-        href: "https://github.com/openstack/murano-apps"
+        name: Dmitry Dovbii
+        href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
         Nginx (pronounced “engine-x”) is an open source reverse proxy server for
@@ -665,8 +665,8 @@
       name: Docker Nginx Site
       package_name: io.murano.apps.docker.DockerNginxSite
       provided_by:
-        name: Murano Apps Repository
-        href: "https://github.com/openstack/murano-apps"
+        name: Dmitry Dovbii
+        href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
         Nginx (pronounced “engine-x”) is an open source reverse proxy server for
@@ -694,8 +694,8 @@
       name: Docker PostgreSQL
       package_name: io.murano.apps.docker.DockerPostgreSQL
       provided_by:
-        name: Murano Apps Repository
-        href: "https://github.com/openstack/murano-apps"
+        name: Dmitry Dovbii
+        href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
         PostgreSQL, often simply “Postgres”, is an object-relational database
@@ -738,8 +738,8 @@
       name: Docker Redis
       package_name: io.murano.apps.docker.DockerRedis
       provided_by:
-        name: Murano Apps Repository
-        href: "https://github.com/openstack/murano-apps"
+        name: Dmitry Dovbii
+        href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
         Redis is an open-source, networked, in-memory, key-value data store with
@@ -763,8 +763,8 @@
       name: Docker Tomcat
       package_name: io.murano.apps.docker.DockerTomcat
       provided_by:
-        name: Murano Apps Repository
-        href: "https://github.com/openstack/murano-apps"
+        name: Dmitry Dovbii
+        href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
         Apache Tomcat (or simply Tomcat) is an open source web server and
@@ -793,9 +793,9 @@
       name: Application Servers Bundle
       package_name: app-servers
       provided_by:
-        name: Stan Lagun
-        href: "https://github.com/istalker2"
-        company: Mirantis
+        name: Serg Melikyan
+        href: "mailto:smelikyan@mirantis.com"
+        company: Mirantis, Inc.
       description: >
         This bundle contains most popular applications servers available today
       release:
@@ -808,9 +808,9 @@
       name: Container-based Apps Bundle
       package_name: container-based-apps
       provided_by:
-        name: Stan Lagun
-        href: "https://github.com/istalker2"
-        company: Mirantis
+        name: Serg Melikyan
+        href: "mailto:smelikyan@mirantis.com"
+        company: Mirantis, Inc.
       description: >
         Bundle includes container-based apps that may be deployed on top of
         DockerStandaloneHost or KubernetesPod/Cluster.
@@ -838,9 +838,9 @@
       name: Databases Bundle
       package_name: databases
       provided_by:
-        name: Stan Lagun
-        href: "https://github.com/istalker2"
-        company: Mirantis
+        name: Serg Melikyan
+        href: "mailto:smelikyan@mirantis.com"
+        company: Mirantis, Inc.
       description: >
         This bundle contains most popular databases available today
       release:
@@ -853,9 +853,9 @@
       name: Docker & Kubernes Bundle
       package_name: docker-n-kubernetes
       provided_by:
-        name: Stan Lagun
-        href: "https://github.com/istalker2"
-        company: Mirantis
+        name: Serg Melikyan
+        href: "mailto:smelikyan@mirantis.com"
+        company: Mirantis, Inc.
       description: >
         Bundle consists of DockerStandaloneHost and KubernetesPod/Cluster,
         required to build your onw Docker/Kuernetes-enabled applications
@@ -869,9 +869,9 @@
       name: Monitoring Bundle
       package_name: monitoring
       provided_by:
-        name: Stan Lagun
-        href: "https://github.com/istalker2"
-        company: Mirantis
+        name: Serg Melikyan
+        href: "mailto:smelikyan@mirantis.com"
+        company: Mirantis, Inc.
       description: >
         This bundle contains most popular monitoring solution available today
       release:
