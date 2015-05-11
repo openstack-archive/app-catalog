@@ -56,8 +56,23 @@
                 - Kilo
                 - Liberty
             minItems: 1
-          format: 
-            enum: 
+          dependsOn:
+            type: object
+            additionalProperties: false
+            properties:
+              apps:
+                type: array
+              image:
+                type: object
+                additionalProperties: false
+                properties:
+                  name:
+                    type: string
+                  uri:
+                    type: string
+                    pattern: "^((https?://)[a-z][a-z0-9_-]+(\\.[a-z][a-z0-9_-]+)+(/[a-z0-9\\._/~%\\-\\+&\\#\\?!=\\(\\)@]*)?)|(mailto:[a-z][a-z0-9_-]+@[a-z][a-z0-9_-]+(\\.[a-z][a-z0-9_-]+)+)$"
+          format:
+            enum:
               - package
               - bundle
           attributes: 
