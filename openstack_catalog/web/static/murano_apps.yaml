@@ -136,19 +136,26 @@
       name: Docker HTTPd
       package_name: io.murano.apps.docker.DockerHTTPd
       provided_by:
-        name: Stan Lagun
-        href: "https://github.com/istalker2"
-        company: Mirantis
+        name: Murano Apps Repository
+        href: "https://github.com/openstack/murano-apps"
+        company: Mirantis, Inc.
       description: >
         The Apache HTTP Server, colloquially called Apache, is a Web server
-        application notable for playing a key role in the initial growth of
-        the World Wide Web.
+        application notable for playing a key role in the initial growth of the
+        World Wide Web. Originally based on the NCSA HTTPd server, development of
+        Apache began in early 1995 after work on the NCSA code stalled. Apache
+        quickly overtook NCSA HTTPd as the dominant HTTP server, and has remained
+        the most popular HTTP server in use since April 1996.
       release:
         - Kilo
       format: package
+      dependsOn:
+        apps:
+          - io.murano.apps.docker.DockerStandaloneHost
+          - io.murano.apps.docker.kubernetes.KubernetesPod
       attributes:
-        "Source URL": "https://github.com/stackforge/murano-apps"
-        Documentation: "https://github.com/stackforge/murano-apps/blob/master/Docker/Kubernetes/readme.md"
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerHTTPd.zip"
+        "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/HTTPdServer/package"
     -
       name: Docker & Kubernes Bundle
       package_name: docker_kubernetes
