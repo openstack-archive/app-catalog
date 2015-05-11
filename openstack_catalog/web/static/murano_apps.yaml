@@ -33,7 +33,7 @@
           - io.murano.apps.docker.Interfaces
         image:
           name: Debian 8 x64 (pre-installed Docker)
-          uri: http://storage.catalog.mirantis.com/images/debian-8-docker.qcow2
+          uri: http://storage.apps.openstack.org/images/debian-8-docker.qcow2
       attributes:
         "Source URL": "https://github.com/stackforge/murano-apps"
         Documentation: "https://github.com/stackforge/murano-apps/blob/master/Docker/Kubernetes/readme.md"
@@ -189,9 +189,9 @@
       dependsOn:
         image:
           name: Debian 8 x64 (pre-installed murano-agent)
-          uri: http://storage.catalog.mirantis.com/images/debian-8-m-agent.qcow2
+          uri: http://storage.apps.openstack.org/images/debian-8-m-agent.qcow2
       attributes:
-        "Package URL": "http://storage.catalog.mirantis.com/apps/io.murano.apps.apache.ApacheHttpServer.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.apache.ApacheHttpServer.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/ApacheHTTPServer/package"
     -
       name: MySQL
@@ -215,9 +215,9 @@
           - io.murano.databases.SqlDatabase
         image:
           name: Debian 8 x64 (pre-installed murano-agent)
-          uri: http://storage.catalog.mirantis.com/images/debian-8-m-agent.qcow2
+          uri: http://storage.apps.openstack.org/images/debian-8-m-agent.qcow2
       attributes:
-        "Package URL": "http://storage.catalog.mirantis.com/apps/io.murano.databases.MySql.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.databases.MySql.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/MySQL/package"
     -
       name: PostgreSql
@@ -239,9 +239,9 @@
           - io.murano.databases.SqlDatabase
         image:
           name: Debian 8 x64 (pre-installed murano-agent)
-          uri: http://storage.catalog.mirantis.com/images/debian-8-m-agent.qcow2
+          uri: http://storage.apps.openstack.org/images/debian-8-m-agent.qcow2
       attributes:
-        "Package URL": "http://storage.catalog.mirantis.com/apps/io.murano.databases.PostgreSql.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.databases.PostgreSql.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/PostgreSQL/package"
     -
       name: SqlDatabase Library
@@ -265,7 +265,7 @@
         - Kilo
       format: package
       attributes:
-        "Package URL": "http://storage.catalog.mirantis.com/apps/io.murano.databases.SqlDatabase.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.databases.SqlDatabase.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/SQLDatabaseLibrary/package"
     -
       name: Apache Tomcat
@@ -289,9 +289,9 @@
       dependsOn:
         image:
           name: Debian 8 x64 (pre-installed murano-agent)
-          uri: http://storage.catalog.mirantis.com/images/debian-8-m-agent.qcow2
+          uri: http://storage.apps.openstack.org/images/debian-8-m-agent.qcow2
       attributes:
-        "Package URL": "http://storage.catalog.mirantis.com/apps/io.murano.apps.apache.Tomcat.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.apache.Tomcat.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Tomcat/package"
     -
       name: WordPress
@@ -311,7 +311,7 @@
           - io.murano.apps.apache.ApacheHttpServer
           - io.murano.apps.ZabbixAgent
       attributes:
-        "Package URL": "http://storage.catalog.mirantis.com/apps/io.murano.apps.WordPress.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.WordPress.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/WordPress/package"
     -
       name: Zabbix Agent
@@ -336,7 +336,7 @@
         apps:
           - io.murano.apps.ZabbixServer
       attributes:
-        "Package URL": "http://storage.catalog.mirantis.com/apps/io.murano.apps.ZabbixAgent.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.ZabbixAgent.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/ZabbixAgent/package"
     -
       name: Zabbix
@@ -356,9 +356,9 @@
       dependsOn:
         image:
           name: Debian 8 x64 (pre-installed murano-agent)
-          uri: http://storage.catalog.mirantis.com/images/debian-8-m-agent.qcow2
+          uri: http://storage.apps.openstack.org/images/debian-8-m-agent.qcow2
       attributes:
-        "Package URL": "http://storage.catalog.mirantis.com/apps/io.murano.apps.ZabbixServer.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.ZabbixServer.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/ZabbixServer/package"
     -
       name: Docker Crate
@@ -380,7 +380,7 @@
           - io.murano.apps.docker.DockerStandaloneHost
           - io.murano.apps.docker.kubernetes.KubernetesPod
       attributes:
-        "Package URL": "http://storage.catalog.mirantis.com/apps/io.murano.apps.docker.DockerCrate.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerCrate.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/Crate/package"
     -
       name: Docker Container
@@ -405,7 +405,7 @@
           - io.murano.apps.docker.DockerStandaloneHost
           - io.murano.apps.docker.kubernetes.KubernetesPod
       attributes:
-        "Package URL": "http://storage.catalog.mirantis.com/apps/io.murano.apps.docker.DockerApp.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerApp.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/DockerApp/package"
     -
       name: Docker GlassFish
@@ -438,7 +438,7 @@
           - io.murano.apps.docker.DockerStandaloneHost
           - io.murano.apps.docker.kubernetes.KubernetesPod
       attributes:
-        "Package URL": "http://storage.catalog.mirantis.com/apps/io.murano.apps.docker.DockerGlassFish.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerGlassFish.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/GlassFish/package"
     -
       name: Docker Grafana
@@ -471,7 +471,7 @@
           - io.murano.apps.docker.kubernetes.KubernetesPod
           - io.murano.apps.docker.DockerInfluxDB
       attributes:
-        "Package URL": "http://storage.catalog.mirantis.com/apps/io.murano.apps.docker.DockerGrafana.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerGrafana.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/Grafana/package"
     -
       name: Docker HTTPd Site
@@ -498,7 +498,7 @@
           - io.murano.apps.docker.DockerStandaloneHost
           - io.murano.apps.docker.kubernetes.KubernetesPod
       attributes:
-        "Package URL": "http://storage.catalog.mirantis.com/apps/io.murano.apps.docker.DockerHTTPdSite.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerHTTPdSite.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/HTTPdSite/package"
     -
       name: Docker InfluxDB
@@ -522,7 +522,7 @@
           - io.murano.apps.docker.DockerStandaloneHost
           - io.murano.apps.docker.kubernetes.KubernetesPod
       attributes:
-        "Package URL": "http://storage.catalog.mirantis.com/apps/io.murano.apps.docker.DockerInfluxDB.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerInfluxDB.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/InfluxDB/package"
     -
       name: Docker Jenkins
@@ -555,7 +555,7 @@
           - io.murano.apps.docker.DockerStandaloneHost
           - io.murano.apps.docker.kubernetes.KubernetesPod
       attributes:
-        "Package URL": "http://storage.catalog.mirantis.com/apps/io.murano.apps.docker.DockerJenkins.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerJenkins.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/Jenkins/package"
     -
       name: Docker MariaDB
@@ -586,7 +586,7 @@
           - io.murano.apps.docker.DockerStandaloneHost
           - io.murano.apps.docker.kubernetes.KubernetesPod
       attributes:
-        "Package URL": "http://storage.catalog.mirantis.com/apps/io.murano.apps.docker.DockerMariaDB.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerMariaDB.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/MariaDB/package"
     -
       name: Docker MongoDB
@@ -620,7 +620,7 @@
           - io.murano.apps.docker.DockerStandaloneHost
           - io.murano.apps.docker.kubernetes.KubernetesPod
       attributes:
-        "Package URL": "http://storage.catalog.mirantis.com/apps/io.murano.apps.docker.DockerMongoDB.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerMongoDB.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/MongoDB/package"
     -
       name: Docker MySQL
@@ -644,7 +644,7 @@
           - io.murano.apps.docker.DockerStandaloneHost
           - io.murano.apps.docker.kubernetes.KubernetesPod
       attributes:
-        "Package URL": "http://storage.catalog.mirantis.com/apps/io.murano.apps.docker.DockerMySQL.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerMySQL.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/MySQL/package"
     -
       name: Docker Nginx
@@ -670,7 +670,7 @@
           - io.murano.apps.docker.DockerStandaloneHost
           - io.murano.apps.docker.kubernetes.KubernetesPod
       attributes:
-        "Package URL": "http://storage.catalog.mirantis.com/apps/io.murano.apps.docker.DockerNginx.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerNginx.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/Nginx/package"
     -
       name: Docker Nginx Site
@@ -699,7 +699,7 @@
           - io.murano.apps.docker.DockerStandaloneHost
           - io.murano.apps.docker.kubernetes.KubernetesPod
       attributes:
-        "Package URL": "http://storage.catalog.mirantis.com/apps/io.murano.apps.docker.DockerNginxSite.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerNginxSite.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/NginxSite/package"
     -
       name: Docker PostgreSQL
@@ -743,7 +743,7 @@
           - io.murano.apps.docker.DockerStandaloneHost
           - io.murano.apps.docker.kubernetes.KubernetesPod
       attributes:
-        "Package URL": "http://storage.catalog.mirantis.com/apps/io.murano.apps.docker.DockerPostgreSQL.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerPostgreSQL.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/PostgreSQL/package"
     -
       name: Docker Redis
@@ -768,7 +768,7 @@
           - io.murano.apps.docker.DockerStandaloneHost
           - io.murano.apps.docker.kubernetes.KubernetesPod
       attributes:
-        "Package URL": "http://storage.catalog.mirantis.com/apps/io.murano.apps.docker.DockerRedis.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerRedis.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/Redis/package"
     -
       name: Docker Tomcat
@@ -794,5 +794,5 @@
           - io.murano.apps.docker.DockerStandaloneHost
           - io.murano.apps.docker.kubernetes.KubernetesPod
       attributes:
-        "Package URL": "http://storage.catalog.mirantis.com/apps/io.murano.apps.docker.DockerTomcat.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerTomcat.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/Tomcat/package"
