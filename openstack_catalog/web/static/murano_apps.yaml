@@ -28,8 +28,9 @@
       release:
         - Kilo
       format: package
-      supported_by: Mirantis
-      license: Apache 2.0
+      dependsOn:
+        apps:
+          - io.murano.apps.docker.Interfaces
       attributes:
         "Source URL": "https://github.com/stackforge/murano-apps"
         Documentation: "https://github.com/stackforge/murano-apps/blob/master/Docker/Kubernetes/readme.md"
@@ -52,8 +53,6 @@
       release:
         - Kilo
       format: package
-      supported_by: Mirantis
-      license: Apache 2.0
       attributes:
         "Source URL": "https://github.com/stackforge/murano-apps"
         Documentation: "https://github.com/stackforge/murano-apps/blob/master/Docker/Kubernetes/readme.md"
@@ -87,8 +86,9 @@
       release:
         - Kilo
       format: package
-      supported_by: Mirantis
-      license: Apache 2.0
+      dependsOn:
+        apps:
+          - io.murano.apps.docker.Interfaces
       attributes:
         "Source URL": "https://github.com/stackforge/murano-apps"
         Documentation: "https://github.com/stackforge/murano-apps/blob/master/Docker/Kubernetes/readme.md"
@@ -123,8 +123,10 @@
       release:
         - Kilo
       format: package
-      supported_by: Mirantis
-      license: Apache 2.0
+      dependsOn:
+        apps:
+          - io.murano.apps.docker.Interfaces
+          - io.murano.apps.docker.kubernetes.KubernetesCluster
       attributes:
         "Source URL": "https://github.com/stackforge/murano-apps"
         Documentation: "https://github.com/stackforge/murano-apps/blob/master/Docker/Kubernetes/readme.md"
@@ -142,8 +144,6 @@
       release:
         - Kilo
       format: package
-      supported_by: Mirantis
-      license: Apache 2.0
       attributes:
         "Source URL": "https://github.com/stackforge/murano-apps"
         Documentation: "https://github.com/stackforge/murano-apps/blob/master/Docker/Kubernetes/readme.md"
@@ -184,7 +184,10 @@
       release:
         - Kilo
       format: package
-      license: Apache 2.0
+      dependsOn:
+        image:
+          name: Debian 8 x64 (pre-installed murano-agent)
+          uri: http://storage.catalog.mirantis.com/images/debian-8-m-agent.qcow2
       attributes:
         "Package URL": "http://storage.catalog.mirantis.com/apps/io.murano.apps.apache.ApacheHttpServer.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/ApacheHTTPServer/package"
@@ -205,7 +208,12 @@
       release:
         - Kilo
       format: package
-      license: Apache 2.0
+      dependsOn:
+        apps:
+          - io.murano.databases.SqlDatabase
+        image:
+          name: Debian 8 x64 (pre-installed murano-agent)
+          uri: http://storage.catalog.mirantis.com/images/debian-8-m-agent.qcow2
       attributes:
         "Package URL": "http://storage.catalog.mirantis.com/apps/io.murano.databases.MySql.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/MySQL/package"
@@ -224,7 +232,12 @@
       release:
         - Kilo
       format: package
-      license: Apache 2.0
+      dependsOn:
+        apps:
+          - io.murano.databases.SqlDatabase
+        image:
+          name: Debian 8 x64 (pre-installed murano-agent)
+          uri: http://storage.catalog.mirantis.com/images/debian-8-m-agent.qcow2
       attributes:
         "Package URL": "http://storage.catalog.mirantis.com/apps/io.murano.databases.PostgreSql.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/PostgreSQL/package"
@@ -249,7 +262,6 @@
       release:
         - Kilo
       format: package
-      license: Apache 2.0
       attributes:
         "Package URL": "http://storage.catalog.mirantis.com/apps/io.murano.databases.SqlDatabase.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/SQLDatabaseLibrary/package"
@@ -272,7 +284,10 @@
       release:
         - Kilo
       format: package
-      license: Apache 2.0
+      dependsOn:
+        image:
+          name: Debian 8 x64 (pre-installed murano-agent)
+          uri: http://storage.catalog.mirantis.com/images/debian-8-m-agent.qcow2
       attributes:
         "Package URL": "http://storage.catalog.mirantis.com/apps/io.murano.apps.apache.Tomcat.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Tomcat/package"
@@ -288,7 +303,11 @@
       release:
         - Kilo
       format: package
-      license: Apache 2.0
+      dependsOn:
+        apps:
+          - io.murano.databases.MySql
+          - io.murano.apps.apache.ApacheHttpServer
+          - io.murano.apps.ZabbixAgent
       attributes:
         "Package URL": "http://storage.catalog.mirantis.com/apps/io.murano.apps.WordPress.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/WordPress/package"
@@ -311,7 +330,9 @@
       release:
         - Kilo
       format: package
-      license: Apache 2.0
+      dependsOn:
+        apps:
+          - io.murano.apps.ZabbixServer
       attributes:
         "Package URL": "http://storage.catalog.mirantis.com/apps/io.murano.apps.ZabbixAgent.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/ZabbixAgent/package"
@@ -330,7 +351,10 @@
       release:
         - Kilo
       format: package
-      license: Apache 2.0
+      dependsOn:
+        image:
+          name: Debian 8 x64 (pre-installed murano-agent)
+          uri: http://storage.catalog.mirantis.com/images/debian-8-m-agent.qcow2
       attributes:
         "Package URL": "http://storage.catalog.mirantis.com/apps/io.murano.apps.ZabbixServer.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/ZabbixServer/package"
