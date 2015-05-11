@@ -11,7 +11,7 @@
       supported_by: Mirantis
       license: GPL 2.0
       attributes:
-        url: http://storage.catalog.mirantis.com/images/ubuntu14.04-x64-docker.qcow2
+        url: http://storage.apps.openstack.org/images/ubuntu14.04-x64-docker.qcow2
         hash: dd69232d1a745a7b237bd8d5e9e8485a
     -
       name: ubuntu14.04-x64-kubernetes
@@ -24,7 +24,7 @@
       supported_by: Mirantis
       license: GPL 2.0
       attributes:
-        url: http://storage.catalog.mirantis.com/images/ubuntu14.04-x64-kubernetes.qcow2
+        url: http://storage.apps.openstack.org/images/ubuntu14.04-x64-kubernetes.qcow2
         hash: e7a843811aab86040f672b1254037a7f
     -
       name: Ubuntu Trusty 14
@@ -105,7 +105,7 @@
       format: QCOW2
       license: GPL 2.0
       attributes:
-        url: http://storage.catalog.mirantis.com/images/debian-8-m-agent.qcow2
+        url: http://storage.apps.openstack.org/images/debian-8-m-agent.qcow2
         hash: c05398176ff18ca4d011b3550fa174e3
     -
       name: Debian 8 x64 (pre-installed Docker)
@@ -117,5 +117,5 @@
       format: QCOW2
       license: GPL 2.0
       attributes:
-        url: http://storage.catalog.mirantis.com/images/debian-8-docker.qcow2
+        url: http://storage.apps.openstack.org/images/debian-8-docker.qcow2
         hash: f9f2466c39dac98a1e4ed03fb5701225
