@@ -157,24 +157,6 @@
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerHTTPd.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/HTTPdServer/package"
     -
-      name: Docker & Kubernes Bundle
-      package_name: docker_kubernetes
-      provided_by:
-        name: Stan Lagun
-        href: "https://github.com/istalker2"
-        company: Mirantis
-      description: >
-        Bundle consists of DockerStandaloneHost and KubernetesPod/Cluster,
-        required to build your onw Docker/Kuernetes-enabled applications
-      release:
-        - Kilo
-      format: bundle
-      supported_by: Mirantis
-      license: Apache 2.0
-      attributes:
-        "Source URL": "https://github.com/stackforge/murano-apps"
-        Documentation: "https://github.com/stackforge/murano-apps/blob/master/Docker/Kubernetes/readme.md"
-    -
       name: Apache HTTP Server
       package_name: io.murano.apps.apache.ApacheHttpServer
       provided_by:
@@ -803,3 +785,99 @@
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerTomcat.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/Tomcat/package"
+
+#------------------------------------------------------------------------------
+#                                  Bundles
+#------------------------------------------------------------------------------
+    -
+      name: Application Servers Bundle
+      package_name: app-servers
+      provided_by:
+        name: Stan Lagun
+        href: "https://github.com/istalker2"
+        company: Mirantis
+      description: >
+        This bundle contains most popular applications servers available today
+      release:
+        - Kilo
+      format: bundle
+      bundled:
+        - io.murano.apps.apache.ApacheHttpServer
+        - io.murano.apps.apache.Tomcat
+    -
+      name: Container-based Apps Bundle
+      package_name: container-based-apps
+      provided_by:
+        name: Stan Lagun
+        href: "https://github.com/istalker2"
+        company: Mirantis
+      description: >
+        Bundle includes container-based apps that may be deployed on top of
+        DockerStandaloneHost or KubernetesPod/Cluster.
+      release:
+        - Kilo
+      format: bundle
+      bundled:
+        - io.murano.apps.docker.DockerCrate
+        - io.murano.apps.docker.DockerApp
+        - io.murano.apps.docker.DockerGlassFish
+        - io.murano.apps.docker.DockerGrafana
+        - io.murano.apps.docker.DockerHTTPd
+        - io.murano.apps.docker.DockerHTTPdSite
+        - io.murano.apps.docker.DockerInfluxDB
+        - io.murano.apps.docker.DockerJenkins
+        - io.murano.apps.docker.DockerMariaDB
+        - io.murano.apps.docker.DockerMongoDB
+        - io.murano.apps.docker.DockerMySQL
+        - io.murano.apps.docker.DockerNginx
+        - io.murano.apps.docker.DockerNginxSite
+        - io.murano.apps.docker.DockerPostgreSQL
+        - io.murano.apps.docker.DockerRedis
+        - io.murano.apps.docker.DockerTomcat
+    -
+      name: Databases Bundle
+      package_name: databases
+      provided_by:
+        name: Stan Lagun
+        href: "https://github.com/istalker2"
+        company: Mirantis
+      description: >
+        This bundle contains most popular databases available today
+      release:
+        - Kilo
+      format: bundle
+      bundled:
+        - io.murano.databases.MySql
+        - io.murano.databases.PostgreSql
+    -
+      name: Docker & Kubernes Bundle
+      package_name: docker-n-kubernetes
+      provided_by:
+        name: Stan Lagun
+        href: "https://github.com/istalker2"
+        company: Mirantis
+      description: >
+        Bundle consists of DockerStandaloneHost and KubernetesPod/Cluster,
+        required to build your onw Docker/Kuernetes-enabled applications
+      release:
+        - Kilo
+      format: bundle
+      bundled:
+        - io.murano.apps.docker.DockerStandaloneHost
+        - io.murano.apps.docker.kubernetes.KubernetesPod
+    -
+      name: Monitoring Bundle
+      package_name: monitoring
+      provided_by:
+        name: Stan Lagun
+        href: "https://github.com/istalker2"
+        company: Mirantis
+      description: >
+        This bundle contains most popular monitoring solution available today
+      release:
+        - Kilo
+      format: bundle
+      bundled:
+        - io.murano.apps.ZabbixAgent
+        - io.murano.apps.ZabbixServer
+

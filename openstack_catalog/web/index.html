@@ -379,7 +379,7 @@
 
       <h2>${name} (${format})</h2>
       <div>
-	<span class="label">Package name:</span>
+	<span class="label">{{if format == 'package'}}Package{{else}}Bundle{{/if}} name:</span>
 	<input type="text" value="${package_name}" onfocus="this.select();" onmouseup="return false;">
       </div>
 
@@ -388,11 +388,6 @@
 
       <h3>Supported OpenStack Releases</h3>
       <div><span class="value">${release_html}</span></div>
-
-      {{if supported_by}}
-      <h3>Support</h3>
-      <div><span class="label">Supported by:</span> <span class="value">${supported_by}</span></div>
-      {{/if}}
 
       <h3>Author</h3>
       <div><span class="label">Contact:	</span><a href="${provided_by.href}"> <span class="value">${provided_by.name}</span> </a></div>
@@ -414,6 +409,17 @@
          {{/each}}
       </ul>
       {{/if}}
+      {{/if}}
+
+      {{if bundled && format == 'bundle'}}
+      <h3>In the Bundle</h3>
+      <p>Following packages included to this bundle:</p>
+      <ul>
+         {{each bundled }}
+         <li>${bundled[$index]}</li>
+         {{/each}}
+      </ul>
+      <p>Note: Dependencies of the each package included to the bundle will be also imported.<p>
       {{/if}}
 
       {{if attributes }}
