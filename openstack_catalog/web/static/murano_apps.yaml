@@ -16,6 +16,15 @@
           Docker enables apps to be quickly assembled from components and
           eliminates the friction between development, QA, and production
           environments.
+
+          Standalone docker implementation; employs single VM running docker service.
+
+          Implements DockerHost interface (along with Kubernetes Pod), to unify
+          docker hosting solutions, and make docker applications independent
+          of one another on hosting platform.
+
+          The Docker service is accessed using CLI client from within the same
+          VM, so the docker API is not exposed outside VM.
       release:
         - Kilo
       format: package
@@ -33,8 +42,13 @@
         href: "https://github.com/istalker2"
         company: Mirantis
       description: >
-        The library provides all necessary interface for Docker and
-        Kubernetes applications
+        Library package containing all base classes and interfaces for docker
+        applications and docker hosts.
+
+        Contains definitions of DockerApplication, DockerContainer,
+        DockerHost, DockerVolume, ApplicationPort and all other classes
+        that are used to pass information between docker
+        applications and docker host providers
       release:
         - Kilo
       format: package
@@ -54,24 +68,22 @@
         Kubernetes is an open source system for managing containerized
         applications across multiple hosts, providing basic mechanisms
         for deployment, maintenance, and scaling of applications.
-      release:
-        - Kilo
-      format: package
-      supported_by: Mirantis
-      license: Apache 2.0
-      attributes:
-        "Source URL": "https://github.com/stackforge/murano-apps"
-        Documentation: "https://github.com/stackforge/murano-apps/blob/master/Docker/Kubernetes/readme.md"
-    -
-      name: Kubernetes static entities
-      package_name: io.murano.apps.docker.kubernetes.static.KubernetesEntities
-      provided_by:
-        name: Stan Lagun
-        href: "https://github.com/istalker2"
-        company: Mirantis
-      description: >
-         Library provides kubernetes instances that can be constructed
-         from a JSON definition — Pod, Service and ReplicationController
+
+        Kubernetes application; deploys a Kubernetes cluster with 3 different
+        node types:
+          * 1 master node VM running the Kubernetes API
+          * 1 or more minion nodes to be used to host user applications
+          * 0 or more gateway nodes running HAProxy to route external
+              traffic to provide access to  services running
+              in the Kubernetes cluster.
+
+        This application deploys all Kubernetes prerequisites, builds the
+        etcd cluster and the flannel networking cluster and then configures
+        Kubernetes API and other services, as appropriate for each node type.
+
+        The application also provides API access to other applications, so
+        they can create/delete Kubernetes services and Pods/Replication
+        Controllers from its JSON definitions.
       release:
         - Kilo
       format: package
@@ -88,9 +100,26 @@
         href: "https://github.com/istalker2"
         company: Mirantis
       description: >
-         Kubernes Pod — A collection of containers which will be scheduled
-         onto the same node, which share and an IP and port space, and which
-         can be created/destroyed together.
+        Application representing a Kubernetes Pod on a given Kubernetes Cluster
+
+        Pod is a colocated set of docker containers which are deployed
+        together on a single node and share single network space. Containers
+        within a single pod can access each other using 127.0.0.1 (localhost).
+        Kubernetes treats Pods as an indivisible deployment unit.
+
+        This application also encapsulates Kubernetes Replication Controller.
+        User is asked to provide count of replicas; if the number is greater
+        than zero, the Replication Controller is created automatically with
+        the desired number of replicas.
+
+        The Replication Controller creates clones of the Pod (copies with the
+        same container list). If a  Pod dies for any reason (for example, due
+        to hosting minion failure) Replication Controller will create
+        additional Pod replicas on available resources.
+
+        The Kubernetes Pod provides an API to the host docker container that
+        is compatible with Docker Standalone Host so that any Docker
+        Application can be hosted on any of them.
       release:
         - Kilo
       format: package
@@ -136,3 +165,172 @@
       attributes:
         "Source URL": "https://github.com/stackforge/murano-apps"
         Documentation: "https://github.com/stackforge/murano-apps/blob/master/Docker/Kubernetes/readme.md"
+    -
+      name: Apache HTTP Server
+      package_name: io.murano.apps.apache.ApacheHttpServer
+      provided_by:
+        name: Murano Apps Repository
+        href: "https://github.com/openstack/murano-apps"
+        company: Mirantis, Inc.
+      description: >
+         The Apache HTTP Server, colloquially called Apache, is a Web server
+         application notable for playing a key role in the initial growth of
+         the World Wide Web. Originally based on the NCSA HTTPd server,
+         development of Apache began in early 1995 after work on the NCSA code
+         stalled.
+
+         Apache quickly overtook NCSA HTTPd as the dominant HTTP server, and
+         has remained the most popular HTTP server in use since April 1996.
+      release:
+        - Kilo
+      format: package
+      license: Apache 2.0
+      attributes:
+        "Package URL": "http://storage.catalog.mirantis.com/apps/io.murano.apps.apache.ApacheHttpServer.zip"
+        "Source URL": "https://github.com/openstack/murano-apps/tree/master/ApacheHTTPServer/package"
+    -
+      name: MySQL
+      package_name: io.murano.databases.MySql
+      provided_by:
+        name: Murano Apps Repository
+        href: "https://github.com/openstack/murano-apps"
+        company: Mirantis, Inc.
+      description: >
+         MySQL is a freely available open source Relational Database
+         Management System (RDBMS) that uses Structured Query Language (SQL).
+
+         SQL is the most popular language for adding, accessing and managing
+         content in a database. It is most noted for its quick processing,
+         proven reliability, ease and flexibility of use.
+      release:
+        - Kilo
+      format: package
+      license: Apache 2.0
+      attributes:
+        "Package URL": "http://storage.catalog.mirantis.com/apps/io.murano.databases.MySql.zip"
+        "Source URL": "https://github.com/openstack/murano-apps/tree/master/MySQL/package"
+    -
+      name: PostgreSql
+      package_name: io.murano.databases.PostgreSql
+      provided_by:
+        name: Murano Apps Repository
+        href: "https://github.com/openstack/murano-apps"
+        company: Mirantis, Inc.
+      description: >
+         PostgreSQL is a powerful, open source object-relational database
+         system. It has more than 15 years of active development and
+         a proven architecture that has earned it a strong reputation
+         for reliability, data integrity, and correctness.
+      release:
+        - Kilo
+      format: package
+      license: Apache 2.0
+      attributes:
+        "Package URL": "http://storage.catalog.mirantis.com/apps/io.murano.databases.PostgreSql.zip"
+        "Source URL": "https://github.com/openstack/murano-apps/tree/master/PostgreSQL/package"
+    -
+      name: SqlDatabase Library
+      package_name: io.murano.databases.SqlDatabase
+      provided_by:
+        name: Murano Apps Repository
+        href: "https://github.com/openstack/murano-apps"
+        company: Mirantis, Inc.
+      description: >
+         Library package containing base interface for all SQL database
+         implementations.
+
+         Provides API to create databases, users and retrieve a
+         connection string. Implementations of this interface will override
+         those methods to provide DMBS-specific implementation of this interface.
+
+         Implementing this interface overrides DBMS-specific methods for the
+         three basic functions (creating a database, users, or retrieving a
+         connection string).
+      release:
+        - Kilo
+      format: package
+      license: Apache 2.0
+      attributes:
+        "Package URL": "http://storage.catalog.mirantis.com/apps/io.murano.databases.SqlDatabase.zip"
+        "Source URL": "https://github.com/openstack/murano-apps/tree/master/SQLDatabaseLibrary/package"
+    -
+      name: Apache Tomcat
+      package_name: io.murano.apps.apache.Tomcat
+      provided_by:
+        name: Murano Apps Repository
+        href: "https://github.com/openstack/murano-apps"
+        company: Mirantis, Inc.
+      description: >
+         Apache Tomcat is an open source software implementation of the
+         Java Servlet and JavaServer Pages technologies. It provides provides
+         a 'pure Java' HTTP web server environment for Java code to run in.
+
+         In the simplest config Tomcat runs in a single operating system
+         process. The process runs a Java virtual machine (JVM). Every
+         single HTTP request from a browser to Tomcat is processed in
+         the Tomcat process in a separate thread.
+      release:
+        - Kilo
+      format: package
+      license: Apache 2.0
+      attributes:
+        "Package URL": "http://storage.catalog.mirantis.com/apps/io.murano.apps.apache.Tomcat.zip"
+        "Source URL": "https://github.com/openstack/murano-apps/tree/master/Tomcat/package"
+    -
+      name: WordPress
+      package_name: io.murano.apps.WordPress
+      provided_by:
+        name: Murano Apps Repository
+        href: "https://github.com/openstack/murano-apps"
+        company: Mirantis, Inc.
+      description: >
+         WordPress is a free and open source blogging tool and a content management system (CMS) based on PHP and MySQL.
+      release:
+        - Kilo
+      format: package
+      license: Apache 2.0
+      attributes:
+        "Package URL": "http://storage.catalog.mirantis.com/apps/io.murano.apps.WordPress.zip"
+        "Source URL": "https://github.com/openstack/murano-apps/tree/master/WordPress/package"
+    -
+      name: Zabbix Agent
+      package_name: io.murano.apps.ZabbixAgent
+      provided_by:
+        name: Murano Apps Repository
+        href: "https://github.com/openstack/murano-apps"
+        company: Mirantis, Inc.
+      description: >
+         Zabbix Agent is deployed on a monitoring target to actively monitor
+         local resources and applications (hard drives, memory, processor
+         statistics etc).
+
+         Zabbix is the ultimate open source availability and performance
+         monitoring solution. Zabbix offer advance monitoring, alerting, and
+         visualization features today which are missing in other monitoring
+         system, even some of the best commercial ones.
+      release:
+        - Kilo
+      format: package
+      license: Apache 2.0
+      attributes:
+        "Package URL": "http://storage.catalog.mirantis.com/apps/io.murano.apps.ZabbixAgent.zip"
+        "Source URL": "https://github.com/openstack/murano-apps/tree/master/ZabbixAgent/package"
+    -
+      name: Zabbix
+      package_name: io.murano.apps.ZabbixServer
+      provided_by:
+        name: Murano Apps Repository
+        href: "https://github.com/openstack/murano-apps"
+        company: Mirantis, Inc.
+      description: >
+         Zabbix is the ultimate open source availability and performance
+         monitoring solution. Zabbix offer advance monitoring, alerting, and
+         visualization features today which are missing in other monitoring
+         system, even some of the best commercial ones.
+      release:
+        - Kilo
+      format: package
+      license: Apache 2.0
+      attributes:
+        "Package URL": "http://storage.catalog.mirantis.com/apps/io.murano.apps.ZabbixServer.zip"
+        "Source URL": "https://github.com/openstack/murano-apps/tree/master/ZabbixServer/package"
