@@ -157,24 +157,6 @@
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerHTTPd.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/HTTPdServer/package"
     -
-      name: Docker & Kubernes Bundle
-      package_name: docker_kubernetes
-      provided_by:
-        name: Stan Lagun
-        href: "https://github.com/istalker2"
-        company: Mirantis
-      description: >
-        Bundle consists of DockerStandaloneHost and KubernetesPod/Cluster,
-        required to build your onw Docker/Kuernetes-enabled applications
-      release:
-        - Kilo
-      format: bundle
-      supported_by: Mirantis
-      license: Apache 2.0
-      attributes:
-        "Source URL": "https://github.com/stackforge/murano-apps"
-        Documentation: "https://github.com/stackforge/murano-apps/blob/master/Docker/Kubernetes/readme.md"
-    -
       name: Apache HTTP Server
       package_name: io.murano.apps.apache.ApacheHttpServer
       provided_by:
@@ -803,3 +785,132 @@
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerTomcat.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/Tomcat/package"
+
+#------------------------------------------------------------------------------
+#                                  Bundles
+#------------------------------------------------------------------------------
+    -
+      name: Application Servers Bundle
+      package_name: app-servers
+      provided_by:
+        name: Stan Lagun
+        href: "https://github.com/istalker2"
+        company: Mirantis
+      description: >
+        This bundle contains the Apache HTTP Server and Apache Tomcat: an
+        open source server-side executive for Java Servlets and JavaServer
+        Pages. The bundle provides a flexible, familiar environment for
+        developing websites and applications that use Java for server-side
+        processing. Each request from a browser is processed by
+        Tomcat in a separate thread.
+      release:
+        - Kilo
+      format: bundle
+      bundled:
+        - io.murano.apps.apache.ApacheHttpServer
+        - io.murano.apps.apache.Tomcat
+    -
+      name: Container-based Apps Bundle
+      package_name: container-based-apps
+      provided_by:
+        name: Stan Lagun
+        href: "https://github.com/istalker2"
+        company: Mirantis
+      description: >
+        This bundle contains a wide range of apps for building
+        (from Git), continuously-integrating, deploying and testing
+        container-native, resilient and scalable data-driven and
+        transaction-driven websites and applications. All components in
+        this bundle can be deployed on DockerStandaloneHost or
+        KubernetesPod/Cluster.
+        Included in the bundle are:
+          *  Web server options: Market-leading Apache and high-performing,
+             tunable Nginx, in simplex versions as well as versions rigged
+             to automatically deploy a website from a given Git repository.
+          *  Java engine options: Glassfish application server
+             (open source Java EE) and Tomcat.
+          *  NoSQL and specialized databases: InfluxDB for storing
+             metrics and sensor data (with no external dependencies).
+             MongoDB for object/document storage, Redis for key/value storage.
+          *  Leading SQL databases: MySQL, the increasingly-popular MariaDB
+             and Crate for massively-scalable elastic SQL storage.
+          *  Grafana for visualizing large-scale measurement data.
+          *  Plus: Jenkins for automating continuous builds
+             and monitoring remote job execution.
+      release:
+        - Kilo
+      format: bundle
+      bundled:
+        - io.murano.apps.docker.DockerCrate
+        - io.murano.apps.docker.DockerApp
+        - io.murano.apps.docker.DockerGlassFish
+        - io.murano.apps.docker.DockerGrafana
+        - io.murano.apps.docker.DockerHTTPd
+        - io.murano.apps.docker.DockerHTTPdSite
+        - io.murano.apps.docker.DockerInfluxDB
+        - io.murano.apps.docker.DockerJenkins
+        - io.murano.apps.docker.DockerMariaDB
+        - io.murano.apps.docker.DockerMongoDB
+        - io.murano.apps.docker.DockerMySQL
+        - io.murano.apps.docker.DockerNginx
+        - io.murano.apps.docker.DockerNginxSite
+        - io.murano.apps.docker.DockerPostgreSQL
+        - io.murano.apps.docker.DockerRedis
+        - io.murano.apps.docker.DockerTomcat
+    -
+      name: Databases Bundle
+      package_name: databases
+      provided_by:
+        name: Stan Lagun
+        href: "https://github.com/istalker2"
+        company: Mirantis
+      description: >
+        This bundle contains most popular databases available today.
+      release:
+        - Kilo
+      format: bundle
+      bundled:
+        - io.murano.databases.MySql
+        - io.murano.databases.PostgreSql
+    -
+      name: Docker & Kubernes Bundle
+      package_name: docker-n-kubernetes
+      provided_by:
+        name: Stan Lagun
+        href: "https://github.com/istalker2"
+        company: Mirantis
+      description: >
+        This bundle contains Docker Standalone Host and Kubernetes Pod: two
+        ways (both compatible with any Docker-containerized app and
+        both offering access to standard Docker APIs) of aggregating groups
+        of related Docker containers on host compute/storage and network
+        infrastructure, and treating these aggregations as indivisible
+        deployment units. Kubernetes Pod also contains the Kubernetes
+        Replication Controller, which can auto-replicate and redeploy a
+        Pod with given contents in the event of Pod failure.
+      release:
+        - Kilo
+      format: bundle
+      bundled:
+        - io.murano.apps.docker.DockerStandaloneHost
+        - io.murano.apps.docker.kubernetes.KubernetesPod
+    -
+      name: Monitoring Bundle
+      package_name: monitoring
+      provided_by:
+        name: Stan Lagun
+        href: "https://github.com/istalker2"
+        company: Mirantis
+      description: >
+        This bundle contains Zabbix Agent and Zabbix Server: components of the
+        popular monitoring application. Use Zabbix Agent to instrument
+        monitored nodes and return realtime metrics on resource consumption
+        and application performance. Use Zabbix Server to aggregate,
+        alert and help visualize your data.
+      release:
+        - Kilo
+      format: bundle
+      bundled:
+        - io.murano.apps.ZabbixAgent
+        - io.murano.apps.ZabbixServer
+

@@ -120,7 +120,7 @@
           </div>
 	</div>
         <p><strong>Don't have OpenStack yet?</strong></p>
-        <p>Get over to the <a href="https://www.openstack.org/marketplace/" target="_blank">OpenStack Marketplace</a> and find the best way to build your cloud. Once you have a cloud come back to the OpenStack Application Catalog to make your cloud sing with applications.</p>
+        <p>Visit the <a href="https://www.openstack.org/marketplace/" target="_blank">OpenStack Marketplace</a> and select tools and methods for building your cloud. Then come back to the OpenStack Application Catalog to make your cloud sing with applications.</p>
 
         <div class="row">
 
@@ -132,16 +132,16 @@
               </a>
               <p>
                 In Murano Packages you will find complete
-                applications, simple and clustered, ready to deploy
-                into your cloud. To use them:
+                applications, in both simple and clustered configurations, ready to deploy
+                on your cloud. To use them:
               </p>
               <ol>
                 <li>Verify that you have Murano installed</li>
                 <li>Browse the list and find the app package you want</li>
-                <li>Copy the name of the app package</li>
-                <li>In Horizon navigate to Murano &gt; Manage &gt; Package Definitions and click Import Package</li>
-		<li>Paste the app package name, and click Next</li>
-		<li>You can now deploy the app into your cloud using Horizon, by navigating to Application Catalog &gt; Environments, creating and deploying that environment.</li>
+                <li>Highlight and copy the name of the app package</li>
+                <li>In Horizon, navigate to Murano &gt; Manage &gt; Package Definitions and click Import Package</li>
+		<li>Paste the app package name into the labeled text field, and click Next. This will download and install the package components.</li>
+		<li>Now deploy the app on your cloud by navigating to Application Catalog &gt; Environments, then creating and deploying that environment.</li>
 	      </ol>
 	    </div>
 	  </div>
@@ -159,8 +159,8 @@
               </p>
 	      <ol>
                 <li>Browse the list and find the one you want</li>
-                <li>Download the template yaml file to your local machine</li>
-                <li>Use Horizon to add the template to Heat </li>
+                <li>Download the template yaml (.yml) file to your local machine</li>
+                <li>Use Horizon to add the template to Heat (by uploading it via file selector, or copy/pasting it into the editable field)</li>
                 <li>Use the <a href="http://docs.openstack.org/cli-reference/content/heatclient_commands.html" target="_blank">Heat client</a> to create a stack</li>
 	      </ol>
 	    </div>
@@ -180,9 +180,9 @@
               </p>
 	      <ol>
                 <li>Browse the list and find the one you want</li>
-                <li>Copy URL for the image file</li>
-                <li>Use the <a href="http://docs.openstack.org/cli-reference/content/glanceclient_commands.html" target="_blank">Glance client</a> to add it to your cloud with the --copy-from option, or add the image from Horizon by specifying the URL as the image location.</li>
-                <li>Use Nova to launch a vm from the new image
+                <li>Copy the URL for the image file</li>
+                <li>Use the <a href="http://docs.openstack.org/cli-reference/content/glanceclient_commands.html" target="_blank">Glance client</a> to add it to your cloud with the --copy-from option, or add the image from Horizon by creating a new image, and specifying the URL as the image location.</li>
+                <li>Use Nova to launch a vm from the new image (or Horizon to launch it directly from the Glance image list)
                 </li>
 	      </ol>
 	    </div>
@@ -379,7 +379,7 @@
 
       <h2>${name} (${format})</h2>
       <div>
-	<span class="label">Package name:</span>
+	<span class="label">{{if format == 'package'}}Package{{else}}Bundle{{/if}} name:</span>
 	<input type="text" value="${package_name}" onfocus="this.select();" onmouseup="return false;">
       </div>
 
@@ -388,11 +388,6 @@
 
       <h3>Supported OpenStack Releases</h3>
       <div><span class="value">${release_html}</span></div>
-
-      {{if supported_by}}
-      <h3>Support</h3>
-      <div><span class="label">Supported by:</span> <span class="value">${supported_by}</span></div>
-      {{/if}}
 
       <h3>Author</h3>
       <div><span class="label">Contact:	</span><a href="${provided_by.href}"> <span class="value">${provided_by.name}</span> </a></div>
@@ -414,6 +409,17 @@
          {{/each}}
       </ul>
       {{/if}}
+      {{/if}}
+
+      {{if format == 'bundle' && bundled}}
+      <h3>In the Bundle</h3>
+      <p>Following packages included to this bundle:</p>
+      <ul>
+         {{each bundled }}
+         <li>${bundled[$index]}</li>
+         {{/each}}
+      </ul>
+      <p>Note: Dependencies of the each package included to the bundle will be also imported.<p>
       {{/if}}
 
       {{if attributes }}
