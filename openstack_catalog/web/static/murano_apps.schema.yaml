@@ -15,8 +15,6 @@
           - description
           - release
           - format
-          - supported_by
-          - license
         additionalProperties: true
         properties: 
           name: 
@@ -62,10 +60,6 @@
             enum: 
               - package
               - bundle
-          supported_by: 
-            type: string
-          license: 
-            type: string
           attributes: 
             type: object
             additionalProperties: true
