@@ -803,3 +803,29 @@
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerTomcat.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/Tomcat/package"
+    -
+      name: Cloud Foundry
+      package_name: io.murano.apps.paas.CloudFoundry
+      provided_by:
+        name: Murano Apps Repository
+        href: "https://github.com/openstack/murano-apps"
+        company: Mirantis, Inc.
+      description: >
+         Cloud Foundry is an opensource PaaS solution. PaaS makes platform
+         much easier to deploy, run and scale applications. Some PaaS
+         offerings have limited language and framework support, do not
+         deliver key application services, or restrict deployment to a single
+         cloud. Cloud Foundry is the industry’s Open PaaS and provides a
+         choice of clouds, frameworks and application services. As an open
+         source project, there is a broad community both contributing and
+         supporting Cloud Foundry.
+      release:
+        - Kilo
+      format: package
+      dependsOn:
+        image:
+          name: Ubuntu 14.04 x64 (pre-installed murano-agent)
+          uri: http://storage.apps.openstack.org/images/ubuntu-14.04-m-agent.qcow2
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.paas.CloudFoundry.zip"
+        "Source URL": "https://github.com/openstack/murano-apps/tree/master/CloudFoundry/package"
