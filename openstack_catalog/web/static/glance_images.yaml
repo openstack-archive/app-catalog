@@ -1,31 +1,61 @@
 ---
   images:
     -
-      name: ubuntu14.04-x64-docker
+      name: Ubuntu 14.04 x64 (pre-installed Kubernetes)
       provided_by:
-        name: Stan Lagun
-        href: mailto:slagun@mirantis.com
-        company: Mirantis
-      description: Base Ubuntu 14.04 with docker
-      format: QCOW2
-      supported_by: Mirantis
-      license: GPL 2.0
-      attributes:
-        url: http://storage.apps.openstack.org/images/ubuntu14.04-x64-docker.qcow2
-        hash: dd69232d1a745a7b237bd8d5e9e8485a
-    -
-      name: ubuntu14.04-x64-kubernetes
-      provided_by:
-        name: Stan Lagun
-        href: mailto:slagun@mirantis.com
-        company: Mirantis
-      description: Base Ubuntu 14.04 with docker
+        name: Alexey Deryugin
+        href: mailto:aderyugin@mirantis.com
+        company: Mirantis, Inc.
+      description: >
+                  Ubuntu 14.04 x64 with Docker & Kubernetes pre-installed
+                  used by Kubernetes Cluster application.
       format: QCOW2
       supported_by: Mirantis
       license: GPL 2.0
       attributes:
         url: http://storage.apps.openstack.org/images/ubuntu14.04-x64-kubernetes.qcow2
         hash: e7a843811aab86040f672b1254037a7f
+    -
+      name: Ubuntu 14.04 x64 (pre-installed murano-agent)
+      provided_by:
+        name: Alexey Deryugin
+        href: mailto:aderyugin@mirantis.com
+        company: Mirantis, Inc.
+      description: >
+                  Ubuntu 14.04 x64 with murano-agent pre-installed
+                  used by Murano applications that does not rely on
+                  pre-installed software in the image and instead provision
+                  applications using murano-agent.
+      format: QCOW2
+      supported_by: Mirantis
+      license: GPL 2.0
+      attributes:
+        url: http://storage.apps.openstack.org/images/ubuntu-14.04-m-agent.qcow2
+        hash: cbd9ded8587b98d144d9cf0faea991a9
+    -
+      name: Debian 8 x64 (pre-installed murano-agent)
+      provided_by:
+        name: Alexey Deryugin
+        href: mailto:aderyugin@mirantis.com
+        company: Mirantis, Inc.
+      description: Base Debian Jessie x64 image with murano-agent pre-installed
+      format: QCOW2
+      license: GPL 2.0
+      attributes:
+        url: http://storage.apps.openstack.org/images/debian-8-m-agent.qcow2
+        hash: c05398176ff18ca4d011b3550fa174e3
+    -
+      name: Debian 8 x64 (pre-installed Docker)
+      provided_by:
+        name: Alexey Deryugin
+        href: mailto:aderyugin@mirantis.com
+        company: Mirantis, Inc.
+      description: Base Debian Jessie x64 image with murano-agent & Docker pre-installed
+      format: QCOW2
+      license: GPL 2.0
+      attributes:
+        url: http://storage.apps.openstack.org/images/debian-8-docker.qcow2
+        hash: f9f2466c39dac98a1e4ed03fb5701225
     -
       name: Ubuntu Trusty 14
       provided_by:
@@ -95,27 +125,3 @@
       attributes:
         url: http://www.cloudbase.it/ws2012r2/
         hash: unknown
-    -
-      name: Debian 8 x64 (pre-installed murano-agent)
-      provided_by:
-        name: Alexey Deryugin
-        href: mailto:aderyugin@mirantis.com
-        company: Mirantis, Inc.
-      description: Base Debian Jessie x64 image with murano-agent pre-installed
-      format: QCOW2
-      license: GPL 2.0
-      attributes:
-        url: http://storage.apps.openstack.org/images/debian-8-m-agent.qcow2
-        hash: c05398176ff18ca4d011b3550fa174e3
-    -
-      name: Debian 8 x64 (pre-installed Docker)
-      provided_by:
-        name: Alexey Deryugin
-        href: mailto:aderyugin@mirantis.com
-        company: Mirantis, Inc.
-      description: Base Debian Jessie x64 image with murano-agent & Docker pre-installed
-      format: QCOW2
-      license: GPL 2.0
-      attributes:
-        url: http://storage.apps.openstack.org/images/debian-8-docker.qcow2
-        hash: f9f2466c39dac98a1e4ed03fb5701225
