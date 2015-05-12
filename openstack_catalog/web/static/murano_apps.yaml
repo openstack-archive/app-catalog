@@ -146,6 +146,10 @@
         Apache began in early 1995 after work on the NCSA code stalled. Apache
         quickly overtook NCSA HTTPd as the dominant HTTP server, and has remained
         the most popular HTTP server in use since April 1996.
+
+        Murano will deploy this in the docker service of your choice;
+        you'll be will prompted to create a docker service or choose one
+        you have deployed (e.g., via Kubernetes Pod).
       release:
         - Kilo
       format: package
@@ -190,6 +194,8 @@
 
          Apache quickly overtook NCSA HTTPd as the dominant HTTP server, and
          has remained the most popular HTTP server in use since April 1996.
+
+         Murano creates a VM(s) for you from the image listed in the dependencies.
       release:
         - Kilo
       format: package
@@ -214,6 +220,8 @@
          SQL is the most popular language for adding, accessing and managing
          content in a database. It is most noted for its quick processing,
          proven reliability, ease and flexibility of use.
+
+         Murano creates a VM(s) for you from the image listed in the dependencies.
       release:
         - Kilo
       format: package
@@ -238,6 +246,8 @@
          system. It has more than 15 years of active development and
          a proven architecture that has earned it a strong reputation
          for reliability, data integrity, and correctness.
+
+         Murano creates a VM(s) for you from the image listed in the dependencies.
       release:
         - Kilo
       format: package
@@ -290,6 +300,8 @@
          process. The process runs a Java virtual machine (JVM). Every
          single HTTP request from a browser to Tomcat is processed in
          the Tomcat process in a separate thread.
+
+         Murano creates a VM(s) for you from the image listed in the dependencies.
       release:
         - Kilo
       format: package
@@ -357,6 +369,8 @@
          monitoring solution. Zabbix offer advance monitoring, alerting, and
          visualization features today which are missing in other monitoring
          system, even some of the best commercial ones.
+
+         Murano creates a VM(s) for you from the image listed in the dependencies.
       release:
         - Kilo
       format: package
@@ -379,6 +393,10 @@
         Crate makes centralized database servers obsolete. Realtime
         non-blocking SQL engine with full blown search. Highly available,
         massively scalable yet simple to use.
+
+        Murano will deploy this in the docker service of your choice;
+        you'll be will prompted to create a docker service or choose one
+        you have deployed (e.g., via Kubernetes Pod).
       release:
         - Kilo
       format: package
@@ -404,6 +422,10 @@
 
         To deploy app user need just to choose any image from the Docker Hub and
         configure deployment process by specifying environment variables and ports.
+
+        Murano will deploy this in the docker service of your choice;
+        you'll be will prompted to create a docker service or choose one
+        you have deployed (e.g., via Kubernetes Pod).
       release:
         - Kilo
       format: package
@@ -437,6 +459,10 @@
         enterprise applications that are portable and scalable, and that
         integrate with legacy technologies. Optional components can also be
         installed for additional services.
+
+        Murano will deploy this in the docker service of your choice;
+        you'll be will prompted to create a docker service or choose one
+        you have deployed (e.g., via Kubernetes Pod).
       release:
         - Kilo
       format: package
@@ -469,6 +495,10 @@
         and OpenTSDB. There is also experimental support for KairosDB, and SQL
         is on the roadmap. Grafana has a variety of panels, including a fully
         featured graph panel with rich visualization options.
+
+        Murano will deploy this in the docker service of your choice;
+        you'll be will prompted to create a docker service or choose one
+        you have deployed (e.g., via Kubernetes Pod).
       release:
         - Kilo
       format: package
@@ -497,6 +527,10 @@
 
         This applications deploys a web-site from a git URL using Apache HTTPd as
         the web server.
+
+        Murano will deploy this in the docker service of your choice;
+        you'll be will prompted to create a docker service or choose one
+        you have deployed (e.g., via Kubernetes Pod).
       release:
         - Kilo
       format: package
@@ -521,6 +555,10 @@
 
         InfluxDB is targeted at use cases for DevOps, metrics, sensor data,
         and real-time analytics.
+
+        Murano will deploy this in the docker service of your choice;
+        you'll be will prompted to create a docker service or choose one
+        you have deployed (e.g., via Kubernetes Pod).
       release:
         - Kilo
       format: package
@@ -554,6 +592,10 @@
              capture the output, and it is up to you to look at them diligently
              and notice when it broke. Jenkins keeps those outputs and makes it
              easy for you to notice when something is wrong.
+
+        Murano will deploy this in the docker service of your choice;
+        you'll be will prompted to create a docker service or choose one
+        you have deployed (e.g., via Kubernetes Pod).
       release:
         - Kilo
       format: package
@@ -585,6 +627,10 @@
         storage engine for replacing InnoDB, as well as a new storage engine, Aria,
         that intends to be both a transactional and non-transactional engine
         perhaps even included in future versions of MySQL.
+
+        Murano will deploy this in the docker service of your choice;
+        you'll be will prompted to create a docker service or choose one
+        you have deployed (e.g., via Kubernetes Pod).
       release:
         - Kilo
       format: package
@@ -619,6 +665,10 @@
         and services, including Craigslist, eBay, Foursquare, SourceForge, Viacom,
         and the New York Times, among others. MongoDB is the most popular
         NoSQL database system.
+
+        Murano will deploy this in the docker service of your choice;
+        you'll be will prompted to create a docker service or choose one
+        you have deployed (e.g., via Kubernetes Pod).
       release:
         - Kilo
       format: package
@@ -643,6 +693,10 @@
         SQL is the most popular language for adding, accessing and managing content
         in a database. It is most noted for its quick processing, proven
         reliability, ease and flexibility of use.
+
+        Murano will deploy this in the docker service of your choice;
+        you'll be will prompted to create a docker service or choose one
+        you have deployed (e.g., via Kubernetes Pod).
       release:
         - Kilo
       format: package
@@ -669,6 +723,10 @@
         high performance and low memory usage. It is licensed under
         the 2-clause BSD-like license and it runs on Linux, BSD variants,
         Mac OS X, Solaris, AIX, HP-UX, as well as on other *nix flavors.
+
+        Murano will deploy this in the docker service of your choice;
+        you'll be will prompted to create a docker service or choose one
+        you have deployed (e.g., via Kubernetes Pod).
       release:
         - Kilo
       format: package
@@ -698,6 +756,10 @@
 
         This applications deploys a web-site from a git URL using Nginx as
         the web server.
+
+        Murano will deploy this in the docker service of your choice;
+        you'll be will prompted to create a docker service or choose one
+        you have deployed (e.g., via Kubernetes Pod).
       release:
         - Kilo
       format: package
@@ -742,6 +804,10 @@
         by its extensive standard SQL support and available migration tools.
         And if proprietary extensions had been used, by its extensibility that
         can emulate many through some built-in and third-party open source.
+
+        Murano will deploy this in the docker service of your choice;
+        you'll be will prompted to create a docker service or choose one
+        you have deployed (e.g., via Kubernetes Pod).
       release:
         - Kilo
       format: package
@@ -767,6 +833,10 @@
         Redis is the most popular key-value store.
 
         The name Redis means REmote DIctionary Server.
+
+        Murano will deploy this in the docker service of your choice;
+        you'll be will prompted to create a docker service or choose one
+        you have deployed (e.g., via Kubernetes Pod).
       release:
         - Kilo
       format: package
@@ -793,6 +863,10 @@
         runs in a single operating system process. The process runs a Java
         virtual machine (JVM). Every single HTTP request from a browser to
         Tomcat is processed in the Tomcat process in a separate thread.
+
+        Murano will deploy this in the docker service of your choice;
+        you'll be will prompted to create a docker service or choose one
+        you have deployed (e.g., via Kubernetes Pod).
       release:
         - Kilo
       format: package
