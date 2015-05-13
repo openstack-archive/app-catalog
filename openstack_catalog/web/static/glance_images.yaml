@@ -125,3 +125,14 @@
       attributes:
         url: http://www.cloudbase.it/ws2012r2/
         hash: unknown
+    -
+      name: Apcera HCOS Trial Edition
+      provided_by:
+        name: Austin Mills
+        href: mailto:austin@apcera.com
+        company: Apcera, Inc.
+      description: Apcera HCOS Trial Edition image, built on Ubuntu 14.04 x64 image with murano-agent pre-installed
+      format: QCOW2
+      attributes:
+        url: http://apcera-downloads.s3.amazonaws.com/continuum_trial_openstack_1431536104.qcow2
+        hash: 1055116f26f2ea36a51217ab33ddec3f
