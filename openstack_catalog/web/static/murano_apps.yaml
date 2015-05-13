@@ -875,6 +875,29 @@
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerTomcat.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/Tomcat/package"
+    -
+      name: Apcera
+      package_name: com.apcera.Apcera
+      provided_by:
+        name: Austin Mills
+        href: "mailto:austin@apcera.com"
+        company: Apcera, Inc.
+      description: >
+        Apcera Hybrid Cloud Operating System (HCOS) delivers seamless workload
+        mobility and pervasive policy and governance across any cloud - public
+        or private. Built on a foundation of trust, Apcera HCOS enables you to
+        securely develop, deploy, orchestrate and govern diverse workloads
+        across multiple cloud providers resulting in lower cost, simplified
+        operations and assured compliance.
+      release:
+        - Kilo
+      format: package
+      dependsOn:
+        image:
+          name: Apcera HCOS Trial Edition
+          uri: http://storage.apps.openstack.org/images/continuum-trial-openstack-1431536104.qcow2
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/com.apcera.Apcera.zip"
 #------------------------------------------------------------------------------
 #                                  Bundles
 #------------------------------------------------------------------------------
