@@ -136,3 +136,41 @@
       attributes:
         url: http://storage.apps.openstack.org/images/continuum-trial-openstack-1431536104.qcow2
         hash: 1055116f26f2ea36a51217ab33ddec3f
+    -
+      name: Bitnami Gitlab Stack
+      provided_by:
+        name: Bitnami
+        href: http://helpdesk.bitnami.com/home
+        company: Bitnami
+      description: >
+                  The Bitnami Gitlab Stack provides a
+                  one-click install solution for GitLab.
+                  Download installers and virtual
+                  machines, or run your own GitLab server
+                  in the cloud.
+
+                  The GitLab open source edition,
+                  available from Bitnami, is a developer
+                  tool that allows users to collaborate on
+                  code, create new projects, manage
+                  repositories, and perform code reviews.
+                  When using GitLab, users can keep their
+                  code on their own servers, either in the
+                  cloud or on-premise. For additional
+                  peace of mind, the free community
+                  edition even features enterprise-grade
+                  features such as a mature user
+                  permissions scheme and support for high
+                  availability. Bitnami GitLab is bundled
+                  with GitLab CI, a continuous integration
+                  server. Just point your projects at the
+                  CI server and automate all your tests.
+
+                  You can find more details on this image at
+                  https://bitnami.com/stack/gitlab
+      format: QCOW2
+      supported_by: Bitnami
+      license: GPL 2.0
+      attributes:
+        url: http://storage.apps.openstack.org/images/bitnami-gitlab-7.10.1-0-ubuntu-14.04-demo.qcow
+        hash: b6a66764d8c6689c5401c68dd320a3d2
