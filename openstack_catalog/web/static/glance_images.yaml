@@ -136,3 +136,28 @@
       attributes:
         url: http://storage.apps.openstack.org/images/continuum-trial-openstack-1431536104.qcow2
         hash: 1055116f26f2ea36a51217ab33ddec3f
+    -
+      name: Bitnami LAMP Stack
+      provided_by:
+        name: Bitnami
+        href: http://helpdesk.bitnami.com/home
+        company: Bitnami
+      description: >
+                  Bitnami LAMP Stack provides a complete,
+                  fully-integrated and ready to run LAMP development
+                  environment. In addition to PHP, MySQL and Apache,
+                  it includes FastCGI, OpenSSL, phpMyAdmin,
+                  ModSecurity, SQLite, Varnish, ImageMagick, xDebug,
+                  Xcache, OpenLDAP, ModSecurity, Memcache, OAuth,
+                  PEAR, PECL, APC, GD, cURL and other components and
+                  the following frameworks:Zend Framework, Symfony,
+                  CodeIgniter, CakePHP, Smarty, Laravel.
+
+                  You can find more details on this image at
+                  https://bitnami.com/stack/lamp
+      format: QCOW2
+      supported_by: Bitnami
+      license: GPL 2.0
+      attributes:
+        url: http://storage.apps.openstack.org/images/bitnami-lampstack-5.4.40-0-ubuntu-14.04-auro.qcow
+        hash: f75928d8ff814c23c69c0a673e2fc13c
