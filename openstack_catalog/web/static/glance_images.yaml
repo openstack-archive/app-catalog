@@ -136,3 +136,28 @@
       attributes:
         url: http://storage.apps.openstack.org/images/continuum-trial-openstack-1431536104.qcow2
         hash: 1055116f26f2ea36a51217ab33ddec3f
+    -
+      name: Bitnami Django Stack
+      provided_by:
+        name: Bitnami
+        href: http://helpdesk.bitnami.com/home
+        company: Bitnami
+      description: >
+                  Django is a high-level Python Web framework
+                  that encourages rapid development and clean,
+                  pragmatic design. Python is a dynamic
+                  object-oriented programming language that can
+                  be used for many kinds of software development.
+                  The Bitnami Django Stack greatly simplifies
+                  the deployment of Django and its runtime
+                  dependencies and includes ready-to-run versions
+                  of Python, Django, MySQL and Apache.
+
+                  You can find more details on this image at
+                  https://bitnami.com/stack/django
+      format: QCOW2
+      supported_by: Bitnami
+      license: GPL 2.0
+      attributes:
+        url: http://storage.apps.openstack.org/images/bitnami-djangostack-1.8-0-dev-ubuntu-14.04-demo.qcow.gz
+        hash: 718131197f641429356263c09829ed88
