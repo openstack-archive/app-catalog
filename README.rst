@@ -6,7 +6,7 @@ Application Catalog for OpenStack
 The OpenStack Application Catalog will help you make
 applications available on your OpenStack cloud by providing
 a community driven catalog containing Glance images, Heat
-templates and Murano applications. 
+templates and Murano applications.
 
 Overview
 --------
@@ -20,9 +20,9 @@ packages for installing complete applications. When many
 OpenStack community members are publishing artifacts that
 users can easily download and install into their clouds this
 will multiply the value of their OpenStack cloud. Easy
-access to images, templates and apps will solve the “what
-now” question some user consider after successfully
-deploying an OpenStack environment. 
+access to images, templates and apps will solve the "what
+now" question some user consider after successfully
+deploying an OpenStack environment.
 
 * Free software: Apache 2.0 License. See LICENSE file.
 * Documentation: http://wiki.openstack.org/wiki/App-Catalog
