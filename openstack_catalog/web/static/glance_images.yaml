@@ -136,3 +136,63 @@
       attributes:
         url: http://storage.apps.openstack.org/images/continuum-trial-openstack-1431536104.qcow2
         hash: 1055116f26f2ea36a51217ab33ddec3f
+    -
+      name: Sahara HDP 2.0.6 (CentOS 6.6)
+      provided_by:
+        name: Mirantis
+        company: Mirantis, Inc.
+      description: CentOS 6.6 with pre-installed HDP 2.0.6
+      format: QCOW2
+      attributes:
+        url: http://sahara-files.mirantis.com/images/upstream/kilo/sahara-kilo-hdp-2.0-centos-6.6.qcow2
+        hash: e463b989880f91c373f9b97af8a0bb83
+    -
+      name: Sahara CDH 5.3.0 (CentOS 6.6)
+      provided_by:
+        name: Mirantis
+        company: Mirantis, Inc.
+      description: CentOS 6.6 with pre-installed CDH 5.3.0
+      format: QCOW2
+      attributes:
+        url: http://sahara-files.mirantis.com/images/upstream/kilo/sahara-kilo-cloudera-5.3.0-centos-6.6.qcow2
+        hash: 568698419b85d9c9279e4c5335ffe3e6
+    -
+      name: Sahara CDH 5.3.0 (Ubuntu 12.04)
+      provided_by:
+        name: Mirantis
+        company: Mirantis, Inc.
+      description: Ubuntu 12.04 with pre-installed CDH 5.3.0
+      format: QCOW2
+      attributes:
+        url: http://sahara-files.mirantis.com/images/upstream/kilo/sahara-kilo-cloudera-5.3.0-ubuntu-12.04.qcow2
+        hash: e7f1190bb4952dfc1a72716987076577
+    -
+      name: Sahara MAPR 4.0.2 (CentOS 6.6)
+      provided_by:
+        name: Mirantis
+        company: Mirantis, Inc.
+      description: CentOS 6.6 with pre-installed MAPR 4.0.2
+      format: QCOW2
+      attributes:
+        url: http://sahara-files.mirantis.com/images/upstream/kilo/sahara-kilo-mapr-4.0.2-centos-6.6.qcow2
+        hash: 47ff252fc7859dde36ebc3a28fea3819
+    -
+      name: Sahara Spark 1.0.0 (Ubuntu 14.04)
+      provided_by:
+        name: Mirantis
+        company: Mirantis, Inc.
+      description: Ubuntu 14.04 with pre-installed Spark 1.0.0
+      format: QCOW2
+      attributes:
+        url: http://sahara-files.mirantis.com/images/upstream/kilo/sahara-kilo-spark-1.0.0-ubuntu-14.04.qcow2
+        hash: ce07050ecdfa67115c0ea8b66435bf53
+    -
+      name: Sahara Storm 0.9.1 (Ubuntu 14.04)
+      provided_by:
+        name: Mirantis
+        company: Mirantis, Inc.
+      description: Ubuntu 14.04 with pre-installed Storm 0.9.1
+      format: QCOW2
+      attributes:
+        url: http://sahara-files.mirantis.com/images/upstream/kilo/sahara-kilo-storm-0.9.1-ubuntu-14.04.qcow2
+        hash: 600584fa4d0dac8be3a571fdbee75e09
