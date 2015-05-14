@@ -1,0 +1,9 @@
+Verified+2: Jenkins
+Code-Review+2: Serg Melikyan <smelikyan@mirantis.com>
+Code-Review+2: Christopher Aedo <doc@aedo.net>
+Workflow+1: Christopher Aedo <doc@aedo.net>
+Submitted-by: Jenkins
+Submitted-at: Thu, 14 May 2015 17:13:46 +0000
+Reviewed-on: https://review.openstack.org/182806
+Project: stackforge/apps-catalog
+Branch: refs/heads/master
