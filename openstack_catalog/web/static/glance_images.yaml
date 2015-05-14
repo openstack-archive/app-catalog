@@ -14,7 +14,7 @@
       license: GPL 2.0
       attributes:
         url: http://storage.apps.openstack.org/images/ubuntu14.04-x64-kubernetes.qcow2
-        hash: e7a843811aab86040f672b1254037a7f
+        hash: 0d959023d0551d68f9dc7139cb814e92
     -
       name: Ubuntu 14.04 x64 (pre-installed murano-agent)
       provided_by:
