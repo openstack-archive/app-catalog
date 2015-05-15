@@ -388,3 +388,19 @@
       attributes:
         url: http://sahara-files.mirantis.com/images/upstream/kilo/sahara-kilo-storm-0.9.1-ubuntu-14.04.qcow2
         hash: 600584fa4d0dac8be3a571fdbee75e09
+    -
+      name: CoreOS v647.0.0
+      provided_by:
+        name: CoreOS
+        company: CoreOS
+      description: CoreOS version 647.0.0, released 2015-04-08
+      format: QCOW2
+      attributes:
+        url: http://stable.release.core-os.net/amd64-usr/647.0.0/coreos_production_openstack_image.img.bz2
+        docs: https://coreos.com/docs/
+        gpg: http://stable.release.core-os.net/amd64-usr/647.0.0/coreos_production_openstack_image.img.bz2.sig
+        digest: http://stable.release.core-os.net/amd64-usr/647.0.0/coreos_production_openstack_image.img.bz2.DIGESTS.asc
+        pubkey: https://coreos.com/security/image-signing-key
+        releases: https://coreos.com/releases/
+        hash: 298d349fa3facdcc533758ce6611ab290094bf11c1cb1fd994ac34e2b47ec384ee0421edfdfd8ae5f7acd7933a46859f7455045230cc5b1a8201481dc859f4c8
+
