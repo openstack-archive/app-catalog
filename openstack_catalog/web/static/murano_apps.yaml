@@ -205,8 +205,8 @@
         apps:
           - io.murano.databases.SqlDatabase
         image:
-          name: Debian 8 x64 (pre-installed murano-agent)
-          uri: http://storage.apps.openstack.org/images/debian-8-m-agent.qcow2
+          name: Ubuntu 14.04 x64 (pre-installed murano-agent)
+          uri: http://storage.apps.openstack.org/images/ubuntu-14.04-m-agent.qcow2
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.databases.PostgreSql.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/PostgreSQL/package"
