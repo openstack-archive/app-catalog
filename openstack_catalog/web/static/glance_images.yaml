@@ -256,7 +256,7 @@
       description: Stackato v3.4.2 PaaS image with Murano agent
       format: QCOW2
       attributes:
-        url: http://www.bigfastblog.com/wp-content/uploads/stackato-342-murano.qcow2
+        url: http://storage.apps.openstack.org/images/stackato-342-murano.qcow2
         hash: 7a7baf53a90c1afd9bb375bf7b26af5b
     -
       name: Sahara HDP 2.0.6 (CentOS 6.6)
