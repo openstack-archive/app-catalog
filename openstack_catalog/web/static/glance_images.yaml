@@ -134,3 +134,28 @@
       attributes:
         url: http://storage.apps.openstack.org/images/continuum-trial-openstack-1431536104.qcow2
         hash: 1055116f26f2ea36a51217ab33ddec3f
+    -
+      name: Bitnami Wordpress Stack
+      provided_by:
+        name: Bitnami
+        href: http://helpdesk.bitnami.com/home
+        company: Bitnami
+      description: >
+                  WordPress is one of the world’s most popular web
+                  publishing platforms for building blogs and
+                  websites. It can be customized via a wide
+                  selection of themes, extensions and plug-ins.
+
+                  The Bitnami WordPress Stack provides a one-click
+                  install solution for WordPress. Download
+                  installers and virtual machines, or run your own
+                  WordPress server in the cloud.
+
+                  You can find more details on this image at
+                  https://bitnami.com/stack/wordpress
+      format: QCOW2
+      supported_by: Bitnami
+      license: GPL 2.0
+      attributes:
+        url: http://storage.apps.openstack.org/images/bitnami-wordpress-4.2.2-0-ubuntu-14.04-demo.qcow
+        hash: e453a49802a240483ac62b152f033bbe
