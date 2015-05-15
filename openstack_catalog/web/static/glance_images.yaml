@@ -136,3 +136,19 @@
       attributes:
         url: http://storage.apps.openstack.org/images/continuum-trial-openstack-1431536104.qcow2
         hash: 1055116f26f2ea36a51217ab33ddec3f
+    -
+      name: CoreOS v668.3.0
+      provided_by:
+        name: CoreOS
+        company: CoreOS
+      description: CoreOS version 668.3.0, released 2015-05-12
+      format: QCOW2
+      attributes:
+        url: http://beta.release.core-os.net/amd64-usr/668.3.0/coreos_production_openstack_image.img.bz2
+        docs: https://coreos.com/docs/
+        gpg: http://beta.release.core-os.net/amd64-usr/668.3.0/coreos_production_openstack_image.img.bz2.sig
+        digest: http://beta.release.core-os.net/amd64-usr/668.3.0/coreos_production_openstack_image.img.bz2.DIGESTS.asc
+        pubkey: https://coreos.com/security/image-signing-key
+        releases: https://coreos.com/releases/
+        hash: 2209106e9243559f9da5707586ffae567ccf5b806420cfeb0673870a91a068115ca924b77f2e9a88240a03dbf3e790a0190d0a8730cf6172034e5033e7622e05
+
