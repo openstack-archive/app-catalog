@@ -58,6 +58,7 @@
       name: Ubuntu Trusty 14
       provided_by:
         name: Canonical
+        href: http://ubuntu.com
         company: Canonical
       description: Base Ubuntu 14.04 with cloud_init
       format: QCOW2
@@ -68,8 +69,22 @@
       name: CentOS 6
       provided_by:
         name: CentOS
+        href: http://centos.org
         company: CentOS
-      description: Base CentOS 6 with cloud_init
+      description: >
+                  The CentOS Linux distribution is a stable,
+                  predictable, manageable and reproducible platform
+                  derived from the sources of Red Hat Enterprise
+                  Linux (RHEL). We are now looking to expand on that
+                  by creating the resources needed by other
+                  communities to come together and be able to build
+                  on the CentOS Linux platform. And today we start
+                  the process by delivering a clear governance
+                  model, increased transparency and access. In the
+                  coming weeks we aim to publish our own roadmap
+                  that includes variants of the core CentOS Linux.
+                  
+                  This is a Base CentOS 6 image with cloud_init
       format: QCOW2
       attributes:
         url: http://cloud.centos.org/centos/6/images/CentOS-6-x86_64-GenericCloud-20141129_01.qcow2
@@ -78,8 +93,22 @@
       name: CentOS 7
       provided_by:
         name: CentOS
+        href: http://centos.org
         company: CentOS
-      description: Base CentOS 7 with cloud_init
+      description: >
+                  The CentOS Linux distribution is a stable,
+                  predictable, manageable and reproducible platform
+                  derived from the sources of Red Hat Enterprise
+                  Linux (RHEL). We are now looking to expand on that
+                  by creating the resources needed by other
+                  communities to come together and be able to build
+                  on the CentOS Linux platform. And today we start
+                  the process by delivering a clear governance
+                  model, increased transparency and access. In the
+                  coming weeks we aim to publish our own roadmap
+                  that includes variants of the core CentOS Linux.
+ 
+                  Base CentOS 7 with cloud_init
       format: QCOW2
       attributes:
         url: http://cloud.centos.org/centos/7/images/CentOS-7-x86_64-GenericCloud.qcow2
@@ -88,7 +117,8 @@
       name: CirrOS
       provided_by:
         name: CirrOS
-        company: CirrOS
+        href: http://cirros-cloud.net
+        company: CirrOS Community
       description: Tiny OS meant to run on a cloud
       format: QCOW2
       attributes:
@@ -97,9 +127,23 @@
     -
       name: Fedora 21
       provided_by:
-        name: Fedora
-        company: Fedora
-      description: Fedora 21 base image with cloud_init
+        name: Fedora Project
+        href: http://fedoraproject.org
+        company: Fedora Project Community
+      description: >
+                  The Fedora Project is a global partnership of
+                  free software community members. The Fedora
+                  Project is sponsored by Red Hat, which invests in
+                  our infrastructure and resources to encourage
+                  collaboration and incubate innovative new
+                  technologies. Some of these technologies may later
+                  be integrated into Red Hat products. They are
+                  developed in Fedora and produced under a free and
+                  open source license from inception, so other free
+                  software communities and projects are free to
+                  study, adopt, and modify them. 
+                  
+                  This is a Fedora 21 base image with cloud_init
       format: QCOW2
       attributes:
         url: http://download.fedoraproject.org/pub/fedora/linux/releases/21/Cloud/Images/x86_64/Fedora-Cloud-Base-20141203-21.x86_64.qcow2
@@ -108,8 +152,17 @@
       name: Debian
       provided_by:
         name: Debian
-        company: Debian
-      description: Debian base image with cloud_init
+        href: http://debian.org
+        company: Debian Community
+      description: >
+                  Debian is a Unix-like computer operating system
+                  and a Linux distribution that is composed entirely
+                  of free and open-source software, most of which is
+                  under the GNU General Public License, and packaged
+                  by a group of individuals known as the Debian
+                  project.
+                  
+                  This is a Debian base image with cloud_init pre-installed
       format: QCOW2
       attributes:
         url: http://cdimage.debian.org/cdimage/openstack/testing/debian-testing-openstack-amd64.qcow2
@@ -118,6 +171,7 @@
       name: Windows Server 2012 R2
       provided_by:
         name: Cloudbase
+        href: http://www.cloudbase.it/
         company: Cloudbase
       description: Windows Server 2012 R2 image with cloud_init
       attributes:
