@@ -1,6 +1,287 @@
 ---
   applications:
+#==============================================================================
+#                                Libraries
+#==============================================================================
+    -
+      name: SqlDatabase Library
+      package_name: io.murano.databases.SqlDatabase
+      provided_by:
+        name: Dmitry Dovbii
+        href: "mailto:ddovbii@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+         Library package containing base interface for all SQL database
+         implementations.
 
+         Provides API to create databases, users and retrieve a
+         connection string. Implementations of this interface will override
+         those methods to provide DMBS-specific implementation of this interface.
+
+         Implementing this interface overrides DBMS-specific methods for the
+         three basic functions (creating a database, users, or retrieving a
+         connection string).
+      release:
+        - Kilo
+      format: package
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.databases.SqlDatabase.zip"
+        "Source URL": "https://github.com/openstack/murano-apps/tree/master/SQLDatabaseLibrary/package"
+    -
+      name: Docker Interface Library
+      package_name: io.murano.apps.docker.Interfaces
+      provided_by:
+        name: Stan Lagun
+        href: "mailto:slagun@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+        Library package containing all base classes and interfaces for docker
+        applications and docker hosts.
+
+        Contains definitions of DockerApplication, DockerContainer,
+        DockerHost, DockerVolume, ApplicationPort and all other classes
+        that are used to pass information between docker
+        applications and docker host providers.
+      release:
+        - Kilo
+      format: package
+      attributes:
+        "Source URL": "https://github.com/stackforge/murano-apps"
+        Documentation: "https://github.com/stackforge/murano-apps/blob/master/Docker/Kubernetes/readme.md"
+#==============================================================================
+#                             Regular Applications
+#==============================================================================
+    -
+      name: Apache HTTP Server
+      package_name: io.murano.apps.apache.ApacheHttpServer
+      provided_by:
+        name: Dmitry Dovbii
+        href: "mailto:ddovbii@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+         The Apache HTTP Server, colloquially called Apache, is a Web server
+         application notable for playing a key role in the initial growth of
+         the World Wide Web. Originally based on the NCSA HTTPd server,
+         development of Apache began in early 1995 after work on the NCSA code
+         stalled.
+
+         Apache quickly overtook NCSA HTTPd as the dominant HTTP server, and
+         has remained the most popular HTTP server in use since April 1996.
+
+         Murano creates one or more VM(s) for you from the image listed in the dependencies.
+      release:
+        - Kilo
+      format: package
+      dependsOn:
+        image:
+          name: Debian 8 x64 (pre-installed murano-agent)
+          uri: http://storage.apps.openstack.org/images/debian-8-m-agent.qcow2
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.apache.ApacheHttpServer.zip"
+        "Source URL": "https://github.com/openstack/murano-apps/tree/master/ApacheHTTPServer/package"
+    -
+      name: Apache Tomcat
+      package_name: io.murano.apps.apache.Tomcat
+      provided_by:
+        name: Dmitry Dovbii
+        href: "mailto:ddovbii@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+         Apache Tomcat is an open source software implementation of the
+         Java Servlet and JavaServer Pages technologies. It provides provides
+         a 'pure Java' HTTP web server environment for Java code to run in.
+
+         In the simplest config Tomcat runs in a single operating system
+         process. The process runs a Java virtual machine (JVM). Every
+         single HTTP request from a browser to Tomcat is processed in
+         the Tomcat process in a separate thread.
+
+         Murano creates one or more VM(s) for you from the image listed in the dependencies.
+      release:
+        - Kilo
+      format: package
+      dependsOn:
+        image:
+          name: Debian 8 x64 (pre-installed murano-agent)
+          uri: http://storage.apps.openstack.org/images/debian-8-m-agent.qcow2
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.apache.Tomcat.zip"
+        "Source URL": "https://github.com/openstack/murano-apps/tree/master/Tomcat/package"
+    -
+      name: Apcera
+      package_name: com.apcera.Apcera
+      provided_by:
+        name: Austin Mills
+        href: "mailto:austin@apcera.com"
+        company: Apcera, Inc.
+      description: >
+        Apcera Hybrid Cloud Operating System (HCOS) delivers seamless workload
+        mobility and pervasive policy and governance across any cloud - public
+        or private. Built on a foundation of trust, Apcera HCOS enables you to
+        securely develop, deploy, orchestrate and govern diverse workloads
+        across multiple cloud providers resulting in lower cost, simplified
+        operations and assured compliance.
+      release:
+        - Kilo
+      format: package
+      dependsOn:
+        image:
+          name: Apcera HCOS Trial Edition
+          uri: http://storage.apps.openstack.org/images/continuum-trial-openstack-1431536104.qcow2
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/com.apcera.Apcera.zip"
+    -
+      name: Cloud Foundry
+      package_name: io.murano.apps.paas.CloudFoundry
+      provided_by:
+        name: Andrey Shestakov
+        href: "mailto:ashestakov@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+         Cloud Foundry is an opensource PaaS solution. PaaS makes platform
+         much easier to deploy, run and scale applications. Some PaaS
+         offerings have limited language and framework support, do not
+         deliver key application services, or restrict deployment to a single
+         cloud. Cloud Foundry is the industry’s Open PaaS and provides a
+         choice of clouds, frameworks and application services. As an open
+         source project, there is a broad community both contributing and
+         supporting Cloud Foundry.
+      release:
+        - Kilo
+      format: package
+      dependsOn:
+        image:
+          name: Ubuntu 14.04 x64 (pre-installed murano-agent)
+          uri: http://storage.apps.openstack.org/images/ubuntu-14.04-m-agent.qcow2
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.paas.CloudFoundry.zip"
+        "Source URL": "https://github.com/openstack/murano-apps/tree/master/CloudFoundry/package"
+    -
+      name: MySQL
+      package_name: io.murano.databases.MySql
+      provided_by:
+        name: Dmitry Dovbii
+        href: "mailto:ddovbii@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+         MySQL is a freely available open source Relational Database
+         Management System (RDBMS) that uses Structured Query Language (SQL).
+
+         SQL is the most popular language for adding, accessing and managing
+         content in a database. It is most noted for its quick processing,
+         proven reliability, ease and flexibility of use.
+
+         Murano creates one or more VM(s) for you from the image listed in the dependencies.
+      release:
+        - Kilo
+      format: package
+      dependsOn:
+        apps:
+          - io.murano.databases.SqlDatabase
+        image:
+          name: Debian 8 x64 (pre-installed murano-agent)
+          uri: http://storage.apps.openstack.org/images/debian-8-m-agent.qcow2
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.databases.MySql.zip"
+        "Source URL": "https://github.com/openstack/murano-apps/tree/master/MySQL/package"
+    -
+      name: PostgreSql
+      package_name: io.murano.databases.PostgreSql
+      provided_by:
+        name: Dmitry Dovbii
+        href: "mailto:ddovbii@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+         PostgreSQL is a powerful, open source object-relational database
+         system. It has more than 15 years of active development and
+         a proven architecture that has earned it a strong reputation
+         for reliability, data integrity, and correctness.
+
+         Murano creates one or more VM(s) for you from the image listed in the dependencies.
+      release:
+        - Kilo
+      format: package
+      dependsOn:
+        apps:
+          - io.murano.databases.SqlDatabase
+        image:
+          name: Debian 8 x64 (pre-installed murano-agent)
+          uri: http://storage.apps.openstack.org/images/debian-8-m-agent.qcow2
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.databases.PostgreSql.zip"
+        "Source URL": "https://github.com/openstack/murano-apps/tree/master/PostgreSQL/package"
+    -
+      name: WordPress
+      package_name: io.murano.apps.WordPress
+      provided_by:
+        name: Dmitry Dovbii
+        href: "mailto:ddovbii@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+         WordPress is a free and open source blogging tool and a content management system (CMS) based on PHP and MySQL.
+      release:
+        - Kilo
+      format: package
+      dependsOn:
+        apps:
+          - io.murano.databases.MySql
+          - io.murano.apps.apache.ApacheHttpServer
+          - io.murano.apps.ZabbixAgent
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.WordPress.zip"
+        "Source URL": "https://github.com/openstack/murano-apps/tree/master/WordPress/package"
+    -
+      name: Zabbix Agent
+      package_name: io.murano.apps.ZabbixAgent
+      provided_by:
+        name: Dmitry Dovbii
+        href: "mailto:ddovbii@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+         Zabbix Agent is deployed on a monitoring target to actively monitor
+         local resources and applications (hard drives, memory, processor
+         statistics etc).
+
+         Zabbix is the ultimate open source availability and performance
+         monitoring solution. Zabbix offer advance monitoring, alerting, and
+         visualization features today which are missing in other monitoring
+         system, even some of the best commercial ones.
+      release:
+        - Kilo
+      format: package
+      dependsOn:
+        apps:
+          - io.murano.apps.ZabbixServer
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.ZabbixAgent.zip"
+        "Source URL": "https://github.com/openstack/murano-apps/tree/master/ZabbixAgent/package"
+    -
+      name: Zabbix
+      package_name: io.murano.apps.ZabbixServer
+      provided_by:
+        name: Dmitry Dovbii
+        href: "mailto:ddovbii@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+         Zabbix is the ultimate open source availability and performance
+         monitoring solution. Zabbix offer advance monitoring, alerting, and
+         visualization features today which are missing in other monitoring
+         system, even some of the best commercial ones.
+
+         Murano creates one or more VM(s) for you from the image listed in the dependencies.
+      release:
+        - Kilo
+      format: package
+      dependsOn:
+        image:
+          name: Debian 8 x64 (pre-installed murano-agent)
+          uri: http://storage.apps.openstack.org/images/debian-8-m-agent.qcow2
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.ZabbixServer.zip"
+        "Source URL": "https://github.com/openstack/murano-apps/tree/master/ZabbixServer/package"
+#==============================================================================
+#                                Platforms
+#==============================================================================
     -
       name: Docker Standalone Host
       package_name: io.murano.apps.docker.DockerStandaloneHost
@@ -34,27 +315,6 @@
         image:
           name: Debian 8 x64 (pre-installed Docker)
           uri: http://storage.apps.openstack.org/images/debian-8-docker.qcow2
-      attributes:
-        "Source URL": "https://github.com/stackforge/murano-apps"
-        Documentation: "https://github.com/stackforge/murano-apps/blob/master/Docker/Kubernetes/readme.md"
-    -
-      name: Docker Interface Library
-      package_name: io.murano.apps.docker.Interfaces
-      provided_by:
-        name: Stan Lagun
-        href: "mailto:slagun@mirantis.com"
-        company: Mirantis, Inc.
-      description: >
-        Library package containing all base classes and interfaces for docker
-        applications and docker hosts.
-
-        Contains definitions of DockerApplication, DockerContainer,
-        DockerHost, DockerVolume, ApplicationPort and all other classes
-        that are used to pass information between docker
-        applications and docker host providers.
-      release:
-        - Kilo
-      format: package
       attributes:
         "Source URL": "https://github.com/stackforge/murano-apps"
         Documentation: "https://github.com/stackforge/murano-apps/blob/master/Docker/Kubernetes/readme.md"
@@ -132,279 +392,9 @@
       attributes:
         "Source URL": "https://github.com/stackforge/murano-apps"
         Documentation: "https://github.com/stackforge/murano-apps/blob/master/Docker/Kubernetes/readme.md"
-    -
-      name: Docker HTTPd
-      package_name: io.murano.apps.docker.DockerHTTPd
-      provided_by:
-        name: Dmitry Dovbii
-        href: "mailto:ddovbii@mirantis.com"
-        company: Mirantis, Inc.
-      description: >
-        The Apache HTTP Server, colloquially called Apache, is a Web server
-        application notable for playing a key role in the initial growth of the
-        World Wide Web. Originally based on the NCSA HTTPd server, development of
-        Apache began in early 1995 after work on the NCSA code stalled. Apache
-        quickly overtook NCSA HTTPd as the dominant HTTP server, and has remained
-        the most popular HTTP server in use since April 1996.
-        Murano will deploy this in the docker service of your choice; you'll be prompted to create a docker service or choose one
-        you have deployed (e.g., via Kubernetes Pod).
-      release:
-        - Kilo
-      format: package
-      dependsOn:
-        apps:
-          - io.murano.apps.docker.DockerStandaloneHost
-          - io.murano.apps.docker.kubernetes.KubernetesPod
-      attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerHTTPd.zip"
-        "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/HTTPdServer/package"
-    -
-      name: Docker & Kubernetes Bundle
-      package_name: docker_kubernetes
-      provided_by:
-        name: Stan Lagun
-        href: "https://github.com/istalker2"
-        company: Mirantis
-      description: >
-        This Bundle consists of DockerStandaloneHost and KubernetesPod/Cluster,
-        required to build your own Docker/Kubernetes-enabled applications
-      release:
-        - Kilo
-      format: bundle
-      supported_by: Mirantis
-      license: Apache 2.0
-      attributes:
-        "Source URL": "https://github.com/stackforge/murano-apps"
-        Documentation: "https://github.com/stackforge/murano-apps/blob/master/Docker/Kubernetes/readme.md"
-    -
-      name: Apache HTTP Server
-      package_name: io.murano.apps.apache.ApacheHttpServer
-      provided_by:
-        name: Dmitry Dovbii
-        href: "mailto:ddovbii@mirantis.com"
-        company: Mirantis, Inc.
-      description: >
-         The Apache HTTP Server, colloquially called Apache, is a Web server
-         application notable for playing a key role in the initial growth of
-         the World Wide Web. Originally based on the NCSA HTTPd server,
-         development of Apache began in early 1995 after work on the NCSA code
-         stalled.
-
-         Apache quickly overtook NCSA HTTPd as the dominant HTTP server, and
-         has remained the most popular HTTP server in use since April 1996.
-
-         Murano creates one or more VM(s) for you from the image listed in the dependencies.
-      release:
-        - Kilo
-      format: package
-      dependsOn:
-        image:
-          name: Debian 8 x64 (pre-installed murano-agent)
-          uri: http://storage.apps.openstack.org/images/debian-8-m-agent.qcow2
-      attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.apache.ApacheHttpServer.zip"
-        "Source URL": "https://github.com/openstack/murano-apps/tree/master/ApacheHTTPServer/package"
-    -
-      name: MySQL
-      package_name: io.murano.databases.MySql
-      provided_by:
-        name: Dmitry Dovbii
-        href: "mailto:ddovbii@mirantis.com"
-        company: Mirantis, Inc.
-      description: >
-         MySQL is a freely available open source Relational Database
-         Management System (RDBMS) that uses Structured Query Language (SQL).
-
-         SQL is the most popular language for adding, accessing and managing
-         content in a database. It is most noted for its quick processing,
-         proven reliability, ease and flexibility of use.
-
-         Murano creates one or more VM(s) for you from the image listed in the dependencies.
-      release:
-        - Kilo
-      format: package
-      dependsOn:
-        apps:
-          - io.murano.databases.SqlDatabase
-        image:
-          name: Debian 8 x64 (pre-installed murano-agent)
-          uri: http://storage.apps.openstack.org/images/debian-8-m-agent.qcow2
-      attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.databases.MySql.zip"
-        "Source URL": "https://github.com/openstack/murano-apps/tree/master/MySQL/package"
-    -
-      name: PostgreSql
-      package_name: io.murano.databases.PostgreSql
-      provided_by:
-        name: Dmitry Dovbii
-        href: "mailto:ddovbii@mirantis.com"
-        company: Mirantis, Inc.
-      description: >
-         PostgreSQL is a powerful, open source object-relational database
-         system. It has more than 15 years of active development and
-         a proven architecture that has earned it a strong reputation
-         for reliability, data integrity, and correctness.
-
-         Murano creates one or more VM(s) for you from the image listed in the dependencies.
-      release:
-        - Kilo
-      format: package
-      dependsOn:
-        apps:
-          - io.murano.databases.SqlDatabase
-        image:
-          name: Debian 8 x64 (pre-installed murano-agent)
-          uri: http://storage.apps.openstack.org/images/debian-8-m-agent.qcow2
-      attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.databases.PostgreSql.zip"
-        "Source URL": "https://github.com/openstack/murano-apps/tree/master/PostgreSQL/package"
-    -
-      name: SqlDatabase Library
-      package_name: io.murano.databases.SqlDatabase
-      provided_by:
-        name: Dmitry Dovbii
-        href: "mailto:ddovbii@mirantis.com"
-        company: Mirantis, Inc.
-      description: >
-         Library package containing base interface for all SQL database
-         implementations.
-
-         Provides API to create databases, users and retrieve a
-         connection string. Implementations of this interface will override
-         those methods to provide DMBS-specific implementation of this interface.
-
-         Implementing this interface overrides DBMS-specific methods for the
-         three basic functions (creating a database, users, or retrieving a
-         connection string).
-      release:
-        - Kilo
-      format: package
-      attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.databases.SqlDatabase.zip"
-        "Source URL": "https://github.com/openstack/murano-apps/tree/master/SQLDatabaseLibrary/package"
-    -
-      name: Apache Tomcat
-      package_name: io.murano.apps.apache.Tomcat
-      provided_by:
-        name: Dmitry Dovbii
-        href: "mailto:ddovbii@mirantis.com"
-        company: Mirantis, Inc.
-      description: >
-         Apache Tomcat is an open source software implementation of the
-         Java Servlet and JavaServer Pages technologies. It provides provides
-         a 'pure Java' HTTP web server environment for Java code to run in.
-
-         In the simplest config Tomcat runs in a single operating system
-         process. The process runs a Java virtual machine (JVM). Every
-         single HTTP request from a browser to Tomcat is processed in
-         the Tomcat process in a separate thread.
-
-         Murano creates one or more VM(s) for you from the image listed in the dependencies.
-      release:
-        - Kilo
-      format: package
-      dependsOn:
-        image:
-          name: Debian 8 x64 (pre-installed murano-agent)
-          uri: http://storage.apps.openstack.org/images/debian-8-m-agent.qcow2
-      attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.apache.Tomcat.zip"
-        "Source URL": "https://github.com/openstack/murano-apps/tree/master/Tomcat/package"
-    -
-      name: WordPress
-      package_name: io.murano.apps.WordPress
-      provided_by:
-        name: Dmitry Dovbii
-        href: "mailto:ddovbii@mirantis.com"
-        company: Mirantis, Inc.
-      description: >
-         WordPress is a free and open source blogging tool and a content management system (CMS) based on PHP and MySQL.
-      release:
-        - Kilo
-      format: package
-      dependsOn:
-        apps:
-          - io.murano.databases.MySql
-          - io.murano.apps.apache.ApacheHttpServer
-          - io.murano.apps.ZabbixAgent
-      attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.WordPress.zip"
-        "Source URL": "https://github.com/openstack/murano-apps/tree/master/WordPress/package"
-    -
-      name: Zabbix Agent
-      package_name: io.murano.apps.ZabbixAgent
-      provided_by:
-        name: Dmitry Dovbii
-        href: "mailto:ddovbii@mirantis.com"
-        company: Mirantis, Inc.
-      description: >
-         Zabbix Agent is deployed on a monitoring target to actively monitor
-         local resources and applications (hard drives, memory, processor
-         statistics etc).
-
-         Zabbix is the ultimate open source availability and performance
-         monitoring solution. Zabbix offer advance monitoring, alerting, and
-         visualization features today which are missing in other monitoring
-         system, even some of the best commercial ones.
-      release:
-        - Kilo
-      format: package
-      dependsOn:
-        apps:
-          - io.murano.apps.ZabbixServer
-      attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.ZabbixAgent.zip"
-        "Source URL": "https://github.com/openstack/murano-apps/tree/master/ZabbixAgent/package"
-    -
-      name: Zabbix
-      package_name: io.murano.apps.ZabbixServer
-      provided_by:
-        name: Dmitry Dovbii
-        href: "mailto:ddovbii@mirantis.com"
-        company: Mirantis, Inc.
-      description: >
-         Zabbix is the ultimate open source availability and performance
-         monitoring solution. Zabbix offer advance monitoring, alerting, and
-         visualization features today which are missing in other monitoring
-         system, even some of the best commercial ones.
-
-         Murano creates one or more VM(s) for you from the image listed in the dependencies.
-      release:
-        - Kilo
-      format: package
-      dependsOn:
-        image:
-          name: Debian 8 x64 (pre-installed murano-agent)
-          uri: http://storage.apps.openstack.org/images/debian-8-m-agent.qcow2
-      attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.ZabbixServer.zip"
-        "Source URL": "https://github.com/openstack/murano-apps/tree/master/ZabbixServer/package"
-    -
-      name: Docker Crate
-      package_name: io.murano.apps.docker.DockerCrate
-      provided_by:
-        name: Dmitry Dovbii
-        href: "mailto:ddovbii@mirantis.com"
-        company: Mirantis, Inc.
-      description: >
-        Crate is an Elastic SQL Data Store. Distributed by design,
-        Crate makes centralized database servers obsolete. Realtime
-        non-blocking SQL engine with full blown search. Highly available,
-        massively scalable yet simple to use.
-
-        Murano will deploy this in the docker service of your choice;
-        you'll be prompted to create a docker service or choose one
-        you have deployed (e.g., via Kubernetes Pod).
-      release:
-        - Kilo
-      format: package
-      dependsOn:
-        apps:
-          - io.murano.apps.docker.DockerStandaloneHost
-          - io.murano.apps.docker.kubernetes.KubernetesPod
-      attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerCrate.zip"
-        "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/Crate/package"
+#==============================================================================
+#                          Container-based Application
+#==============================================================================
     -
       name: Docker Container
       package_name: io.murano.apps.docker.DockerApp
@@ -434,6 +424,32 @@
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerApp.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/DockerApp/package"
+    -
+      name: Docker Crate
+      package_name: io.murano.apps.docker.DockerCrate
+      provided_by:
+        name: Dmitry Dovbii
+        href: "mailto:ddovbii@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+        Crate is an Elastic SQL Data Store. Distributed by design,
+        Crate makes centralized database servers obsolete. Realtime
+        non-blocking SQL engine with full blown search. Highly available,
+        massively scalable yet simple to use.
+
+        Murano will deploy this in the docker service of your choice;
+        you'll be prompted to create a docker service or choose one
+        you have deployed (e.g., via Kubernetes Pod).
+      release:
+        - Kilo
+      format: package
+      dependsOn:
+        apps:
+          - io.murano.apps.docker.DockerStandaloneHost
+          - io.murano.apps.docker.kubernetes.KubernetesPod
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerCrate.zip"
+        "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/Crate/package"
     -
       name: Docker GlassFish
       package_name: io.murano.apps.docker.DockerGlassFish
@@ -508,6 +524,32 @@
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerGrafana.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/Grafana/package"
+    -
+      name: Docker HTTPd
+      package_name: io.murano.apps.docker.DockerHTTPd
+      provided_by:
+        name: Dmitry Dovbii
+        href: "mailto:ddovbii@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+        The Apache HTTP Server, colloquially called Apache, is a Web server
+        application notable for playing a key role in the initial growth of the
+        World Wide Web. Originally based on the NCSA HTTPd server, development of
+        Apache began in early 1995 after work on the NCSA code stalled. Apache
+        quickly overtook NCSA HTTPd as the dominant HTTP server, and has remained
+        the most popular HTTP server in use since April 1996.
+        Murano will deploy this in the docker service of your choice; you'll be prompted to create a docker service or choose one
+        you have deployed (e.g., via Kubernetes Pod).
+      release:
+        - Kilo
+      format: package
+      dependsOn:
+        apps:
+          - io.murano.apps.docker.DockerStandaloneHost
+          - io.murano.apps.docker.kubernetes.KubernetesPod
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerHTTPd.zip"
+        "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/HTTPdServer/package"
     -
       name: Docker HTTPd Site
       package_name: io.murano.apps.docker.DockerHTTPdSite
@@ -875,32 +917,9 @@
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerTomcat.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/Tomcat/package"
-    -
-      name: Apcera
-      package_name: com.apcera.Apcera
-      provided_by:
-        name: Austin Mills
-        href: "mailto:austin@apcera.com"
-        company: Apcera, Inc.
-      description: >
-        Apcera Hybrid Cloud Operating System (HCOS) delivers seamless workload
-        mobility and pervasive policy and governance across any cloud - public
-        or private. Built on a foundation of trust, Apcera HCOS enables you to
-        securely develop, deploy, orchestrate and govern diverse workloads
-        across multiple cloud providers resulting in lower cost, simplified
-        operations and assured compliance.
-      release:
-        - Kilo
-      format: package
-      dependsOn:
-        image:
-          name: Apcera HCOS Trial Edition
-          uri: http://storage.apps.openstack.org/images/continuum-trial-openstack-1431536104.qcow2
-      attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/com.apcera.Apcera.zip"
-#------------------------------------------------------------------------------
+#==============================================================================
 #                                  Bundles
-#------------------------------------------------------------------------------
+#==============================================================================
     -
       name: Application Servers Bundle
       package_name: app-servers
@@ -985,7 +1004,7 @@
         - io.murano.databases.MySql
         - io.murano.databases.PostgreSql
     -
-      name: Docker & Kubernes Bundle
+      name: Docker & Kubernetes Bundle
       package_name: docker-n-kubernetes
       provided_by:
         name: Serg Melikyan
@@ -1025,29 +1044,3 @@
       bundled:
         - io.murano.apps.ZabbixAgent
         - io.murano.apps.ZabbixServer
-    -
-      name: Cloud Foundry
-      package_name: io.murano.apps.paas.CloudFoundry
-      provided_by:
-        name: Murano Apps Repository
-        href: "https://github.com/openstack/murano-apps"
-        company: Mirantis, Inc.
-      description: >
-         Cloud Foundry is an opensource PaaS solution. PaaS makes platform
-         much easier to deploy, run and scale applications. Some PaaS
-         offerings have limited language and framework support, do not
-         deliver key application services, or restrict deployment to a single
-         cloud. Cloud Foundry is the industry’s Open PaaS and provides a
-         choice of clouds, frameworks and application services. As an open
-         source project, there is a broad community both contributing and
-         supporting Cloud Foundry.
-      release:
-        - Kilo
-      format: package
-      dependsOn:
-        image:
-          name: Ubuntu 14.04 x64 (pre-installed murano-agent)
-          uri: http://storage.apps.openstack.org/images/ubuntu-14.04-m-agent.qcow2
-      attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.paas.CloudFoundry.zip"
-        "Source URL": "https://github.com/openstack/murano-apps/tree/master/CloudFoundry/package"
