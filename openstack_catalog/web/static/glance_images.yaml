@@ -10,7 +10,6 @@
                   Ubuntu 14.04 x64 with Docker & Kubernetes pre-installed
                   used by Kubernetes Cluster application.
       format: QCOW2
-      supported_by: Mirantis
       license: GPL 2.0
       attributes:
         url: http://storage.apps.openstack.org/images/ubuntu14.04-x64-kubernetes.qcow2
@@ -27,7 +26,6 @@
                   pre-installed software in the image and instead provision
                   applications using murano-agent.
       format: QCOW2
-      supported_by: Mirantis
       license: GPL 2.0
       attributes:
         url: http://storage.apps.openstack.org/images/ubuntu-14.04-m-agent.qcow2
