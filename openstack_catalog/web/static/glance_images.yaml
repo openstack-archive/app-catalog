@@ -136,3 +136,19 @@
       attributes:
         url: http://storage.apps.openstack.org/images/continuum-trial-openstack-1431536104.qcow2
         hash: 1055116f26f2ea36a51217ab33ddec3f
+    -
+      name: CoreOS v681.0.0
+      provided_by:
+        name: CoreOS
+        company: CoreOS
+      description: CoreOS version 681.0.0, released 2015-05-14
+      format: QCOW2
+      attributes:
+        url: http://alpha.release.core-os.net/amd64-usr/681.0.0/coreos_production_openstack_image.img.bz2
+        docs: https://coreos.com/docs/
+        gpg: http://alpha.release.core-os.net/amd64-usr/681.0.0/coreos_production_openstack_image.img.bz2.sig
+        digest: http://alpha.release.core-os.net/amd64-usr/681.0.0/coreos_production_openstack_image.img.bz2.DIGESTS.asc
+        pubkey: https://coreos.com/security/image-signing-key
+        releases: https://coreos.com/releases/
+        hash: b30cfb18add5497298efef80cfb2eb9727b2f4e5267d3dfd2c3339ea6190403fe3c2d2417239e7d37327d817ff5b4786f51d41810ad3a63d91e077742bddffa0
+
