@@ -247,3 +247,14 @@
       attributes:
         url: http://storage.apps.openstack.org/images/bitnami-djangostack-1.8-0-dev-ubuntu-14.04-demo.qcow
         hash: b2f72250205e359884cad808aa3102a4
+    -
+      name: stackato-3.4.2-murano-agent
+      provided_by:
+        name: John Wetherill
+        href: mailto:johnw@activestate.com
+        company: ActiveState
+      description: Stackato v3.4.2 PaaS image with Murano agent
+      format: QCOW2
+      attributes:
+        url: http://www.bigfastblog.com/wp-content/uploads/stackato-342-murano.qcow2
+        hash: 7a7baf53a90c1afd9bb375bf7b26af5b
