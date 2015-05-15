@@ -1044,3 +1044,29 @@
       bundled:
         - io.murano.apps.ZabbixAgent
         - io.murano.apps.ZabbixServer
+    -
+      name: Stackato
+      package_name: io.murano.apps.activestate.StackatoNode
+      provided_by:
+        name: John Wetherill
+        href: "http://activestate.com"
+        company: ActiveState
+      description: >
+        Stackato is a secure, stable, and commercially supported
+        Platform-as-a-Service (PaaS) that is built with and on top of
+        various open source components such as Cloud Foundry and
+        Docker. Stackato allows agile enterprises to develop and
+        deploy software solutions faster than ever before and manage
+        them more effectively. It provides development teams with
+        built-in languages, frameworks and services on one single
+        cloud application platform, while providing enterprise-level
+        security and world-class support.
+      release:
+        - 3.4.2
+      format: package
+      licence: Apache 2.0
+      suppored_by: ActiveState
+      attributes:
+        "Source URL": "https://github.com/ActiveState/stackato-node-murano"
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.activestate.StackatoNode.zip"
+        "Documentation": "https://github.com/ActiveState/stackato-node-murano/blob/master/README.md"
