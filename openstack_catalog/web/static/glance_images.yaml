@@ -134,3 +134,18 @@
       attributes:
         url: http://storage.apps.openstack.org/images/continuum-trial-openstack-1431536104.qcow2
         hash: 1055116f26f2ea36a51217ab33ddec3f
+    -
+      name: CoreOS v647.0.0
+      provided_by:
+        name: CoreOS
+        company: CoreOS
+      description: CoreOS version 647.0.0, released 2015-04-08
+      format: QCOW2
+      attributes:
+        url: http://stable.release.core-os.net/amd64-usr/647.0.0/coreos_production_openstack_image.img.bz2
+        docs: https://coreos.com/docs/
+        gpg: http://stable.release.core-os.net/amd64-usr/647.0.0/coreos_production_openstack_image.img.bz2.sig
+        digest: http://stable.release.core-os.net/amd64-usr/647.0.0/coreos_production_openstack_image.img.bz2.DIGESTS.asc
+        pubkey: https://coreos.com/security/image-signing-key
+        releases: https://coreos.com/releases/
+        hash: 298d349fa3facdcc533758ce6611ab290094bf11c1cb1fd994ac34e2b47ec384ee0421edfdfd8ae5f7acd7933a46859f7455045230cc5b1a8201481dc859f4c8
