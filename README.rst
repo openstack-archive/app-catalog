@@ -1,9 +1,9 @@
-=============================
-OpenStack Application Catalog
-=============================
+===============================
+OpenStack Community App Catalog
+===============================
 Application Catalog for OpenStack
 
-The OpenStack Application Catalog will help you make
+The OpenStack Community App Catalog will help you make
 applications available on your OpenStack cloud by providing
 a community driven catalog containing Glance images, Heat
 templates and Murano applications.
@@ -27,19 +27,19 @@ deploying an OpenStack environment.
 * Free software: Apache 2.0 License. See LICENSE file.
 * Documentation: http://wiki.openstack.org/wiki/App-Catalog
 
-Getting started with the Application Catalog
---------------------------------------------
+Getting started with the Community App Catalog
+----------------------------------------------
 
 See the wiki page to see how to get started using or
-contributing to the Application Catalog. Visit
+contributing to the App Catalog. Visit
 https://wiki.openstack.org/wiki/App-Catalog for more
 details.
 
 Project Info
 ------------
 
- * Web-site: http://catalog.mirantis.com
- * Source: http://git.openstack.org/cgit/stackforge/app-catalog
+ * Web-site: http://apps.openstack.org
+ * Source: http://git.openstack.org/cgit/stackforge/apps-catalog
  * Wiki: https://wiki.openstack.org/wiki/App-Catalog
  * Launchpad: https://launchpad.net/app-catalog
  * Blueprints: https://blueprints.launchpad.net/app-catalog
