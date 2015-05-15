@@ -1,0 +1,9 @@
+Verified+2: Jenkins
+Code-Review+2: Georgy Okrokvertskhov <gokrokvertskhov@mirantis.com>
+Workflow+1: Georgy Okrokvertskhov <gokrokvertskhov@mirantis.com>
+Code-Review+1: Craig Peters <cpeters@mirantis.com>
+Submitted-by: Jenkins
+Submitted-at: Fri, 15 May 2015 20:34:25 +0000
+Reviewed-on: https://review.openstack.org/183622
+Project: stackforge/apps-catalog
+Branch: refs/heads/master
