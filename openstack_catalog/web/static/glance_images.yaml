@@ -487,3 +487,25 @@
         pubkey: https://coreos.com/security/image-signing-key
         releases: https://coreos.com/releases/
         hash: b30cfb18add5497298efef80cfb2eb9727b2f4e5267d3dfd2c3339ea6190403fe3c2d2417239e7d37327d817ff5b4786f51d41810ad3a63d91e077742bddffa0
+    -
+      name: Fedora 21 Atomic Cloud
+      provided_by:
+        name: Project Atomic
+        href: http://www.projectatomic.io
+        company: Project Atomic, sponsored by Red Hat
+      description: >
+                  Project Atomic integrates the tools and patterns of
+                  container-based application and service deployment with
+                  trusted operating system platforms to deliver an end-to-end
+                  hosting architecture that's modern, reliable, and secure.
+                  This Atomic image is based on Fedora 21 and was released
+                  2014-12-03.
+      format: QCOW2
+      attributes:
+        url: http://download.fedoraproject.org/pub/fedora/linux/releases/21/Cloud/Images/x86_64/Fedora-Cloud-Atomic-20141203-21.x86_64.qcow2
+        docs: http://www.projectatomic.io/docs/
+        gpg: https://getfedora.org/static/fedora.gpg
+        digest: https://getfedora.org/static/checksums/Fedora-Cloud-Images-x86_64-21-CHECKSUM
+        pubkey: https://getfedora.org/static/95A43F54.txt
+        releases: http://www.projectatomic.io/download/
+        hash: 7aa95d1513c957ac5028c3f7e6900e16
