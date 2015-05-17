@@ -14,11 +14,12 @@
          Library package containing base interface for all SQL database
          implementations.
 
-         Provides API to create databases, users and retrieve a
+         Provides API to create a database, its users and to retrieve its
          connection string. Implementations of this interface will override
-         those methods to provide DMBS-specific implementation of this interface.
+         those methods to provide DBMS-specific implementation of this interface.
 
-         Implementing this interface overrides DBMS-specific methods for the
+         Using this interface overrides methods native to a
+         specific database for these
          three basic functions (creating a database, users, or retrieving a
          connection string).
       release:
@@ -138,14 +139,20 @@
         href: "mailto:ashestakov@mirantis.com"
         company: Mirantis, Inc.
       description: >
-         Cloud Foundry is an opensource PaaS solution. PaaS makes platform
-         much easier to deploy, run and scale applications. Some PaaS
-         offerings have limited language and framework support, do not
-         deliver key application services, or restrict deployment to a single
-         cloud. Cloud Foundry is the industry’s Open PaaS and provides a
-         choice of clouds, frameworks and application services. As an open
-         source project, there is a broad community both contributing and
-         supporting Cloud Foundry.
+                  Cloud Foundry is an open source Platform-as-a-Service (PaaS)
+                  solution. It allows users to develop, run and manage
+                  web-based software applications and services. Application
+                  code written through a PaaS can avoid much of the complexity
+                  of building and maintaining the infrastructure, such as is
+                  typically associated with developing and launching a web or
+                  cloud-based service.
+
+                  Cloud Foundry is the industry’s Open PaaS and enables choice
+                  of clouds, programming frameworks and application services.
+                  As an open source project, there is a broad community both
+                  contributing code and supporting the project, with
+                  sponsorship provided via the Cloud Foundry Foundation,
+                  http://www.cloudfoundry.org
       release:
         - Kilo
       format: package
@@ -364,7 +371,7 @@
       description: >
         Application representing a Kubernetes Pod on a given Kubernetes Cluster
 
-        This Pod is a colocated set of docker containers which are deployed
+        This Pod is a co-located set of docker containers which are deployed
         together on a single node and share single network space. Containers
         within a single pod can access each other using 127.0.0.1 (localhost).
         Kubernetes treats Pods as an indivisible deployment unit.
@@ -403,13 +410,13 @@
         href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
-        Application that can run any arbitrary docker container to deploy one of
+        This application can run any arbitrary docker container, and deploy one of
         the 13,000+ apps available on Docker Hub at https://registry.hub.docker.com
         on any supported host implementation (i.e. Kubernetes Pod or
         Docker Standalone Host).
 
-        To deploy app user need just to choose any image from the Docker Hub and
-        configure deployment process by specifying environment variables and ports.
+        To deploy an application, the user need only choose any image from the Docker Hub and
+        configure the deployment requirements by specifying environment variables and ports.
 
         Murano will deploy this in the docker service of your choice;
         you'll be prompted to create a docker service or choose one
@@ -463,7 +470,7 @@
         Oracle Corporation.
 
         The supported version is called Oracle GlassFish Server. GlassFish is
-        free software, dual-licensed under two free software licences:
+        free software, dual-licensed under two free software licenses:
         the Common Development and Distribution License (CDDL) and
         the GNU General Public License (GPL) with the classpath exception.
 
@@ -759,7 +766,7 @@
         HTTP, HTTPS, SMTP, POP3, and IMAP protocols, as well as a load balancer,
         HTTP cache, and a web server (origin server).
 
-        The nginx project started with a strong focus on high concurrency,
+        The Nginx project started with a strong focus on high concurrency,
         high performance and low memory usage. It is licensed under
         the 2-clause BSD-like license and it runs on Linux, BSD variants,
         Mac OS X, Solaris, AIX, HP-UX, as well as on other *nix flavors.
@@ -789,7 +796,7 @@
         HTTP, HTTPS, SMTP, POP3, and IMAP protocols, as well as a load balancer,
         HTTP cache, and a web server (origin server).
 
-        The nginx project started with a strong focus on high concurrency,
+        The Nginx project started with a strong focus on high concurrency,
         high performance and low memory usage. It is licensed under
         the 2-clause BSD-like license and it runs on Linux, BSD variants,
         Mac OS X, Solaris, AIX, HP-UX, as well as on other *nix flavors.
@@ -1064,8 +1071,8 @@
       release:
         - Kilo
       format: package
-      licence: Apache 2.0
-      suppored_by: ActiveState
+      license: Apache 2.0
+      supported_by: ActiveState
       attributes:
         "Source URL": "https://github.com/ActiveState/stackato-node-murano"
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.activestate.StackatoNode.zip"
