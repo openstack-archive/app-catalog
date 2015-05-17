@@ -16,7 +16,7 @@
 
          Provides API to create databases, users and retrieve a
          connection string. Implementations of this interface will override
-         those methods to provide DMBS-specific implementation of this interface.
+         those methods to provide DBMS-specific implementation of this interface.
 
          Implementing this interface overrides DBMS-specific methods for the
          three basic functions (creating a database, users, or retrieving a
@@ -138,7 +138,7 @@
         href: "mailto:ashestakov@mirantis.com"
         company: Mirantis, Inc.
       description: >
-         Cloud Foundry is an opensource PaaS solution. PaaS makes platform
+         Cloud Foundry is an open source PaaS solution. PaaS makes platform
          much easier to deploy, run and scale applications. Some PaaS
          offerings have limited language and framework support, do not
          deliver key application services, or restrict deployment to a single
@@ -364,7 +364,7 @@
       description: >
         Application representing a Kubernetes Pod on a given Kubernetes Cluster
 
-        This Pod is a colocated set of docker containers which are deployed
+        This Pod is a co-located set of docker containers which are deployed
         together on a single node and share single network space. Containers
         within a single pod can access each other using 127.0.0.1 (localhost).
         Kubernetes treats Pods as an indivisible deployment unit.
@@ -463,7 +463,7 @@
         Oracle Corporation.
 
         The supported version is called Oracle GlassFish Server. GlassFish is
-        free software, dual-licensed under two free software licences:
+        free software, dual-licensed under two free software licenses:
         the Common Development and Distribution License (CDDL) and
         the GNU General Public License (GPL) with the classpath exception.
 
@@ -759,7 +759,7 @@
         HTTP, HTTPS, SMTP, POP3, and IMAP protocols, as well as a load balancer,
         HTTP cache, and a web server (origin server).
 
-        The nginx project started with a strong focus on high concurrency,
+        The Nginx project started with a strong focus on high concurrency,
         high performance and low memory usage. It is licensed under
         the 2-clause BSD-like license and it runs on Linux, BSD variants,
         Mac OS X, Solaris, AIX, HP-UX, as well as on other *nix flavors.
@@ -789,7 +789,7 @@
         HTTP, HTTPS, SMTP, POP3, and IMAP protocols, as well as a load balancer,
         HTTP cache, and a web server (origin server).
 
-        The nginx project started with a strong focus on high concurrency,
+        The Nginx project started with a strong focus on high concurrency,
         high performance and low memory usage. It is licensed under
         the 2-clause BSD-like license and it runs on Linux, BSD variants,
         Mac OS X, Solaris, AIX, HP-UX, as well as on other *nix flavors.
@@ -1064,8 +1064,8 @@
       release:
         - Kilo
       format: package
-      licence: Apache 2.0
-      suppored_by: ActiveState
+      license: Apache 2.0
+      supported_by: ActiveState
       attributes:
         "Source URL": "https://github.com/ActiveState/stackato-node-murano"
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.activestate.StackatoNode.zip"
