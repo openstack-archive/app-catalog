@@ -509,3 +509,26 @@
         pubkey: https://getfedora.org/static/95A43F54.txt
         releases: http://www.projectatomic.io/download/
         hash: 7aa95d1513c957ac5028c3f7e6900e16
+    -
+      name: ManageIQ Botvinnik RC3
+      provided_by:
+        name: ManageIQ
+        href: http://www.manageiq.org
+        company: ManageIQ, sponsored by Red Hat
+      description: >
+                  Drive your complete virtual infrastructure with ManageIQ.
+                  Manage the lifecycle of your applications, place virtual
+                  workloads according to your business priorities, and —
+                  automatically through policies you set — balance your costs,
+                  performance, security, and reliability across cloud
+                  platforms. ManageIQ lets you control everything, completely,
+                  from one end of a virtual machine lifecycle to the other.
+                  ManageIQ is the open source project that powers Red Hat
+                  CloudForms. This is the 3rd Release Candidate for the
+                  upcoming 'Botvinnik' release.
+      format: QCOW2
+      attributes:
+        url: http://releases.manageiq.org/manageiq-openstack-botvinnik-1-rc3.qc2
+        docs: http://manageiq.org/documentation/
+        releases: http://releases.manageiq.org/
+        hash: 933baba0d9a362725cb18836df4eb70e
