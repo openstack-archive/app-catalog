@@ -192,6 +192,28 @@
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.databases.MySql.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/MySQL/package"
     -
+      name: Oracle Pluggable Database
+      package_name: com.oracle.db.muranoPdb.OraclePDB
+      provided_by:
+        name: Danek Duvall
+        href: "mailto:danek.duvall@oracle.com"
+        company: Oracle, Inc.
+      description: >
+         Oracle PDB Connector is an Murano application that provides
+         OpenStack cloud users with the means for self-service provisioning
+         of Oracle Database 12c and Oracle Multitenant Pluggable Databases
+         (PDBs).
+
+         This is an unsupported technology preview release not intended for
+         use in production environments.
+      release:
+        - Kilo
+      format: package
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/com.oracle.db.muranoPdb.OraclePDB.zip"
+        "Source URL": "https://github.com/openstack/murano-apps/tree/master/OraclePDBConnector/package"
+        "Documentation URL": "https://github.com/dhduvall/murano-apps/tree/master/OraclePDBConnector/package/readme.md"
+    -
       name: PostgreSql
       package_name: io.murano.databases.PostgreSql
       provided_by:
