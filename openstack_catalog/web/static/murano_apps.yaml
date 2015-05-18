@@ -532,6 +532,31 @@
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerGrafana.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/Grafana/package"
     -
+      name: Docker GuestBook
+      package_name: io.murano.apps.docker.GuestBook
+      provided_by:
+        name: Dmitry Dovbii
+        href: "mailto:ddovbii@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+        GuestBook is a simple application which demonstrates deployment
+        process using Kubernetes services. User should only configure
+        Kubernetes Cluster because rest part of backend is hidden in application
+        implementation. To use 'GuestBook' you need to import following
+        applications to the catalog:
+        Docker Redis, Kubernetes Pod, Kubernetes Cluster
+      release:
+        - Kilo
+      format: package
+      dependsOn:
+        apps:
+          - io.murano.apps.docker.DockerRedis
+          - io.murano.apps.docker.kubernetes.KubernetesCluster
+          - io.murano.apps.docker.kubernetes.KubernetesPod
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.GuestBook.zip"
+        "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/GuestBook/package"
+    -
       name: Docker HTTPd
       package_name: io.murano.apps.docker.DockerHTTPd
       provided_by:
