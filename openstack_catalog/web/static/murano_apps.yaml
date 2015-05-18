@@ -935,6 +935,14 @@
         href: "mailto:smelikyan@mirantis.com"
         company: Mirantis, Inc.
       description: >
+        A bundle is the collection of Murano applications and
+        their dependencies. Bundles are designed to allow the
+        user to consume a group of related applications to
+        address a particular use-case. Adding a bundle to
+        Murano provides automated download of all the
+        applications associated with that bundle at the same
+        time.
+
         This bundle contains the Apache HTTP Server and Apache Tomcat: an
         open source server-side executive for Java Servlets and JavaServer
         Pages. The bundle provides a flexible, familiar environment for
@@ -955,6 +963,14 @@
         href: "mailto:smelikyan@mirantis.com"
         company: Mirantis, Inc.
       description: >
+        A bundle is the collection of Murano applications and
+        their dependencies. Bundles are designed to allow the
+        user to consume a group of related applications to
+        address a particular use-case. Adding a bundle to
+        Murano provides automated download of all the
+        applications associated with that bundle at the same
+        time.
+
         This bundle contains a wide range of apps for building
         (from Git), continuously-integrating, deploying and testing
         container-native, resilient and scalable data-driven and
@@ -1003,7 +1019,19 @@
         href: "mailto:smelikyan@mirantis.com"
         company: Mirantis, Inc.
       description: >
-        This bundle contains most popular databases available today.
+        A bundle is the collection of Murano applications and
+        their dependencies. Bundles are designed to allow the
+        user to consume a group of related applications to
+        address a particular use-case. Adding a bundle to
+        Murano provides automated download of all the
+        applications associated with that bundle at the same
+        time.
+
+        This bundle groups popular database solutions that are
+        useful for developling applications. Currently this
+        bundle contains Postgres and MySQL, but as new
+        databases are added to the catalog this bundle will
+        grow to include them.
       release:
         - Kilo
       format: bundle
@@ -1018,6 +1046,14 @@
         href: "mailto:smelikyan@mirantis.com"
         company: Mirantis, Inc.
       description: >
+        A bundle is the collection of Murano applications and
+        their dependencies. Bundles are designed to allow the
+        user to consume a group of related applications to
+        address a particular use-case. Adding a bundle to
+        Murano provides automated download of all the
+        applications associated with that bundle at the same
+        time.
+
         This bundle contains Docker Standalone Host and Kubernetes Pod: two
         ways (both compatible with any Docker-containerized app and
         both offering access to standard Docker APIs) of aggregating groups
@@ -1040,11 +1076,28 @@
         href: "mailto:smelikyan@mirantis.com"
         company: Mirantis, Inc.
       description: >
-        This bundle contains Zabbix Agent and Zabbix Server: components of the
-        popular monitoring application. Use Zabbix Agent to instrument
-        monitored nodes and return realtime metrics on resource consumption
-        and application performance. Use Zabbix Server to aggregate,
-        alert and help visualize your data.
+        A bundle is the collection of Murano applications and
+        their dependencies. Bundles are designed to allow the
+        user to consume a group of related applications to
+        address a particular use-case. Adding a bundle to
+        Murano provides automated download of all the
+        applications associated with that bundle at the same
+        time.
+
+        This bundle contains the Zabbix Agent and Server.
+        Zabbix is the ultimate enterprise-level software
+        designed for monitoring availability and performance
+        of IT infrastructure components.
+
+        With Zabbix it is possible to gather virtually
+        limitless types of data from the network. High
+        performance real-time monitoring means that tens of
+        thousands of servers, virtual machines and network
+        devices can be monitored simultaneously. Along with
+        storing the data, visualization features are
+        available (overviews, maps, graphs, screens, etc),
+        as well as very flexible ways of analyzing the data
+        for the purpose of alerting.
       release:
         - Kilo
       format: bundle
