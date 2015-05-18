@@ -30,7 +30,7 @@
                 type: string
               href: 
                 type: string
-                pattern: "^((https?://)[a-z][a-z0-9_-]+(\\.[a-z][a-z0-9_-]+)+(/[a-z0-9\\._/~%\\-\\+&\\#\\?!=\\(\\)@]*)?)|(mailto:[a-z][a-z0-9_-]+@[a-z][a-z0-9_-]+(\\.[a-z][a-z0-9_-]+)+)$"
+                pattern: "^((https?://)[a-z][a-z0-9_-]+(\\.[a-z][a-z0-9_-]+)+(/[a-z0-9\\._/~%\\-\\+&\\#\\?!=\\(\\)@]*)?)|(mailto:[a-z][a-z0-9._-]+@[a-z][a-z0-9_-]+(\\.[a-z][a-z0-9_-]+)+)$"
               company: 
                 type: string
           description: 
