@@ -189,10 +189,10 @@
         url: http://storage.apps.openstack.org/images/continuum-trial-openstack-1431536104.qcow2
         hash: 1055116f26f2ea36a51217ab33ddec3f
     -
-      name: Bitnami Wordpress Stack
+      name: Wordpress powered by Bitnami
       provided_by:
         name: Bitnami
-        href: http://helpdesk.bitnami.com/home
+        href: https://www.bitnami.com/
         company: Bitnami
       description: >
                   WordPress is one of the world’s most popular web
@@ -201,106 +201,103 @@
                   selection of themes, extensions and plug-ins.
 
                   The Bitnami WordPress Stack provides a one-click
-                  install solution for WordPress. Download
-                  installers and virtual machines, or run your own
-                  WordPress server in the cloud.
+                  install solution for WordPress.
 
                   You can find more details on this image at
                   https://bitnami.com/stack/wordpress
       format: QCOW2
-      supported_by: Bitnami
-      license: GPL 2.0
       attributes:
-        url: http://storage.apps.openstack.org/images/bitnami-wordpress-4.2.2-0-ubuntu-14.04-demo.qcow
-        hash: e453a49802a240483ac62b152f033bbe
+        url: https://downloads.bitnami.com/files/download/openstack/bitnami-wordpress-4.2.2-0-ubuntu-14.04.qcow
+        hash: 412fe8d31ecd69ec91d1bb1fbc4c84ac
     -
-      name: Bitnami Gitlab Stack
+      name: LAMP Stack powered by Bitnami
       provided_by:
         name: Bitnami
-        href: http://helpdesk.bitnami.com/home
+        href: https://www.bitnami.com/
         company: Bitnami
       description: >
-                  The Bitnami Gitlab Stack provides a
-                  one-click install solution for GitLab.
-                  Download installers and virtual
-                  machines, or run your own GitLab server
-                  in the cloud.
+        Bitnami LAMP Stack provides a complete, fully-integrated
+        and ready to run LAMP development environment. In
+        addition to PHP, MySQL and Apache, it includes FastCGI,
+        OpenSSL, phpMyAdmin, ModSecurity, SQLite, Varnish,
+        ImageMagick, xDebug, Xcache, OpenLDAP, ModSecurity,
+        Memcache, OAuth, PEAR, PECL, APC, GD, cURL and
+        other components and the following frameworks: Zend
+        Framework, Symfony, CodeIgniter, CakePHP, Smarty,
+        Laravel.
 
-                  The GitLab open source edition,
-                  available from Bitnami, is a developer
-                  tool that allows users to collaborate on
-                  code, create new projects, manage
-                  repositories, and perform code reviews.
-                  When using GitLab, users can keep their
-                  code on their own servers, either in the
-                  cloud or on-premise. For additional
-                  peace of mind, the free community
-                  edition even features enterprise-grade
-                  features such as a mature user
-                  permissions scheme and support for high
-                  availability. Bitnami GitLab is bundled
-                  with GitLab CI, a continuous integration
-                  server. Just point your projects at the
-                  CI server and automate all your tests.
-
-                  You can find more details on this image at
-                  https://bitnami.com/stack/gitlab
+        You can find more details on this image at
+        https://bitnami.com/stack/lamp
       format: QCOW2
-      supported_by: Bitnami
-      license: GPL 2.0
       attributes:
-        url: http://storage.apps.openstack.org/images/bitnami-gitlab-7.10.1-0-ubuntu-14.04-demo.qcow
-        hash: b6a66764d8c6689c5401c68dd320a3d2
+        url: https://downloads.bitnami.com/files/download/openstack/bitnami-lampstack-5.4.40-0-ubuntu-14.04.qcow
+        hash: 8dfa316d4037fb192882fa7500db61f8
     -
-      name: Bitnami LAMP Stack
+      name: Ruby Stack powered by Bitnami
       provided_by:
         name: Bitnami
-        href: http://helpdesk.bitnami.com/home
+        href: http://bitnami.com/
         company: Bitnami
       description: >
-                  Bitnami LAMP Stack provides a complete,
-                  fully-integrated and ready to run LAMP development
-                  environment. In addition to PHP, MySQL and Apache,
-                  it includes FastCGI, OpenSSL, phpMyAdmin,
-                  ModSecurity, SQLite, Varnish, ImageMagick, xDebug,
-                  Xcache, OpenLDAP, ModSecurity, Memcache, OAuth,
-                  PEAR, PECL, APC, GD, cURL and other components and
-                  the following frameworks:Zend Framework, Symfony,
-                  CodeIgniter, CakePHP, Smarty, Laravel.
+          Bitnami Ruby Stack provides a complete, ready-to-run
+          development environment for Ruby on Rails. It
+          includes the latest stable release of Ruby, Rails,
+          RVM, MySQL, SQLite, NGINX, Apache, Memcache and
+          Varnish, Git and Subersion, Sphinx, PHP and
+          phpMyAdmin.
 
-                  You can find more details on this image at
-                  https://bitnami.com/stack/lamp
+          It also includes most popular gems for building
+          Rails applications: Thin, RMagick, Rake, Mongrel,
+          Passenger, Nokogiri and more. It also includes
+          libraries such as OpenSSL, openLDAP, CURL,
+          ImageMagick and more.
+
+          You can find more details on this image at
+          https://bitnami.com/stack/ruby
       format: QCOW2
-      supported_by: Bitnami
-      license: GPL 2.0
       attributes:
-        url: http://storage.apps.openstack.org/images/bitnami-lampstack-5.4.40-0-ubuntu-14.04-auro.qcow
-        hash: f75928d8ff814c23c69c0a673e2fc13c
+        url: https://downloads.bitnami.com/files/download/openstack/bitnami-rubystack-2.0.0-26-ubuntu-14.04.qcow
+        hash: dbd3308da442c3a479621f03d3857b2c
     -
-      name: Bitnami Django Stack
+      name: Jenkins powered by Bitnami
       provided_by:
         name: Bitnami
-        href: http://helpdesk.bitnami.com/home
+        href: http://bitnami.com/
         company: Bitnami
       description: >
-                  Django is a high-level Python Web framework
-                  that encourages rapid development and clean,
-                  pragmatic design. Python is a dynamic
-                  object-oriented programming language that can
-                  be used for many kinds of software development.
-                  The Bitnami Django Stack greatly simplifies
-                  the deployment of Django and its runtime
-                  dependencies and includes ready-to-run versions
-                  of Python, Django, MySQL and Apache.
+          Bitnami Jenkins is a feature-rich Continuous
+          Integration (CI) solution with easy configuration,
+          continuous delivery and continuous integration
+          support, easily test, build and stage your app,
+          and more. It supports multiple SCM tools including
+          CVS, Subversion and Git.
 
-                  You can find more details on this image at
-                  https://bitnami.com/stack/django
+          Out of the box, the Bitnami Jenkins includes Jenkins, Apache, Tomcat, and Git.
+
+          You can find more details on this image at
+          https://bitnami.com/stack/jenkins
       format: QCOW2
-      supported_by: Bitnami
-      license: GPL 2.0
       attributes:
-        url: http://storage.apps.openstack.org/images/bitnami-djangostack-1.8-0-dev-ubuntu-14.04-demo.qcow
-        hash: b2f72250205e359884cad808aa3102a4
+        url: https://downloads.bitnami.com/files/download/openstack/bitnami-jenkins-1.613-0-ubuntu-14.04.qcow
+    -
+      name: MEAN Stack powered by Bitnami
+      provided_by:
+        name: Bitnami
+        href: http://bitnami.com/
+        company: Bitnami
+      description: >
+          The Bitnami MEAN Stack provides a complete
+          development environment for the leading noSQL
+          database, MongoDB. It includes the latest
+          stable release of MongoDB, Express, Angular,
+          Node.js, Git, PHP and RockMongo.
+
+          You can find more details on this image at
+          https://bitnami.com/stack/mean
+      format: QCOW2
+      attributes:
+        url: https://downloads.bitnami.com/files/download/openstack/bitnami-meanstack-3.0.2-0-ubuntu-14.04.qcow
+        hash: 6ca3c138289b2f969448063e076ab297
     -
       name: stackato-3.4.2-murano-agent
       provided_by:
