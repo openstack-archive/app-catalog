@@ -149,7 +149,7 @@
         url: http://download.fedoraproject.org/pub/fedora/linux/releases/21/Cloud/Images/x86_64/Fedora-Cloud-Base-20141203-21.x86_64.qcow2
         hash: 3a99bb89f33e3d4ee826c8160053cdb8a72c80cd23350b776ce73cd244467d86
     -
-      name: Debian
+      name: Debian Jessie 8.0.0
       provided_by:
         name: Debian
         href: http://debian.org
@@ -162,7 +162,30 @@
                   by a group of individuals known as the Debian
                   project.
 
-                  This is a Debian base image with cloud_init pre-installed
+                  This is a Debian Stalbe 8.0.0 (aka Jessie) official
+                  base image with cloud_init, cloud-utils, and
+                  cloud-initramfs-growroot pre-installed.
+      format: QCOW2
+      attributes:
+        url: http://cdimage.debian.org/cdimage/openstack/8.0.0/debian-8.0.0-openstack-amd64.qcow2
+        hash: 0fcf78a066da0fe489b61176eba11f12e55f60081556693a0c5652d1acfbda57
+    -
+      name: Debian Testing weekly build
+      provided_by:
+        name: Debian
+        href: http://debian.org
+        company: Debian Community
+      description: >
+                  Debian is a Unix-like computer operating system
+                  and a Linux distribution that is composed entirely
+                  of free and open-source software, most of which is
+                  under the GNU General Public License, and packaged
+                  by a group of individuals known as the Debian
+                  project.
+
+                  This is a Debian Testing (currently Stretch) official
+                  weekly built base image with cloud_init, cloud-utils,
+                  and cloud-initramfs-growroot pre-installed.
       format: QCOW2
       attributes:
         url: http://cdimage.debian.org/cdimage/openstack/testing/debian-testing-openstack-amd64.qcow2
