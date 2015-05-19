@@ -551,3 +551,14 @@
         docs: http://manageiq.org/documentation/
         releases: http://releases.manageiq.org/
         hash: 9e47ffcdb52ce2aa9159f9178b3dea79
+    -
+      name: openSUSE 13.2
+      provided_by:
+        name: openSUSE Project
+        href: http://www.opensuse.org
+        company: openSUSE Project Community
+      description: Base openSUSE 13.2 with cloud-init
+      format: QCOW2
+      attributes:
+        url: http://download.opensuse.org/repositories/Cloud:/Images:/openSUSE_13.2/images/openSUSE-13.2-OpenStack-Guest.x86_64.qcow2
+        hash: unknown
