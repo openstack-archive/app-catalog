@@ -17,47 +17,6 @@
       attributes:
         url: http://storage.catalog.mirantis.com/hot/hello_world.yaml
     -
-      name: Gitlab CE
-      provided_by:
-        name: Rackspace
-        company: Rackspace
-      description: >
-          This is a template to deploy Gitlab on a
-          single Linux server with OpenStack Heat.
-          This template uses chef-solo to configure the server.
-          More details on usage and options can be found at:
-          https://github.com/rackspace-orchestration-templates/gitlab
-      release:
-        - Icehouse
-        - Juno
-        - Kilo
-      format: HOT
-      supported_by: Rackspace
-      license: Apache 2.0
-      attributes:
-        url: https://github.com/rackspace-orchestration-templates/gitlab/blob/master/gitlab.yaml
-    -
-      name: Minecraft
-      provided_by:
-        name: Rackspace
-        company: Rackspace
-      description: >
-          This is a Heat template to deploy a
-          single Linux server running a Minecraft
-          server. The Minecraft server will be
-          setup leveraging Chef solo.
-          More details on usage and options can be found at:
-          https://github.com/rackspace-orchestration-templates/minecraft
-      release:
-        - Icehouse
-        - Juno
-        - Kilo
-      format: HOT
-      supported_by: Rackspace
-      license: Apache 2.0
-      attributes:
-        url: https://github.com/rackspace-orchestration-templates/minecraft/blob/master/minecraft-server.yaml
-    -
       name: OpenShift-CentOS65
       provided_by:
         name: Steve Baker
