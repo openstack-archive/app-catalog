@@ -95,3 +95,22 @@
       license: Apache 2.0
       attributes:
         url: https://github.com/openstack/heat-templates/blob/master/openshift-origin/F19/hot-template/openshift/openshift.yaml
+    -
+      name: Lattice
+      provided_by:
+        name: Layne Peng
+        href: mailto:appamail@hotmail.com
+        company: EMC
+      description: >
+          Lattice is an open source project for running containerized workloads on a cluster (http://lattice.cf/docs ). Lattice bundles up http load-balancing, a cluster scheduler, log aggregation/streaming and health management into an easy-to-deploy and easy-to-use package.
+
+          This is a Lattice template for deploying a Lattice cluster on a Ubuntu Cloud VM. More details on usage and options can be found at: https://github.com/LaynePeng/heat-lattice
+      release:
+        - Icehouse
+        - Juno
+        - Kilo
+      format: HOT
+      supported_by: Layne Peng
+      license: Apache 2.0
+      attributes:
+        url: https://github.com/LaynePeng/heat-lattice/blob/master/lattice.yaml
