@@ -19,8 +19,8 @@
     -
       name: OpenShift-CentOS65
       provided_by:
-        name: Steve Baker
-        href: mailto:sbaker@redhat.com
+        name: Red Hat
+        href: http://www.redhat.com
         company: Red Hat
       description: >
           This is an OpenShift template for deploying an OpenShift
@@ -38,8 +38,8 @@
     -
       name: OpenShift-F19
       provided_by:
-        name: Steve Baker
-        href: mailto:sbaker@redhat.com
+        name: Red Hat
+        href: http://www.redhat.com
         company: Red Hat
       description: >
           This is an OpenShift template for deploying an OpenShift
