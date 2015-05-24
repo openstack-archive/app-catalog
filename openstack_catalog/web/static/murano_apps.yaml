@@ -246,6 +246,30 @@
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.databases.PostgreSql.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/PostgreSQL/package"
     -
+      name: Rally
+      package_name: org.openstack.Rally
+      provided_by:
+        name: Boris Pavlovic
+        href: "mailto:bpavlovic@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+        Rally is an official OpenStack benchmarking and performance analysis tool.
+        Rally is intended to provide the community with a benchmarking tool
+        that is capable of performing specific, complicated and reproducible
+        test cases on real deployment scenarios.
+      release:
+        - Icehouse
+        - Juno
+        - Kilo
+      format: package
+      dependsOn:
+        image:
+          name: Ubuntu 14.04 x64 (pre-installed murano-agent)
+          uri: http://storage.apps.openstack.org/images/ubuntu-14.04-m-agent.qcow2
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/org.openstack.Rally.zip"
+        "Source URL": "https://github.com/openstack/murano-apps/tree/master/Rally/package"
+    -
       name: WordPress
       package_name: io.murano.apps.WordPress
       provided_by:
