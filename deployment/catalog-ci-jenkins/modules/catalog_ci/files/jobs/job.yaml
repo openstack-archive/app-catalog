@@ -1,0 +1,67 @@
+- job:
+    name: check-image
+    node: master
+    project-type: freestyle
+    description: "This job checks glance images"
+    defaults: global
+    disabled: false
+    concurrent: true
+
+    scm:
+     - git:
+        url: https://git.openstack.org/stackforge/apps-catalog
+        refspec: $GERRIT_REFSPEC
+        name:
+        choosing-strategy: gerrit
+        skip-tag: false
+        wipe-workspace: true
+        branches:
+         - "$GERRIT_BRANCH"
+
+    triggers:
+        - gerrit:
+            server-name: "review.openstack.org"
+            trigger-on-patchset-uploaded-event: true
+            projects:
+                - project-compare-type: 'PLAIN'
+                  project-pattern: 'stackforge/apps-catalog'
+                  branch-compare-type: 'PLAIN'
+                  branch-pattern: master
+
+    builders:
+    - shell:  "git checkout $FETCH_HEAD\
+               \n$JENKINS_HOME/scripts/app-catalog.sh"
+
+- job:
+    name: merge-image
+    node: master
+    project-type: freestyle
+    description: "This job checks and uploads glance images to CDN"
+    defaults: global
+    disabled: false
+    concurrent: true
+
+    scm:
+     - git:
+        url: https://git.openstack.org/stackforge/apps-catalog
+        refspec: $GERRIT_REFSPEC
+        name:
+        choosing-strategy: gerrit
+        skip-tag: false
+        wipe-workspace: true
+        branches:
+         - "$GERRIT_BRANCH"
+
+    triggers:
+        - gerrit:
+            server-name: "review.openstack.org"
+            trigger-on-change-merged-event: true
+            projects:
+                - project-compare-type: 'PLAIN'
+                  project-pattern: 'stackforge/apps-catalog'
+                  branch-compare-type: 'PLAIN'
+                  branch-pattern: master
+
+    builders:
+    - shell:  "git checkout $FETCH_HEAD\
+               \n$JENKINS_HOME/scripts/app-catalog.sh"
