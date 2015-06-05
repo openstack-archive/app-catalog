@@ -585,3 +585,18 @@
       attributes:
         url: http://download.opensuse.org/repositories/Cloud:/Images:/openSUSE_13.2/images/openSUSE-13.2-OpenStack-Guest.x86_64.qcow2
         hash: unknown
+    -
+      name: AeroFS Private Cloud
+      provided_by:
+        name: AeroFS Private Cloud
+        href: http://aerofs.com
+        company: Air Computing Inc.
+      description: >
+                  The AeroFS Private Cloud is an on-premise file sharing and
+                  collaboration platform for OpenStack. Like Dropbpx, but
+                  behind your corporate firewall. This is the current stable
+                  release.
+      format: QCOW2
+      attributes:
+        url: https://pc.aerofs.com/aerofs-appliance.qcow2
+        docs: https://support.aerofs.com
