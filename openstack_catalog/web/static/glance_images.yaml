@@ -592,11 +592,10 @@
         href: http://aerofs.com
         company: Air Computing Inc.
       description: >
-                  The AeroFS Private Cloud is an on-premise file sharing and
-                  collaboration platform for OpenStack. Like Dropbox, but
-                  behind your corporate firewall. This is the current stable
-                  release.
-
+                  The AeroFS Private Cloud is a file sharing and collaboration
+                  platform for OpenStack. AeroFS provides the same experience
+                  as Dropbox, but it integrates with Swift and can be run on
+                  your own infrastructure. This is the current stable release.
                   This image requires a minimum of 4 GB RAM and 10 GB disk
                   space.
       format: QCOW2
