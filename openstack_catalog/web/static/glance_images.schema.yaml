@@ -8,11 +8,12 @@
       type: array
       items: 
         type: object
-        required: 
+        required:
           - name
           - provided_by
           - description
-          - format
+          - format #FIXME remove format, add disk_format and container_format once the repo converted.
+          #- license #FIXME add license as a requirement going forward. Make required once the repo has them populated.
         additionalProperties: true
         properties: 
           name: 
@@ -38,6 +39,34 @@
             enum: 
               - QCOW2
               - VMDK
+          container_format:
+            enum:
+              - ami
+              - ari
+              - aki
+              - bare
+              - ovf
+          disk_format:
+            enum:
+              - ami
+              - ari
+              - aki
+              - vhd
+              - vmdk
+              - raw
+              - qcow2
+              - vdi
+              - iso
+          min_ram:
+            type: number
+          min_disk:
+            type: number
+          license:
+            type: string
+            pattern: "^(GPL .*)|(Apache .*)|(BSD .*)|(MIT)|(Free <= [0-9]+ Users)|(Other)|(Unknown)$"
+          license-url:
+            type: string
+            pattern: "^((https?://)[a-z][a-z0-9_-]+(\\.[a-z][a-z0-9_-]+)+(/[a-z0-9\\._/~%\\-\\+&\\#\\?!=\\(\\)@]*)?)$"
           attributes: 
             type: object
             additionalProperties: true
