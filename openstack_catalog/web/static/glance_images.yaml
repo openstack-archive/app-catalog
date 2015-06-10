@@ -209,7 +209,7 @@
         company: Cloudbase
       description: Windows Server 2012 R2 image with cloud_init
       attributes:
-        url: http://www.cloudbase.it/ws2012r2/
+        indirect_url: http://www.cloudbase.it/ws2012r2/
         hash: unknown
       license: Other
       license_url: http://www.cloudbase.it/windows-cloud-images/
