@@ -162,7 +162,7 @@ var glance_images = { images: [] };
 function show_glance_images ()
 {
     populate_table ("glance-images-table",
-		    ["name_html", "description", "format"],
+		    ["name_html", "description", "disk_format", "license"],
 		    filterData (glance_images["images"], getUrlVars ()));
 }
 
