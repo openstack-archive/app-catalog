@@ -239,6 +239,7 @@
           <th>Image&nbsp;Name</th>
           <th>Description</th>
           <th>Format</th>
+          <th>License</th>
         </tr>
               </thead>
         </table>
@@ -344,13 +345,20 @@
 
     <script id="glance-images-info" type="text/x-jquery-tmpl">
 
-      <h2>${name} (${format})</h2>
+      <h2>${name} (${disk_format})</h2>
       <div>
       <span class="label">glance image-create:</span>
-      <input type="text" value="glance image-create --copy-from ${attributes['url']} --disk-format ${format.toLowerCase()} --container-format bare --name '${name}'" onfocus="this.select();" onmouseup="return false;">
+      <input type="text" value="glance image-create --copy-from ${attributes['url']} --disk-format ${disk_format} --container-format ${container_format} --name '${name}'" onfocus="this.select();" onmouseup="return false;">
       </div>
       {{if supported_by}}
       <div><span class="label">Supported by</span> <span class="value">${supported_by}</span></div>
+      {{/if}}
+      {{if license}}
+      {{if license_url}}
+      <div><span class="label">License</span> <a href="${license_url}"> <span class="value">${license}</span></a></div>
+      {{else}}
+      <div><span class="label">License</span> <span class="value">${license}</span></div>
+      {{/if}}
       {{/if}}
       <div><span class="label">Description:</span> <span class="value">${description}</span></div>
 
