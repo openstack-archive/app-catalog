@@ -562,7 +562,7 @@
         releases: http://www.projectatomic.io/download/
         hash: 7aa95d1513c957ac5028c3f7e6900e16
     -
-      name: ManageIQ Botvinnik RC3
+      name: ManageIQ Botvinnik (stable)
       provided_by:
         name: ManageIQ
         href: http://www.manageiq.org
@@ -576,38 +576,15 @@
                   platforms. ManageIQ lets you control everything, completely,
                   from one end of a virtual machine lifecycle to the other.
                   ManageIQ is the open source project that powers Red Hat
-                  CloudForms. This is the 3rd Release Candidate for the
-                  upcoming 'Botvinnik' release.
+                  CloudForms. This is the stable version of the 'Botvinnik'
+                  release.
       disk_format: qcow2
       container_format: bare
       attributes:
-        url: http://releases.manageiq.org/manageiq-openstack-botvinnik-1-rc3.qc2
+        url: http://manageiq.org/download/manageiq-openstack-stable.qc2
         docs: http://manageiq.org/documentation/
         releases: http://releases.manageiq.org/
-        hash: 933baba0d9a362725cb18836df4eb70e
-    -
-      name: ManageIQ Stable
-      provided_by:
-        name: ManageIQ
-        href: http://www.manageiq.org
-        company: ManageIQ, sponsored by Red Hat
-      description: >
-                  Drive your complete virtual infrastructure with ManageIQ.
-                  Manage the lifecycle of your applications, place virtual
-                  workloads according to your business priorities, and —
-                  automatically through policies you set — balance your costs,
-                  performance, security, and reliability across cloud
-                  platforms. ManageIQ lets you control everything, completely,
-                  from one end of a virtual machine lifecycle to the other.
-                  ManageIQ is the open source project that powers Red Hat
-                  CloudForms. This is the current stable release.
-      disk_format: qcow2
-      container_format: bare
-      attributes:
-        url: http://releases.manageiq.org/manageiq-openstack-stable.qc2
-        docs: http://manageiq.org/documentation/
-        releases: http://releases.manageiq.org/
-        hash: 9e47ffcdb52ce2aa9159f9178b3dea79
+        hash: 957fc92f324f18f53af86eaaf41cd8c4
     -
       name: openSUSE 13.2
       provided_by:
