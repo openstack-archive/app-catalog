@@ -14,7 +14,7 @@
           - description
           - disk_format
           - container_format
-          #- license #FIXME add license as a requirement going forward. Make required once the repo has them populated.
+          - license
         additionalProperties: true
         properties: 
           name: 
@@ -64,7 +64,8 @@
             type: number
           license:
             type: string
-            pattern: "^(GPL .*)|(Apache .*)|(BSD .*)|(MIT)|(Free <= [0-9]+ Users)|(Other)|(Unknown)$"
+            pattern: "^(GPL .*)|(Apache .*)|(BSD .*)|(MIT)|(Free <= [0-9]+ Users)|(Multi-licensed OpenSource
+)|(Other)|(Unknown)$"
           license_url:
             type: string
             pattern: "^((https?://)[a-z][a-z0-9_-]+(\\.[a-z][a-z0-9_-]+)+(/[a-z0-9\\._/~%\\-\\+&\\#\\?!=\\(\\)@]*)?)$"

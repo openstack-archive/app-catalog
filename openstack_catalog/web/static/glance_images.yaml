@@ -11,7 +11,7 @@
                   used by Kubernetes Cluster application.
       disk_format: qcow2
       container_format: bare
-      license: GPL 2.0
+      license: Multi-licensed OpenSource
       attributes:
         url: http://storage.apps.openstack.org/images/ubuntu14.04-x64-kubernetes.qcow2
         hash: 0d959023d0551d68f9dc7139cb814e92
@@ -28,7 +28,7 @@
                   applications using murano-agent.
       disk_format: qcow2
       container_format: bare
-      license: GPL 2.0
+      license: Multi-licensed OpenSource
       attributes:
         url: http://storage.apps.openstack.org/images/ubuntu-14.04-m-agent.qcow2
         hash: cbd9ded8587b98d144d9cf0faea991a9
@@ -41,7 +41,7 @@
       description: Base Debian Jessie x64 image with murano-agent pre-installed
       disk_format: qcow2
       container_format: bare
-      license: GPL 2.0
+      license: Multi-licensed OpenSource
       attributes:
         url: http://storage.apps.openstack.org/images/debian-8-m-agent.qcow2
         hash: c05398176ff18ca4d011b3550fa174e3
@@ -54,7 +54,7 @@
       description: Base Debian Jessie x64 image with murano-agent & Docker pre-installed
       disk_format: qcow2
       container_format: bare
-      license: GPL 2.0
+      license: Multi-licensed OpenSource
       attributes:
         url: http://storage.apps.openstack.org/images/debian-8-docker.qcow2
         hash: f9f2466c39dac98a1e4ed03fb5701225
@@ -67,6 +67,7 @@
       description: Base Ubuntu 14.04 with cloud_init
       disk_format: qcow2
       container_format: bare
+      license: Multi-licensed OpenSource
       attributes:
         url: http://uec-images.ubuntu.com/trusty/current/trusty-server-cloudimg-amd64-disk1.img
         hash: unknown
@@ -92,6 +93,7 @@
                   This is a Base CentOS 6 image with cloud_init
       disk_format: qcow2
       container_format: bare
+      license: Multi-licensed OpenSource
       attributes:
         url: http://cloud.centos.org/centos/6/images/CentOS-6-x86_64-GenericCloud-20141129_01.qcow2
         hash: f5729dd91bb45d3210a3bcc52534cc7307fbed4d01b0e7810533f727763c1038
@@ -117,6 +119,7 @@
                   Base CentOS 7 with cloud_init
       disk_format: qcow2
       container_format: bare
+      license: Multi-licensed OpenSource
       attributes:
         url: http://cloud.centos.org/centos/7/images/CentOS-7-x86_64-GenericCloud.qcow2
         hash: e324e3ab1d24a1bbf035ddb365e7f9058c0b454acf48d7aa15c5519fae5998ab
@@ -129,6 +132,7 @@
       description: Tiny OS meant to run on a cloud
       disk_format: qcow2
       container_format: bare
+      license: Multi-licensed OpenSource
       attributes:
         url: http://download.cirros-cloud.net/0.3.3/cirros-0.3.3-x86_64-disk.img
         hash: f11286e2bd317ee1a1d0469a6b182b33bda4af6f35ba224ca49d75752c81e20a
@@ -154,6 +158,7 @@
                   This is a Fedora 21 base image with cloud_init
       disk_format: qcow2
       container_format: bare
+      license: Multi-licensed OpenSource
       attributes:
         url: http://download.fedoraproject.org/pub/fedora/linux/releases/21/Cloud/Images/x86_64/Fedora-Cloud-Base-20141203-21.x86_64.qcow2
         hash: 3a99bb89f33e3d4ee826c8160053cdb8a72c80cd23350b776ce73cd244467d86
@@ -176,6 +181,7 @@
                   cloud-initramfs-growroot pre-installed.
       disk_format: qcow2
       container_format: bare
+      license: Multi-licensed OpenSource
       attributes:
         url: http://cdimage.debian.org/cdimage/openstack/8.0.0/debian-8.0.0-openstack-amd64.qcow2
         hash: 0fcf78a066da0fe489b61176eba11f12e55f60081556693a0c5652d1acfbda57
@@ -198,6 +204,7 @@
                   and cloud-initramfs-growroot pre-installed.
       disk_format: qcow2
       container_format: bare
+      license: Multi-licensed OpenSource
       attributes:
         url: http://cdimage.debian.org/cdimage/openstack/testing/debian-testing-openstack-amd64.qcow2
         hash: unknown
@@ -224,6 +231,7 @@
       description: Apcera HCOS Trial Edition image, built on Ubuntu 14.04 x64 image with murano-agent pre-installed
       disk_format: qcow2
       container_format: bare
+      license: Unknown
       attributes:
         url: http://storage.apps.openstack.org/images/continuum-trial-openstack-1431536104.qcow2
         hash: 1055116f26f2ea36a51217ab33ddec3f
@@ -246,6 +254,7 @@
                   https://bitnami.com/stack/wordpress
       disk_format: qcow2
       container_format: bare
+      license: Multi-licensed OpenSource
       attributes:
         url: https://downloads.bitnami.com/files/download/openstack/bitnami-wordpress-4.2.2-0-ubuntu-14.04.qcow
         hash: 412fe8d31ecd69ec91d1bb1fbc4c84ac
@@ -270,6 +279,7 @@
         https://bitnami.com/stack/lamp
       disk_format: qcow2
       container_format: bare
+      license: Multi-licensed OpenSource
       attributes:
         url: https://downloads.bitnami.com/files/download/openstack/bitnami-lampstack-5.4.40-0-ubuntu-14.04.qcow
         hash: 8dfa316d4037fb192882fa7500db61f8
@@ -297,6 +307,7 @@
           https://bitnami.com/stack/ruby
       disk_format: qcow2
       container_format: bare
+      license: Multi-licensed OpenSource
       attributes:
         url: https://downloads.bitnami.com/files/download/openstack/bitnami-rubystack-2.0.0-26-ubuntu-14.04.qcow
         hash: dbd3308da442c3a479621f03d3857b2c
@@ -320,6 +331,7 @@
           https://bitnami.com/stack/jenkins
       disk_format: qcow2
       container_format: bare
+      license: Multi-licensed OpenSource
       attributes:
         url: https://downloads.bitnami.com/files/download/openstack/bitnami-jenkins-1.613-0-ubuntu-14.04.qcow
     -
@@ -339,6 +351,7 @@
           https://bitnami.com/stack/mean
       disk_format: qcow2
       container_format: bare
+      license: Multi-licensed OpenSource
       attributes:
         url: https://downloads.bitnami.com/files/download/openstack/bitnami-meanstack-3.0.2-0-ubuntu-14.04.qcow
         hash: 6ca3c138289b2f969448063e076ab297
@@ -351,6 +364,8 @@
       description: Stackato v3.4.2 PaaS image with Murano agent
       disk_format: qcow2
       container_format: bare
+      license: Other
+      license-url: http://www.activestate.com/stackato/get_stackato?intcmp=pageheaderbutton
       attributes:
         url: http://downloads.activestate.com/stackato/vm/v3.4.2/stackato-node-murano-v1.qcow2
         hash: 7a7baf53a90c1afd9bb375bf7b26af5b
@@ -375,6 +390,7 @@
                   https://wiki.openstack.org/wiki/Sahara/AppsCatalogHowTo
       disk_format: qcow2
       container_format: bare
+      license: Multi-licensed OpenSource
       attributes:
         url: http://sahara-files.mirantis.com/images/upstream/kilo/sahara-kilo-hdp-2.0-centos-6.6.qcow2
         hash: e463b989880f91c373f9b97af8a0bb83
@@ -398,6 +414,7 @@
                   https://wiki.openstack.org/wiki/Sahara/AppsCatalogHowTo
       disk_format: qcow2
       container_format: bare
+      license: Multi-licensed OpenSource
       attributes:
         url: http://sahara-files.mirantis.com/images/upstream/kilo/sahara-kilo-cloudera-5.3.0-centos-6.6.qcow2
         hash: 568698419b85d9c9279e4c5335ffe3e6
@@ -421,6 +438,7 @@
                   https://wiki.openstack.org/wiki/Sahara/AppsCatalogHowTo
       disk_format: qcow2
       container_format: bare
+      license: Multi-licensed OpenSource
       attributes:
         url: http://sahara-files.mirantis.com/images/upstream/kilo/sahara-kilo-cloudera-5.3.0-ubuntu-12.04.qcow2
         hash: e7f1190bb4952dfc1a72716987076577
@@ -443,6 +461,7 @@
                   https://wiki.openstack.org/wiki/Sahara/AppsCatalogHowTo
       disk_format: qcow2
       container_format: bare
+      license: Multi-licensed OpenSource
       attributes:
         url: http://sahara-files.mirantis.com/images/upstream/kilo/sahara-kilo-mapr-4.0.2-centos-6.6.qcow2
         hash: 47ff252fc7859dde36ebc3a28fea3819
@@ -464,6 +483,7 @@
                   https://wiki.openstack.org/wiki/Sahara/AppsCatalogHowTo
       disk_format: qcow2
       container_format: bare
+      license: Multi-licensed OpenSource
       attributes:
         url: http://sahara-files.mirantis.com/images/upstream/kilo/sahara-kilo-spark-1.0.0-ubuntu-14.04.qcow2
         hash: ce07050ecdfa67115c0ea8b66435bf53
@@ -487,6 +507,7 @@
                   https://wiki.openstack.org/wiki/Sahara/AppsCatalogHowTo
       disk_format: qcow2
       container_format: bare
+      license: Multi-licensed OpenSource
       attributes:
         url: http://sahara-files.mirantis.com/images/upstream/kilo/sahara-kilo-storm-0.9.1-ubuntu-14.04.qcow2
         hash: 600584fa4d0dac8be3a571fdbee75e09
@@ -498,6 +519,7 @@
       description: CoreOS version 647.0.0, released 2015-04-08
       disk_format: qcow2
       container_format: bare
+      license: Multi-licensed OpenSource
       attributes:
         url: http://stable.release.core-os.net/amd64-usr/647.0.0/coreos_production_openstack_image.img.bz2
         docs: https://coreos.com/docs/
@@ -514,6 +536,7 @@
       description: CoreOS version 668.3.0, released 2015-05-12
       disk_format: qcow2
       container_format: bare
+      license: Multi-licensed OpenSource
       attributes:
         url: http://beta.release.core-os.net/amd64-usr/668.3.0/coreos_production_openstack_image.img.bz2
         docs: https://coreos.com/docs/
@@ -530,6 +553,7 @@
       description: CoreOS version 681.0.0, released 2015-05-14
       disk_format: qcow2
       container_format: bare
+      license: Multi-licensed OpenSource
       attributes:
         url: http://alpha.release.core-os.net/amd64-usr/681.0.0/coreos_production_openstack_image.img.bz2
         docs: https://coreos.com/docs/
@@ -553,6 +577,7 @@
                   2014-12-03.
       disk_format: qcow2
       container_format: bare
+      license: Multi-licensed OpenSource
       attributes:
         url: http://download.fedoraproject.org/pub/fedora/linux/releases/21/Cloud/Images/x86_64/Fedora-Cloud-Atomic-20141203-21.x86_64.qcow2
         docs: http://www.projectatomic.io/docs/
@@ -580,6 +605,7 @@
                   release.
       disk_format: qcow2
       container_format: bare
+      license: Multi-licensed OpenSource
       attributes:
         url: http://manageiq.org/download/manageiq-openstack-stable.qc2
         docs: http://manageiq.org/documentation/
@@ -594,6 +620,7 @@
       description: Base openSUSE 13.2 with cloud-init
       disk_format: qcow2
       container_format: bare
+      license: Multi-licensed OpenSource
       attributes:
         url: http://download.opensuse.org/repositories/Cloud:/Images:/openSUSE_13.2/images/openSUSE-13.2-OpenStack-Guest.x86_64.qcow2
         hash: unknown
@@ -608,10 +635,12 @@
                   platform for OpenStack. AeroFS provides the same experience
                   as Dropbox, but it integrates with Swift and can be run on
                   your own infrastructure. This is the current stable release.
-                  This image requires a minimum of 4 GB RAM and 10 GB disk
-                  space.
       disk_format: qcow2
       container_format: bare
+      min_ram: 4096
+      min_disk: 10
+      license: Free <= 30 Users
+      license_url: https://www.aerofs.com/
       attributes:
         url: https://pc.aerofs.com/aerofs-appliance.qcow2
         docs: https://support.aerofs.com
