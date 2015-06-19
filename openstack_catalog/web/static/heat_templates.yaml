@@ -34,7 +34,7 @@
       supported_by: Red Hat
       license: Apache 2.0
       attributes:
-        url: https://github.com/openstack/heat-templates/blob/master/openshift-origin/centos65/OpenShift.yaml
+        url: https://raw.githubusercontent.com/openstack/heat-templates/master/openshift-origin/centos65/OpenShift.yaml
     -
       name: OpenShift-F19
       provided_by:
@@ -53,7 +53,7 @@
       supported_by: Red Hat
       license: Apache 2.0
       attributes:
-        url: https://github.com/openstack/heat-templates/blob/master/openshift-origin/F19/hot-template/openshift/openshift.yaml
+        url: https://raw.githubusercontent.com/openstack/heat-templates/master/openshift-origin/F19/hot-template/openshift/openshift.yaml
     -
       name: Lattice
       provided_by:
@@ -72,4 +72,4 @@
       supported_by: Layne Peng
       license: Apache 2.0
       attributes:
-        url: https://github.com/LaynePeng/heat-lattice/blob/master/lattice.yaml
+        url: https://raw.githubusercontent.com/LaynePeng/heat-lattice/master/lattice.yaml
