@@ -1,0 +1,9 @@
+Verified+2: Jenkins
+Code-Review+1: Tom Fifield <tom@openstack.org>
+Code-Review+2: Christopher Aedo <doc@aedo.net>
+Workflow+1: Christopher Aedo <doc@aedo.net>
+Submitted-by: Jenkins
+Submitted-at: Mon, 22 Jun 2015 14:48:18 +0000
+Reviewed-on: https://review.openstack.org/185262
+Project: stackforge/apps-catalog
+Branch: refs/heads/master
