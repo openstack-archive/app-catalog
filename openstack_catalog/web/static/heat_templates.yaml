@@ -73,3 +73,24 @@
       license: Apache 2.0
       attributes:
         url: https://raw.githubusercontent.com/LaynePeng/heat-lattice/master/lattice.yaml
+    -
+      name: OpenShift Origin 3
+      provided_by:
+        name: OpenShift
+        href: http://www.openshift.org/
+        company: Red Hat
+      description: >
+          OpenShift 3 is a free and open source platform as a service tool
+          designed on top of Docker and Kubernetes. The templates have been
+          tested with CentOS 7.1.
+
+          For more details on how to configure and use them, see:
+
+          https://github.com/redhat-openstack/openshift-on-openstack
+      release:
+        - Kilo
+      format: HOT
+      supported_by: Community
+      license: Apache 2.0
+      attributes:
+        url: https://raw.githubusercontent.com/redhat-openstack/openshift-on-openstack/master/openshift.yaml
