@@ -1,0 +1,87 @@
+---
+  $schema: http://json-schema.org/draft-04/schema#
+  type: object
+  required:
+    - assets
+  properties:
+    assets:
+      type: array
+      items:
+        type: object
+        required:
+          - name
+          - package_name
+          - provided_by
+          - description
+          - release
+          - format
+        additionalProperties: true
+        properties:
+          name:
+            type: string
+          package_name:
+            type: string
+            pattern: "^[a-zA-Z][a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)*$"
+          provided_by:
+            type: object
+            required:
+              - name
+              - href
+              - company
+            additionalProperties: false
+            properties:
+              name:
+                type: string
+              href:
+                type: string
+                pattern: "^((https?://)[a-z][a-z0-9_-]+(\\.[a-z][a-z0-9_-]+)+(/[a-z0-9\\._/~%\\-\\+&\\#\\?!=\\(\\)@]*)?)|(mailto:[a-z][a-z0-9._-]+@[a-z][a-z0-9_-]+(\\.[a-z][a-z0-9_-]+)+)$"
+              company:
+                type: string
+          description:
+            type: string
+          release:
+            type: array
+            items:
+              enum:
+                - Austin
+                - Bexar
+                - Cactus
+                - Diablo
+                - Essex
+                - Folsom
+                - Grizzly
+                - Havana
+                - Icehouse
+                - Juno
+                - Kilo
+                - Liberty
+            minItems: 1
+          bundled:
+            type: array
+          dependsOn:
+            type: object
+            additionalProperties: false
+            properties:
+              apps:
+                type: array
+              image:
+                type: object
+                additionalProperties: false
+                properties:
+                  name:
+                    type: string
+                  uri:
+                    type: string
+                    pattern: "^((https?://)[a-z][a-z0-9_-]+(\\.[a-z][a-z0-9_-]+)+(/[a-z0-9\\._/~%\\-\\+&\\#\\?!=\\(\\)@]*)?)|(mailto:[a-z][a-z0-9._-]+@[a-z][a-z0-9_-]+(\\.[a-z][a-z0-9_-]+)+)$"
+          format:
+            enum:
+              - package
+              - bundle
+          attributes:
+            type: object
+            additionalProperties: true
+            patternProperties:
+              .*:
+                type:
+                  - string
+                  - number
