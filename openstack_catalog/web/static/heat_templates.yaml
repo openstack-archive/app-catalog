@@ -3,7 +3,7 @@
     -
       name: Hello World
       provided_by:
-        name: ' '
+        name: '?'
         href: mailto:support@mirantis.com
         company: Mirantis
       description: This is a hello world HOT template just defining a single compute server.
