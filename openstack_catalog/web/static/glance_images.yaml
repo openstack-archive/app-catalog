@@ -667,3 +667,29 @@
       attributes:
         url: https://pc.aerofs.com/aerofs-appliance.qcow2
         docs: https://support.aerofs.com
+    -
+      name: Chef Server
+      provided_by:
+        name: Chef
+        href: https://chef.io/openstack
+        company: Chef Software Inc.
+      description: >
+                  The Chef server acts as a hub for configuration data. The Chef
+                  server stores cookbooks, the policies that are applied to nodes,
+                  and metadata that describes each registered node that is being
+                  managed by the chef-client. Nodes use the chef-client to ask the
+                  Chef server for configuration details, such as recipes,
+                  templates, and file distributions.
+
+                  This is a CentOS 6.6 base image with cloud_init using
+                  https://github.com/chef-partners/marketplace_image
+      disk_format: qcow2
+      container_format: bare
+      min_ram: 4096
+      min_disk: 10
+      license: Free <= 25 Nodes, Multi-licensed OpenSource
+      license_url: https://www.chef.io/online-master-agreement/
+      attributes:
+        url: https://chef-server-glance-images.s3-us-west-2.amazonaws.com/chef-server-12.1.2-1437522600.qcow2
+        docs: https://docs.chef.io
+        hash: e6b964572be00a845bd53d6033a780f4
