@@ -226,7 +226,7 @@ function initMarketPlace ()
         close: function () { }
     });
 
-    $.ajax({ url: "static/glance_images.yaml" }).
+    $.ajax({ url: "static/assets.yaml" }).
 	done (function (data) {
 	    try {
 		glance_images = jsyaml.safeLoad (data);
@@ -242,7 +242,7 @@ function initMarketPlace ()
 	    show_glance_images ();
 	});      
 
-    $.ajax({ url: "static/heat_templates.yaml" }).
+    $.ajax({ url: "static/assets.yaml" }).
 	done (function (data) {
 	    try {
 		heat_templates = jsyaml.safeLoad (data);
@@ -261,7 +261,7 @@ function initMarketPlace ()
 	    initSingleSelector ("heat-release", "release", tableData, show_heat_templates);
 	});      
 
-    $.ajax({ url: "static/murano_apps.yaml" }).
+    $.ajax({ url: "static/assets.yaml" }).
 	done (function (data) {
 	    try {
 		murano_apps = jsyaml.safeLoad (data);
