@@ -94,3 +94,28 @@
       license: Apache 2.0
       attributes:
         url: https://raw.githubusercontent.com/redhat-openstack/openshift-on-openstack/master/openshift.yaml
+    -
+      name: Chef Server - Standalone Server
+      provided_by:
+        name: Chef
+        href: https://chef.io/openstack
+        company: Chef
+      service:
+        type: heat
+        format: HOT
+      description: >
+          This is a template to build a Standalone Chef server instance.
+          It uses Ubuntu 14.04 as the base image to build it.
+
+          Offical Documentation on how to install it located here:
+          http://docs.chef.io/server/install_server.html
+
+          For more details on how to configure:
+          Please take a look at the README.md (https://github.com/chef-partners/chef-heat-templates/blob/master/README.md)
+          for specific configuration(s).
+      release:
+        - Kilo
+      supported_by: Community and Chef Partnereng
+      license: Apache 2.0
+      attributes:
+        url: https://raw.githubusercontent.com/chef-partners/chef-heat-templates/master/single_chef_server-HOT.yml
