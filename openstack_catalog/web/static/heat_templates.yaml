@@ -94,3 +94,46 @@
       license: Apache 2.0
       attributes:
         url: https://raw.githubusercontent.com/redhat-openstack/openshift-on-openstack/master/openshift.yaml
+    -
+      name: Chef Server - Single-stack
+      provided_by:
+        name: Chef
+        href: https://chef.io/openstack
+        company: Chef
+      description: >
+          This is a HOT to build a single-stack Chef instance.
+          It uses Ubuntu 14.04 as the base image to build it.
+
+          For more details on how to configure:
+          Please take a look at the README.md (https://github.com/chef-partners/chef-heat-templates/blob/master/README.md)
+          for specific configuration(s).
+
+      release:
+        - Kilo
+      format: HOT
+      supported_by: Community and Chef Partnereng
+      license: Apache 2.0
+      attributes:
+        url: https://raw.githubusercontent.com/chef-partners/chef-heat-templates/master/single_chef_server-HOT.yml
+
+    -
+      name: Chef Server - HA-Stack
+      provided_by:
+        name: Chef
+        href: https://chef.io/openstack
+        company: Chef
+      description: >
+          This is a HOT to build a HA-stack Chef instance.
+          It uses Ubuntu 14.04 as the base image to build it.
+
+          For more details on how to configure:
+          Please take a look at the README.md (https://github.com/chef-partners/chef-heat-templates/blob/master/README.md)
+          for specific configuration(s).
+
+      release:
+        - Kilo
+      format: HOT
+      supported_by: Community and Chef Partnereng
+      license: Apache 2.0
+      attributes:
+        url: https://raw.githubusercontent.com/chef-partners/chef-heat-templates/master/high_availability_chef_server-HOT.yml
