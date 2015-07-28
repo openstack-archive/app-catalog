@@ -1,0 +1,6 @@
+# use standard openstack linting profile
+extends: openstack
+
+env:
+  # browser global variables.
+  browser: true
