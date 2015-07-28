@@ -5,3 +5,10 @@ env:
   # browser global variables.
   browser: true
 
+rules:
+  # Require camel case names
+  # http://eslint.org/docs/rules/camelcase
+  camelcase:
+   - 1  # report camelcase properties as warnings
+   - properties: "never"
+
