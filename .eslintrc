@@ -1,0 +1,7 @@
+# use standard openstack linitng profile
+extends: openstack
+
+env:
+  # browser global variables.
+  browser: true
+
