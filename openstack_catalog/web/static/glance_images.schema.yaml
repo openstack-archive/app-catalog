@@ -2,9 +2,9 @@
   $schema: http://json-schema.org/draft-04/schema#
   type: object
   required: 
-    - images
-  properties: 
-    applications: 
+    - assets
+  properties:
+    assets:
       type: array
       items: 
         type: object
@@ -64,8 +64,7 @@
             type: number
           license:
             type: string
-            pattern: "^(GPL .*)|(Apache .*)|(BSD .*)|(MIT)|(Free <= [0-9]+ Users)|(Multi-licensed OpenSource
-)|(Other)|(Unknown)$"
+            pattern: "^(GPL .*)|(Apache .*)|(BSD .*)|(MIT)|(Free <= [0-9]+ (Users|Nodes))|(Multi-licensed OpenSource)|(Other)|(Unknown)$"
           license_url:
             type: string
             pattern: "^((https?://)[a-z][a-z0-9_-]+(\\.[a-z][a-z0-9_-]+)+(/[a-z0-9\\._/~%\\-\\+&\\#\\?!=\\(\\)@]*)?)$"
