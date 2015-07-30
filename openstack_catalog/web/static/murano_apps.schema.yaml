@@ -2,9 +2,9 @@
   $schema: http://json-schema.org/draft-04/schema#
   type: object
   required:
-    - applications
+    - assets
   properties:
-    applications:
+    assets:
       type: array
       items:
         type: object

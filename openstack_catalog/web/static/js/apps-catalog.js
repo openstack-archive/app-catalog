@@ -171,31 +171,31 @@ function setupInfoHandler (tab, element_id, info) {
   });
 }
 
-var glance_images = { images: [] };
+var glance_images = { assets: [] };
 
 function show_glance_images ()
 {
   populate_table ("glance-images-table",
       ["name_html", "description", "disk_format", "license"],
-      filterData (glance_images.images, getUrlVars ()));
+      filterData (glance_images.assets, getUrlVars ()));
 }
 
-var heat_templates = { templates: [] };
+var heat_templates = { assets: [] };
 
 function show_heat_templates ()
 {
   populate_table ("heat-templates-table",
       ["name_html", "description", "release_html", "format"],
-      filterData (heat_templates.templates, getUrlVars ()));
+      filterData (heat_templates.assets, getUrlVars ()));
 }
 
-var murano_apps = { applications: [] };
+var murano_apps = { assets: [] };
 
 function show_murano_apps ()
 {
   populate_table ("murano-apps-table",
       ["name_html", "description", "release_html", "format"],
-      filterData (murano_apps.applications, getUrlVars ()));
+      filterData (murano_apps.assets, getUrlVars ()));
 }
 
 function initTabs ()
@@ -247,7 +247,7 @@ function initMarketPlace ()
         glance_images = jsyaml.safeLoad (data);
       } catch (e) {
       }
-      var tableData = glance_images.images;
+      var tableData = glance_images.assets;
       for (var i = 0; i < tableData.length; i++) {
         setupInfoHandler ("glance-images", i, tableData[i]);
       }
@@ -262,7 +262,7 @@ function initMarketPlace ()
         heat_templates = jsyaml.safeLoad (data);
       } catch (e) {
       }
-      var tableData = heat_templates.templates;
+      var tableData = heat_templates.assets;
       for (var i = 0; i < tableData.length; i++) {
         tableData[i].release_html = tableData[i].release.join (", ");
         setupInfoHandler ("heat-templates", i, tableData[i]);
@@ -280,7 +280,7 @@ function initMarketPlace ()
         murano_apps = jsyaml.safeLoad (data);
       } catch (e) {
       }
-      var tableData = murano_apps.applications;
+      var tableData = murano_apps.assets;
       for (var i = 0; i < tableData.length; i++) {
         tableData[i].release_html = tableData[i].release.join (", ");
         setupInfoHandler ("murano-apps", i, tableData[i]);
@@ -318,9 +318,9 @@ function navigate ()
   if (selected_tab_name === null) {
     $( "#landing-page" ).show ();
   } else if ("asset" in options) {
-    show_asset ("murano-apps", murano_apps.applications);
-    show_asset ("heat-templates", heat_templates.templates);
-    show_asset ("glance-images", glance_images.images);
+    show_asset ("murano-apps", murano_apps.assets);
+    show_asset ("heat-templates", heat_templates.assets);
+    show_asset ("glance-images", glance_images.assets);
   } else {
     $( "#" + selected_tab_name ).show ();
   }

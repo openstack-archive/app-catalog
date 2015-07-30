@@ -1,5 +1,5 @@
 ---
-  images:
+  assets:
     -
       name: Ubuntu 14.04 x64 (pre-installed Kubernetes)
       provided_by:
@@ -396,6 +396,7 @@
       name: Sahara HDP 2.0.6 (CentOS 6.6)
       provided_by:
         name: Mirantis
+        href: https://www.mirantis.com/
         company: Mirantis, Inc.
       description: >
                   Hortonworks Data Platform (HDP) is the open source
@@ -421,6 +422,7 @@
       name: Sahara CDH 5.3.0 (CentOS 6.6)
       provided_by:
         name: Mirantis
+        href: https://www.mirantis.com/
         company: Mirantis, Inc.
       description: >
                   Cloudera Distribution including Apache Hadoop (CDH)
@@ -445,6 +447,7 @@
       name: Sahara CDH 5.3.0 (Ubuntu 12.04)
       provided_by:
         name: Mirantis
+        href: https://www.mirantis.com/
         company: Mirantis, Inc.
       description: >
                   Cloudera Distribution including Apache Hadoop (CDH)
@@ -469,6 +472,7 @@
       name: Sahara MapR 4.0.2 (CentOS 6.6)
       provided_by:
         name: Mirantis
+        href: https://www.mirantis.com/
         company: Mirantis, Inc.
       description: >
                   The MapR Distribution including Apache Hadoop
@@ -492,6 +496,7 @@
       name: Sahara Apache Spark 1.0.0 (Ubuntu 14.04)
       provided_by:
         name: Mirantis
+        href: https://www.mirantis.com/
         company: Mirantis, Inc.
       description: >
                   Apache Spark is a fast and general engine for
@@ -514,6 +519,7 @@
       name: Sahara Apache Storm 0.9.1 (Ubuntu 14.04)
       provided_by:
         name: Mirantis
+        href: https://www.mirantis.com/
         company: Mirantis, Inc.
       description: >
                   Apache Storm is a distributed realtime computation
@@ -538,6 +544,7 @@
       name: CoreOS v647.0.0
       provided_by:
         name: CoreOS
+        href: https://coreos.com/
         company: CoreOS
       description: CoreOS version 647.0.0, released 2015-04-08
       disk_format: qcow2
@@ -555,6 +562,7 @@
       name: CoreOS v668.3.0
       provided_by:
         name: CoreOS
+        href: https://coreos.com/
         company: CoreOS
       description: CoreOS version 668.3.0, released 2015-05-12
       disk_format: qcow2
@@ -572,6 +580,7 @@
       name: CoreOS v681.0.0
       provided_by:
         name: CoreOS
+        href: https://coreos.com/
         company: CoreOS
       description: CoreOS version 681.0.0, released 2015-05-14
       disk_format: qcow2
