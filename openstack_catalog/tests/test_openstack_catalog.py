@@ -57,9 +57,9 @@ class TestOpenstack_catalog(testtools.TestCase):
     def test_heat_templates_schema_conformance(self):
         self._verify_by_schema(
             'openstack_catalog/web/static/heat_templates.yaml',
-            'openstack_catalog/web/static/heat_templates.schema.yaml')
+            'openstack_catalog/web/static/assets.schema.yaml')
 
     def test_glance_images_schema_conformance(self):
         self._verify_by_schema(
             'openstack_catalog/web/static/glance_images.yaml',
-            'openstack_catalog/web/static/glance_images.schema.yaml')
+            'openstack_catalog/web/static/assets.schema.yaml')

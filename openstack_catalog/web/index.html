@@ -345,18 +345,18 @@
 
     <script id="glance-images-info" type="text/x-jquery-tmpl">
 
-      <h2>${name} (${disk_format})</h2>
+      <h2>${name} (${engine['disk_format']})</h2>
       <div>
       {{if attributes['url']}}
       <span class="label">glance image-create:</span>
-      <input type="text" value="glance image-create --copy-from ${attributes['url']} --disk-format ${disk_format} --container-format ${container_format} --name '${name}'" onfocus="this.select();" onmouseup="return false;">
+      <input type="text" value="glance image-create --copy-from ${attributes['url']} --disk-format ${engine['disk_format']} --container-format ${engine['container_format']} --name '${name}'" onfocus="this.select();" onmouseup="return false;">
       {{else}}
       <span class="label">Website where the image can be downloaded:</span>
       <a href="${attributes['indirect_url']}">Link...</a>
       {{/if}}
       </div>
-      {{if supported_by}}
-      <div><span class="label">Supported by</span> <span class="value">${supported_by}</span></div>
+      {{if supported_by && supported_by.name}}
+      <div><span class="label">Supported by</span> <span class="value">${supported_by.name}</span></div>
       {{/if}}
       {{if license}}
       {{if license_url}}
@@ -383,9 +383,9 @@
 
     <script id="heat-templates-info" type="text/x-jquery-tmpl">
 
-      <h2>${name} (${format})</h2>
-      {{if supported_by}}
-      <div><span class="label">Supported by</span> <span class="value">${supported_by}</span></div>
+      <h2>${name} (${engine['format']})</h2>
+      {{if supported_by && supported_by.name}}
+      <div><span class="label">Supported by</span> <span class="value">${supported_by.name}</span></div>
       {{/if}}
       <div><span class="label">Description:</span> <span class="value">${description}</span></div>
       <div><span class="label">Available in Releases:</span> <span class="value">${release_html}</span></div>
