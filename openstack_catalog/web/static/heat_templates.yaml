@@ -1,5 +1,5 @@
 ---
-  templates:
+  assets:
     -
       name: Hello World
       provided_by:
