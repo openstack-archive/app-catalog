@@ -9,14 +9,16 @@
       items: 
         type: object
         required:
+          - engine
           - name
           - provided_by
           - description
-          - disk_format
-          - container_format
           - license
-        additionalProperties: true
-        properties: 
+        additionalProperties: false
+        properties:
+          engine:
+            oneOf:
+              - $ref: "#/definitions/glance"
           name: 
             type: string
           provided_by: 
@@ -36,32 +38,6 @@
                 type: string
           description: 
             type: string
-          format: 
-            enum: 
-              - QCOW2
-              - VMDK
-          container_format:
-            enum:
-              - ami
-              - ari
-              - aki
-              - bare
-              - ovf
-          disk_format:
-            enum:
-              - ami
-              - ari
-              - aki
-              - vhd
-              - vmdk
-              - raw
-              - qcow2
-              - vdi
-              - iso
-          min_ram:
-            type: number
-          min_disk:
-            type: number
           license:
             type: string
             pattern: "^(GPL .*)|(Apache .*)|(BSD .*)|(MIT)|(Free <= [0-9]+ (Users|Nodes))|(Multi-licensed OpenSource)|(Other)|(Unknown)$"
@@ -76,3 +52,37 @@
                 type: 
                   - string
                   - number
+  definitions:
+    glance:
+      required:
+        - type
+        - container_format
+        - disk_format
+      properties:
+        type:
+          type: string
+          enum:
+            - glance
+        container_format:
+          enum:
+            - ami
+            - ari
+            - aki
+            - bare
+            - ovf
+        disk_format:
+          enum:
+            - ami
+            - ari
+            - aki
+            - vhd
+            - vmdk
+            - raw
+            - qcow2
+            - vdi
+            - iso
+        min_ram:
+          type: number
+        min_disk:
+          type: number
+      additionalProperties: false

@@ -345,11 +345,11 @@
 
     <script id="glance-images-info" type="text/x-jquery-tmpl">
 
-      <h2>${name} (${disk_format})</h2>
+      <h2>${name} (${engine['disk_format']})</h2>
       <div>
       {{if attributes['url']}}
       <span class="label">glance image-create:</span>
-      <input type="text" value="glance image-create --copy-from ${attributes['url']} --disk-format ${disk_format} --container-format ${container_format} --name '${name}'" onfocus="this.select();" onmouseup="return false;">
+      <input type="text" value="glance image-create --copy-from ${attributes['url']} --disk-format ${engine['disk_format']} --container-format ${engine['container_format']} --name '${name}'" onfocus="this.select();" onmouseup="return false;">
       {{else}}
       <span class="label">Website where the image can be downloaded:</span>
       <a href="${attributes['indirect_url']}">Link...</a>
