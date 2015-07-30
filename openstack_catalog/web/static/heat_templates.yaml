@@ -11,8 +11,11 @@
         - Icehouse
         - Juno
         - Kilo
-      format: HOT
-      supported_by: Mirantis
+      service:
+        type: heat
+        format: HOT
+      supported_by:
+        name: Mirantis
       license: Apache 2.0
       attributes:
         url: http://storage.catalog.mirantis.com/hot/hello_world.yaml
@@ -30,8 +33,11 @@
       release:
         - Juno
         - Kilo
-      format: HOT
-      supported_by: Red Hat
+      service:
+        type: heat
+        format: HOT
+      supported_by:
+        name: Red Hat
       license: Apache 2.0
       attributes:
         url: https://raw.githubusercontent.com/openstack/heat-templates/master/openshift-origin/centos65/OpenShift.yaml
@@ -49,8 +55,11 @@
       release:
         - Juno
         - Kilo
-      format: HOT
-      supported_by: Red Hat
+      service:
+        type: heat
+        format: HOT
+      supported_by:
+        name: Red Hat
       license: Apache 2.0
       attributes:
         url: https://raw.githubusercontent.com/openstack/heat-templates/master/openshift-origin/F19/hot-template/openshift/openshift.yaml
@@ -68,8 +77,11 @@
         - Icehouse
         - Juno
         - Kilo
-      format: HOT
-      supported_by: Layne Peng
+      service:
+        type: heat
+        format: HOT
+      supported_by:
+        name: Layne Peng
       license: Apache 2.0
       attributes:
         url: https://raw.githubusercontent.com/LaynePeng/heat-lattice/master/lattice.yaml
@@ -89,8 +101,11 @@
           https://github.com/redhat-openstack/openshift-on-openstack
       release:
         - Kilo
-      format: HOT
-      supported_by: Community
+      service:
+        type: heat
+        format: HOT
+      supported_by:
+        name: Community
       license: Apache 2.0
       attributes:
         url: https://raw.githubusercontent.com/redhat-openstack/openshift-on-openstack/master/openshift.yaml

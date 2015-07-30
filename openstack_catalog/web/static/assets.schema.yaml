@@ -1,0 +1,127 @@
+---
+  $schema: http://json-schema.org/draft-04/schema#
+  type: object
+  required:
+    - assets
+  properties:
+    assets:
+      type: array
+      items:
+        type: object
+        required:
+          - service
+          - name
+          - provided_by
+          - description
+          - license
+        additionalProperties: false
+        properties:
+          service:
+            oneOf:
+              - $ref: "#/definitions/glance"
+              - $ref: "#/definitions/heat"
+          name:
+            type: string
+          release:
+            type: array
+            items:
+              enum:
+                - Austin
+                - Bexar
+                - Cactus
+                - Diablo
+                - Essex
+                - Folsom
+                - Grizzly
+                - Havana
+                - Icehouse
+                - Juno
+                - Kilo
+                - Liberty
+            minItems: 1
+          provided_by:
+            type: object
+            required:
+              - name
+              - href
+              - company
+            additionalProperties: false
+            properties:
+              name:
+                type: string
+              href:
+                type: string
+                pattern: "^((https?://)[a-z][a-z0-9_-]+(\\.[a-z][a-z0-9_-]+)+(/[a-z0-9\\._/~%\\-\\+&\\#\\?!=\\(\\)@]*)?)|(mailto:[a-z][a-z0-9._-]+@[a-z][a-z0-9_-]+(\\.[a-z][a-z0-9_-]+)+)$"
+              company:
+                type: string
+          supported_by:
+            type: object
+            required:
+              - name
+            additionalProperties: false
+            properties:
+              name:
+                type: string
+              href:
+                type: string
+                pattern: "^((https?://)[a-z][a-z0-9_-]+(\\.[a-z][a-z0-9_-]+)+(/[a-z0-9\\._/~%\\-\\+&\\#\\?!=\\(\\)@]*)?)|(mailto:[a-z][a-z0-9._-]+@[a-z][a-z0-9_-]+(\\.[a-z][a-z0-9_-]+)+)$"
+              company:
+                type: string
+          description:
+            type: string
+          license:
+            type: string
+            pattern: "^(GPL .*)|(Apache .*)|(BSD .*)|(MIT)|(Free <= [0-9]+ (Users|Nodes))|(Multi-licensed OpenSource)|(Other)|(Unknown)$"
+          license_url:
+            type: string
+            pattern: "^((https?://)[a-z][a-z0-9_-]+(\\.[a-z][a-z0-9_-]+)+(/[a-z0-9\\._/~%\\-\\+&\\#\\?!=\\(\\)@]*)?)$"
+          attributes:
+            type: object
+            additionalProperties: true
+            patternProperties:
+              .*:
+                type:
+                  - string
+                  - number
+  definitions:
+    glance:
+      required:
+        - type
+        - container_format
+        - disk_format
+      properties:
+        type:
+          type: string
+          enum:
+            - glance
+        container_format:
+          enum:
+            - ami
+            - ari
+            - aki
+            - bare
+            - ovf
+        disk_format:
+          enum:
+            - ami
+            - ari
+            - aki
+            - vhd
+            - vmdk
+            - raw
+            - qcow2
+            - vdi
+            - iso
+        min_ram:
+          type: number
+        min_disk:
+          type: number
+      additionalProperties: false
+    heat:
+      required:
+        - type
+      properties:
+        type:
+          type: string
+          enum:
+            - heat
