@@ -772,3 +772,18 @@
         url: https://chef-server-glance-images.s3-us-west-2.amazonaws.com/chef-server-12.1.2-1437522600.qcow2
         docs: https://docs.chef.io
         hash: e6b964572be00a845bd53d6033a780f4
+    -
+      name: CirrOS
+      provided_by:
+        name: Scott Moser
+        href: http://launchpad.net/cirros
+        company: NA
+      description: >
+                  CirrOS is a Tiny OS that specializes in running on a cloud.
+      service:
+        type: glance
+        disk_format: qcow2
+        container_format: bare
+      license: Multi-licensed OpenSource
+      attributes:
+        url: http://download.cirros-cloud.net/0.3.4/cirros-0.3.4-x86_64-disk.img
