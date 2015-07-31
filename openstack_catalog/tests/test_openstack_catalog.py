@@ -44,6 +44,12 @@ class TestOpenstack_catalog(testtools.TestCase):
     def _verify_by_schema(self, file_name, schema):
         data = self._read_file(file_name)
         schema = self._read_file(schema)
+        names = {}
+        for asset in data['assets']:
+            name = asset['name']
+            if name in names:
+                self.fail("Duplicate asset name: %s" % name)
+            names[name] = True
         try:
             jsonschema.validate(data, schema)
         except jsonschema.ValidationError as e:
