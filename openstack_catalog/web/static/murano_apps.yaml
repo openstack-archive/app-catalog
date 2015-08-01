@@ -54,6 +54,7 @@
 #==============================================================================
     -
       name: Apache HTTP Server
+      tags: ['app']
       package_name: io.murano.apps.apache.ApacheHttpServer
       provided_by:
         name: Dmitry Dovbii
@@ -82,6 +83,7 @@
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/ApacheHTTPServer/package"
     -
       name: Apache Tomcat
+      tags: ['app']
       package_name: io.murano.apps.apache.Tomcat
       provided_by:
         name: Dmitry Dovbii
@@ -110,6 +112,7 @@
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Tomcat/package"
     -
       name: Apcera
+      tags: ['app']
       package_name: com.apcera.Apcera
       provided_by:
         name: Austin Mills
@@ -133,6 +136,7 @@
         "Package URL": "http://storage.apps.openstack.org/apps/com.apcera.Apcera.zip"
     -
       name: Cloud Foundry
+      tags: ['app']
       package_name: io.murano.apps.paas.CloudFoundry
       provided_by:
         name: Andrey Shestakov
@@ -165,6 +169,7 @@
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/CloudFoundry/package"
     -
       name: MySQL
+      tags: ['app']
       package_name: io.murano.databases.MySql
       provided_by:
         name: Dmitry Dovbii
@@ -193,6 +198,7 @@
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/MySQL/package"
     -
       name: Oracle Pluggable Database
+      tags: ['app']
       package_name: com.oracle.db.muranoPdb.OraclePDB
       provided_by:
         name: Danek Duvall
@@ -221,6 +227,7 @@
         "Documentation URL": "https://github.com/dhduvall/murano-apps/tree/master/OraclePDBConnector/readme.md"
     -
       name: PostgreSql
+      tags: ['app']
       package_name: io.murano.databases.PostgreSql
       provided_by:
         name: Dmitry Dovbii
@@ -247,6 +254,7 @@
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/PostgreSQL/package"
     -
       name: Rally
+      tags: ['app']
       package_name: org.openstack.Rally
       provided_by:
         name: Boris Pavlovic
@@ -271,6 +279,7 @@
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Rally/package"
     -
       name: WordPress
+      tags: ['app']
       package_name: io.murano.apps.WordPress
       provided_by:
         name: Dmitry Dovbii
@@ -316,6 +325,7 @@
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/ZabbixAgent/package"
     -
       name: Zabbix
+      tags: ['app']
       package_name: io.murano.apps.ZabbixServer
       provided_by:
         name: Dmitry Dovbii
@@ -456,6 +466,7 @@
 #==============================================================================
     -
       name: Docker Container
+      tags: ['app']
       package_name: io.murano.apps.docker.DockerApp
       provided_by:
         name: Dmitry Dovbii
@@ -485,6 +496,7 @@
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/DockerApp/package"
     -
       name: Docker Crate
+      tags: ['app']
       package_name: io.murano.apps.docker.DockerCrate
       provided_by:
         name: Dmitry Dovbii
@@ -511,6 +523,7 @@
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/Crate/package"
     -
       name: Docker GlassFish
+      tags: ['app']
       package_name: io.murano.apps.docker.DockerGlassFish
       provided_by:
         name: Dmitry Dovbii
@@ -548,6 +561,7 @@
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/GlassFish/package"
     -
       name: Docker Grafana
+      tags: ['app']
       package_name: io.murano.apps.docker.DockerGrafana
       provided_by:
         name: Dmitry Dovbii
@@ -585,6 +599,7 @@
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/Grafana/package"
     -
       name: Docker GuestBook
+      tags: ['app']
       package_name: io.murano.apps.docker.GuestBook
       provided_by:
         name: Dmitry Dovbii
@@ -610,6 +625,7 @@
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/GuestBook/package"
     -
       name: Docker HTTPd
+      tags: ['app']
       package_name: io.murano.apps.docker.DockerHTTPd
       provided_by:
         name: Dmitry Dovbii
@@ -636,6 +652,7 @@
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/HTTPdServer/package"
     -
       name: Docker HTTPd Site
+      tags: ['app']
       package_name: io.murano.apps.docker.DockerHTTPdSite
       provided_by:
         name: Dmitry Dovbii
@@ -667,6 +684,7 @@
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/HTTPdSite/package"
     -
       name: Docker InfluxDB
+      tags: ['app']
       package_name: io.murano.apps.docker.DockerInfluxDB
       provided_by:
         name: Dmitry Dovbii
@@ -695,6 +713,7 @@
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/InfluxDB/package"
     -
       name: Docker Jenkins
+      tags: ['app']
       package_name: io.murano.apps.docker.DockerJenkins
       provided_by:
         name: Dmitry Dovbii
@@ -732,6 +751,7 @@
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/Jenkins/package"
     -
       name: Docker MariaDB
+      tags: ['app']
       package_name: io.murano.apps.docker.DockerMariaDB
       provided_by:
         name: Dmitry Dovbii
@@ -767,6 +787,7 @@
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/MariaDB/package"
     -
       name: Docker MongoDB
+      tags: ['app']
       package_name: io.murano.apps.docker.DockerMongoDB
       provided_by:
         name: Dmitry Dovbii
@@ -805,6 +826,7 @@
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/MongoDB/package"
     -
       name: Docker MySQL
+      tags: ['app']
       package_name: io.murano.apps.docker.DockerMySQL
       provided_by:
         name: Dmitry Dovbii
@@ -833,6 +855,7 @@
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/MySQL/package"
     -
       name: Docker Nginx
+      tags: ['app']
       package_name: io.murano.apps.docker.DockerNginx
       provided_by:
         name: Dmitry Dovbii
@@ -863,6 +886,7 @@
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/Nginx/package"
     -
       name: Docker Nginx Site
+      tags: ['app']
       package_name: io.murano.apps.docker.DockerNginxSite
       provided_by:
         name: Dmitry Dovbii
@@ -896,6 +920,7 @@
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/NginxSite/package"
     -
       name: Docker PostgreSQL
+      tags: ['app']
       package_name: io.murano.apps.docker.DockerPostgreSQL
       provided_by:
         name: Dmitry Dovbii
@@ -944,6 +969,7 @@
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/PostgreSQL/package"
     -
       name: Docker Redis
+      tags: ['app']
       package_name: io.murano.apps.docker.DockerRedis
       provided_by:
         name: Dmitry Dovbii
@@ -973,6 +999,7 @@
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/Redis/package"
     -
       name: Docker Tomcat
+      tags: ['app']
       package_name: io.murano.apps.docker.DockerTomcat
       provided_by:
         name: Dmitry Dovbii
@@ -1183,6 +1210,7 @@
         - io.murano.apps.ZabbixServer
     -
       name: Stackato
+      tags: ['app']
       package_name: io.murano.apps.activestate.StackatoNode
       provided_by:
         name: John Wetherill
