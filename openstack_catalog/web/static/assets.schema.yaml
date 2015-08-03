@@ -22,6 +22,11 @@
               - $ref: "#/definitions/heat"
           name:
             type: string
+          tags:
+            type: array
+            items:
+              enum:
+                - app
           release:
             type: array
             items:

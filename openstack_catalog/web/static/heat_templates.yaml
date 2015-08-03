@@ -2,6 +2,7 @@
   assets:
     -
       name: Hello World
+      tags: ['app']
       provided_by:
         name: '?'
         href: mailto:support@mirantis.com
@@ -21,6 +22,7 @@
         url: http://storage.catalog.mirantis.com/hot/hello_world.yaml
     -
       name: OpenShift-CentOS65
+      tags: ['app']
       provided_by:
         name: Red Hat
         href: http://www.redhat.com
@@ -43,6 +45,7 @@
         url: https://raw.githubusercontent.com/openstack/heat-templates/master/openshift-origin/centos65/OpenShift.yaml
     -
       name: OpenShift-F19
+      tags: ['app']
       provided_by:
         name: Red Hat
         href: http://www.redhat.com
@@ -65,6 +68,7 @@
         url: https://raw.githubusercontent.com/openstack/heat-templates/master/openshift-origin/F19/hot-template/openshift/openshift.yaml
     -
       name: Lattice
+      tags: ['app']
       provided_by:
         name: Layne Peng
         href: mailto:appamail@hotmail.com
@@ -87,6 +91,7 @@
         url: https://raw.githubusercontent.com/LaynePeng/heat-lattice/master/lattice.yaml
     -
       name: OpenShift Origin 3
+      tags: ['app']
       provided_by:
         name: OpenShift
         href: http://www.openshift.org/
