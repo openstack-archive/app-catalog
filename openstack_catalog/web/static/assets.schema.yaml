@@ -20,6 +20,8 @@
             oneOf:
               - $ref: "#/definitions/glance"
               - $ref: "#/definitions/heat"
+              - $ref: "#/definitions/murano"
+              - $ref: "#/definitions/bundle"
           name:
             type: string
           tags:
@@ -27,6 +29,16 @@
             items:
               enum:
                 - app
+          depends:
+            type: array
+            items:
+              type: object
+              required:
+                - name
+              additionalProperties: false
+              properties:
+                name:
+                  type: string
           release:
             type: array
             items:
@@ -130,3 +142,29 @@
           type: string
           enum:
             - heat
+    murano:
+      required:
+        - type
+      additionalProperties: false
+      properties:
+        type:
+          type: string
+          enum:
+            - murano
+        format:
+          type: string
+          enum:
+            - package
+        package_name:
+          type: string
+    bundle:
+      required:
+        - type
+      additionalProperties: false
+      properties:
+        type:
+          type: string
+          enum:
+            - bundle
+        murano_package_name:
+          type: string
