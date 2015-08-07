@@ -406,10 +406,10 @@
 
     <script id="murano-apps-info" type="text/x-jquery-tmpl">
 
-      <h2>${name} (${format})</h2>
+      <h2>${name} (${service.format})</h2>
       <div>
-    <span class="label">{{if format == 'package'}}Package{{else}}Bundle{{/if}} name:</span>
-    <input type="text" value="${package_name}" onfocus="this.select();" onmouseup="return false;">
+    <span class="label">{{if service.format == 'package'}}Package{{else}}Bundle{{/if}} name:</span>
+    <input type="text" value="${service.package_name}" onfocus="this.select();" onmouseup="return false;">
       </div>
 
       <h3>Description</h3>
@@ -422,33 +422,19 @@
       <div><span class="label">Contact:	</span><a href="${provided_by.href}"> <span class="value">${provided_by.name}</span> </a></div>
       <div><span class="label">Company:</span> <span class="value">${provided_by.company}</span></div>
 
-      {{if dependsOn }}
+      {{if depends }}
       <h3>Depends On</h3>
       <p>Package may depend on image and on other packages, during import of
       this package to Murano following dependencies will be also downloaded
       and imported, but existing entries will not be overwritten.</p>
-      {{if dependsOn.image }}
-      Base Image: <a href="${dependsOn.image.uri}">${dependsOn.image.name}</a><br />
-      {{/if}}
-      {{if dependsOn.apps }}
+      {{if depends }}
       Dependencies:
       <ul>
-         {{each dependsOn.apps }}
-         <li>${dependsOn.apps[$index]}</li>
+         {{each depends }}
+         <li>${depends[$index]['name']}</li>
          {{/each}}
       </ul>
       {{/if}}
-      {{/if}}
-
-      {{if format == 'bundle' && bundled}}
-      <h3>In the Bundle</h3>
-      <p>Following packages included to this bundle:</p>
-      <ul>
-         {{each bundled }}
-         <li>${bundled[$index]}</li>
-         {{/each}}
-      </ul>
-      <p>Note: Dependencies of the each package included to the bundle will be also imported.<p>
       {{/if}}
 
       {{if attributes }}

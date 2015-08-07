@@ -5,7 +5,6 @@
 #==============================================================================
     -
       name: SqlDatabase Library
-      package_name: io.murano.databases.SqlDatabase
       provided_by:
         name: Dmitry Dovbii
         href: "mailto:ddovbii@mirantis.com"
@@ -22,15 +21,18 @@
          specific database for these
          three basic functions (creating a database, users, or retrieving a
          connection string).
+      service:
+        type: murano
+        format: package
+        package_name: io.murano.databases.SqlDatabase
       release:
         - Kilo
-      format: package
+      license: Apache 2.0
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.databases.SqlDatabase.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/SQLDatabaseLibrary/package"
     -
       name: Docker Interface Library
-      package_name: io.murano.apps.docker.Interfaces
       provided_by:
         name: Stan Lagun
         href: "mailto:slagun@mirantis.com"
@@ -43,9 +45,13 @@
         DockerHost, DockerVolume, ApplicationPort and all other classes
         that are used to pass information between docker
         applications and docker host providers.
+      service:
+        type: murano
+        format: package
+        package_name: io.murano.apps.docker.Interfaces
       release:
         - Kilo
-      format: package
+      license: Apache 2.0
       attributes:
         "Source URL": "https://github.com/stackforge/murano-apps"
         Documentation: "https://github.com/stackforge/murano-apps/blob/master/Docker/Kubernetes/readme.md"
@@ -55,7 +61,6 @@
     -
       name: Apache HTTP Server
       tags: ['app']
-      package_name: io.murano.apps.apache.ApacheHttpServer
       provided_by:
         name: Dmitry Dovbii
         href: "mailto:ddovbii@mirantis.com"
@@ -71,20 +76,21 @@
          has remained the most popular HTTP server in use since April 1996.
 
          Murano creates one or more VM(s) for you from the image listed in the dependencies.
+      service:
+        type: murano
+        format: package
+        package_name: io.murano.apps.apache.ApacheHttpServer
       release:
         - Kilo
-      format: package
-      dependsOn:
-        image:
-          name: Debian 8 x64 (pre-installed murano-agent)
-          uri: http://storage.apps.openstack.org/images/debian-8-m-agent.qcow2
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Debian 8 x64 (pre-installed murano-agent)
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.apache.ApacheHttpServer.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/ApacheHTTPServer/package"
     -
       name: Apache Tomcat
       tags: ['app']
-      package_name: io.murano.apps.apache.Tomcat
       provided_by:
         name: Dmitry Dovbii
         href: "mailto:ddovbii@mirantis.com"
@@ -100,20 +106,21 @@
          the Tomcat process in a separate thread.
 
          Murano creates one or more VM(s) for you from the image listed in the dependencies.
+      service:
+        type: murano
+        format: package
+        package_name: io.murano.apps.apache.Tomcat
       release:
         - Kilo
-      format: package
-      dependsOn:
-        image:
-          name: Debian 8 x64 (pre-installed murano-agent)
-          uri: http://storage.apps.openstack.org/images/debian-8-m-agent.qcow2
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Debian 8 x64 (pre-installed murano-agent)
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.apache.Tomcat.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Tomcat/package"
     -
       name: Apcera
       tags: ['app']
-      package_name: com.apcera.Apcera
       provided_by:
         name: Austin Mills
         href: "mailto:austin@apcera.com"
@@ -125,19 +132,20 @@
         securely develop, deploy, orchestrate and govern diverse workloads
         across multiple cloud providers resulting in lower cost, simplified
         operations and assured compliance.
+      service:
+        type: murano
+        format: package
+        package_name: com.apcera.Apcera
       release:
         - Kilo
-      format: package
-      dependsOn:
-        image:
-          name: Apcera HCOS Trial Edition
-          uri: http://storage.apps.openstack.org/images/continuum-trial-openstack-1431536104.qcow2
+      license: Unknown
+      depends:
+        - name: Apcera HCOS Trial Edition
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/com.apcera.Apcera.zip"
     -
       name: Cloud Foundry
       tags: ['app']
-      package_name: io.murano.apps.paas.CloudFoundry
       provided_by:
         name: Andrey Shestakov
         href: "mailto:ashestakov@mirantis.com"
@@ -157,20 +165,21 @@
                   contributing code and supporting the project, with
                   sponsorship provided via the Cloud Foundry Foundation,
                   http://www.cloudfoundry.org
+      service:
+        type: murano
+        format: package
+        package_name: io.murano.apps.paas.CloudFoundry
       release:
         - Kilo
-      format: package
-      dependsOn:
-        image:
-          name: Ubuntu 14.04 x64 (pre-installed murano-agent)
-          uri: http://storage.apps.openstack.org/images/ubuntu-14.04-m-agent.qcow2
+      license: Unknown
+      depends:
+        - name: Ubuntu 14.04 x64 (pre-installed murano-agent)
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.paas.CloudFoundry.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/CloudFoundry/package"
     -
       name: MySQL
       tags: ['app']
-      package_name: io.murano.databases.MySql
       provided_by:
         name: Dmitry Dovbii
         href: "mailto:ddovbii@mirantis.com"
@@ -184,22 +193,22 @@
          proven reliability, ease and flexibility of use.
 
          Murano creates one or more VM(s) for you from the image listed in the dependencies.
+      service:
+        type: murano
+        format: package
+        package_name: io.murano.databases.MySql
       release:
         - Kilo
-      format: package
-      dependsOn:
-        apps:
-          - io.murano.databases.SqlDatabase
-        image:
-          name: Debian 8 x64 (pre-installed murano-agent)
-          uri: http://storage.apps.openstack.org/images/debian-8-m-agent.qcow2
+      license: Multi-licensed OpenSource
+      depends:
+        - name: SqlDatabase Library
+        - name: Debian 8 x64 (pre-installed murano-agent)
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.databases.MySql.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/MySQL/package"
     -
       name: Oracle Pluggable Database
       tags: ['app']
-      package_name: com.oracle.db.muranoPdb.OraclePDB
       provided_by:
         name: Danek Duvall
         href: "mailto:danek.duvall@oracle.com"
@@ -215,12 +224,15 @@
 
          Please read the documentation (at the URL shown below) carefully,
          as this application will not run without careful setup.
+      service:
+        type: murano
+        format: package
+        package_name: com.oracle.db.muranoPdb.OraclePDB
       release:
         - Kilo
-      format: package
-      dependsOn:
-        apps:
-          - io.murano.databases.SqlDatabase
+      license: Apache 2.0
+      depends:
+        - name: SqlDatabase Library
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/com.oracle.db.muranoPdb.OraclePDB.zip"
         "Source URL": "https://github.com/dhduvall/murano-apps/tree/master/OraclePDBConnector/package"
@@ -228,7 +240,6 @@
     -
       name: PostgreSql
       tags: ['app']
-      package_name: io.murano.databases.PostgreSql
       provided_by:
         name: Dmitry Dovbii
         href: "mailto:ddovbii@mirantis.com"
@@ -240,22 +251,22 @@
          for reliability, data integrity, and correctness.
 
          Murano creates one or more VM(s) for you from the image listed in the dependencies.
+      service:
+        type: murano
+        format: package
+        package_name: io.murano.databases.PostgreSql
       release:
         - Kilo
-      format: package
-      dependsOn:
-        apps:
-          - io.murano.databases.SqlDatabase
-        image:
-          name: Ubuntu 14.04 x64 (pre-installed murano-agent)
-          uri: http://storage.apps.openstack.org/images/ubuntu-14.04-m-agent.qcow2
+      license: Multi-licensed OpenSource
+      depends:
+        - name: SqlDatabase Library
+        - name: Ubuntu 14.04 x64 (pre-installed murano-agent)
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.databases.PostgreSql.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/PostgreSQL/package"
     -
       name: Rally
       tags: ['app']
-      package_name: org.openstack.Rally
       provided_by:
         name: Boris Pavlovic
         href: "mailto:bpavlovic@mirantis.com"
@@ -265,42 +276,45 @@
         Rally is intended to provide the community with a benchmarking tool
         that is capable of performing specific, complicated and reproducible
         test cases on real deployment scenarios.
+      service:
+        type: murano
+        format: package
+        package_name: org.openstack.Rally
       release:
         - Icehouse
         - Juno
         - Kilo
-      format: package
-      dependsOn:
-        image:
-          name: Ubuntu 14.04 x64 (pre-installed murano-agent)
-          uri: http://storage.apps.openstack.org/images/ubuntu-14.04-m-agent.qcow2
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Ubuntu 14.04 x64 (pre-installed murano-agent)
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/org.openstack.Rally.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Rally/package"
     -
       name: WordPress
       tags: ['app']
-      package_name: io.murano.apps.WordPress
       provided_by:
         name: Dmitry Dovbii
         href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
          WordPress is a free and open source blogging tool and a content management system (CMS) based on PHP and MySQL.
+      service:
+        type: murano
+        format: package
+        package_name: io.murano.apps.WordPress
       release:
         - Kilo
-      format: package
-      dependsOn:
-        apps:
-          - io.murano.databases.MySql
-          - io.murano.apps.apache.ApacheHttpServer
-          - io.murano.apps.ZabbixAgent
+      license: Multi-licensed OpenSource
+      depends:
+        - name: MySQL
+        - name: Apache HTTP Server
+        - name: Zabbix Agent
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.WordPress.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/WordPress/package"
     -
       name: Zabbix Agent
-      package_name: io.murano.apps.ZabbixAgent
       provided_by:
         name: Dmitry Dovbii
         href: "mailto:ddovbii@mirantis.com"
@@ -314,19 +328,21 @@
          monitoring solution. Zabbix offer advance monitoring, alerting, and
          visualization features today which are missing in other monitoring
          system, even some of the best commercial ones.
+      service:
+        type: murano
+        format: package
+        package_name: io.murano.apps.ZabbixAgent
       release:
         - Kilo
-      format: package
-      dependsOn:
-        apps:
-          - io.murano.apps.ZabbixServer
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Zabbix
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.ZabbixAgent.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/ZabbixAgent/package"
     -
       name: Zabbix
       tags: ['app']
-      package_name: io.murano.apps.ZabbixServer
       provided_by:
         name: Dmitry Dovbii
         href: "mailto:ddovbii@mirantis.com"
@@ -338,22 +354,53 @@
          system, even some of the best commercial ones.
 
          Murano creates one or more VM(s) for you from the image listed in the dependencies.
+      service:
+        type: murano
+        format: package
+        package_name: io.murano.apps.ZabbixServer
       release:
         - Kilo
-      format: package
-      dependsOn:
-        image:
-          name: Debian 8 x64 (pre-installed murano-agent)
-          uri: http://storage.apps.openstack.org/images/debian-8-m-agent.qcow2
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Debian 8 x64 (pre-installed murano-agent)
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.ZabbixServer.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/ZabbixServer/package"
+    -
+      name: Stackato
+      tags: ['app']
+      provided_by:
+        name: John Wetherill
+        href: "http://activestate.com"
+        company: ActiveState
+      description: >
+        Stackato is a secure, stable, and commercially supported
+        Platform-as-a-Service (PaaS) that is built with and on top of
+        various open source components such as Cloud Foundry and
+        Docker. Stackato allows agile enterprises to develop and
+        deploy software solutions faster than ever before and manage
+        them more effectively. It provides development teams with
+        built-in languages, frameworks and services on one single
+        cloud application platform, while providing enterprise-level
+        security and world-class support.
+      service:
+        type: murano
+        format: package
+        package_name: io.murano.apps.activestate.StackatoNode
+      release:
+        - Kilo
+      license: Multi-licensed OpenSource
+      supported_by:
+        name: ActiveState
+      attributes:
+        "Source URL": "https://github.com/ActiveState/stackato-node-murano"
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.activestate.StackatoNode.zip"
+        "Documentation": "https://github.com/ActiveState/stackato-node-murano/blob/master/README.md"
 #==============================================================================
 #                                Platforms
 #==============================================================================
     -
       name: Docker Standalone Host
-      package_name: io.murano.apps.docker.DockerStandaloneHost
       provided_by:
         name: Stan Lagun
         href: "mailto:slagun@mirantis.com"
@@ -375,21 +422,21 @@
 
           The Docker service is accessed using CLI client from within the same
           VM, so the docker API is not exposed outside that VM.
+      service:
+        type: murano
+        format: package
+        package_name: io.murano.apps.docker.DockerStandaloneHost
       release:
         - Kilo
-      format: package
-      dependsOn:
-        apps:
-          - io.murano.apps.docker.Interfaces
-        image:
-          name: Debian 8 x64 (pre-installed Docker)
-          uri: http://storage.apps.openstack.org/images/debian-8-docker.qcow2
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Docker Interface Library
+        - name: Debian 8 x64 (pre-installed Docker)
       attributes:
         "Source URL": "https://github.com/stackforge/murano-apps"
         Documentation: "https://github.com/stackforge/murano-apps/blob/master/Docker/Kubernetes/readme.md"
     -
       name: Kubernetes Cluster
-      package_name: io.murano.apps.docker.kubernetes.KubernetesCluster
       provided_by:
         name: Stan Lagun
         href: "mailto:slagun@mirantis.com"
@@ -414,18 +461,20 @@
         The application also provides API access to other applications, so
         they can create/delete Kubernetes services and Pods/Replication
         Controllers from its JSON definitions.
+      service:
+        type: murano
+        format: package
+        package_name: io.murano.apps.docker.kubernetes.KubernetesCluster
       release:
         - Kilo
-      format: package
-      dependsOn:
-        apps:
-          - io.murano.apps.docker.Interfaces
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Docker Interface Library
       attributes:
         "Source URL": "https://github.com/stackforge/murano-apps"
         Documentation: "https://github.com/stackforge/murano-apps/blob/master/Docker/Kubernetes/readme.md"
     -
       name: Kubernetes Pod
-      package_name: io.murano.apps.docker.kubernetes.KubernetesPod
       provided_by:
         name: Stan Lagun
         href: "mailto:slagun@mirantis.com"
@@ -451,13 +500,16 @@
         The Kubernetes Pod provides an API to the host docker container that
         is compatible with Docker Standalone Host so that any Docker
         Application can be hosted on any one of them.
+      service:
+        type: murano
+        format: package
+        package_name: io.murano.apps.docker.kubernetes.KubernetesPod
       release:
         - Kilo
-      format: package
-      dependsOn:
-        apps:
-          - io.murano.apps.docker.Interfaces
-          - io.murano.apps.docker.kubernetes.KubernetesCluster
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Docker Interface Library
+        - name: Kubernetes Cluster
       attributes:
         "Source URL": "https://github.com/stackforge/murano-apps"
         Documentation: "https://github.com/stackforge/murano-apps/blob/master/Docker/Kubernetes/readme.md"
@@ -467,7 +519,6 @@
     -
       name: Docker Container
       tags: ['app']
-      package_name: io.murano.apps.docker.DockerApp
       provided_by:
         name: Dmitry Dovbii
         href: "mailto:ddovbii@mirantis.com"
@@ -484,20 +535,22 @@
         Murano will deploy this in the docker service of your choice;
         you'll be prompted to create a docker service or choose one
         you have deployed (e.g., via Kubernetes Pod).
+      service:
+        type: murano
+        format: package
+        package_name: io.murano.apps.docker.DockerApp
       release:
         - Kilo
-      format: package
-      dependsOn:
-        apps:
-          - io.murano.apps.docker.DockerStandaloneHost
-          - io.murano.apps.docker.kubernetes.KubernetesPod
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Docker Standalone Host
+        - name: Kubernetes Pod
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerApp.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/DockerApp/package"
     -
       name: Docker Crate
       tags: ['app']
-      package_name: io.murano.apps.docker.DockerCrate
       provided_by:
         name: Dmitry Dovbii
         href: "mailto:ddovbii@mirantis.com"
@@ -511,20 +564,22 @@
         Murano will deploy this in the docker service of your choice;
         you'll be prompted to create a docker service or choose one
         you have deployed (e.g., via Kubernetes Pod).
+      service:
+        type: murano
+        format: package
+        package_name: io.murano.apps.docker.DockerCrate
       release:
         - Kilo
-      format: package
-      dependsOn:
-        apps:
-          - io.murano.apps.docker.DockerStandaloneHost
-          - io.murano.apps.docker.kubernetes.KubernetesPod
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Docker Standalone Host
+        - name: Kubernetes Pod
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerCrate.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/Crate/package"
     -
       name: Docker GlassFish
       tags: ['app']
-      package_name: io.murano.apps.docker.DockerGlassFish
       provided_by:
         name: Dmitry Dovbii
         href: "mailto:ddovbii@mirantis.com"
@@ -549,20 +604,22 @@
         Murano will deploy this in the docker service of your choice;
         you'll be prompted to create a docker service or choose one
         you have deployed (e.g., via Kubernetes Pod).
+      service:
+        type: murano
+        format: package
+        package_name: io.murano.apps.docker.DockerGlassFish
       release:
         - Kilo
-      format: package
-      dependsOn:
-        apps:
-          - io.murano.apps.docker.DockerStandaloneHost
-          - io.murano.apps.docker.kubernetes.KubernetesPod
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Docker Standalone Host
+        - name: Kubernetes Pod
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerGlassFish.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/GlassFish/package"
     -
       name: Docker Grafana
       tags: ['app']
-      package_name: io.murano.apps.docker.DockerGrafana
       provided_by:
         name: Dmitry Dovbii
         href: "mailto:ddovbii@mirantis.com"
@@ -586,21 +643,23 @@
         Murano will deploy this in the docker service of your choice;
         you'll be prompted to create a docker service or choose one
         you have deployed (e.g., via Kubernetes Pod).
+      service:
+        type: murano
+        format: package
+        package_name: io.murano.apps.docker.DockerGrafana
       release:
         - Kilo
-      format: package
-      dependsOn:
-        apps:
-          - io.murano.apps.docker.DockerStandaloneHost
-          - io.murano.apps.docker.kubernetes.KubernetesPod
-          - io.murano.apps.docker.DockerInfluxDB
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Docker Standalone Host
+        - name: Kubernetes Pod
+        - name: Docker InfluxDB
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerGrafana.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/Grafana/package"
     -
       name: Docker GuestBook
       tags: ['app']
-      package_name: io.murano.apps.docker.GuestBook
       provided_by:
         name: Dmitry Dovbii
         href: "mailto:ddovbii@mirantis.com"
@@ -612,21 +671,23 @@
         implementation. To use 'GuestBook' you need to import following
         applications to the catalog:
         Docker Redis, Kubernetes Pod, Kubernetes Cluster
+      service:
+        type: murano
+        format: package
+        package_name: io.murano.apps.docker.GuestBook
       release:
         - Kilo
-      format: package
-      dependsOn:
-        apps:
-          - io.murano.apps.docker.DockerRedis
-          - io.murano.apps.docker.kubernetes.KubernetesCluster
-          - io.murano.apps.docker.kubernetes.KubernetesPod
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Kubernetes Cluster
+        - name: Kubernetes Pod
+        - name: Docker Redis
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.GuestBook.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/GuestBook/package"
     -
       name: Docker HTTPd
       tags: ['app']
-      package_name: io.murano.apps.docker.DockerHTTPd
       provided_by:
         name: Dmitry Dovbii
         href: "mailto:ddovbii@mirantis.com"
@@ -640,20 +701,22 @@
         the most popular HTTP server in use since April 1996.
         Murano will deploy this in the docker service of your choice; you'll be prompted to create a docker service or choose one
         you have deployed (e.g., via Kubernetes Pod).
+      service:
+        type: murano
+        format: package
+        package_name: io.murano.apps.docker.DockerHTTPd
       release:
         - Kilo
-      format: package
-      dependsOn:
-        apps:
-          - io.murano.apps.docker.DockerStandaloneHost
-          - io.murano.apps.docker.kubernetes.KubernetesPod
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Docker Standalone Host
+        - name: Kubernetes Pod
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerHTTPd.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/HTTPdServer/package"
     -
       name: Docker HTTPd Site
       tags: ['app']
-      package_name: io.murano.apps.docker.DockerHTTPdSite
       provided_by:
         name: Dmitry Dovbii
         href: "mailto:ddovbii@mirantis.com"
@@ -672,20 +735,22 @@
         Murano will deploy this in the docker service of your choice;
         you'll be prompted to create a docker service or choose one
         you have deployed (e.g., via Kubernetes Pod).
+      service:
+        type: murano
+        format: package
+        package_name: io.murano.apps.docker.DockerHTTPdSite
       release:
         - Kilo
-      format: package
-      dependsOn:
-        apps:
-          - io.murano.apps.docker.DockerStandaloneHost
-          - io.murano.apps.docker.kubernetes.KubernetesPod
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Docker Standalone Host
+        - name: Kubernetes Pod
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerHTTPdSite.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/HTTPdSite/package"
     -
       name: Docker InfluxDB
       tags: ['app']
-      package_name: io.murano.apps.docker.DockerInfluxDB
       provided_by:
         name: Dmitry Dovbii
         href: "mailto:ddovbii@mirantis.com"
@@ -701,20 +766,22 @@
         Murano will deploy this in the docker service of your choice;
         you'll be prompted to create a docker service or choose one
         you have deployed (e.g., via Kubernetes Pod).
+      service:
+        type: murano
+        format: package
+        package_name: io.murano.apps.docker.DockerInfluxDB
       release:
         - Kilo
-      format: package
-      dependsOn:
-        apps:
-          - io.murano.apps.docker.DockerStandaloneHost
-          - io.murano.apps.docker.kubernetes.KubernetesPod
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Docker Standalone Host
+        - name: Kubernetes Pod
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerInfluxDB.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/InfluxDB/package"
     -
       name: Docker Jenkins
       tags: ['app']
-      package_name: io.murano.apps.docker.DockerJenkins
       provided_by:
         name: Dmitry Dovbii
         href: "mailto:ddovbii@mirantis.com"
@@ -739,20 +806,22 @@
         Murano will deploy this in the docker service of your choice;
         you'll be prompted to create a docker service or choose one
         you have deployed (e.g., via Kubernetes Pod).
+      service:
+        type: murano
+        format: package
+        package_name: io.murano.apps.docker.DockerJenkins
       release:
         - Kilo
-      format: package
-      dependsOn:
-        apps:
-          - io.murano.apps.docker.DockerStandaloneHost
-          - io.murano.apps.docker.kubernetes.KubernetesPod
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Docker Standalone Host
+        - name: Kubernetes Pod
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerJenkins.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/Jenkins/package"
     -
       name: Docker MariaDB
       tags: ['app']
-      package_name: io.murano.apps.docker.DockerMariaDB
       provided_by:
         name: Dmitry Dovbii
         href: "mailto:ddovbii@mirantis.com"
@@ -775,20 +844,22 @@
         Murano will deploy this in the docker service of your choice;
         you'll be prompted to create a docker service or choose one
         you have deployed (e.g., via Kubernetes Pod).
+      service:
+        type: murano
+        format: package
+        package_name: io.murano.apps.docker.DockerMariaDB
       release:
         - Kilo
-      format: package
-      dependsOn:
-        apps:
-          - io.murano.apps.docker.DockerStandaloneHost
-          - io.murano.apps.docker.kubernetes.KubernetesPod
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Docker Standalone Host
+        - name: Kubernetes Pod
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerMariaDB.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/MariaDB/package"
     -
       name: Docker MongoDB
       tags: ['app']
-      package_name: io.murano.apps.docker.DockerMongoDB
       provided_by:
         name: Dmitry Dovbii
         href: "mailto:ddovbii@mirantis.com"
@@ -814,20 +885,22 @@
         Murano will deploy this in the docker service of your choice;
         you'll be prompted to create a docker service or choose one
         you have deployed (e.g., via Kubernetes Pod).
+      service:
+        type: murano
+        format: package
+        package_name: io.murano.apps.docker.DockerMongoDB
       release:
         - Kilo
-      format: package
-      dependsOn:
-        apps:
-          - io.murano.apps.docker.DockerStandaloneHost
-          - io.murano.apps.docker.kubernetes.KubernetesPod
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Docker Standalone Host
+        - name: Kubernetes Pod
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerMongoDB.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/MongoDB/package"
     -
       name: Docker MySQL
       tags: ['app']
-      package_name: io.murano.apps.docker.DockerMySQL
       provided_by:
         name: Dmitry Dovbii
         href: "mailto:ddovbii@mirantis.com"
@@ -843,20 +916,22 @@
         Murano will deploy this in the docker service of your choice;
         you'll be prompted to create a docker service or choose one
         you have deployed (e.g., via Kubernetes Pod).
+      service:
+        type: murano
+        format: package
+        package_name: io.murano.apps.docker.DockerMySQL
       release:
         - Kilo
-      format: package
-      dependsOn:
-        apps:
-          - io.murano.apps.docker.DockerStandaloneHost
-          - io.murano.apps.docker.kubernetes.KubernetesPod
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Docker Standalone Host
+        - name: Kubernetes Pod
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerMySQL.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/MySQL/package"
     -
       name: Docker Nginx
       tags: ['app']
-      package_name: io.murano.apps.docker.DockerNginx
       provided_by:
         name: Dmitry Dovbii
         href: "mailto:ddovbii@mirantis.com"
@@ -874,20 +949,22 @@
         Murano will deploy this in the docker service of your choice;
         you'll be prompted to create a docker service or choose one
         you have deployed (e.g., via Kubernetes Pod).
+      service:
+        type: murano
+        format: package
+        package_name: io.murano.apps.docker.DockerNginx
       release:
         - Kilo
-      format: package
-      dependsOn:
-        apps:
-          - io.murano.apps.docker.DockerStandaloneHost
-          - io.murano.apps.docker.kubernetes.KubernetesPod
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Docker Standalone Host
+        - name: Kubernetes Pod
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerNginx.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/Nginx/package"
     -
       name: Docker Nginx Site
       tags: ['app']
-      package_name: io.murano.apps.docker.DockerNginxSite
       provided_by:
         name: Dmitry Dovbii
         href: "mailto:ddovbii@mirantis.com"
@@ -908,20 +985,22 @@
         Murano will deploy this in the docker service of your choice;
         you'll be prompted to create a docker service or choose one
         you have deployed (e.g., via Kubernetes Pod).
+      service:
+        type: murano
+        format: package
+        package_name: io.murano.apps.docker.DockerNginxSite
       release:
         - Kilo
-      format: package
-      dependsOn:
-        apps:
-          - io.murano.apps.docker.DockerStandaloneHost
-          - io.murano.apps.docker.kubernetes.KubernetesPod
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Docker Standalone Host
+        - name: Kubernetes Pod
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerNginxSite.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/NginxSite/package"
     -
       name: Docker PostgreSQL
       tags: ['app']
-      package_name: io.murano.apps.docker.DockerPostgreSQL
       provided_by:
         name: Dmitry Dovbii
         href: "mailto:ddovbii@mirantis.com"
@@ -957,20 +1036,22 @@
         Murano will deploy this in the docker service of your choice;
         you'll be prompted to create a docker service or choose one
         you have deployed (e.g., via Kubernetes Pod).
+      service:
+        type: murano
+        format: package
+        package_name: io.murano.apps.docker.DockerPostgreSQL
       release:
         - Kilo
-      format: package
-      dependsOn:
-        apps:
-          - io.murano.apps.docker.DockerStandaloneHost
-          - io.murano.apps.docker.kubernetes.KubernetesPod
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Docker Standalone Host
+        - name: Kubernetes Pod
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerPostgreSQL.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/PostgreSQL/package"
     -
       name: Docker Redis
       tags: ['app']
-      package_name: io.murano.apps.docker.DockerRedis
       provided_by:
         name: Dmitry Dovbii
         href: "mailto:ddovbii@mirantis.com"
@@ -987,20 +1068,22 @@
         Murano will deploy this in the docker service of your choice;
         you'll be prompted to create a docker service or choose one
         you have deployed (e.g., via Kubernetes Pod).
+      service:
+        type: murano
+        format: package
+        package_name: io.murano.apps.docker.DockerRedis
       release:
         - Kilo
-      format: package
-      dependsOn:
-        apps:
-          - io.murano.apps.docker.DockerStandaloneHost
-          - io.murano.apps.docker.kubernetes.KubernetesPod
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Docker Standalone Host
+        - name: Kubernetes Pod
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerRedis.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/Redis/package"
     -
       name: Docker Tomcat
       tags: ['app']
-      package_name: io.murano.apps.docker.DockerTomcat
       provided_by:
         name: Dmitry Dovbii
         href: "mailto:ddovbii@mirantis.com"
@@ -1018,13 +1101,16 @@
         Murano will deploy this in the docker service of your choice;
         you'll be prompted to create a docker service or choose one
         you have deployed (e.g., via Kubernetes Pod).
+      service:
+        type: murano
+        format: package
+        package_name: io.murano.apps.docker.DockerTomcat
       release:
         - Kilo
-      format: package
-      dependsOn:
-        apps:
-          - io.murano.apps.docker.DockerStandaloneHost
-          - io.murano.apps.docker.kubernetes.KubernetesPod
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Docker Standalone Host
+        - name: Kubernetes Pod
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerTomcat.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/Tomcat/package"
@@ -1033,7 +1119,6 @@
 #==============================================================================
     -
       name: Application Servers Bundle
-      package_name: app-servers
       provided_by:
         name: Serg Melikyan
         href: "mailto:smelikyan@mirantis.com"
@@ -1053,15 +1138,16 @@
         developing websites and applications that use Java for server-side
         processing. Each request from a browser is processed by
         Tomcat in a separate thread.
+      service:
+        type: bundle
       release:
         - Kilo
-      format: bundle
-      bundled:
-        - io.murano.apps.apache.ApacheHttpServer
-        - io.murano.apps.apache.Tomcat
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Apache HTTP Server
+        - name: Apache Tomcat
     -
       name: Container-based Apps Bundle
-      package_name: container-based-apps
       provided_by:
         name: Serg Melikyan
         href: "mailto:smelikyan@mirantis.com"
@@ -1095,29 +1181,30 @@
           *  Grafana for visualizing large-scale measurement data.
           *  Plus: Jenkins for automating continuous builds
              and monitoring remote job execution.
+      service:
+        type: bundle
       release:
         - Kilo
-      format: bundle
-      bundled:
-        - io.murano.apps.docker.DockerCrate
-        - io.murano.apps.docker.DockerApp
-        - io.murano.apps.docker.DockerGlassFish
-        - io.murano.apps.docker.DockerGrafana
-        - io.murano.apps.docker.DockerHTTPd
-        - io.murano.apps.docker.DockerHTTPdSite
-        - io.murano.apps.docker.DockerInfluxDB
-        - io.murano.apps.docker.DockerJenkins
-        - io.murano.apps.docker.DockerMariaDB
-        - io.murano.apps.docker.DockerMongoDB
-        - io.murano.apps.docker.DockerMySQL
-        - io.murano.apps.docker.DockerNginx
-        - io.murano.apps.docker.DockerNginxSite
-        - io.murano.apps.docker.DockerPostgreSQL
-        - io.murano.apps.docker.DockerRedis
-        - io.murano.apps.docker.DockerTomcat
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Docker Crate
+        - name: Docker Container
+        - name: Docker GlassFish
+        - name: Docker Grafana
+        - name: Docker HTTPd
+        - name: Docker HTTPd Site
+        - name: Docker InfluxDB
+        - name: Docker Jenkins
+        - name: Docker MariaDB
+        - name: Docker MongoDB
+        - name: Docker MySQL
+        - name: Docker Nginx
+        - name: Docker Nginx Site
+        - name: Docker PostgreSQL
+        - name: Docker Redis
+        - name: Docker Tomcat
     -
       name: Databases Bundle
-      package_name: databases
       provided_by:
         name: Serg Melikyan
         href: "mailto:smelikyan@mirantis.com"
@@ -1136,15 +1223,16 @@
         bundle contains Postgres and MySQL, but as new
         databases are added to the catalog this bundle will
         grow to include them.
+      service:
+        type: bundle
       release:
         - Kilo
-      format: bundle
-      bundled:
-        - io.murano.databases.MySql
-        - io.murano.databases.PostgreSql
+      license: Multi-licensed OpenSource
+      depends:
+        - name: MySQL
+        - name: PostgreSql
     -
       name: Docker & Kubernetes Bundle
-      package_name: docker-n-kubernetes
       provided_by:
         name: Serg Melikyan
         href: "mailto:smelikyan@mirantis.com"
@@ -1166,15 +1254,16 @@
         deployment units. Kubernetes Pod also contains the Kubernetes
         Replication Controller, which can auto-replicate and redeploy a
         Pod with given contents in the event of Pod failure.
+      service:
+        type: bundle
       release:
         - Kilo
-      format: bundle
-      bundled:
-        - io.murano.apps.docker.DockerStandaloneHost
-        - io.murano.apps.docker.kubernetes.KubernetesPod
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Docker Standalone Host
+        - name: Kubernetes Pod
     -
       name: Monitoring Bundle
-      package_name: monitoring
       provided_by:
         name: Serg Melikyan
         href: "mailto:smelikyan@mirantis.com"
@@ -1202,36 +1291,11 @@
         available (overviews, maps, graphs, screens, etc),
         as well as very flexible ways of analyzing the data
         for the purpose of alerting.
+      service:
+        type: bundle
       release:
         - Kilo
-      format: bundle
-      bundled:
-        - io.murano.apps.ZabbixAgent
-        - io.murano.apps.ZabbixServer
-    -
-      name: Stackato
-      tags: ['app']
-      package_name: io.murano.apps.activestate.StackatoNode
-      provided_by:
-        name: John Wetherill
-        href: "http://activestate.com"
-        company: ActiveState
-      description: >
-        Stackato is a secure, stable, and commercially supported
-        Platform-as-a-Service (PaaS) that is built with and on top of
-        various open source components such as Cloud Foundry and
-        Docker. Stackato allows agile enterprises to develop and
-        deploy software solutions faster than ever before and manage
-        them more effectively. It provides development teams with
-        built-in languages, frameworks and services on one single
-        cloud application platform, while providing enterprise-level
-        security and world-class support.
-      release:
-        - Kilo
-      format: package
-      license: Apache 2.0
-      supported_by: ActiveState
-      attributes:
-        "Source URL": "https://github.com/ActiveState/stackato-node-murano"
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.activestate.StackatoNode.zip"
-        "Documentation": "https://github.com/ActiveState/stackato-node-murano/blob/master/README.md"
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Zabbix Agent
+        - name: Zabbix

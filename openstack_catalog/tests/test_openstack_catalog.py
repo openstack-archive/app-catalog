@@ -58,7 +58,7 @@ class TestOpenstack_catalog(testtools.TestCase):
     def test_murano_apps_schema_conformance(self):
         self._verify_by_schema(
             'openstack_catalog/web/static/murano_apps.yaml',
-            'openstack_catalog/web/static/murano_apps.schema.yaml')
+            'openstack_catalog/web/static/assets.schema.yaml')
 
     def test_heat_templates_schema_conformance(self):
         self._verify_by_schema(
