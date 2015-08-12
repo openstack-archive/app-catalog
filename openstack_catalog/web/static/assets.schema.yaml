@@ -84,6 +84,24 @@
                 pattern: "^((https?://)[a-z][a-z0-9_-]+(\\.[a-z][a-z0-9_-]+)+(/[a-z0-9\\._/~%\\-\\+&\\#\\?!=\\(\\)@]*)?)|(mailto:[a-z][a-z0-9._-]+@[a-z][a-z0-9_-]+(\\.[a-z][a-z0-9_-]+)+)$"
               company:
                 type: string
+          icon:
+            type: object
+            required:
+              - top
+              - left
+              - height
+              - url
+            additionalProperties: false
+            properties:
+              top:
+                type: number
+              left:
+                type: number
+              height:
+                type: number
+              url:
+                type: string
+                pattern: "^((https?://)[a-z][a-z0-9_-]*(\\.[a-z][a-z0-9_-]*)+(/[a-z0-9\\._/~%\\-\\+&\\#\\?!=\\(\\)@]*)?)"
           description:
             type: string
           license:
