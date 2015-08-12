@@ -2,7 +2,6 @@
   assets:
     -
       name: Hello World
-      tags: ['app']
       provided_by:
         name: '?'
         href: mailto:support@mirantis.com
@@ -40,9 +39,15 @@
         format: HOT
       supported_by:
         name: Red Hat
+      icon:
+        url: https://upload.wikimedia.org/wikipedia/en/thumb/3/3a/OpenShift-LogoType.svg/240px-OpenShift-LogoType.svg.png
+        top: -10
+        left: -30
+        height: 180
       license: Apache 2.0
       attributes:
         url: https://raw.githubusercontent.com/openstack/heat-templates/master/openshift-origin/centos65/OpenShift.yaml
+        height: 110
     -
       name: OpenShift-F19
       tags: ['app']
@@ -63,6 +68,11 @@
         format: HOT
       supported_by:
         name: Red Hat
+      icon:
+        url: https://upload.wikimedia.org/wikipedia/en/thumb/3/3a/OpenShift-LogoType.svg/240px-OpenShift-LogoType.svg.png
+        top: -10
+        left: -30
+        height: 180
       license: Apache 2.0
       attributes:
         url: https://raw.githubusercontent.com/openstack/heat-templates/master/openshift-origin/F19/hot-template/openshift/openshift.yaml
@@ -86,6 +96,11 @@
         format: HOT
       supported_by:
         name: Layne Peng
+      icon:
+        url: http://lattice.cf/images/logo/latticeLogo-bf855393.png
+        top: 0
+        left: 0
+        height: 128
       license: Apache 2.0
       attributes:
         url: https://raw.githubusercontent.com/LaynePeng/heat-lattice/master/lattice.yaml
@@ -111,6 +126,11 @@
         format: HOT
       supported_by:
         name: Community
+      icon:
+        url: https://upload.wikimedia.org/wikipedia/en/thumb/3/3a/OpenShift-LogoType.svg/240px-OpenShift-LogoType.svg.png
+        top: -10
+        left: -30
+        height: 180
       license: Apache 2.0
       attributes:
         url: https://raw.githubusercontent.com/redhat-openstack/openshift-on-openstack/master/openshift.yaml
@@ -135,6 +155,11 @@
         - Kilo
       supported_by:
         name: Community and Chef Partner Engineering
+      icon:
+        url: http://apps.openstack.org/static/images/Chef-124x90-logo.png
+        top: 5
+        left: -45
+        height: 170
       license: Apache 2.0
       attributes:
         url: https://raw.githubusercontent.com/chef-partners/chef-heat-templates/master/single_chef_server-HOT.yml

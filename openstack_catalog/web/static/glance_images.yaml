@@ -78,6 +78,11 @@
         type: glance
         disk_format: qcow2
         container_format: bare
+      icon:
+        url: http://design.ubuntu.com/wp-content/uploads/ubuntu-logo32.png
+        top: 0
+        left: 6
+        height: 110
       license: Multi-licensed OpenSource
       attributes:
         url: http://uec-images.ubuntu.com/trusty/current/trusty-server-cloudimg-amd64-disk1.img
@@ -107,6 +112,11 @@
         type: glance
         disk_format: qcow2
         container_format: bare
+      icon:
+        url: http://wiki.centos.org/ArtWork/Brand/Logo?action=AttachFile&do=get&target=centos-logo-dark.svg
+        top: -12
+        left: -12
+        height: 150
       license: Multi-licensed OpenSource
       attributes:
         url: http://cloud.centos.org/centos/6/images/CentOS-6-x86_64-GenericCloud-20141129_01.qcow2
@@ -136,6 +146,11 @@
         type: glance
         disk_format: qcow2
         container_format: bare
+      icon:
+        url: http://wiki.centos.org/ArtWork/Brand/Logo?action=AttachFile&do=get&target=centos-logo-dark.svg
+        top: -12
+        left: -12
+        height: 150
       license: Multi-licensed OpenSource
       attributes:
         url: http://cloud.centos.org/centos/7/images/CentOS-7-x86_64-GenericCloud.qcow2
@@ -152,6 +167,11 @@
         type: glance
         disk_format: qcow2
         container_format: bare
+      icon:
+        url: https://raw.githubusercontent.com/docker-library/docs/master/cirros/logo.png
+        top: 0
+        left: -2
+        height: 130
       license: Multi-licensed OpenSource
       attributes:
         url: http://download.cirros-cloud.net/0.3.4/cirros-0.3.4-x86_64-disk.img
@@ -180,6 +200,11 @@
         type: glance
         disk_format: qcow2
         container_format: bare
+      icon:
+        url: https://fedoraproject.org/w/uploads/e/e5/Fedora_infinity.png
+        top: -50
+        left: -40
+        height: 210
       license: Multi-licensed OpenSource
       attributes:
         url: http://download.fedoraproject.org/pub/fedora/linux/releases/21/Cloud/Images/x86_64/Fedora-Cloud-Base-20141203-21.x86_64.qcow2
@@ -206,6 +231,11 @@
         type: glance
         disk_format: qcow2
         container_format: bare
+      icon:
+        url: https://www.debian.org/logos/openlogo-nd-100.jpg
+        top: 0
+        left: 10
+        height: 124
       license: Multi-licensed OpenSource
       attributes:
         url: http://cdimage.debian.org/cdimage/openstack/archive/8.0.0/debian-8.0.0-openstack-amd64.qcow2
@@ -232,6 +262,11 @@
         type: glance
         disk_format: qcow2
         container_format: bare
+      icon:
+        url: https://www.debian.org/logos/openlogo-nd-100.jpg
+        top: 0
+        left: 10
+        height: 124
       license: Multi-licensed OpenSource
       attributes:
         url: http://cdimage.debian.org/cdimage/openstack/current/debian-8.1.0-openstack-amd64.qcow2
@@ -258,6 +293,11 @@
         type: glance
         disk_format: qcow2
         container_format: bare
+      icon:
+        url: https://www.debian.org/logos/openlogo-nd-100.jpg
+        top: 0
+        left: 10
+        height: 124
       license: Multi-licensed OpenSource
       attributes:
         url: http://cdimage.debian.org/cdimage/openstack/testing/debian-testing-openstack-amd64.qcow2
@@ -273,6 +313,11 @@
       attributes:
         indirect_url: http://www.cloudbase.it/ws2012r2/
         hash: unknown
+      icon:
+        url: https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Windows_logo_-_2012.svg/240px-Windows_logo_-_2012.svg.png
+        top: 0
+        left: 0
+        height: 128
       license: Other
       license_url: http://www.cloudbase.it/windows-cloud-images/
       service:
@@ -291,6 +336,11 @@
         type: glance
         disk_format: qcow2
         container_format: bare
+      icon:
+        url: https://pbs.twimg.com/profile_images/514286722545250304/jpRmJQoY_normal.png
+        top: 0
+        left: 0
+        height: 128
       license: Unknown
       attributes:
         url: http://storage.apps.openstack.org/images/continuum-trial-openstack-1431536104.qcow2
@@ -317,6 +367,11 @@
         type: glance
         disk_format: qcow2
         container_format: bare
+      icon:
+        url: https://s.w.org/about/images/logos/wordpress-logo-notext-rgb.png
+        top: 0
+        left: 0
+        height: 128
       license: Multi-licensed OpenSource
       attributes:
         url: https://downloads.bitnami.com/files/download/openstack/bitnami-wordpress-4.2.2-0-ubuntu-14.04.qcow
@@ -345,6 +400,11 @@
         type: glance
         disk_format: qcow2
         container_format: bare
+      icon:
+        url: https://d0.awsstatic.com/logos/Developer/lamp_logo.gif
+        top: 20
+        left: 8
+        height: 64
       license: Multi-licensed OpenSource
       attributes:
         url: https://downloads.bitnami.com/files/download/openstack/bitnami-lampstack-5.4.40-0-ubuntu-14.04.qcow
@@ -376,6 +436,11 @@
         type: glance
         disk_format: qcow2
         container_format: bare
+      icon:
+        url: https://www.ruby-lang.org/images/header-ruby-logo.png
+        top: 0
+        left: 0
+        height: 128
       license: Multi-licensed OpenSource
       attributes:
         url: https://downloads.bitnami.com/files/download/openstack/bitnami-rubystack-2.0.0-26-ubuntu-14.04.qcow
@@ -403,6 +468,11 @@
         type: glance
         disk_format: qcow2
         container_format: bare
+      icon:
+        url: https://wiki.jenkins-ci.org/download/attachments/2916393/logo.png?version=1&modificationDate=1302753947000
+        top: 0
+        left: 20
+        height: 128
       license: Multi-licensed OpenSource
       attributes:
         url: https://downloads.bitnami.com/files/download/openstack/bitnami-jenkins-1.613-0-ubuntu-14.04.qcow
@@ -426,6 +496,11 @@
         type: glance
         disk_format: qcow2
         container_format: bare
+      icon:
+        url: http://mean.io/system/assets/img/logos/meanlogo.png
+        top: 0
+        left: 0
+        height: 128
       license: Multi-licensed OpenSource
       attributes:
         url: https://downloads.bitnami.com/files/download/openstack/bitnami-meanstack-3.0.2-0-ubuntu-14.04.qcow
@@ -618,6 +693,11 @@
         type: glance
         disk_format: qcow2
         container_format: bare
+      icon:
+        url: https://raw.githubusercontent.com/coreos/coreos-web/master/src/img/apple-touch-icon-114-precomposed.png
+        top: 2
+        left: 10
+        height: 114
       license: Multi-licensed OpenSource
       attributes:
         url: http://stable.release.core-os.net/amd64-usr/647.0.0/coreos_production_openstack_image.img.bz2
@@ -639,6 +719,12 @@
         type: glance
         disk_format: qcow2
         container_format: bare
+      icon:
+        url: https://raw.githubusercontent.com/coreos/coreos-web/master/src/img/apple-touch-icon-114-precomposed.png
+        top: 2
+        left: 10
+        height: 114
+      license: Multi-licensed OpenSource
       license: Multi-licensed OpenSource
       attributes:
         url: http://beta.release.core-os.net/amd64-usr/668.3.0/coreos_production_openstack_image.img.bz2
@@ -660,6 +746,11 @@
         type: glance
         disk_format: qcow2
         container_format: bare
+      icon:
+        url: https://raw.githubusercontent.com/coreos/coreos-web/master/src/img/apple-touch-icon-114-precomposed.png
+        top: 2
+        left: 10
+        height: 114
       license: Multi-licensed OpenSource
       attributes:
         url: http://alpha.release.core-os.net/amd64-usr/681.0.0/coreos_production_openstack_image.img.bz2
@@ -687,6 +778,11 @@
         type: glance
         disk_format: qcow2
         container_format: bare
+      icon:
+        url: https://fedoraproject.org/w/uploads/e/e5/Fedora_infinity.png
+        top: -50
+        left: -40
+        height: 210
       license: Multi-licensed OpenSource
       attributes:
         url: http://download.fedoraproject.org/pub/fedora/linux/releases/21/Cloud/Images/x86_64/Fedora-Cloud-Atomic-20141203-21.x86_64.qcow2
@@ -718,6 +814,11 @@
         type: glance
         disk_format: qcow2
         container_format: bare
+      icon:
+        url: http://manageiq.org/images/logo/manageiq-logo-glyph.png
+        top: 0
+        left: 0
+        height: 128
       license: Multi-licensed OpenSource
       attributes:
         url: http://manageiq.org/download/manageiq-openstack-stable.qc2
@@ -736,6 +837,11 @@
         type: glance
         disk_format: qcow2
         container_format: bare
+      icon:
+        url: https://en.opensuse.org/images/a/ac/Geeko-button-bling.png
+        top: -10
+        left: -10
+        height: 140
       license: Multi-licensed OpenSource
       attributes:
         url: http://download.opensuse.org/repositories/Cloud:/Images:/openSUSE_13.2/images/openSUSE-13.2-OpenStack-Guest.x86_64.qcow2
@@ -758,6 +864,11 @@
         container_format: bare
         min_ram: 4096
         min_disk: 10
+      icon:
+        url: http://subiectiv.com/wp-content/uploads/2014/03/aerofs-280x225.png
+        top: 15
+        left: -25
+        height: 150
       license: Free <= 30 Users
       license_url: https://www.aerofs.com/
       attributes:
@@ -788,6 +899,11 @@
         container_format: bare
         min_ram: 4096
         min_disk: 10
+      icon:
+        url: http://apps.openstack.org/static/images/Chef-124x90-logo.png
+        top: 5
+        left: -45
+        height: 170
       license: Free <= 25 Nodes
       license_url: https://www.chef.io/online-master-agreement/
       attributes:
