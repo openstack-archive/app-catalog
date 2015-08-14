@@ -54,6 +54,7 @@
       license: Apache 2.0
       attributes:
         "Source URL": "https://github.com/stackforge/murano-apps"
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.Interfaces.zip"
         Documentation: "https://github.com/stackforge/murano-apps/blob/master/Docker/Kubernetes/readme.md"
 #==============================================================================
 #                             Regular Applications
@@ -433,6 +434,7 @@
         - name: Docker Interface Library
         - name: Debian 8 x64 (pre-installed Docker)
       attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerStandaloneHost.zip"
         "Source URL": "https://github.com/stackforge/murano-apps"
         Documentation: "https://github.com/stackforge/murano-apps/blob/master/Docker/Kubernetes/readme.md"
     -
@@ -471,6 +473,7 @@
       depends:
         - name: Docker Interface Library
       attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.kubernetes.KubernetesCluster.zip"
         "Source URL": "https://github.com/stackforge/murano-apps"
         Documentation: "https://github.com/stackforge/murano-apps/blob/master/Docker/Kubernetes/readme.md"
     -
@@ -511,6 +514,7 @@
         - name: Docker Interface Library
         - name: Kubernetes Cluster
       attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.kubernetes.KubernetesPod.zip"
         "Source URL": "https://github.com/stackforge/murano-apps"
         Documentation: "https://github.com/stackforge/murano-apps/blob/master/Docker/Kubernetes/readme.md"
 #==============================================================================
