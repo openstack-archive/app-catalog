@@ -88,6 +88,48 @@
         url: http://uec-images.ubuntu.com/trusty/current/trusty-server-cloudimg-amd64-disk1.img
         hash: unknown
     -
+      name: Ubuntu Utopic 14
+      tags: ['app']
+      provided_by:
+        name: Canonical
+        href: http://ubuntu.com
+        company: Canonical
+      description: Base Ubuntu 14.10 with cloud_init
+      service:
+        type: glance
+        disk_format: qcow2
+        container_format: bare
+      icon:
+        url: http://design.ubuntu.com/wp-content/uploads/ubuntu-logo32.png
+        top: 0
+        left: 6
+        height: 110
+      license: Multi-licensed OpenSource
+      attributes:
+        url: http://uec-images.ubuntu.com/utopic/current/utopic-server-cloudimg-amd64-disk1.img
+        hash: unknown
+    -
+      name: Ubuntu Vivid 15
+      tags: ['app']
+      provided_by:
+        name: Canonical
+        href: http://ubuntu.com
+        company: Canonical
+      description: Base Ubuntu 15.04 with cloud_init
+      service:
+        type: glance
+        disk_format: qcow2
+        container_format: bare
+      icon:
+        url: http://design.ubuntu.com/wp-content/uploads/ubuntu-logo32.png
+        top: 0
+        left: 6
+        height: 110
+      license: Multi-licensed OpenSource
+      attributes:
+        url: http://uec-images.ubuntu.com/vivid/current/vivid-server-cloudimg-amd64-disk1.img
+        hash: unknown
+    -
       name: CentOS 6
       tags: ['app']
       provided_by:
