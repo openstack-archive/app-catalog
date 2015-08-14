@@ -472,6 +472,7 @@
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Interface Library
+        - name: Ubuntu 14.04 x64 (pre-installed Kubernetes)
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.kubernetes.KubernetesCluster.zip"
         "Source URL": "https://github.com/stackforge/murano-apps"
