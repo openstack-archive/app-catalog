@@ -176,7 +176,7 @@ var glance_images = { assets: [] };
 function show_glance_images ()
 {
   populate_table ("glance-images-table",
-      ["name_html", "description", "disk_format", "license"],
+      ["name_html", "description", "service.disk_format", "license"],
       filterData (glance_images.assets, getUrlVars ()));
 }
 
@@ -185,7 +185,7 @@ var heat_templates = { assets: [] };
 function show_heat_templates ()
 {
   populate_table ("heat-templates-table",
-      ["name_html", "description", "release_html", "format"],
+      ["name_html", "description", "release_html", "service.format"],
       filterData (heat_templates.assets, getUrlVars ()));
 }
 
