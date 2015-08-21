@@ -194,7 +194,7 @@ var murano_apps = { assets: [] };
 function show_murano_apps ()
 {
   populate_table ("murano-apps-table",
-      ["name_html", "description", "release_html", "format"],
+      ["name_html", "description", "release_html", "service.format"],
       filterData (murano_apps.assets, getUrlVars ()));
 }
 
@@ -278,6 +278,11 @@ function initMarketPlace ()
     done (function (data) {
       try {
         murano_apps = jsyaml.safeLoad (data);
+        for (var i = 0; i < murano_apps.assets.length; ++i) {
+          if (murano_apps.assets[i].service.type === 'bundle') {
+            murano_apps.assets[i].service.format = 'bundle';
+          }
+        }
       } catch (e) {
       }
       var tableData = murano_apps.assets;
