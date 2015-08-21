@@ -1145,6 +1145,7 @@
         Tomcat in a separate thread.
       service:
         type: bundle
+        format: bundle
         murano_package_name: app-servers
       release:
         - Kilo
@@ -1189,6 +1190,7 @@
              and monitoring remote job execution.
       service:
         type: bundle
+        format: bundle
         murano_package_name: container-based-apps
       release:
         - Kilo
@@ -1232,6 +1234,7 @@
         grow to include them.
       service:
         type: bundle
+        format: bundle
         murano_package_name: databases
       release:
         - Kilo
@@ -1264,6 +1267,7 @@
         Pod with given contents in the event of Pod failure.
       service:
         type: bundle
+        format: bundle
         murano_package_name: docker-n-kubernetes
       release:
         - Kilo
@@ -1302,6 +1306,7 @@
         for the purpose of alerting.
       service:
         type: bundle
+        format: bundle
         murano_package_name: monitoring
       release:
         - Kilo

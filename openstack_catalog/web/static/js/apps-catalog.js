@@ -194,7 +194,7 @@ var murano_apps = { assets: [] };
 function show_murano_apps ()
 {
   populate_table ("murano-apps-table",
-      ["name_html", "description", "release_html", "format"],
+      ["name_html", "description", "release_html", "service.format"],
       filterData (murano_apps.assets, getUrlVars ()));
 }
 
