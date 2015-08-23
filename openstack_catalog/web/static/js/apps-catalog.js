@@ -171,6 +171,7 @@ function setupInfoHandler (tab, element_id, info) {
   });
 }
 
+var assets = { assets: [] };
 var glance_images = { assets: [] };
 
 function show_glance_images ()
@@ -241,28 +242,41 @@ function initMarketPlace ()
     close: function () { }
   });
 
-  $.ajax({ url: "static/glance_images.yaml" }).
+  $.ajax({ url: "static/assets.yaml" }).
     done (function (data) {
       try {
-        glance_images = jsyaml.safeLoad (data);
+        assets = jsyaml.safeLoad (data);
       } catch (e) {
       }
-      var tableData = glance_images.assets;
+      for (var i = 0; i < assets.assets.length; i++) {
+        var asset = assets.assets[i];
+        if (asset.service.type == 'glance') {
+          glance_images.assets.push(asset);
+        } else if (asset.service.type == 'heat') {
+          heat_templates.assets.push(asset);
+        } else if (asset.service.type == 'murano') {
+          murano_apps.assets.push(asset);
+          if (asset.service.type === 'bundle') {
+            asset.service.format = 'bundle';
+          }
+        } else if (asset.service.type == 'bundle') {
+          if ('murano_package_name' in asset.service) {
+            murano_apps.assets.push(asset);
+            asset.service.format = 'bundle';
+          }
+        }
+      }
+      var tableData;
+
+      tableData = glance_images.assets;
       for (var i = 0; i < tableData.length; i++) {
         setupInfoHandler ("glance-images", i, tableData[i]);
       }
 
       show_asset ("glance-images", tableData);
       show_glance_images ();
-    });
 
-  $.ajax({ url: "static/heat_templates.yaml" }).
-    done (function (data) {
-      try {
-        heat_templates = jsyaml.safeLoad (data);
-      } catch (e) {
-      }
-      var tableData = heat_templates.assets;
+      tableData = heat_templates.assets;
       for (var i = 0; i < tableData.length; i++) {
         tableData[i].release_html = tableData[i].release.join (", ");
         setupInfoHandler ("heat-templates", i, tableData[i]);
@@ -272,20 +286,8 @@ function initMarketPlace ()
       show_heat_templates ();
 
       initSingleSelector ("heat-release", "release", tableData, show_heat_templates);
-    });
 
-  $.ajax({ url: "static/murano_apps.yaml" }).
-    done (function (data) {
-      try {
-        murano_apps = jsyaml.safeLoad (data);
-        for (var i = 0; i < murano_apps.assets.length; ++i) {
-          if (murano_apps.assets[i].service.type === 'bundle') {
-            murano_apps.assets[i].service.format = 'bundle';
-          }
-        }
-      } catch (e) {
-      }
-      var tableData = murano_apps.assets;
+      tableData = murano_apps.assets;
       for (var i = 0; i < tableData.length; i++) {
         tableData[i].release_html = tableData[i].release.join (", ");
         setupInfoHandler ("murano-apps", i, tableData[i]);

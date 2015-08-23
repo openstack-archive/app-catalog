@@ -43,9 +43,8 @@ done
 function run_server {
   echo "Starting development server..."
   pushd $root/openstack_catalog/web > /dev/null
-  for x in murano_apps heat_templates glance_images; do
-    python $root/tools/yaml2json.py < static/$x.yaml > static/$x.json
-  done
+  mkdir -p api/v1/
+  python $root/tools/yaml2json.py < static/assets.yaml > api/v1/assets
   ${command_wrapper} python $root/tools/testserver.py runserver $testopts $testargs
   popd > /dev/null
   echo "Server stopped."
