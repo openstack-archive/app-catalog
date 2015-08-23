@@ -55,17 +55,7 @@ class TestOpenstack_catalog(testtools.TestCase):
         except jsonschema.ValidationError as e:
             self.fail(e)
 
-    def test_murano_apps_schema_conformance(self):
+    def test_asset_schema_conformance(self):
         self._verify_by_schema(
-            'openstack_catalog/web/static/murano_apps.yaml',
-            'openstack_catalog/web/static/assets.schema.yaml')
-
-    def test_heat_templates_schema_conformance(self):
-        self._verify_by_schema(
-            'openstack_catalog/web/static/heat_templates.yaml',
-            'openstack_catalog/web/static/assets.schema.yaml')
-
-    def test_glance_images_schema_conformance(self):
-        self._verify_by_schema(
-            'openstack_catalog/web/static/glance_images.yaml',
+            'openstack_catalog/web/static/assets.yaml',
             'openstack_catalog/web/static/assets.schema.yaml')
