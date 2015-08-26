@@ -952,3 +952,29 @@
         url: https://chef-server-glance-images.s3-us-west-2.amazonaws.com/chef-server-12.1.2-1437522600.qcow2
         docs: https://docs.chef.io
         hash: e6b964572be00a845bd53d6033a780f4
+    -
+      name: Cloudify Orchestrator
+      tags: ['app']
+      provided_by:
+        name: Cloudify
+        href: http://getcloudify.org
+        company: Gigaspaces Inc.
+      description: >
+                  Cloudify Orchestrator image which is capable to launce TOSCA Blueprints.
+      service:
+        type: glance
+        disk_format: qcow2
+        container_format: bare
+        min_ram: 4096
+        min_disk: 10
+      icon:
+        url: http://apps.openstack.org/static/images/Cloudify-logo.png
+        top: 5
+        left: -45
+        height: 170
+      license: Multi-licensed OpenSource
+      attributes:
+        url: https://s3.amazonaws.com/shay1/manager.qcow2
+        docs: http://getcloudify.org/guide/3.2/quickstart.html
+        hash: f3f6eeeea35552e02797bc7f9bc1928d
+
