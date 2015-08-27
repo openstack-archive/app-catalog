@@ -960,7 +960,7 @@
         href: http://getcloudify.org
         company: Gigaspaces Inc.
       description: >
-                  This is a precaned Cloudify Orchestrator image which is capable to launce TOSCA Blueprints
+                  Cloudify Orchestrator image which is capable to launch TOSCA Blueprints.
       service:
         type: glance
         disk_format: qcow2
