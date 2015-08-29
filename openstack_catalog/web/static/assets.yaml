@@ -953,6 +953,34 @@
         docs: https://docs.chef.io
         hash: e6b964572be00a845bd53d6033a780f4
     -
+      name: kloudbuster_v3
+      tags: ['app']
+      provided_by:
+        name: kloudbuster team
+        href: https://github.com/openstack/kloudbuster
+        company: Cisco
+      description: >
+                  This is a VM image version 3 for running KloudBuster scale testing.
+                  KloudBuster provides a quick and easy way to load any OpenStack data plane
+                  with massive HTTP scale (hundreds of thousands of flows) on any size of cloud
+                  and measure the scale very accurately.
+                  This image is based off Ubuntu 14.04 with pre-installed software
+                  required to run the KloudBuster scale test:
+                  kloudbuster agent, Redis server, Nginx HTTP server, wrk2 HTTP traffic generator.
+                  VM instances are created with this image by KloudBuster to perform the various
+                  roles of a scale session (HTTP server, HTTP clients, Redis server).
+      service:
+        type: glance
+        disk_format: qcow2
+        container_format: bare
+        min_ram: 2048
+        min_disk: 10
+      license: Multi-licensed OpenSource
+      attributes:
+        url: http://storage.apps.openstack.org/images/kloudbuster_v3.qcow2
+        docs: https://github.com/openstack/kloudbuster
+        hash: ac3cb49c0f2f5412a29901615ada1c22
+    -
       name: Hello World
       provided_by:
         name: '?'
