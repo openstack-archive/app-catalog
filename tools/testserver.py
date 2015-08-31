@@ -18,9 +18,17 @@ import SocketServer
 
 
 class AllowOriginRequestHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
+    def do_GET(self):
+        print "App Catalog Versions:", self.headers.get('X-App-Catalog-Versions', '')
+        return SimpleHTTPServer.SimpleHTTPRequestHandler.do_GET(self)
     def end_headers(self):
         self.send_header("Access-Control-Allow-Origin", "*")
         SimpleHTTPServer.SimpleHTTPRequestHandler.end_headers(self)
+    def do_OPTIONS(self):
+        self.send_response(200)
+        self.send_header("Access-Control-Allow-Origin", "*")
+        self.send_header("Access-Control-Allow-Headers", "X-App-Catalog-Versions")
+        self.send_header("Allow", "GET")
 
 if __name__ == '__main__':
     PORT = 18001
