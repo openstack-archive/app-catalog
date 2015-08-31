@@ -553,7 +553,7 @@
         name: John Wetherill
         href: mailto:johnw@activestate.com
         company: ActiveState
-      description: Stackato v3.4.2 PaaS image with Murano agent
+      description: Stackato v3.4.2 PaaS image with the murano-agent pre-installed.
       service:
         type: glance
         disk_format: qcow2
