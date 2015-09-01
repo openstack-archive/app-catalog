@@ -42,9 +42,8 @@ done
 
 function run_server {
   echo "Starting development server..."
+  $root/tools/update_assets.sh
   pushd $root/openstack_catalog/web > /dev/null
-  mkdir -p api/v1/
-  python $root/tools/yaml2json.py < static/assets.yaml > api/v1/assets
   ${command_wrapper} python $root/tools/testserver.py runserver $testopts $testargs
   popd > /dev/null
   echo "Server stopped."
