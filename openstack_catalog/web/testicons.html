@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope, $http) {
+  $http({url:'/api/v1/assets'}).success(function(data) {
+    $scope.assets = [];
+    for(i in data.assets) {
+      var asset = data.assets[i];
+      if('tags' in asset) {
+        var found;
+        for(j in asset['tags']) {
+          if(asset['tags'][j] == 'app') {
+            $scope.assets.push(asset);
+          }
+        }
+      }
+    }
+    console.log($scope.assets);
+  });
+});
+</script>
+<body>
+
+<div style="margin-bottom: 4px;" ng-app="myApp" ng-controller="myCtrl">
+
+  <div style="
+    background-color:#f9f9f9;
+    overflow: auto;
+    border-color:#cccccc; border-width:1px; border-style: solid;
+    ">
+    <div ng-repeat="asset in assets | orderBy:'name':false" style="border:1px;
+      margin: 10px;
+      width: 200px; height: 180px; float: left;
+      ">
+      <div style="
+        margin:10px;
+        border-color:#cccccc; border-width:1px;
+        border-radius: 2px;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+        padding:8px;
+        height: 170px;
+        overflow: hidden;
+        background-color:#ffffff;
+        position: relative;
+        ">
+        <div style="">
+  	<div style="
+  	  width:128px;
+  	  height:128px;
+  	  overflow: hidden;
+  	  margin-left: auto; margin-right:auto;
+  	  ">
+     
+  	  <img style="
+  	    margin: {{ asset.icon.top }}px 0px 0px {{ asset.icon.left }}px;
+  	    height: {{ asset.icon.height }}px;
+  	    " src="{{ asset.icon.url }}">
+     
+  	</div>
+     
+  	<span style="
+  	  max-height: 100%;
+  	  width: 23px;
+  	  height: 23px;
+  	  top: 0;
+  	  right: 0;
+  	  position: absolute;
+  	  background: rgba(0, 0, 0, 0) url('http://apps.openstack.org/static/images/featured-corner-{{ asset.service.type }}.png') no-repeat scroll right top;
+  	  ">
+  	</span>
+        </div>
+        <div title="{{ asset.name }}" style="
+  	overflow: hidden;
+  	white-space: nowrap;
+  	position: relative;
+  	line-height: 18px;
+  	font-size: 16px;
+  	"> {{ asset.name }}
+  	<span style="
+  	  max-height: 100%;
+  	  width: 40px;
+  	  height: 20px;
+  	  bottom: 0;
+  	  right: 0;
+  	  position: absolute;
+  	  background: rgba(0, 0, 0, 0) linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)) repeat scroll 0 0;
+  	  ">
+  	</span>
+        </div>
+        <div title="{{ asset.provided_by.name }}" style="
+  	overflow: hidden;
+  	white-space: nowrap;
+  	position: relative;
+  	line-height: 14px;
+  	font-size: 12px;
+  	"> {{ asset.provided_by.name }}
+  	<span style="
+  	  max-height: 100%;
+  	  width: 40px;
+  	  height: 20px;
+  	  bottom: 0;
+  	  right: 0;
+  	  position: absolute;
+  	  background: rgba(0, 0, 0, 0) linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)) repeat scroll 0 0;
+  	  ">
+  	</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
