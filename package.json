@@ -1,8 +1,8 @@
 {
   "version": "0.0.0",
   "private": true,
-  "name": "apps-catalog",
-  "description": "OpenStack Apps Catalog",
+  "name": "app-catalog",
+  "description": "OpenStack App Catalog",
   "repository": "none",
   "license": "Apache 2.0",
   "devDependencies": {

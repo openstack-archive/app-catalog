@@ -39,7 +39,7 @@ Project Info
 ------------
 
  * Web-site: http://apps.openstack.org
- * Source: http://git.openstack.org/cgit/stackforge/apps-catalog
+ * Source: http://git.openstack.org/cgit/openstack/app-catalog
  * Wiki: https://wiki.openstack.org/wiki/App-Catalog
  * Launchpad: https://launchpad.net/app-catalog
  * Blueprints: https://blueprints.launchpad.net/app-catalog

@@ -1,14 +1,17 @@
-apps-catalog-ci
-========
+app-catalog-ci
+===============
+
 Description
-----------------------
-This is a collection of deployment scripts for apps-catalog CI project.
+-----------
+
+This is a collection of deployment scripts for app-catalog CI project.
 It consists of Puppet module catalog_ci and an additional shell script.
 The scripts allow to setup Jenkins with access to Gerrit to trigger
-appropriate jobs on a commit to the apps-catalog project.
+appropriate jobs on a commit to the app-catalog project.
 
 Deployment
-----------------------
+----------
+
 Execute deploy.sh script to begin deployment:
 (some operations require superuser access rights)
 
@@ -36,7 +39,8 @@ The following steps are required after deployment:
   in order to use it.
 
 Jenkins Jobs
-----------------------
+------------
+
 Jenkins Job Builder is used to configure Jenkins jobs. It will be automatically
 installed by deployment scripts. Jobs configuration files will be placed to
 /etc/jenkins_jobs/jobs. You can use the following command to apply your changes

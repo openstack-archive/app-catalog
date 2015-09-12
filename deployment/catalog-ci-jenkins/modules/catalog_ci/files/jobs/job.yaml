@@ -9,7 +9,7 @@
 
     scm:
      - git:
-        url: https://git.openstack.org/stackforge/apps-catalog
+        url: https://git.openstack.org/openstack/app-catalog
         refspec: $GERRIT_REFSPEC
         name:
         choosing-strategy: gerrit
@@ -24,7 +24,7 @@
             trigger-on-patchset-uploaded-event: true
             projects:
                 - project-compare-type: 'PLAIN'
-                  project-pattern: 'stackforge/apps-catalog'
+                  project-pattern: 'openstack/app-catalog'
                   branch-compare-type: 'PLAIN'
                   branch-pattern: master
 
@@ -43,7 +43,7 @@
 
     scm:
      - git:
-        url: https://git.openstack.org/stackforge/apps-catalog
+        url: https://git.openstack.org/openstack/app-catalog
         refspec: $GERRIT_REFSPEC
         name:
         choosing-strategy: gerrit
@@ -58,7 +58,7 @@
             trigger-on-change-merged-event: true
             projects:
                 - project-compare-type: 'PLAIN'
-                  project-pattern: 'stackforge/apps-catalog'
+                  project-pattern: 'openstack/app-catalog'
                   branch-compare-type: 'PLAIN'
                   branch-pattern: master
 
