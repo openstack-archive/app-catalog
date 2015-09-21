@@ -4,4 +4,4 @@ source = openstack_catalog
 omit = openstack_catalog/tests/*,openstack_catalog/openstack/*
 
 [report]
-ignore-errors = True
+ignore_errors = True
