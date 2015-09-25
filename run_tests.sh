@@ -43,14 +43,27 @@ done
 function run_server {
   echo "Starting development server..."
   $root/tools/update_assets.sh
-  pushd $root/openstack_catalog/web > /dev/null
-  ${command_wrapper} python $root/tools/testserver.py runserver $testopts $testargs
-  popd > /dev/null
+  if [ ! -d $venv ]; then
+    virtualenv $venv
+    . $venv/bin/activate
+  fi
+  . $venv/bin/activate
+  pip install -r $root/requirements.txt
+#FIXME make venv cleaner.
+
+# FIXME remove when CORS works
+#  pushd $root/openstack_catalog/web > /dev/null
+#  ${command_wrapper} python $root/tools/testserver.py runserver $testopts $testargs
+  ${command_wrapper} python manage.py runserver $testopts $testargs
+#  popd > /dev/null
   echo "Server stopped."
 }
 
 # Development server
 if [ $runserver -eq 1 ]; then
+    if [ "x$testargs" = "x" -o "$testargs x" = " x" ]; then
+      testargs="127.0.0.1:18001"
+    fi
     run_server
     exit $?
 fi
