@@ -996,6 +996,9 @@
       service:
         type: heat
         format: HOT
+        environment:
+          parameters:
+            db_port: 1000
       supported_by:
         name: Mirantis
       license: Apache 2.0

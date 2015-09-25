@@ -160,6 +160,9 @@
           type: string
           enum:
             - heat
+        environment:
+          type: object
+          additionalProperties: true
     murano:
       required:
         - type

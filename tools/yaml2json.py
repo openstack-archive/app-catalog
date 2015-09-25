@@ -17,4 +17,10 @@ import json
 import sys
 import yaml
 
-json.dump(yaml.load(sys.stdin), sys.stdout)
+y = yaml.load(sys.stdin)
+for a in y['assets']:
+    s = a['service']
+    if s['type'] == 'heat':
+        if 'environment' in s:
+            s['environment'] = yaml.dump(s['environment'])
+json.dump(y, sys.stdout)
