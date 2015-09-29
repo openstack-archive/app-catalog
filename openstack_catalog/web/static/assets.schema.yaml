@@ -55,6 +55,7 @@
                 - Juno
                 - Kilo
                 - Liberty
+                - Mitaka
             minItems: 1
           provided_by:
             type: object
@@ -163,6 +164,24 @@
         environment:
           type: object
           additionalProperties: true
+        ever:
+          type: array
+          items:
+            type: object
+            additionalProperties: false
+            properties:
+              min:
+                type: array
+                items:
+                  type: number
+                minItems: 3
+                maxItems: 3
+              max:
+                type: array
+                items:
+                  type: number
+                minItems: 3
+                maxItems: 3
     murano:
       required:
         - type
@@ -178,6 +197,24 @@
             - package
         package_name:
           type: string
+        ever:
+          type: array
+          items:
+            type: object
+            additionalProperties: false
+            properties:
+              min:
+                type: array
+                items:
+                  type: number
+                minItems: 3
+                maxItems: 3
+              max:
+                type: array
+                items:
+                  type: number
+                minItems: 3
+                maxItems: 3
     bundle:
       required:
         - type
