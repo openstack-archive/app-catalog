@@ -2362,7 +2362,7 @@
         useful for developling applications. Currently this
         bundle contains Postgres and MySQL, but as new
         databases are added to the catalog this bundle will
-        grow to include them.
+        grow to include them. Testing change...
       service:
         type: bundle
         murano_package_name: databases
