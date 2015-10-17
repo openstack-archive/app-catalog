@@ -952,13 +952,13 @@
         docs: https://docs.chef.io
         hash: e6b964572be00a845bd53d6033a780f4
     -
-      name: kloudbuster_v3
+      name: kloudbuster_v4
       provided_by:
-        name: kloudbuster team
+        name: KloudBuster team
         href: https://github.com/openstack/kloudbuster
         company: Cisco
       description: >
-                  VM image version 3 needed for any KloudBuster scale testing.
+                  VM image version 4 needed for any KloudBuster scale testing.
                   This image is launched by the KloudBuster application in potentially large
                   number of VM instances. It is not designed to be launched directly by the user.
                   KloudBuster provides a quick and easy way to load any OpenStack data plane
@@ -978,9 +978,9 @@
         min_disk: 10
       license: Multi-licensed OpenSource
       attributes:
-        url: http://storage.apps.openstack.org/images/kloudbuster_v3.qcow2
+        url: http://storage.apps.openstack.org/images/kloudbuster_v4.qcow2
         docs: http://kloudbuster.readthedocs.org
-        hash: ac3cb49c0f2f5412a29901615ada1c22
+        hash: 4eec3a8c954121fa89774fd1b192242b
     -
       name: Hello World
       provided_by:
