@@ -127,6 +127,14 @@ a.details i {
     margin-bottom: 0;
     font-size: .9em;
 }
+.pluginbox {
+    background-color: #edf2f7;
+    padding: 20px;
+    margin: 20px 0;
+}
+.pluginbox .lbl {
+    text-align: center;
+}
 .title div {
     font-size: 18px;
     text-transform: uppercase;
