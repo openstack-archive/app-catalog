@@ -242,12 +242,9 @@ function initMarketPlace ()
     close: function () { }
   });
 
-  $.ajax({ url: "static/assets.yaml" }).
+  $.ajax({ url: "api/v1/assets" }).
     done (function (data) {
-      try {
-        assets = jsyaml.safeLoad (data);
-      } catch (e) {
-      }
+      assets = data;
       for (var i = 0; i < assets.assets.length; i++) {
         var asset = assets.assets[i];
         if (asset.service.type == 'glance') {
