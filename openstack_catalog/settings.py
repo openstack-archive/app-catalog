@@ -51,6 +51,14 @@ COMPRESS_ENABLED = False
 COMPRESS_CSS_HASHING_METHOD = 'hash'
 COMPRESS_PARSER = 'compressor.parser.HtmlParser'
 
+COMPRESS_PRECOMPILERS = (
+    ('text/scss', 'openstack_catalog.scss_filter.ScssFilter'),
+)
+
+COMPRESS_CSS_FILTERS = (
+    'compressor.filters.css_default.CssAbsoluteFilter',
+)
+
 COMPRESS_OFFLINE_CONTEXT = {
     'STATIC_URL': STATIC_URL,
 }
@@ -65,6 +73,7 @@ STATICFILES_FINDERS = (
 INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django.contrib.staticfiles',
+    'django_pyscss',
     'compressor',
 )
 

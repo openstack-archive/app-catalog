@@ -17,16 +17,13 @@
     <link href="/static/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
 {% include "_scripts.html" %}
+{% include "_stylesheets.html" %}
 {% verbatim %}
-    <!-- Bootstrap core CSS -->
-    <link href="//cdn.jsdelivr.net/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 
     <!-- Custom styles for this template -->
-    <link href="static/css/theme.css" rel="stylesheet" type="text/css" />
     <link href="//cdn.jsdelivr.net/fontawesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,400,700" rel="stylesheet" type="text/css" />
 
-    <link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.11.4/themes/cupertino/jquery-ui.css" />
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.datatables/1.10.4/css/jquery.dataTables.min.css" />
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/select2/3.5.2/select2.css" />
 
@@ -37,8 +34,9 @@
     <![endif]-->
        </head>
 
-  <body role="document">
+  <body role="document" class="oldapp">
 
+<!--FIXME Make configurable-->
     <!-- Google Tag Manager -->
     <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-K2J65K"
               height="0" width="0"
@@ -58,6 +56,7 @@
       ga('create', 'UA-17511903-16', {'allowAnchor': true});
       ga('send', 'pageview', { 'page': location.pathname + location.search + location.hash});
     </script>
+<!--END FIXME-->
     <!-- Fixed navbar -->
     <div class="masthead navbar-fixed-top">
       <div class="container">
@@ -340,15 +339,11 @@
     <!-- core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.datatables/1.10.4/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/select2/3.5.2/select2.min.js"></script>
     <script type="text/javascript" src="//ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.timeago/1.4.1/jquery.timeago.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.6.0/jquery.matchHeight-min.js"></script>
-
-    <script type="text/javascript" src="static/js/apps-catalog.js"></script>
 
     <script type="text/javascript">
       $(function() { initMarketPlace (); });

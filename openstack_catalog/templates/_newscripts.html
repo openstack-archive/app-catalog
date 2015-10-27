@@ -1,0 +1,23 @@
+{% load compress %}
+
+{% compress js %}
+<!--function gettext(x) {return x};-->
+
+<script type="text/javascript" charset="utf-8">
+function gettext(x) {return x;};
+</script>
+
+<script src="{{ STATIC_URL }}lib/angular/angular-bootstrap.js" type="text/javascript" charset="utf-8"></script>
+<script src='{{ STATIC_URL }}lib/angular/angular-gettext.js'></script>
+<script src="{{ STATIC_URL }}lib/angular/smart-table.js"></script>
+<script src='{{ STATIC_URL }}lib/app-catalog-common/app_catalog.js'></script>
+<script src='{{ STATIC_URL }}horizon-widgets/table/table.module.js'></script>
+<script src='{{ STATIC_URL }}horizon-widgets/table/table.controller.js'></script>
+<script src='{{ STATIC_URL }}horizon-widgets/table/hz-table.directive.js'></script>
+<script src='{{ STATIC_URL }}horizon-widgets/table/hz-expand-detail.directive.js'></script>
+<script src='{{ STATIC_URL }}horizon-widgets/magic-search/magic-search.module.js'></script>
+<script src='{{ STATIC_URL }}horizon-widgets/magic-search/hz-magic-search-bar.directive.js'></script>
+<script src='{{ STATIC_URL }}horizon-widgets/magic-search/st-magic-search.directive.js'></script>
+<script src='{{ STATIC_URL }}horizon-widgets/magic-search/magic-overrides.directive.js'></script>
+<script src='{{ STATIC_URL }}lib/magic_search/magic_search.js'></script>
+{% endcompress %}
