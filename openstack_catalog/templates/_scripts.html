@@ -1,6 +1,11 @@
 {% load compress %}
 
 {% compress js %}
+<script src='{{ STATIC_URL }}lib/jquery/jquery.js'></script>
+<script src="{{ STATIC_URL }}lib/jquery-ui/ui/jquery-ui.js"></script>
 <script src="{{ STATIC_URL }}lib/angular/angular.js" type='text/javascript' charset="utf-8"></script>
 <script src="{{ STATIC_URL }}lib/magic_search/magic_search.js" type='text/javascript' charset="utf-8"></script>
+<script src="{{ STATIC_URL }}lib/bootstrap/js/bootstrap.js"></script>
+
+<script type="text/javascript" src="{{ STATIC_URL }}js/apps-catalog.js"></script>
 {% endcompress %}
