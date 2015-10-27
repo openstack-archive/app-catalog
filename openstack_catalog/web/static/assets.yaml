@@ -1,6 +1,36 @@
 ---
   assets:
     -
+      name: Fedora 21 Atomic (for use with Magnum)
+      provided_by:
+        name: OpenStack Magnum Project
+        href: https://wiki.openstack.org/wiki/Magnum
+        company: OpenStack
+      description: >
+                  Magnum is an OpenStack API service developed
+                  by the OpenStack Containers Team making
+                  container orchestration engines such as
+                  Docker Swarm and Kubernetes available as first
+                  class resources in OpenStack. Magnum uses
+                  Heat to orchestrate an OS image which
+                  contains Docker and Kubernetes and runs that
+                  image in either virtual machines or bare
+                  metal in a cluster configuration.
+
+                  This image is intended to be used with an
+                  environment running Magnum.
+                  See https://wiki.openstack.org/wiki/Magnum
+                  for more information on using this image and
+                  Magnum in your OpenStack environment.
+      service:
+        type: glance
+        disk_format: qcow2
+        container_format: bare
+      license: Multi-licensed OpenSource
+      attributes:
+        url: https://fedorapeople.org/groups/magnum/fedora-21-atomic-5.qcow2
+        hash: cebefc0c21fb8567e662bf9f2d5b78b0
+    -
       name: Ubuntu 14.04 x64 (pre-installed Kubernetes)
       provided_by:
         name: Alexey Deryugin
