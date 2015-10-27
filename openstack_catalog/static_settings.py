@@ -14,15 +14,62 @@
 
 import xstatic.main
 import xstatic.pkg.angular
+import xstatic.pkg.angular_bootstrap
+import xstatic.pkg.angular_gettext
+import xstatic.pkg.angular_smart_table
+import xstatic.pkg.app_catalog_common
+import xstatic.pkg.bootstrap_scss
+import xstatic.pkg.font_awesome
+import xstatic.pkg.jquery
+import xstatic.pkg.jquery_ui
 import xstatic.pkg.magic_search
 
 
 def get_staticfiles_dirs(webroot='/'):
-    return [
+    STATICFILES_DIRS = [
         ('lib/angular',
             xstatic.main.XStatic(xstatic.pkg.angular,
+                                 root_url=webroot).base_dir),
+        ('lib/angular',
+            xstatic.main.XStatic(xstatic.pkg.angular_bootstrap,
+                                 root_url=webroot).base_dir),
+        ('lib/angular',
+            xstatic.main.XStatic(xstatic.pkg.angular_smart_table,
+                                 root_url=webroot).base_dir),
+        ('lib/angular',
+            xstatic.main.XStatic(xstatic.pkg.angular_gettext,
                                  root_url=webroot).base_dir),
         ('lib/magic_search',
             xstatic.main.XStatic(xstatic.pkg.magic_search,
                                  root_url=webroot).base_dir),
+        ('lib/jquery',
+            xstatic.main.XStatic(xstatic.pkg.jquery,
+                                 root_url=webroot).base_dir),
+        ('lib/jquery-ui',
+            xstatic.main.XStatic(xstatic.pkg.jquery_ui,
+                                 root_url=webroot).base_dir),
+        ('lib/bootstrap',
+            xstatic.main.XStatic(xstatic.pkg.bootstrap_scss,
+                                 root_url=webroot).base_dir),
+        ('lib/app-catalog-common',
+            xstatic.main.XStatic(xstatic.pkg.app_catalog_common,
+                                 root_url=webroot).base_dir),
+        ('lib/font-awesome',
+            xstatic.main.XStatic(xstatic.pkg.font_awesome,
+                                 root_url=webroot).base_dir),
     ]
+    if xstatic.main.XStatic(xstatic.pkg.jquery_ui,
+                            root_url=webroot).version.startswith('1.10.'):
+        # The 1.10.x versions already contain the 'ui' directory.
+        STATICFILES_DIRS.append(
+            ('lib/jquery-ui',
+             xstatic.main.XStatic(xstatic.pkg.jquery_ui,
+                                  root_url=webroot).base_dir))
+    else:
+        # Newer versions dropped the directory, add it to keep the path the
+        # same.
+        STATICFILES_DIRS.append(
+            ('lib/jquery-ui/ui',
+             xstatic.main.XStatic(xstatic.pkg.jquery_ui,
+                                  root_url=webroot).base_dir))
+    return STATICFILES_DIRS

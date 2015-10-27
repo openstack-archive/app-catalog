@@ -1,0 +1,6 @@
+{% load compress %}
+
+{% compress css %}
+    <link href="{{ STATIC_URL }}horizon-widgets/foo.scss" rel="stylesheet" type="text/scss" />
+    <link href="{{ STATIC_URL }}lib/app-catalog-common/app_catalog.scss" rel="stylesheet" type="text/scss" />
+{% endcompress %}
