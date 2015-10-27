@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+{% include "_scripts.html" %}
+{% include "_newscripts.html" %}
+{% include "_stylesheets.html" %}
+{% include "_newstylesheets.html" %}
+{% verbatim %}
+<script>
+//function gettext(x) {return x};
+var WEBROOT='/';
+//FIXME We need to have the engine return all entries, or allow this to be specified by the user...
+/*
+window.APP_CATALOG_SETTINGS = {
+    'HEAT_VERSION': {
+        'VER': '1000',
+        'REL': '1000'
+    },
+    'HAS_MURANO': true,
+    'MURANO_VERSION': {
+        'VER': '1000',
+        'REL': '1000'
+    },
+    'HORIZON_VERSION': {
+        'VER': '1000',
+        'REL': '1000'
+    },
+    'APP_CATALOG_VERSION': {
+        'VER': '1000',
+        'REL': '1000'
+    },
+    'APP_CATALOG_URL': ''
+};
+*/
+
+{% endverbatim %}
+var STATIC_URL="{{ STATIC_URL }}";
+{% verbatim %}
+var app = angular.module('myApp', ['gettext', 'ui.bootstrap', 'smart-table', 'MagicSearch', 'horizon.framework.widgets.table', 'horizon.dashboard.project.app_catalog']);
+//FIXME What to do with this?
+app.service('horizon.framework.widgets.toast.service', function() {
+});
+app.service('horizon.app.core.openstack-service-api.heat', function($timeout) {
+    var service = {
+      validate: function (a, b) {
+        var stub = {
+          success: function(x) {
+            $timeout(function() {x([]);}, 0, false);
+            return stub;
+          },
+          error: function(x) {return stub;}
+        };
+        return stub;
+      }
+    };
+    return service;
+});
+app.service('horizon.app.core.openstack-service-api.glance', function($timeout) {
+    var service = {
+      getImages: function () {
+        return {"success": function(x) {
+          $timeout(function() {x([]);}, 0, false);
+        }};
+      }
+    };
+    return service;
+});
+app.service('horizon.app.core.openstack-service-api.serviceCatalog', function($timeout) {
+    var service = {
+      get: function () {
+        return {"then": function(x) {
+          $timeout(function() { x([
+            {"endpoints": [{"adminURL": "x", "id": "x", "internalURL": "x", "publicURL": "x", "region": "x"}], "endpoints_links": [], "name": "heat", "type": "orchestration"},
+            {"endpoints": [{"adminURL": "x", "id": "x", "internalURL": "x", "publicURL": "x", "region": "x"}], "endpoints_links": [], "name": "glance", "type": "image"},
+            {"endpoints": [{"adminURL": "x", "id": "x", "internalURL": "x", "publicURL": "x", "region": "x"}], "endpoints_links": [], "name": "murano", "type": "appcatalog"},
+            {"endpoints": [{"adminURL": "x", "id": "x", "internalURL": "x", "publicURL": "x", "region": "x"}], "endpoints_links": [], "name": "tosca", "type": "tosca"},
+          ]);}, 0, false);
+        }};
+      }
+    };
+    return service;
+});
+app.service('horizon.app.core.openstack-service-api.murano', function($timeout) {
+    var service = {
+      getPackages: function () {
+        return {"success": function(x) {
+          $timeout(function() {x([]);}, 0, false);
+        }};
+      }
+    };
+    return service;
+});
+app.constant('horizon.framework.widgets.basePath', '/static/horizon-widgets/');
+app.controller('myCtrl', function($scope, $http) {
+  $http({url:'/api/v1/assets'}).success(function(data) {
+    $scope.assets = [];
+    for(i in data.assets) {
+      var asset = data.assets[i];
+      if('tags' in asset) {
+        var found;
+        for(j in asset['tags']) {
+          if(asset['tags'][j] == 'app') {
+            $scope.assets.push(asset);
+          }
+        }
+      }
+    }
+    console.log($scope.assets);
+  });
+});
+app.config(function($interpolateProvider) {
+  $interpolateProvider.startSymbol('{$');
+  $interpolateProvider.endSymbol('$}');
+});
+</script>
+<!--<body ng-app="myApp">-->
+<body ng-app="myApp">
+{% endverbatim %}
+<div ng-cloak
+  ng-controller="appCatalogTableCtrl" ng-init="init(
+{
+    'HEAT_VERSION': {
+        'VER': '1000',
+        'REL': '1000'
+    },
+    'HAS_MURANO': true,
+    'MURANO_VERSION': {
+        'VER': '1000',
+        'REL': '1000'
+    },
+    'HORIZON_VERSION': {
+        'VER': '1000',
+        'REL': '1000'
+    },
+    'APP_CATALOG_VERSION': {
+        'VER': '1000',
+        'REL': '1000'
+    },
+    'APP_CATALOG_URL': ''
+}
+)">
+  <ng-include src="'{{ STATIC_URL }}lib/app-catalog-common/main_panel.html'"></ng-include>
+{% verbatim %}
+</body>
+</html>
+{% endverbatim %}

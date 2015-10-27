@@ -1,0 +1,9 @@
+{% load compress %}
+
+{% compress css %}
+    <link href="{{ STATIC_URL }}css/theme.scss" rel="stylesheet" type="text/scss" />
+    <link href="{{ STATIC_URL }}lib/jquery-ui/themes/cupertino/jquery-ui.css" rel="stylesheet" type="text/css" />
+{% for file in CONFIG.scss_files %}
+    <link href='{{ STATIC_URL }}{{ file }}' type='text/scss' media='screen' rel='stylesheet'/>
+{% endfor %}
+{% endcompress %}
