@@ -97,6 +97,22 @@
         url: http://storage.apps.openstack.org/images/debian-8-docker.qcow2
         hash: f9f2466c39dac98a1e4ed03fb5701225
     -
+      name: Ubuntu 14.04 x64 (pre-installed packages to be used with CloudBees PSE)
+      provided_by:
+        name: CloudBees
+        href: http://cloudbees.com
+        company: CloudBees, Inc.
+      description: Ubuntu 14.04 x64 with various publicly-available packages
+                   for use with CloudBees PSE
+      service:
+        type: glance
+        disk_format: qcow2
+        container_format: bare
+      license: Multi-licensed OpenSource
+      attributes:
+        url: http://pse-vm-images.s3-us-west-1.amazonaws.com/images/cloudbees-pse-ubuntu-juno-20151030011613.qcow2
+        hash: da21abcd47b08632ea39191bb34df3fab148f9fd
+    -
       name: Ubuntu Trusty 14
       tags: ['app']
       provided_by:
