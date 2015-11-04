@@ -305,6 +305,40 @@
         url: http://download.fedoraproject.org/pub/fedora/linux/releases/21/Cloud/Images/x86_64/Fedora-Cloud-Base-20141203-21.x86_64.qcow2
         hash: 3a99bb89f33e3d4ee826c8160053cdb8a72c80cd23350b776ce73cd244467d86
     -
+      name: Fedora 23
+      tags: ['app']
+      provided_by:
+        name: Fedora Project
+        href: http://fedoraproject.org
+        company: Fedora Project Community
+      description: >
+                  The Fedora Project is a global partnership of
+                  free software community members. The Fedora
+                  Project is sponsored by Red Hat, which invests in
+                  our infrastructure and resources to encourage
+                  collaboration and incubate innovative new
+                  technologies. Some of these technologies may later
+                  be integrated into Red Hat products. They are
+                  developed in Fedora and produced under a free and
+                  open source license from inception, so other free
+                  software communities and projects are free to
+                  study, adopt, and modify them.
+
+                  This is a Fedora 23 base image with cloud_init
+      service:
+        type: glance
+        disk_format: qcow2
+        container_format: bare
+      icon:
+        url: https://fedoraproject.org/w/uploads/e/e5/Fedora_infinity.png
+        top: -50
+        left: -40
+        height: 210
+      license: Multi-licensed OpenSource
+      attributes:
+        url: https://download.fedoraproject.org/pub/fedora/linux/releases/23/Cloud/x86_64/Images/Fedora-Cloud-Base-23-20151030.x86_64.qcow2
+        hash: 0c30ef4f0c2e1bc621193d0ee42b7692e19e93aa286abc6e08683397f35d7b0f
+    -
       name: Debian Jessie 8.0.0 x64
       tags: ['app']
       provided_by:
@@ -886,6 +920,38 @@
         pubkey: https://getfedora.org/static/95A43F54.txt
         releases: http://www.projectatomic.io/download/
         hash: 7aa95d1513c957ac5028c3f7e6900e16
+    -
+      name: Fedora 23 Atomic Cloud
+      tags: ['app']
+      provided_by:
+        name: Project Atomic
+        href: http://www.projectatomic.io
+        company: Project Atomic, sponsored by Red Hat
+      description: >
+                  Project Atomic integrates the tools and patterns of
+                  container-based application and service deployment with
+                  trusted operating system platforms to deliver an end-to-end
+                  hosting architecture that's modern, reliable, and secure.
+                  This Atomic image is based on Fedora 23 and was released
+                  2015-11-03.
+      service:
+        type: glance
+        disk_format: qcow2
+        container_format: bare
+      icon:
+        url: https://fedoraproject.org/w/uploads/e/e5/Fedora_infinity.png
+        top: -50
+        left: -40
+        height: 210
+      license: Multi-licensed OpenSource
+      attributes:
+        url: https://download.fedoraproject.org/pub/fedora/linux/releases/23/Cloud/x86_64/Images/Fedora-Cloud-Atomic-23-20151030.x86_64.qcow2
+        docs: http://www.projectatomic.io/docs/
+        gpg: https://getfedora.org/static/fedora.gpg
+        digest: https://getfedora.org/static/checksums/Fedora-Cloud-Images-x86_64-23-CHECKSUM
+        pubkey: https://getfedora.org/static/95A43F54.txt
+        releases: http://www.projectatomic.io/download/
+        hash: 57d4025915cc83e948d155e44c582fa154df33d801175fcf50d69181505b5433
     -
       name: ManageIQ Botvinnik (stable)
       tags: ['app']
