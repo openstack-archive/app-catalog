@@ -1224,6 +1224,7 @@
           https://github.com/redhat-openstack/openshift-on-openstack
       release:
         - Kilo
+        - Liberty
       service:
         type: heat
         format: HOT
