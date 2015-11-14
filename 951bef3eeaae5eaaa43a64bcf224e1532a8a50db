@@ -1,0 +1,8 @@
+Verified+2: Jenkins
+Code-Review+2: Kevin Fox <kevin@efox.cc>
+Workflow+1: Kevin Fox <kevin@efox.cc>
+Submitted-by: Jenkins
+Submitted-at: Sat, 14 Nov 2015 15:04:12 +0000
+Reviewed-on: https://review.openstack.org/245426
+Project: openstack/app-catalog
+Branch: refs/heads/master
