@@ -1461,6 +1461,7 @@
         package_name: io.murano.databases.MySql
       release:
         - Kilo
+        - Liberty
       license: Multi-licensed OpenSource
       depends:
         - name: SqlDatabase Library
@@ -1519,6 +1520,7 @@
         package_name: io.murano.databases.PostgreSql
       release:
         - Kilo
+        - Liberty
       license: Multi-licensed OpenSource
       depends:
         - name: SqlDatabase Library
@@ -1801,10 +1803,12 @@
         package_name: io.murano.apps.docker.DockerApp
       release:
         - Kilo
+        - Liberty
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Standalone Host
         - name: Kubernetes Pod
+        - name: Docker Interfaces Library
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerApp.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/DockerApp/package"
@@ -1830,10 +1834,12 @@
         package_name: io.murano.apps.docker.DockerCrate
       release:
         - Kilo
+        - Liberty
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Standalone Host
         - name: Kubernetes Pod
+        - name: Docker Interfaces Library
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerCrate.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/Crate/package"
@@ -1870,10 +1876,12 @@
         package_name: io.murano.apps.docker.DockerGlassFish
       release:
         - Kilo
+        - Liberty
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Standalone Host
         - name: Kubernetes Pod
+        - name: Docker Interfaces Library
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerGlassFish.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/GlassFish/package"
@@ -1909,11 +1917,13 @@
         package_name: io.murano.apps.docker.DockerGrafana
       release:
         - Kilo
+        - Liberty
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Standalone Host
         - name: Kubernetes Pod
         - name: Docker InfluxDB
+        - name: Docker Interfaces Library
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerGrafana.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/Grafana/package"
@@ -1937,11 +1947,13 @@
         package_name: io.murano.apps.docker.GuestBook
       release:
         - Kilo
+        - Liberty
       license: Multi-licensed OpenSource
       depends:
         - name: Kubernetes Cluster
         - name: Kubernetes Pod
         - name: Docker Redis
+        - name: Docker Interfaces Library
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.GuestBook.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/GuestBook/package"
@@ -1967,10 +1979,12 @@
         package_name: io.murano.apps.docker.DockerHTTPd
       release:
         - Kilo
+        - Liberty
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Standalone Host
         - name: Kubernetes Pod
+        - name: Docker Interfaces Library
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerHTTPd.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/HTTPdServer/package"
@@ -2001,10 +2015,12 @@
         package_name: io.murano.apps.docker.DockerHTTPdSite
       release:
         - Kilo
+        - Liberty
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Standalone Host
         - name: Kubernetes Pod
+        - name: Docker Interfaces Library
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerHTTPdSite.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/HTTPdSite/package"
@@ -2032,10 +2048,12 @@
         package_name: io.murano.apps.docker.DockerInfluxDB
       release:
         - Kilo
+        - Liberty
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Standalone Host
         - name: Kubernetes Pod
+        - name: Docker Interfaces Library
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerInfluxDB.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/InfluxDB/package"
@@ -2072,10 +2090,12 @@
         package_name: io.murano.apps.docker.DockerJenkins
       release:
         - Kilo
+        - Liberty
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Standalone Host
         - name: Kubernetes Pod
+        - name: Docker Interfaces Library
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerJenkins.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/Jenkins/package"
@@ -2110,10 +2130,12 @@
         package_name: io.murano.apps.docker.DockerMariaDB
       release:
         - Kilo
+        - Liberty
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Standalone Host
         - name: Kubernetes Pod
+        - name: Docker Interfaces Library
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerMariaDB.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/MariaDB/package"
@@ -2151,10 +2173,12 @@
         package_name: io.murano.apps.docker.DockerMongoDB
       release:
         - Kilo
+        - Liberty
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Standalone Host
         - name: Kubernetes Pod
+        - name: Docker Interfaces Library
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerMongoDB.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/MongoDB/package"
@@ -2182,10 +2206,12 @@
         package_name: io.murano.apps.docker.DockerMySQL
       release:
         - Kilo
+        - Liberty
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Standalone Host
         - name: Kubernetes Pod
+        - name: Docker Interfaces Library
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerMySQL.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/MySQL/package"
@@ -2215,10 +2241,12 @@
         package_name: io.murano.apps.docker.DockerNginx
       release:
         - Kilo
+        - Liberty
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Standalone Host
         - name: Kubernetes Pod
+        - name: Docker Interfaces Library
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerNginx.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/Nginx/package"
@@ -2251,10 +2279,12 @@
         package_name: io.murano.apps.docker.DockerNginxSite
       release:
         - Kilo
+        - Liberty
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Standalone Host
         - name: Kubernetes Pod
+        - name: Docker Interfaces Library
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerNginxSite.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/NginxSite/package"
@@ -2302,10 +2332,12 @@
         package_name: io.murano.apps.docker.DockerPostgreSQL
       release:
         - Kilo
+        - Liberty
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Standalone Host
         - name: Kubernetes Pod
+        - name: Docker Interfaces Library
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerPostgreSQL.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/PostgreSQL/package"
@@ -2334,10 +2366,12 @@
         package_name: io.murano.apps.docker.DockerRedis
       release:
         - Kilo
+        - Liberty
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Standalone Host
         - name: Kubernetes Pod
+        - name: Docker Interfaces Library
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerRedis.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/Redis/package"
@@ -2367,10 +2401,12 @@
         package_name: io.murano.apps.docker.DockerTomcat
       release:
         - Kilo
+        - Liberty
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Standalone Host
         - name: Kubernetes Pod
+        - name: Docker Interfaces Library
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerTomcat.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/Tomcat/package"
