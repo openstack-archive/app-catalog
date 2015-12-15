@@ -247,6 +247,11 @@ function initMarketPlace ()
       assets = data;
       for (var i = 0; i < assets.assets.length; i++) {
         var asset = assets.assets[i];
+        if (typeof asset.attributes !== "undefined") {
+          if (asset.attributes.active == false) {
+            continue;
+            }
+        }
         if (asset.service.type == 'glance') {
           glance_images.assets.push(asset);
         } else if (asset.service.type == 'heat') {
