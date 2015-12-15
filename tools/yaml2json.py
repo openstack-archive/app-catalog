@@ -18,9 +18,16 @@ import sys
 import yaml
 
 y = yaml.load(sys.stdin)
+
+services = []
 for a in y['assets']:
+    if not a.get('attributes', {}).get('active', True):
+        continue
+
     s = a['service']
-    if s['type'] == 'heat':
-        if 'environment' in s:
-            s['environment'] = yaml.dump(s['environment'])
-json.dump(y, sys.stdout)
+    if s['type'] == 'heat' and 'environment' in s:
+        s['environment'] = yaml.dump(s['environment'])
+    services.append(a)
+
+assets = {'assets': services}
+json.dump(assets, sys.stdout)
