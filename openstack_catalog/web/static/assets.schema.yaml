@@ -16,6 +16,8 @@
           - license
         additionalProperties: false
         properties:
+          active:
+            type: boolean
           service:
             oneOf:
               - $ref: "#/definitions/glance"
