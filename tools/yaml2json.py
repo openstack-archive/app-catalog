@@ -23,4 +23,5 @@ for a in y['assets']:
     if s['type'] == 'heat':
         if 'environment' in s:
             s['environment'] = yaml.dump(s['environment'])
+y = [a for a in y['assets'] if a.get('active', True)]
 json.dump(y, sys.stdout)
