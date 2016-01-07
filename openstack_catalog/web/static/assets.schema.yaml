@@ -18,6 +18,8 @@
         properties:
           active:
             type: boolean
+          hash_url:
+            type: string
           service:
             oneOf:
               - $ref: "#/definitions/glance"

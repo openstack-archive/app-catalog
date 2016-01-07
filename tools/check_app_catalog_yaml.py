@@ -105,6 +105,20 @@ def main():
             r = requests.head(url, allow_redirects=True)
             if r.status_code != 200:
                 a['active'] = False
+            else:
+                hash_url = a.get('hash_url')
+                if hash_url:
+                    hashes = {}
+                    r = requests.get(hash_url, allow_redirects=True)
+                    if r.status_code == 200:
+                        for line in r.iter_lines():
+                            try:
+                                hash, file = line.split("  ")
+                            except ValueError:
+                                continue
+                            hashes[file] = hash
+                        a['attributes']['hash'] = hashes.get(
+                            url.split("/")[-1], 'unknown')
         assets.append(a)
 
     output = {'assets': assets}
