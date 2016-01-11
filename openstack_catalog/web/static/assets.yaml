@@ -33,8 +33,8 @@
     -
       name: Ubuntu 14.04 x64 (pre-installed Kubernetes)
       provided_by:
-        name: Alexey Deryugin
-        href: mailto:aderyugin@mirantis.com
+        name: Dmytro Dovbii
+        href: mailto:ddovbii@mirantis.com
         company: Mirantis, Inc.
       description: >
                   Ubuntu 14.04 x64 with Docker & Kubernetes pre-installed
@@ -46,7 +46,7 @@
       license: Multi-licensed OpenSource
       attributes:
         url: http://storage.apps.openstack.org/images/ubuntu14.04-x64-kubernetes.qcow2
-        hash: 0d959023d0551d68f9dc7139cb814e92
+        hash: c98e90e1ff5ed3730dbecb00716cf8a9
     -
       name: Ubuntu 14.04 x64 (pre-installed murano-agent)
       provided_by:
