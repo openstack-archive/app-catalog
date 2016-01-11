@@ -1748,6 +1748,7 @@
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.kubernetes.KubernetesCluster.zip"
         "Source URL": "https://github.com/stackforge/murano-apps"
         Documentation: "https://github.com/stackforge/murano-apps/blob/master/Docker/Kubernetes/readme.md"
+        hash: 8b56859c2f05d9d1f2649729a62fc5e4
     -
       name: Kubernetes Pod
       provided_by:
@@ -1789,6 +1790,7 @@
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.kubernetes.KubernetesPod.zip"
         "Source URL": "https://github.com/stackforge/murano-apps"
         Documentation: "https://github.com/stackforge/murano-apps/blob/master/Docker/Kubernetes/readme.md"
+        hash: 3e974e6abc579ebdf51feb5bbd03a419
     -
       name: Docker Container
       tags: ['app']
