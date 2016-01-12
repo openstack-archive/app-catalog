@@ -428,6 +428,7 @@
         left: 10
         height: 124
       license: Multi-licensed OpenSource
+      hash_url: http://cdimage.debian.org/cdimage/openstack/testing/MD5SUMS
       attributes:
         url: http://cdimage.debian.org/cdimage/openstack/testing/debian-testing-openstack-amd64.qcow2
         hash: unknown
