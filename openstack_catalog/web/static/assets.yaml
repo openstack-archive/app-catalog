@@ -1307,6 +1307,7 @@
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.databases.SqlDatabase.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/SQLDatabaseLibrary/package"
+        hash: bb263f544f74c4ba1a0d72143ea69e40
     -
       name: Docker Interface Library
       provided_by:
@@ -1332,6 +1333,7 @@
         "Source URL": "https://github.com/stackforge/murano-apps"
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.Interfaces.zip"
         Documentation: "https://github.com/stackforge/murano-apps/blob/master/Docker/Kubernetes/readme.md"
+        hash: f980112cbcd3becfe080729757d6a780
     -
       name: Apache HTTP Server
       tags: ['app']
@@ -1362,6 +1364,7 @@
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.apache.ApacheHttpServer.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/ApacheHTTPServer/package"
+        hash: 27bb020b93304952a5544b88fa212a06
     -
       name: Apache Tomcat
       tags: ['app']
@@ -1392,6 +1395,7 @@
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.apache.Tomcat.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Tomcat/package"
+        hash: 805df99024defff7ace5d377e59a52ab
     -
       name: Apcera
       tags: ['app']
@@ -1417,6 +1421,7 @@
         - name: Apcera HCOS Trial Edition
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/com.apcera.Apcera.zip"
+        hash: a87e91df5f0c166f9336253f63c318d1
     -
       name: Cloud Foundry
       tags: ['app']
@@ -1451,6 +1456,7 @@
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.paas.CloudFoundry.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/CloudFoundry/package"
+        hash: f51977620be42f5b58221b1dc31fc707
     -
       name: MySQL
       tags: ['app']
@@ -1513,6 +1519,7 @@
         "Package URL": "http://storage.apps.openstack.org/apps/com.oracle.db.muranoPdb.OraclePDB.zip"
         "Source URL": "https://github.com/dhduvall/murano-apps/tree/master/OraclePDBConnector/package"
         "Documentation URL": "https://github.com/dhduvall/murano-apps/tree/master/OraclePDBConnector/readme.md"
+        hash: d32a4e30738e8a5d22d9b425f7946bca
     -
       name: PostgreSql
       tags: ['app']
@@ -1568,6 +1575,7 @@
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/org.openstack.Rally.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Rally/package"
+        hash: 841304d6cf7ae5a5cfc0b3bb165a48fd
     -
       name: WordPress
       tags: ['app']
@@ -1591,6 +1599,7 @@
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.WordPress.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/WordPress/package"
+        hash: c3e90b3ad40aaa272e5433f6d3db0a9e
     -
       name: Zabbix Agent
       provided_by:
@@ -1618,6 +1627,7 @@
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.ZabbixAgent.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/ZabbixAgent/package"
+        hash: e9466e43ccbde6e6c0a08642e4c9ba58
     -
       name: Zabbix
       tags: ['app']
@@ -1644,6 +1654,7 @@
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.ZabbixServer.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/ZabbixServer/package"
+        hash: 99a59eec5a5d3b6400054ffc954e562d
     -
       name: Stackato
       tags: ['app']
@@ -1674,6 +1685,7 @@
         "Source URL": "https://github.com/ActiveState/stackato-node-murano"
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.activestate.StackatoNode.zip"
         "Documentation": "https://github.com/ActiveState/stackato-node-murano/blob/master/README.md"
+        hash: 6b5221c9c30a8fe63d3926cf3bba7bc7
     -
       name: Docker Standalone Host
       provided_by:
@@ -1829,6 +1841,7 @@
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerApp.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/DockerApp/package"
+        hash: a2e15d5025f5c8a1d0b67f3a5750b22d
     -
       name: Docker Crate
       tags: ['app']
@@ -1860,6 +1873,7 @@
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerCrate.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/Crate/package"
+        hash: 69d5c598f64529819faced9c8dcf3986
     -
       name: Docker GlassFish
       tags: ['app']
@@ -1902,6 +1916,7 @@
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerGlassFish.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/GlassFish/package"
+        hash: dcf8ce8e3cd87745ea30470429822e59
     -
       name: Docker Grafana
       tags: ['app']
@@ -1944,6 +1959,7 @@
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerGrafana.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/Grafana/package"
+        hash: 07ea26704766a9b86822fab93a8cc7f7
     -
       name: Docker GuestBook
       tags: ['app']
@@ -1974,6 +1990,7 @@
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.GuestBook.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/GuestBook/package"
+        hash: 188eba7c6097a0b237b8271ccf3406b5
     -
       name: Docker HTTPd
       tags: ['app']
@@ -2005,6 +2022,7 @@
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerHTTPd.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/HTTPdServer/package"
+        hash: 408d0685d3299a64f48a030f9703e4d0
     -
       name: Docker HTTPd Site
       tags: ['app']
@@ -2041,6 +2059,7 @@
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerHTTPdSite.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/HTTPdSite/package"
+        hash: ce873d90d946f59b06af65e17d952b8a
     -
       name: Docker InfluxDB
       tags: ['app']
@@ -2074,6 +2093,7 @@
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerInfluxDB.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/InfluxDB/package"
+        hash: 862e80bdb04e21a569d9a0a17547641d
     -
       name: Docker Jenkins
       tags: ['app']
@@ -2116,6 +2136,7 @@
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerJenkins.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/Jenkins/package"
+        hash: 816a32598ca7a12b5db8f3d6d598e8bf
     -
       name: Docker MariaDB
       tags: ['app']
@@ -2156,6 +2177,7 @@
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerMariaDB.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/MariaDB/package"
+        hash: d2b66714adba398045199019d2a1dd3a
     -
       name: Docker MongoDB
       tags: ['app']
@@ -2199,6 +2221,7 @@
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerMongoDB.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/MongoDB/package"
+        hash: a0f99ae24cdc7c5da7f62cc8bb919f64
     -
       name: Docker MySQL
       tags: ['app']
@@ -2232,6 +2255,7 @@
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerMySQL.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/MySQL/package"
+        hash: 25f0a51d04c6959214dc28ebf443497f
     -
       name: Docker Nginx
       tags: ['app']
@@ -2267,6 +2291,7 @@
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerNginx.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/Nginx/package"
+        hash: 4bb119bd0434b865fffbf9c44a44d65f
     -
       name: Docker Nginx Site
       tags: ['app']
@@ -2305,6 +2330,7 @@
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerNginxSite.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/NginxSite/package"
+        hash: 3cf9aae5bd1c77faa99e88537317a289
     -
       name: Docker PostgreSQL
       tags: ['app']
@@ -2358,6 +2384,7 @@
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerPostgreSQL.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/PostgreSQL/package"
+        hash: 4d0200b151c6d50800d433283080888c
     -
       name: Docker Redis
       tags: ['app']
@@ -2392,6 +2419,7 @@
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerRedis.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/Redis/package"
+        hash: f725f78055f300c4ef8f37a69a81b5ce
     -
       name: Docker Tomcat
       tags: ['app']
@@ -2427,6 +2455,7 @@
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerTomcat.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/Tomcat/package"
+        hash: b470fb1788d423a6e627b30137659a88
     -
       name: Application Servers Bundle
       provided_by:
