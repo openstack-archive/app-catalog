@@ -1481,6 +1481,7 @@
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.databases.MySql.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/MySQL/package"
+        hash: 0a1ef0d17f2af1c3f3d3be626d8910c5
     -
       name: Oracle Pluggable Database
       tags: ['app']
@@ -1540,6 +1541,7 @@
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.databases.PostgreSql.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/PostgreSQL/package"
+        hash: 1bae28b44dba6cc9d06fed3024eed469
     -
       name: Rally
       tags: ['app']
@@ -1709,6 +1711,7 @@
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerStandaloneHost.zip"
         "Source URL": "https://github.com/stackforge/murano-apps"
         Documentation: "https://github.com/stackforge/murano-apps/blob/master/Docker/Kubernetes/readme.md"
+        hash: 7eee1d5cbd3f8fbd33d115e090b0a602
     -
       name: Kubernetes Cluster
       provided_by:
@@ -1749,7 +1752,7 @@
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.kubernetes.KubernetesCluster.zip"
         "Source URL": "https://github.com/stackforge/murano-apps"
         Documentation: "https://github.com/stackforge/murano-apps/blob/master/Docker/Kubernetes/readme.md"
-        hash: 8b56859c2f05d9d1f2649729a62fc5e4
+        hash: c991ce0d15bffef0fa32d03dc7e76d6e
     -
       name: Kubernetes Pod
       provided_by:
@@ -1791,7 +1794,7 @@
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.kubernetes.KubernetesPod.zip"
         "Source URL": "https://github.com/stackforge/murano-apps"
         Documentation: "https://github.com/stackforge/murano-apps/blob/master/Docker/Kubernetes/readme.md"
-        hash: 3e974e6abc579ebdf51feb5bbd03a419
+        hash: d16234097d6ba6e69d96248f5d910200
     -
       name: Docker Container
       tags: ['app']
