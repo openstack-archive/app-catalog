@@ -27,9 +27,9 @@
         disk_format: qcow2
         container_format: bare
       license: Multi-licensed OpenSource
+      hash: cebefc0c21fb8567e662bf9f2d5b78b0
       attributes:
         url: https://fedorapeople.org/groups/magnum/fedora-21-atomic-5.qcow2
-        hash: cebefc0c21fb8567e662bf9f2d5b78b0
     -
       name: Ubuntu 14.04 x64 (pre-installed Kubernetes)
       provided_by:
@@ -44,9 +44,9 @@
         disk_format: qcow2
         container_format: bare
       license: Multi-licensed OpenSource
+      hash: c98e90e1ff5ed3730dbecb00716cf8a9
       attributes:
         url: http://storage.apps.openstack.org/images/ubuntu14.04-x64-kubernetes.qcow2
-        hash: c98e90e1ff5ed3730dbecb00716cf8a9
     -
       name: Ubuntu 14.04 x64 (pre-installed murano-agent)
       provided_by:
@@ -63,9 +63,9 @@
         disk_format: qcow2
         container_format: bare
       license: Multi-licensed OpenSource
+      hash: cbd9ded8587b98d144d9cf0faea991a9
       attributes:
         url: http://storage.apps.openstack.org/images/ubuntu-14.04-m-agent.qcow2
-        hash: cbd9ded8587b98d144d9cf0faea991a9
     -
       name: Debian 8 x64 (pre-installed murano-agent)
       provided_by:
@@ -78,9 +78,9 @@
         disk_format: qcow2
         container_format: bare
       license: Multi-licensed OpenSource
+      hash: c05398176ff18ca4d011b3550fa174e3
       attributes:
         url: http://storage.apps.openstack.org/images/debian-8-m-agent.qcow2
-        hash: c05398176ff18ca4d011b3550fa174e3
     -
       name: Debian 8 x64 (pre-installed Docker)
       provided_by:
@@ -93,9 +93,9 @@
         disk_format: qcow2
         container_format: bare
       license: Multi-licensed OpenSource
+      hash: f9f2466c39dac98a1e4ed03fb5701225
       attributes:
         url: http://storage.apps.openstack.org/images/debian-8-docker.qcow2
-        hash: f9f2466c39dac98a1e4ed03fb5701225
     -
       name: Ubuntu 14.04 x64 (pre-installed packages to be used with CloudBees PSE)
       provided_by:
@@ -116,9 +116,9 @@
         disk_format: qcow2
         container_format: bare
       license: Other
+      hash: da21abcd47b08632ea39191bb34df3fab148f9fd
       attributes:
         url: http://pse-vm-images.s3-us-west-1.amazonaws.com/images/cloudbees-pse-ubuntu-juno-20151030011613.qcow2
-        hash: da21abcd47b08632ea39191bb34df3fab148f9fd
     -
       name: Ubuntu Trusty 14
       tags: ['app']
@@ -139,7 +139,6 @@
       license: Multi-licensed OpenSource
       attributes:
         url: http://uec-images.ubuntu.com/trusty/current/trusty-server-cloudimg-amd64-disk1.img
-        hash: unknown
     -
       name: Ubuntu Utopic 14
       tags: ['app']
@@ -160,7 +159,6 @@
       license: Multi-licensed OpenSource
       attributes:
         url: http://uec-images.ubuntu.com/utopic/current/utopic-server-cloudimg-amd64-disk1.img
-        hash: unknown
     -
       name: Ubuntu Vivid 15
       tags: ['app']
@@ -181,7 +179,6 @@
       license: Multi-licensed OpenSource
       attributes:
         url: http://uec-images.ubuntu.com/vivid/current/vivid-server-cloudimg-amd64-disk1.img
-        hash: unknown
     -
       name: CentOS 6
       tags: ['app']
@@ -213,9 +210,9 @@
         left: -12
         height: 150
       license: Multi-licensed OpenSource
+      hash: f5729dd91bb45d3210a3bcc52534cc7307fbed4d01b0e7810533f727763c1038
       attributes:
         url: http://cloud.centos.org/centos/6/images/CentOS-6-x86_64-GenericCloud-20141129_01.qcow2
-        hash: f5729dd91bb45d3210a3bcc52534cc7307fbed4d01b0e7810533f727763c1038
     -
       name: CentOS 7
       tags: ['app']
@@ -247,9 +244,9 @@
         left: -12
         height: 150
       license: Multi-licensed OpenSource
+      hash: e324e3ab1d24a1bbf035ddb365e7f9058c0b454acf48d7aa15c5519fae5998ab
       attributes:
         url: http://cloud.centos.org/centos/7/images/CentOS-7-x86_64-GenericCloud.qcow2
-        hash: e324e3ab1d24a1bbf035ddb365e7f9058c0b454acf48d7aa15c5519fae5998ab
     -
       name: CirrOS
       tags: ['app']
@@ -301,9 +298,9 @@
         left: -40
         height: 210
       license: Multi-licensed OpenSource
+      hash: 3a99bb89f33e3d4ee826c8160053cdb8a72c80cd23350b776ce73cd244467d86
       attributes:
         url: http://download.fedoraproject.org/pub/fedora/linux/releases/21/Cloud/Images/x86_64/Fedora-Cloud-Base-20141203-21.x86_64.qcow2
-        hash: 3a99bb89f33e3d4ee826c8160053cdb8a72c80cd23350b776ce73cd244467d86
     -
       name: Fedora 23
       tags: ['app']
@@ -335,9 +332,9 @@
         left: -40
         height: 210
       license: Multi-licensed OpenSource
+      hash: 0c30ef4f0c2e1bc621193d0ee42b7692e19e93aa286abc6e08683397f35d7b0f
       attributes:
         url: https://download.fedoraproject.org/pub/fedora/linux/releases/23/Cloud/x86_64/Images/Fedora-Cloud-Base-23-20151030.x86_64.qcow2
-        hash: 0c30ef4f0c2e1bc621193d0ee42b7692e19e93aa286abc6e08683397f35d7b0f
     -
       name: Debian Jessie 8.0.0 x64
       tags: ['app']
@@ -366,9 +363,9 @@
         left: 10
         height: 124
       license: Multi-licensed OpenSource
+      hash: 0fcf78a066da0fe489b61176eba11f12e55f60081556693a0c5652d1acfbda57
       attributes:
         url: http://cdimage.debian.org/cdimage/openstack/archive/8.0.0/debian-8.0.0-openstack-amd64.qcow2
-        hash: 0fcf78a066da0fe489b61176eba11f12e55f60081556693a0c5652d1acfbda57
     -
       name: Debian Jessie 8.2.0 x64
       tags: ['app']
@@ -397,9 +394,9 @@
         left: 10
         height: 124
       license: Multi-licensed OpenSource
+      hash: d0a2ea3399dc8895cb3ff5cd8e9fc30cd5a69ceb1037bf614674e43fa169ac93
       attributes:
         url: http://cdimage.debian.org/cdimage/openstack/current/debian-8.2.0-openstack-amd64.qcow2
-        hash: d0a2ea3399dc8895cb3ff5cd8e9fc30cd5a69ceb1037bf614674e43fa169ac93
     -
       name: Debian Testing weekly build x64
       tags: ['app']
@@ -431,7 +428,6 @@
       hash_url: http://cdimage.debian.org/cdimage/openstack/testing/MD5SUMS
       attributes:
         url: http://cdimage.debian.org/cdimage/openstack/testing/debian-testing-openstack-amd64.qcow2
-        hash: unknown
     -
       name: Windows Server 2012 R2
       tags: ['app']
@@ -442,7 +438,6 @@
       description: Windows Server 2012 R2 image with cloud_init
       attributes:
         indirect_url: http://www.cloudbase.it/ws2012r2/
-        hash: unknown
       icon:
         url: https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Windows_logo_-_2012.svg/240px-Windows_logo_-_2012.svg.png
         top: 0
@@ -472,9 +467,9 @@
         left: 0
         height: 128
       license: Unknown
+      hash: 1055116f26f2ea36a51217ab33ddec3f
       attributes:
         url: http://storage.apps.openstack.org/images/continuum-trial-openstack-1431536104.qcow2
-        hash: 1055116f26f2ea36a51217ab33ddec3f
     -
       name: Wordpress powered by Bitnami
       tags: ['app']
@@ -503,9 +498,9 @@
         left: 0
         height: 128
       license: Multi-licensed OpenSource
+      hash: 412fe8d31ecd69ec91d1bb1fbc4c84ac
       attributes:
         url: https://downloads.bitnami.com/files/download/openstack/bitnami-wordpress-4.2.2-0-ubuntu-14.04.qcow
-        hash: 412fe8d31ecd69ec91d1bb1fbc4c84ac
     -
       name: LAMP Stack powered by Bitnami
       tags: ['app']
@@ -536,9 +531,9 @@
         left: 8
         height: 64
       license: Multi-licensed OpenSource
+      hash: 8dfa316d4037fb192882fa7500db61f8
       attributes:
         url: https://downloads.bitnami.com/files/download/openstack/bitnami-lampstack-5.4.40-0-ubuntu-14.04.qcow
-        hash: 8dfa316d4037fb192882fa7500db61f8
     -
       name: Ruby Stack powered by Bitnami
       tags: ['app']
@@ -572,9 +567,9 @@
         left: 0
         height: 128
       license: Multi-licensed OpenSource
+      hash: dbd3308da442c3a479621f03d3857b2c
       attributes:
         url: https://downloads.bitnami.com/files/download/openstack/bitnami-rubystack-2.0.0-26-ubuntu-14.04.qcow
-        hash: dbd3308da442c3a479621f03d3857b2c
     -
       name: Jenkins powered by Bitnami
       tags: ['app']
@@ -632,9 +627,9 @@
         left: 0
         height: 128
       license: Multi-licensed OpenSource
+      hash: 6ca3c138289b2f969448063e076ab297
       attributes:
         url: https://downloads.bitnami.com/files/download/openstack/bitnami-meanstack-3.0.2-0-ubuntu-14.04.qcow
-        hash: 6ca3c138289b2f969448063e076ab297
     -
       name: stackato-3.4.2-murano-agent
       provided_by:
@@ -648,9 +643,9 @@
         container_format: bare
       license: Other
       license_url: http://www.activestate.com/stackato/get_stackato?intcmp=pageheaderbutton
+      hash: 7a7baf53a90c1afd9bb375bf7b26af5b
       attributes:
         url: http://downloads.activestate.com/stackato/vm/v3.4.2/stackato-node-murano-v1.qcow2
-        hash: 7a7baf53a90c1afd9bb375bf7b26af5b
     -
       name: Sahara HDP 2.0.6 (CentOS 6.6)
       provided_by:
@@ -676,9 +671,9 @@
         disk_format: qcow2
         container_format: bare
       license: Multi-licensed OpenSource
+      hash: e463b989880f91c373f9b97af8a0bb83
       attributes:
         url: http://sahara-files.mirantis.com/images/upstream/kilo/sahara-kilo-hdp-2.0-centos-6.6.qcow2
-        hash: e463b989880f91c373f9b97af8a0bb83
     -
       name: Sahara CDH 5.3.0 (CentOS 6.6)
       provided_by:
@@ -703,9 +698,9 @@
         disk_format: qcow2
         container_format: bare
       license: Multi-licensed OpenSource
+      hash: 568698419b85d9c9279e4c5335ffe3e6
       attributes:
         url: http://sahara-files.mirantis.com/images/upstream/kilo/sahara-kilo-cloudera-5.3.0-centos-6.6.qcow2
-        hash: 568698419b85d9c9279e4c5335ffe3e6
     -
       name: Sahara CDH 5.3.0 (Ubuntu 12.04)
       provided_by:
@@ -730,9 +725,9 @@
         disk_format: qcow2
         container_format: bare
       license: Multi-licensed OpenSource
+      hash: e7f1190bb4952dfc1a72716987076577
       attributes:
         url: http://sahara-files.mirantis.com/images/upstream/kilo/sahara-kilo-cloudera-5.3.0-ubuntu-12.04.qcow2
-        hash: e7f1190bb4952dfc1a72716987076577
     -
       name: Sahara MapR 4.0.2 (CentOS 6.6)
       provided_by:
@@ -756,9 +751,9 @@
         disk_format: qcow2
         container_format: bare
       license: Multi-licensed OpenSource
+      hash: 47ff252fc7859dde36ebc3a28fea3819
       attributes:
         url: http://sahara-files.mirantis.com/images/upstream/kilo/sahara-kilo-mapr-4.0.2-centos-6.6.qcow2
-        hash: 47ff252fc7859dde36ebc3a28fea3819
     -
       name: Sahara Apache Spark 1.0.0 (Ubuntu 14.04)
       provided_by:
@@ -781,9 +776,9 @@
         disk_format: qcow2
         container_format: bare
       license: Multi-licensed OpenSource
+      hash: ce07050ecdfa67115c0ea8b66435bf53
       attributes:
         url: http://sahara-files.mirantis.com/images/upstream/kilo/sahara-kilo-spark-1.0.0-ubuntu-14.04.qcow2
-        hash: ce07050ecdfa67115c0ea8b66435bf53
     -
       name: Sahara Apache Storm 0.9.1 (Ubuntu 14.04)
       provided_by:
@@ -808,9 +803,9 @@
         disk_format: qcow2
         container_format: bare
       license: Multi-licensed OpenSource
+      hash: 600584fa4d0dac8be3a571fdbee75e09
       attributes:
         url: http://sahara-files.mirantis.com/images/upstream/kilo/sahara-kilo-storm-0.9.1-ubuntu-14.04.qcow2
-        hash: 600584fa4d0dac8be3a571fdbee75e09
     -
       name: CoreOS v647.0.0
       tags: ['app']
@@ -829,6 +824,7 @@
         left: 10
         height: 114
       license: Multi-licensed OpenSource
+      hash: 298d349fa3facdcc533758ce6611ab290094bf11c1cb1fd994ac34e2b47ec384ee0421edfdfd8ae5f7acd7933a46859f7455045230cc5b1a8201481dc859f4c8
       attributes:
         url: http://stable.release.core-os.net/amd64-usr/647.0.0/coreos_production_openstack_image.img.bz2
         docs: https://coreos.com/docs/
@@ -836,7 +832,6 @@
         digest: http://stable.release.core-os.net/amd64-usr/647.0.0/coreos_production_openstack_image.img.bz2.DIGESTS.asc
         pubkey: https://coreos.com/security/image-signing-key
         releases: https://coreos.com/releases/
-        hash: 298d349fa3facdcc533758ce6611ab290094bf11c1cb1fd994ac34e2b47ec384ee0421edfdfd8ae5f7acd7933a46859f7455045230cc5b1a8201481dc859f4c8
     -
       name: CoreOS v668.3.0
       tags: ['app']
@@ -855,6 +850,7 @@
         left: 10
         height: 114
       license: Multi-licensed OpenSource
+      hash: 2209106e9243559f9da5707586ffae567ccf5b806420cfeb0673870a91a068115ca924b77f2e9a88240a03dbf3e790a0190d0a8730cf6172034e5033e7622e05
       attributes:
         url: http://beta.release.core-os.net/amd64-usr/668.3.0/coreos_production_openstack_image.img.bz2
         docs: https://coreos.com/docs/
@@ -862,7 +858,6 @@
         digest: http://beta.release.core-os.net/amd64-usr/668.3.0/coreos_production_openstack_image.img.bz2.DIGESTS.asc
         pubkey: https://coreos.com/security/image-signing-key
         releases: https://coreos.com/releases/
-        hash: 2209106e9243559f9da5707586ffae567ccf5b806420cfeb0673870a91a068115ca924b77f2e9a88240a03dbf3e790a0190d0a8730cf6172034e5033e7622e05
     -
       name: CoreOS v681.0.0
       tags: ['app']
@@ -881,6 +876,7 @@
         left: 10
         height: 114
       license: Multi-licensed OpenSource
+      hash: b30cfb18add5497298efef80cfb2eb9727b2f4e5267d3dfd2c3339ea6190403fe3c2d2417239e7d37327d817ff5b4786f51d41810ad3a63d91e077742bddffa0
       attributes:
         url: http://alpha.release.core-os.net/amd64-usr/681.0.0/coreos_production_openstack_image.img.bz2
         docs: https://coreos.com/docs/
@@ -888,7 +884,6 @@
         digest: http://alpha.release.core-os.net/amd64-usr/681.0.0/coreos_production_openstack_image.img.bz2.DIGESTS.asc
         pubkey: https://coreos.com/security/image-signing-key
         releases: https://coreos.com/releases/
-        hash: b30cfb18add5497298efef80cfb2eb9727b2f4e5267d3dfd2c3339ea6190403fe3c2d2417239e7d37327d817ff5b4786f51d41810ad3a63d91e077742bddffa0
     -
       name: Fedora 21 Atomic Cloud
       tags: ['app']
@@ -913,6 +908,7 @@
         left: -40
         height: 210
       license: Multi-licensed OpenSource
+      hash: 7aa95d1513c957ac5028c3f7e6900e16
       attributes:
         url: http://download.fedoraproject.org/pub/fedora/linux/releases/21/Cloud/Images/x86_64/Fedora-Cloud-Atomic-20141203-21.x86_64.qcow2
         docs: http://www.projectatomic.io/docs/
@@ -920,7 +916,6 @@
         digest: https://getfedora.org/static/checksums/Fedora-Cloud-Images-x86_64-21-CHECKSUM
         pubkey: https://getfedora.org/static/95A43F54.txt
         releases: http://www.projectatomic.io/download/
-        hash: 7aa95d1513c957ac5028c3f7e6900e16
     -
       name: Fedora 23 Atomic Cloud
       tags: ['app']
@@ -945,6 +940,7 @@
         left: -40
         height: 210
       license: Multi-licensed OpenSource
+      hash: 57d4025915cc83e948d155e44c582fa154df33d801175fcf50d69181505b5433
       attributes:
         url: https://download.fedoraproject.org/pub/fedora/linux/releases/23/Cloud/x86_64/Images/Fedora-Cloud-Atomic-23-20151030.x86_64.qcow2
         docs: http://www.projectatomic.io/docs/
@@ -952,7 +948,6 @@
         digest: https://getfedora.org/static/checksums/Fedora-Cloud-Images-x86_64-23-CHECKSUM
         pubkey: https://getfedora.org/static/95A43F54.txt
         releases: http://www.projectatomic.io/download/
-        hash: 57d4025915cc83e948d155e44c582fa154df33d801175fcf50d69181505b5433
     -
       name: ManageIQ Botvinnik (stable)
       tags: ['app']
@@ -981,11 +976,11 @@
         left: 0
         height: 128
       license: Multi-licensed OpenSource
+      hash: 957fc92f324f18f53af86eaaf41cd8c4
       attributes:
         url: http://manageiq.org/download/manageiq-openstack-stable.qc2
         docs: http://manageiq.org/documentation/
         releases: http://releases.manageiq.org/
-        hash: 957fc92f324f18f53af86eaaf41cd8c4
     -
       name: openSUSE 13.2
       tags: ['app']
@@ -1006,7 +1001,6 @@
       license: Multi-licensed OpenSource
       attributes:
         url: http://download.opensuse.org/repositories/Cloud:/Images:/openSUSE_13.2/images/openSUSE-13.2-OpenStack-Guest.x86_64.qcow2
-        hash: unknown
     -
       name: AeroFS Private Cloud
       tags: ['app']
@@ -1067,10 +1061,10 @@
         height: 170
       license: Free <= 25 Nodes
       license_url: https://www.chef.io/online-master-agreement/
+      hash: e6b964572be00a845bd53d6033a780f4
       attributes:
         url: https://chef-server-glance-images.s3-us-west-2.amazonaws.com/chef-server-12.1.2-1437522600.qcow2
         docs: https://docs.chef.io
-        hash: e6b964572be00a845bd53d6033a780f4
     -
       name: kloudbuster_v5
       provided_by:
@@ -1108,10 +1102,10 @@
         min_ram: 2048
         min_disk: 10
       license: Multi-licensed OpenSource
+      hash: 9d51ac7d0ea465d9a42b5bd5e38ceb5e
       attributes:
         url: http://storage.apps.openstack.org/images/kloudbuster_v5.qcow2
         docs: http://kloudbuster.readthedocs.org
-        hash: 9d51ac7d0ea465d9a42b5bd5e38ceb5e
     -
       name: Hello World
       provided_by:
@@ -1304,6 +1298,7 @@
       release:
         - Kilo
       license: Apache 2.0
+      hash: bb263f544f74c4ba1a0d72143ea69e40
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.databases.SqlDatabase.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/SQLDatabaseLibrary/package"
@@ -1328,6 +1323,7 @@
       release:
         - Kilo
       license: Apache 2.0
+      hash: f980112cbcd3becfe080729757d6a780
       attributes:
         "Source URL": "https://github.com/stackforge/murano-apps"
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.Interfaces.zip"
@@ -1359,6 +1355,7 @@
       license: Multi-licensed OpenSource
       depends:
         - name: Debian 8 x64 (pre-installed murano-agent)
+      hash: 27bb020b93304952a5544b88fa212a06
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.apache.ApacheHttpServer.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/ApacheHTTPServer/package"
@@ -1389,6 +1386,7 @@
       license: Multi-licensed OpenSource
       depends:
         - name: Debian 8 x64 (pre-installed murano-agent)
+      hash: 805df99024defff7ace5d377e59a52ab
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.apache.Tomcat.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Tomcat/package"
@@ -1415,6 +1413,7 @@
       license: Unknown
       depends:
         - name: Apcera HCOS Trial Edition
+      hash: a87e91df5f0c166f9336253f63c318d1
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/com.apcera.Apcera.zip"
     -
@@ -1448,6 +1447,7 @@
       license: Unknown
       depends:
         - name: Ubuntu 14.04 x64 (pre-installed murano-agent)
+      hash: f51977620be42f5b58221b1dc31fc707
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.paas.CloudFoundry.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/CloudFoundry/package"
@@ -1478,10 +1478,10 @@
       depends:
         - name: SqlDatabase Library
         - name: Debian 8 x64 (pre-installed murano-agent)
+      hash: 0a1ef0d17f2af1c3f3d3be626d8910c5
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.databases.MySql.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/MySQL/package"
-        hash: 0a1ef0d17f2af1c3f3d3be626d8910c5
     -
       name: Oracle Pluggable Database
       tags: ['app']
@@ -1509,6 +1509,7 @@
       license: Apache 2.0
       depends:
         - name: SqlDatabase Library
+      hash: d32a4e30738e8a5d22d9b425f7946bca
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/com.oracle.db.muranoPdb.OraclePDB.zip"
         "Source URL": "https://github.com/dhduvall/murano-apps/tree/master/OraclePDBConnector/package"
@@ -1538,10 +1539,10 @@
       depends:
         - name: SqlDatabase Library
         - name: Ubuntu 14.04 x64 (pre-installed murano-agent)
+      hash: 1bae28b44dba6cc9d06fed3024eed469
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.databases.PostgreSql.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/PostgreSQL/package"
-        hash: 1bae28b44dba6cc9d06fed3024eed469
     -
       name: Rally
       tags: ['app']
@@ -1565,6 +1566,7 @@
       license: Multi-licensed OpenSource
       depends:
         - name: Ubuntu 14.04 x64 (pre-installed murano-agent)
+      hash: 841304d6cf7ae5a5cfc0b3bb165a48fd
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/org.openstack.Rally.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Rally/package"
@@ -1588,6 +1590,7 @@
         - name: MySQL
         - name: Apache HTTP Server
         - name: Zabbix Agent
+      hash: c3e90b3ad40aaa272e5433f6d3db0a9e
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.WordPress.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/WordPress/package"
@@ -1615,6 +1618,7 @@
       license: Multi-licensed OpenSource
       depends:
         - name: Zabbix
+      hash: e9466e43ccbde6e6c0a08642e4c9ba58
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.ZabbixAgent.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/ZabbixAgent/package"
@@ -1641,6 +1645,7 @@
       license: Multi-licensed OpenSource
       depends:
         - name: Debian 8 x64 (pre-installed murano-agent)
+      hash: 99a59eec5a5d3b6400054ffc954e562d
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.ZabbixServer.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/ZabbixServer/package"
@@ -1670,6 +1675,7 @@
       license: Multi-licensed OpenSource
       supported_by:
         name: ActiveState
+      hash: 6b5221c9c30a8fe63d3926cf3bba7bc7
       attributes:
         "Source URL": "https://github.com/ActiveState/stackato-node-murano"
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.activestate.StackatoNode.zip"
@@ -1707,11 +1713,11 @@
       depends:
         - name: Docker Interface Library
         - name: Debian 8 x64 (pre-installed Docker)
+      hash: 7eee1d5cbd3f8fbd33d115e090b0a602
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerStandaloneHost.zip"
         "Source URL": "https://github.com/stackforge/murano-apps"
         Documentation: "https://github.com/stackforge/murano-apps/blob/master/Docker/Kubernetes/readme.md"
-        hash: 7eee1d5cbd3f8fbd33d115e090b0a602
     -
       name: Kubernetes Cluster
       provided_by:
@@ -1748,11 +1754,11 @@
       depends:
         - name: Docker Interface Library
         - name: Ubuntu 14.04 x64 (pre-installed Kubernetes)
+      hash: c991ce0d15bffef0fa32d03dc7e76d6e
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.kubernetes.KubernetesCluster.zip"
         "Source URL": "https://github.com/stackforge/murano-apps"
         Documentation: "https://github.com/stackforge/murano-apps/blob/master/Docker/Kubernetes/readme.md"
-        hash: c991ce0d15bffef0fa32d03dc7e76d6e
     -
       name: Kubernetes Pod
       provided_by:
@@ -1790,11 +1796,11 @@
       depends:
         - name: Docker Interface Library
         - name: Kubernetes Cluster
+      hash: d16234097d6ba6e69d96248f5d910200
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.kubernetes.KubernetesPod.zip"
         "Source URL": "https://github.com/stackforge/murano-apps"
         Documentation: "https://github.com/stackforge/murano-apps/blob/master/Docker/Kubernetes/readme.md"
-        hash: d16234097d6ba6e69d96248f5d910200
     -
       name: Docker Container
       tags: ['app']
@@ -1826,6 +1832,7 @@
         - name: Docker Standalone Host
         - name: Kubernetes Pod
         - name: Docker Interfaces Library
+      hash: a2e15d5025f5c8a1d0b67f3a5750b22d
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerApp.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/DockerApp/package"
@@ -1857,6 +1864,7 @@
         - name: Docker Standalone Host
         - name: Kubernetes Pod
         - name: Docker Interfaces Library
+      hash: 69d5c598f64529819faced9c8dcf3986
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerCrate.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/Crate/package"
@@ -1899,6 +1907,7 @@
         - name: Docker Standalone Host
         - name: Kubernetes Pod
         - name: Docker Interfaces Library
+      hash: dcf8ce8e3cd87745ea30470429822e59
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerGlassFish.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/GlassFish/package"
@@ -1941,6 +1950,7 @@
         - name: Kubernetes Pod
         - name: Docker InfluxDB
         - name: Docker Interfaces Library
+      hash: 07ea26704766a9b86822fab93a8cc7f7
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerGrafana.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/Grafana/package"
@@ -1971,6 +1981,7 @@
         - name: Kubernetes Pod
         - name: Docker Redis
         - name: Docker Interfaces Library
+      hash: 188eba7c6097a0b237b8271ccf3406b5
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.GuestBook.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/GuestBook/package"
@@ -2002,6 +2013,7 @@
         - name: Docker Standalone Host
         - name: Kubernetes Pod
         - name: Docker Interfaces Library
+      hash: 408d0685d3299a64f48a030f9703e4d0
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerHTTPd.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/HTTPdServer/package"
@@ -2038,6 +2050,7 @@
         - name: Docker Standalone Host
         - name: Kubernetes Pod
         - name: Docker Interfaces Library
+      hash: ce873d90d946f59b06af65e17d952b8a
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerHTTPdSite.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/HTTPdSite/package"
@@ -2071,6 +2084,7 @@
         - name: Docker Standalone Host
         - name: Kubernetes Pod
         - name: Docker Interfaces Library
+      hash: 862e80bdb04e21a569d9a0a17547641d
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerInfluxDB.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/InfluxDB/package"
@@ -2113,6 +2127,7 @@
         - name: Docker Standalone Host
         - name: Kubernetes Pod
         - name: Docker Interfaces Library
+      hash: 816a32598ca7a12b5db8f3d6d598e8bf
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerJenkins.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/Jenkins/package"
@@ -2153,6 +2168,7 @@
         - name: Docker Standalone Host
         - name: Kubernetes Pod
         - name: Docker Interfaces Library
+      hash: d2b66714adba398045199019d2a1dd3a
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerMariaDB.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/MariaDB/package"
@@ -2196,6 +2212,7 @@
         - name: Docker Standalone Host
         - name: Kubernetes Pod
         - name: Docker Interfaces Library
+      hash: a0f99ae24cdc7c5da7f62cc8bb919f64
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerMongoDB.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/MongoDB/package"
@@ -2229,6 +2246,7 @@
         - name: Docker Standalone Host
         - name: Kubernetes Pod
         - name: Docker Interfaces Library
+      hash: 25f0a51d04c6959214dc28ebf443497f
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerMySQL.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/MySQL/package"
@@ -2264,6 +2282,7 @@
         - name: Docker Standalone Host
         - name: Kubernetes Pod
         - name: Docker Interfaces Library
+      hash: 4bb119bd0434b865fffbf9c44a44d65f
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerNginx.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/Nginx/package"
@@ -2302,6 +2321,7 @@
         - name: Docker Standalone Host
         - name: Kubernetes Pod
         - name: Docker Interfaces Library
+      hash: 3cf9aae5bd1c77faa99e88537317a289
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerNginxSite.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/NginxSite/package"
@@ -2355,6 +2375,7 @@
         - name: Docker Standalone Host
         - name: Kubernetes Pod
         - name: Docker Interfaces Library
+      hash: 4d0200b151c6d50800d433283080888c
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerPostgreSQL.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/PostgreSQL/package"
@@ -2389,6 +2410,7 @@
         - name: Docker Standalone Host
         - name: Kubernetes Pod
         - name: Docker Interfaces Library
+      hash: f725f78055f300c4ef8f37a69a81b5ce
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerRedis.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/Redis/package"
@@ -2424,6 +2446,7 @@
         - name: Docker Standalone Host
         - name: Kubernetes Pod
         - name: Docker Interfaces Library
+      hash: b470fb1788d423a6e627b30137659a88
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerTomcat.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/Tomcat/package"

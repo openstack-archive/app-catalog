@@ -20,6 +20,8 @@
             type: boolean
           hash_url:
             type: string
+          hash:
+            type: string
           service:
             oneOf:
               - $ref: "#/definitions/glance"
