@@ -1027,7 +1027,7 @@
       license: Free <= 30 Users
       license_url: https://www.aerofs.com/
       attributes:
-        url: https://pc.aerofs.com/aerofs-appliance.qcow2
+        url: https://enterprise.aerofs.com/aerofs-appliance.qcow2
         docs: https://support.aerofs.com
     -
       name: Chef Server
