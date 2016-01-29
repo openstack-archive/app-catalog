@@ -361,7 +361,7 @@
       <div>
       {{if attributes['url']}}
       <span class="label">glance image-create:</span>
-      <input type="text" value="glance image-create --copy-from ${attributes['url']} --disk-format ${service['disk_format']} --container-format ${service['container_format']} --name '${name}'" onfocus="this.select();" onmouseup="return false;">
+      <input type="text" value="glance --os-image-api-version 1 image-create --copy-from ${attributes['url']} --disk-format ${service['disk_format']} --container-format ${service['container_format']} --name '${name}'" onfocus="this.select();" onmouseup="return false;">
       {{else}}
       <span class="label">Website where the image can be downloaded:</span>
       <a href="${attributes['indirect_url']}">Link...</a>
