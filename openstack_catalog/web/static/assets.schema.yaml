@@ -26,6 +26,7 @@
               - $ref: "#/definitions/heat"
               - $ref: "#/definitions/murano"
               - $ref: "#/definitions/bundle"
+              - $ref: "#/definitions/tosca"
           name:
             type: string
           tags:
@@ -230,3 +231,37 @@
             - bundle
         murano_package_name:
           type: string
+
+    tosca:
+      required:
+        - type
+        - template_format
+      additionalProperties: false
+      properties:
+        type:
+          type: string
+          enum:
+            - tosca
+        template_format:
+          type: string
+          enum:
+            - YAML
+            - CSAR
+        ever:
+          type: array
+          items:
+            type: object
+            additionalProperties: false
+            properties:
+              min:
+                type: array
+                items:
+                  type: number
+                minItems: 3
+                maxItems: 3
+              max:
+                type: array
+                items:
+                  type: number
+                minItems: 3
+                maxItems: 3
