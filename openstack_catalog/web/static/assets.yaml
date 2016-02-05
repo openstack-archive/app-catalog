@@ -949,7 +949,7 @@
         pubkey: https://getfedora.org/static/95A43F54.txt
         releases: http://www.projectatomic.io/download/
     -
-      name: ManageIQ Botvinnik (stable)
+      name: ManageIQ Capablanca (stable)
       tags: ['app']
       provided_by:
         name: ManageIQ
@@ -964,7 +964,7 @@
                   platforms. ManageIQ lets you control everything, completely,
                   from one end of a virtual machine lifecycle to the other.
                   ManageIQ is the open source project that powers Red Hat
-                  CloudForms. This is the stable version of the 'Botvinnik'
+                  CloudForms. This is the stable version of the 'Capablanca'
                   release.
       service:
         type: glance
@@ -976,9 +976,9 @@
         left: 0
         height: 128
       license: Multi-licensed OpenSource
-      hash: 957fc92f324f18f53af86eaaf41cd8c4
+      hash: 263152a236d4e5fcea9c1e567eb32adfb992242a2c232d2e1f07b44e670d82e3
       attributes:
-        url: http://manageiq.org/download/manageiq-openstack-stable.qc2
+        url:  http://manageiq.org/download/manageiq-openstack-capablanca-2.qc2
         docs: http://manageiq.org/documentation/
         releases: http://releases.manageiq.org/
     -
