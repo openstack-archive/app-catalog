@@ -1317,7 +1317,7 @@
     -
       name: SqlDatabase Library
       provided_by:
-        name: Dmitry Dovbii
+        name: Dmytro Dovbii
         href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
@@ -1335,13 +1335,13 @@
       service:
         type: murano
         format: package
-        package_name: io.murano.databases.SqlDatabase
+        package_name: io.murano.databases
       release:
         - Kilo
       license: Apache 2.0
-      hash: bb263f544f74c4ba1a0d72143ea69e40
+      hash: 0d543e5ed464488118a946b32546696f
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.databases.SqlDatabase.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.databases.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/SQLDatabaseLibrary/package"
     -
       name: Docker Interface Library
