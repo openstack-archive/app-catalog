@@ -881,7 +881,7 @@
       license: Multi-licensed OpenSource
       hash: ca42e4e7b87a7823db2d5d4213a9bad709d665066fb3119fbca74ecb687d984a
       attributes:
-        url: https://download.fedoraproject.org/pub/fedora/linux/releases/23/Cloud/x86_64/Images/Fedora-Cloud-Atomic-23-20160127.2.x86_64.qcow2
+        url: https://download.fedoraproject.org/pub/alt/atomic/stable/Cloud-Images/x86_64/Images/Fedora-Cloud-Atomic-23-20160127.2.x86_64.qcow2
         docs: http://www.projectatomic.io/docs/
         gpg: https://getfedora.org/static/fedora.gpg
         digest: https://alt.fedoraproject.org/pub/alt/atomic/stable/Cloud-Images/x86_64/Images/Fedora-Cloud-Images-x86_64-23-CHECKSUM
