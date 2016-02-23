@@ -1,4 +1,3 @@
 assets:
   Debian Jessie 8.2.0 x64: {active: false}
-  Fedora 23 Atomic Cloud: {active: false}
   stackato-3.4.2-murano-agent: {active: false}
