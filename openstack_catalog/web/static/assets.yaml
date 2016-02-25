@@ -2635,3 +2635,32 @@
       license: Apache 2.0
       attributes:
         url: https://raw.githubusercontent.com/openstack/tosca-parser/master/toscaparser/tests/data/tosca_helloworld.yaml
+    -
+      name: Load Balancer Example
+      tags: ['app']
+      provided_by:
+        name: OpenStack LBAAS Project
+        href: https://github.com/openstack/neutron-lbaas
+        company: OpenStack
+      description: >
+        This is an example Orchestration (Heat) template for
+        deploying a Load Balancer. It is based upon version 2
+        of the Neutron Load Balancer support.
+
+        The template is stands up two servers with a simple
+        web application and then builds a load balancer on
+        top.  Here are the suggested template parameters to
+        experiment with this example:
+        image: cirros  (also available in the catalog)
+        flavor: 512mb ram, 1G disk
+
+      release:
+        - Mitaka
+      service:
+        type: heat
+        format: HOT
+      supported_by:
+        name: OpenStack LBaaS Community
+      license: Apache 2.0
+      attributes:
+        url: https://raw.githubusercontent.com/openstack/heat-templates/master/hot/lbaasv2/lb_group.yaml
