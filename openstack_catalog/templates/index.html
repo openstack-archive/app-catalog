@@ -359,6 +359,9 @@
 
       <h2>${name} (${service['disk_format']})</h2>
       <div>
+      <span class="label">Last modified: </span><span class="value">${last_modified}</span>
+      </div>
+      <div>
       {{if attributes['url']}}
       <span class="label">glance image-create:</span>
       <input type="text" value="glance --os-image-api-version 1 image-create --copy-from ${attributes['url']} --disk-format ${service['disk_format']} --container-format ${service['container_format']} --name '${name}'" onfocus="this.select();" onmouseup="return false;">
@@ -399,6 +402,9 @@
     <script id="heat-templates-info" type="text/x-jquery-tmpl">
 
       <h2>${name} (${service['format']})</h2>
+      <div>
+      <span class="label">Last modified: </span><span class="value">${last_modified}</span>
+      </div>
       {{if supported_by}}
       <div><span class="label">Supported by</span> <span class="value">${supported_by.name}</span></div>
       {{/if}}
@@ -422,6 +428,9 @@
     <script id="murano-apps-info" type="text/x-jquery-tmpl">
 
       <h2>${name} ({{if service.type == "bundle"}}bundle{{else}}${service.format}{{/if}})</h2>
+      <div>
+      <span class="label">Last modified: </span><span class="value">${last_modified}</span>
+      </div>
       <div>
     <span class="label">{{if service.format == 'package'}}Package{{else}}Bundle{{/if}} name:</span>
     {{if service.type == 'bundle'}}
