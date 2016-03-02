@@ -90,47 +90,10 @@
 
         <h1>The OpenStack Application Catalog will help you make applications available on your cloud. </h1>
     <div class="row featured">
-
           <div class="col-md-2 col-sm-6">
             <div class="inner title">
               <div>Recently Added Apps</div>
               <p>(Requires OpenStack)</p>
-            </div>
-          </div>
-          <div class="col-md-2 col-sm-6">
-            <div class="inner murano">
-              <a href="#tab=murano-apps&asset=Kubernetes%20Cluster">
-                <img src="static/images/logo-kubernetes.png">
-                <p>Kubernetes</p>
-              </a>
-            </div>
-          </div>
-          <div class="col-md-2 col-sm-6">
-            <div class="inner glance">
-              <a href="#tab=glance-images&asset=Chef%20Server">
-              <img src="static/images/Chef-124x90-logo.png">
-              <p>Chef</p></a>
-            </div>
-          </div>
-          <div class="col-md-2 col-sm-6">
-            <div class="inner murano">
-              <a href="#tab=murano-apps&asset=Oracle Pluggable Database">
-              <img src="static/images/logo-oracle.png">
-              <p>Oracle</p></a>
-            </div>
-          </div>
-          <div class="col-md-2 col-sm-6">
-            <div class="inner glance">
-              <a href="#tab=glance-images&asset=Debian%20Jessie%208.0.0%20x64">
-              <img src="static/images/logo-debian.png">
-              <p>Debian</p></a>
-            </div>
-          </div>
-          <div class="col-md-2 col-sm-6">
-            <div class="inner heat">
-              <a href="#tab=heat-templates&asset=OpenShift%20Origin%203">
-              <img src="static/images/logo-openshift.png">
-              <p>OpenShift</p></a>
             </div>
           </div>
     </div>
@@ -275,6 +238,24 @@
       </div>
     </div>
 
+    <!-- core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.datatables/1.10.4/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/select2/3.5.2/select2.min.js"></script>
+    <script type="text/javascript" src="//ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.timeago/1.4.1/jquery.timeago.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.6.0/jquery.matchHeight-min.js"></script>
+
+    <script type="text/javascript" src="static/js/apps-catalog.js"></script>
+
+    <script type="text/javascript">
+      $(function() { initMarketPlace (); });
+      $(document).ready(function () { ; } );
+    </script>
+
     <div class="row">
       <div class="col-md-12">
         <table id="heat-templates-table" class="table table-striped">
@@ -336,24 +317,6 @@
       </div>
 
     </div>
-
-    <!-- core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.datatables/1.10.4/js/jquery.dataTables.min.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/select2/3.5.2/select2.min.js"></script>
-    <script type="text/javascript" src="//ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.timeago/1.4.1/jquery.timeago.js"></script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.6.0/jquery.matchHeight-min.js"></script>
-
-    <script type="text/javascript" src="static/js/apps-catalog.js"></script>
-
-    <script type="text/javascript">
-      $(function() { initMarketPlace (); });
-      $(document).ready(function () { ; } );
-    </script>
 
     <script id="glance-images-info" type="text/x-jquery-tmpl">
 
