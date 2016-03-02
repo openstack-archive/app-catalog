@@ -224,6 +224,51 @@ function show_asset (tab, tableData)
   }
 }
 
+var recent_apps = [];
+
+function build_recently_added ()
+{
+  assets.assets.sort(function(a,b) {
+    return new Date(b.last_modified) - new Date(a.last_modified);
+  });
+  sorted_assets = assets.assets.slice(0,15);
+  sorted_assets.sort(
+    function() {
+      return 0.5 - Math.random();
+    });
+  for (var i = 0; i < 5; i++) {
+    if (typeof (sorted_assets[i].icon) === 'undefined') {
+      var iconurl = "static/images/openstack-icon.png";
+    } else {
+      var iconurl = sorted_assets[i].icon.url;
+    }
+    if (sorted_assets[i].name.length > 15) {
+      var fittedname = sorted_assets[i].name.slice(0,13) + "...";
+    } else
+    { var fittedname = sorted_assets[i].name; }
+    if (sorted_assets[i].service.type == 'glance') {
+      var divclass = "glance";
+      var hreftab = "#tab=glance-images&asset=";
+    } else if (sorted_assets[i].service.type == 'heat') {
+      var divclass = "heat";
+      var hreftab = "#tab=heat-templates&asset=";
+    } else if ((sorted_assets[i].service.type == 'murano') ||
+               (sorted_assets[i].service.type == 'bundle')) {
+      var divclass = "murano";
+      var hreftab = "#tab=murano-apps&asset=";
+    }
+    $('.featured').append(
+        $('<div>', {class: "col-md-2 col-sm-6"})
+            .append($('<div>', {class: "inner " + divclass})
+            .append($("<a href='" + hreftab + sorted_assets[i].name + "'>")
+            .append($('<img>', {src: iconurl, height: 90}))
+            .append($('<p>', {text: fittedname}))
+            .append($("</a>")))
+            )
+    );
+  }
+}
+
 function initMarketPlace ()
 {
   navigate ();
@@ -245,6 +290,7 @@ function initMarketPlace ()
   $.ajax({ url: "api/v1/assets" }).
     done (function (data) {
       assets = data;
+      build_recently_added ();
       for (var i = 0; i < assets.assets.length; i++) {
         var asset = assets.assets[i];
         if (asset.service.type == 'glance') {
@@ -263,6 +309,7 @@ function initMarketPlace ()
           }
         }
       }
+
       var tableData;
 
       tableData = glance_images.assets;
