@@ -1283,7 +1283,7 @@
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.databases.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/SQLDatabaseLibrary/package"
     -
-      name: Docker Interface Library
+      name: Docker Interfaces Library
       provided_by:
         name: Stan Lagun
         href: "mailto:slagun@mirantis.com"
@@ -1691,7 +1691,7 @@
         - Kilo
       license: Multi-licensed OpenSource
       depends:
-        - name: Docker Interface Library
+        - name: Docker Interfaces Library
         - name: Debian 8 x64 (pre-installed Docker)
       hash: 7eee1d5cbd3f8fbd33d115e090b0a602
       attributes:
@@ -1732,7 +1732,7 @@
         - Kilo
       license: Multi-licensed OpenSource
       depends:
-        - name: Docker Interface Library
+        - name: Docker Interfaces Library
         - name: Ubuntu 14.04 x64 (pre-installed Kubernetes)
       hash: c991ce0d15bffef0fa32d03dc7e76d6e
       attributes:
@@ -1774,7 +1774,7 @@
         - Kilo
       license: Multi-licensed OpenSource
       depends:
-        - name: Docker Interface Library
+        - name: Docker Interfaces Library
         - name: Kubernetes Cluster
       hash: d16234097d6ba6e69d96248f5d910200
       attributes:
