@@ -172,6 +172,7 @@ function setupInfoHandler (tab, element_id, info) {
 }
 
 var assets = { assets: [] };
+var recent_apps = [];
 var glance_images = { assets: [] };
 
 function show_glance_images ()
@@ -224,6 +225,39 @@ function show_asset (tab, tableData)
   }
 }
 
+function build_recently_added ()
+{
+  assets.assets.sort(function(a,b) {
+    return new Date(b.last_modified) - new Date(a.last_modified)
+  })
+  sorted_assets = assets.assets.slice(0,5)
+  sorted_assets.sort(
+    function() {
+      return 0.5 - Math.random()
+    });
+  for (var i = 0; i < 5; i++) {
+    if (typeof(sorted_assets[i].icon) === 'undefined') {
+      var iconurl = "static/images/openstack-icon.png"
+    } else {
+      var iconurl = sorted_assets[i].icon.url
+    }
+    if (sorted_assets[i].name.length > 15) {
+      var fittedname = sorted_assets[i].name.slice(0,13) + "..."
+    } else
+    { var fittedname = sorted_assets[i].name }
+    if (sorted_assets[i].service.type == 'glance') {
+      recent_apps[i] = '<div class="inner glance"><a href="#tab=glance-images&'
+    } else if (sorted_assets[i].service.type == 'heat') {
+      recent_apps[i] = '<div class="inner heat"><a href="#tab=heat-templates&'
+    } else if (sorted_assets[i].service.type == 'murano') {
+      recent_apps[i] = '<div class="inner murano"><a href="#tab=murano-apps&'
+    }
+    recent_apps[i] = recent_apps[i] + sorted_assets[i].name +
+        '"><img src="' + iconurl +
+        '"><p>' + fittedname + '</p></a></div>'
+  }
+}
+
 function initMarketPlace ()
 {
   navigate ();
@@ -263,6 +297,7 @@ function initMarketPlace ()
           }
         }
       }
+
       var tableData;
 
       tableData = glance_images.assets;
@@ -294,6 +329,7 @@ function initMarketPlace ()
       show_murano_apps ();
 
       initSingleSelector ("murano-release", "release", tableData, show_murano_apps);
+
     });
 }
 
