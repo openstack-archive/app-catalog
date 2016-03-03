@@ -1,0 +1,22 @@
+{% block main %}
+  {% include 'create_asset_form.html' %}
+{% endblock %}
+
+<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+
+<script>
+    var load_form = function() {
+	var asset_name = $('#id_name').val();
+	var asset_type = $('#id_type_name').val();
+        $.ajax({
+            type: "GET",
+            url: $('#create_asser_form').attr('action'),
+    	    dataType: 'html',
+	    data: {name: asset_name, type_name: asset_type},
+            success: function(result)
+            {
+                $('#create_asset_form').replaceWith(result);
+            }
+        });
+    } 
+</script>
