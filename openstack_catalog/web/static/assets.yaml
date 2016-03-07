@@ -2617,3 +2617,22 @@
       depends:
         - name: Zabbix Agent
         - name: Zabbix
+
+    -
+      name: TOSCA Hello World
+      provided_by:
+        name: OpenStack
+        href: https://wiki.openstack.org/wiki/TOSCA-Parser
+        company: OpenStack TOSCA-Parser Project Community
+      description: >
+        TOSCA template for deploying a single server with predefined
+        properties. It contains a very simple topology template with single
+        TOSCA Compute node template that declares some basic values for
+        properties within two of the several capabilities that are built into
+        the TOSCA Compute node type definition.
+      service:
+        type: tosca
+        template_format: yaml
+      license: Apache 2.0
+      attributes:
+        url: https://raw.githubusercontent.com/openstack/tosca-parser/master/toscaparser/tests/data/tosca_helloworld.yaml
