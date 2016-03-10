@@ -26,6 +26,8 @@ import os.path
 
 from static_settings import get_staticfiles_dirs
 
+ASSETS_USE_GLARE = False
+GLARE_URI = "http://127.0.0.1:19494"
 ASSETS_FILE = 'openstack_catalog/web/api/v1/assets'
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__),
