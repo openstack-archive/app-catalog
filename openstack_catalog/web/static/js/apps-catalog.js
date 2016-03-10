@@ -250,7 +250,7 @@ function build_recently_added ()
         fittedname,
         divclass,
         hreftab;
-    if (typeof (sorted_assets[i].icon) === 'undefined') {
+    if ((typeof (sorted_assets[i].icon) === 'undefined') || sorted_assets[i].icon === null) {
       iconurl = "static/images/openstack-icon.png";
     } else {
       iconurl = sorted_assets[i].icon.url;
