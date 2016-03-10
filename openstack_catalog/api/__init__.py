@@ -35,5 +35,6 @@ def index():
     cors_allow(resp)
     return resp
 
-# Pull in v1 api into the server.
+# Pull in v1/v2 api into the server.
 from openstack_catalog.api.v1 import *  # noqa
+from openstack_catalog.api.v2 import *  # noqa
