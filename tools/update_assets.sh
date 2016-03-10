@@ -14,6 +14,5 @@ then
 	zopfli --i150 -c /tmp/assets.$$ > /tmp/assets.$$.gz || gzip -c /tmp/assets.$$ > /tmp/assets.$$.gz
 	mv /tmp/assets.$$.gz api/v1/assets.gz
 	mv /tmp/assets.$$ api/v1/assets
-	rm -f static/assets_merge.yaml
 fi
 popd > /dev/null
