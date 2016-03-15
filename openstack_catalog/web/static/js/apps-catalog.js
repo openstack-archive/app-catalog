@@ -204,10 +204,10 @@ function initTabs ()
   $( "ul.nav > li > a" ).on("click", function (event) {
     event.preventDefault ();
   });
-  $( "ul.nav > li" ).not(":last-child").on("click", function (event) {
+  $( "ul.nav > li" ).not("#addContent").on("click", function (event) {
     update_url ({ tab : this.children[0].hash.substring (1), asset: "" });
   });
-  $( "ul.nav > li:last-child").on("click", function (event) {
+  $( "#addContent").on("click", function (event) {
     window.open('https://wiki.openstack.org/wiki/App-Catalog#How_to_contribute', '_blank');
   });
 }
