@@ -27,6 +27,10 @@ import os.path
 from static_settings import get_staticfiles_dirs
 
 ASSETS_FILE = 'openstack_catalog/web/api/v1/assets'
+
+GLARE_HOST = 'http://127.0.0.1:9494'
+GLARE_API_ENTRYPOINT = "%s/v0.1/" % GLARE_HOST
+
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__),
                                            'web',
