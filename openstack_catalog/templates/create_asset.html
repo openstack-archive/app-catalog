@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body ng-app="app">
+
+<script>
+    var app = angular.module('app', []);
+
+    app.config(['$interpolateProvider', function($interpolateProvider) {
+        $interpolateProvider.startSymbol('{|');
+        $interpolateProvider.endSymbol('|}');
+    }]);
+
+    app.controller('assetController', ['$scope', function($scope) {
+        $scope.asset_submit = function() {
+            var data = angular.copy($scope.asset);
+
+            var rebuild_release = function(data) {
+                var release = [];
+                for (var key in data.releases) {
+                    if (data.releases.hasOwnProperty(key)) {
+                        if (data.releases[key]) {
+                            release.push(key);
+                        }
+                    }
+                }
+                if (release.length == 0) {
+                    release = ['Kilo'];
+                }
+                data['release'] = release;
+            }
+
+            var rebuild_asset_type_data = function(data) {
+                var needed_asset_type_data = data[data['type_name']];
+                var asset_types = ['glance_images', 'heat_templates', 'murano_packages', 'tosca_templates', 'bundles'];
+                for (var key in asset_types) {
+                    delete data[asset_types[key]];
+                }
+                for (var key in needed_asset_type_data) {
+                    data[key] = needed_asset_type_data[key];
+                }
+            }
+
+            rebuild_release(data);
+            rebuild_asset_type_data(data);
+            console.log(data);
+        }
+    }]);
+
+   app.controller('releaseCtrl', function($scope) {
+        var releases_list = ['Austin', 'Bexar', 'Cactus', 'Diablo', 'Essex', 'Folsom', 'Grizzly', 'Havana', 'Icehouse', 'Juno', 'Kilo', 'Liberty', 'Mitaka', 'Newton', 'Ocata'];
+        var releases = {};
+        for (key in releases_list) {releases[releases_list[key]] = false}
+        $scope.releases = releases; 
+    });
+</script>
+
+
+<form name="asset_form" ng-submit="asset_submit()" ng-controller="assetController">
+    Name: <input type="text" ng-model="asset.name" required><br />
+    Type name:
+    <select ng-model="asset.type_name" ng-init="asset.type_name='glance_images'">
+        <option value="glance_images">Glance
+        <option value="heat_templates">Heat
+        <option value="murano_packages">Murano
+        <option value="tosca_templates">Tosca
+        <option value="bundles">Bundle
+    </select><br />
+
+    <br />
+    Supported by:<br />
+    name:<input type="text" ng-model="asset.supported_by.name" required /><br />
+    email:<input type="email" ng-model="asset.supported_by.href" required /><br />
+    company:<input type="text" ng-model="asset.supported_by.company" /><br />
+    irc handle:<input type="text" ng-model="asset.supported_by.irchandle" /><br />
+
+    <br />
+    Provided by:<br />
+    name:<input type="text" ng-model="asset.provided_by.name" required /><br />
+    email:<input type="email" ng-model="asset.provided_by.href" required /><br />
+    company:<input type="text" ng-model="asset.provided_by.company" /><br />
+    irc handle:<input type="text" ng-model="asset.provided_by.irchandle" /><br />
+
+    <br />
+    Depends:<input type="text" ng-model="asset.depends" /><br />
+
+    <br />
+    Release:<br />
+    <div ng-controller="releaseCtrl">
+    <label ng-repeat="(release,enabled) in releases">
+        <input type="checkbox" ng-model="asset.releases[release]"> {|release|}<br/>
+    </label>
+    <div>
+    
+    <br />
+    Icon:<br />
+    top:<input type="number" ng-model="asset.icon.top" min="0" required /><br />
+    left:<input type="number" ng-model="asset.icon.left" min="0" required /><br />
+    height:<input type="number" ng-model="asset.icon.height" min="0" required /><br />
+    url:<input type="url" ng-model="asset.icon.url" required /><br />
+
+    <br />
+    License:<textarea ng-model="asset.license"
+                      ng-pattern="/^(GPL .*)|(Apache .*)|(BSD .*)|(MIT)|(Free <= [0-9]+ (Users|Nodes))|(Multi-licensed OpenSource)|(Other)|(Unknown)$/"
+                      name="license" rows="7" cols="50"
+                      required></textarea>
+    <span ng-show="asset_form.license.$error.pattern">Wrong license pattern!</span><br />
+    license url:<input type="url" ng-model="asset.license_url" /><br />
+
+    <br />
+    File:<input type="file" id="file" name="file" required /><br />
+
+    <br />
+    Active:<input type="checkbox" ng-model="asset.active" /><br />
+    Description:<input type="text" ng-model="asset.description" /><br />
+    Tags:<input type="text" ng-model="asset.tags" /><br />
+
+
+    <!-- Additional fields for different types of assets -->
+    <div ng-switch on="asset.type_name">
+        <div ng-switch-when="glance_images">
+            <h4>Glance additional</h4>
+            Container format
+            <select ng-options="format for format in ['ami', 'ari', 'aki', 'bare', 'ovf']"
+                    ng-model="asset.glance_images.container_format"
+                    ng-init="asset.glance_images.container_format='ami'">
+            </select><br />
+            Disk format
+            <select ng-options="format for format in ['ami', 'ari', 'aki',
+                                                      'vhd', 'vdmk', 'raw', 'qcow2', 'vdi', 'iso']"
+                    ng-model="asset.glance_images.disk_format"
+                    ng-init="asset.glance_images.disk_format='ami'">
+            </select><br />
+            Min ram
+            <input type="number" ng-model="asset.glance_images.min_ram" ng-init="glance.min_ram=0" 
+                   min="0" max="10"/><br />
+            Max ram
+            <input type="number" ng-model="asset.glance_images.max_ram" ng-init="glance.max_ram=0" 
+                   min="0" max="10"/><br />
+        </div>
+
+        <div ng-switch-when="heat_templates">
+            <h4>Heat additional</h4>
+            Environment
+            <input type="text" ng-model="asset.heat_templates.environment" required /><br />
+            Template version
+            <select ng-options="date for date in ['2013-05-23', '2014-10-16', '2015-04-30', '2015-10-15']"
+                    ng-model="asset.heat_templates.template_version"
+                    ng-init="asset.heat_templates.template_version='2013-05-23'">
+            </select>
+        </div>
+
+        <div ng-switch-when="murano_packages">
+            <h4>Murano additional</h4>
+            Fully qualified name
+            <input type="text" ng-model="asset.murano_packages.fqn" required /><br />
+            Package type
+            <select ng-options="type for type in ['Application', 'Library']"
+                    ng-model="asset.murano_packages.package_type"
+                    ng-init="asset.murano_packages.package_type='Application'">
+            </select>
+        </div>
+
+        <div ng-switch-when="tosca_templates" name="tosca_templates">
+            <h4>Tosca additional</h4>
+            Template version
+            <select ng-options="type for type in ['yaml', 'csar']"
+                    ng-model="asset.tosca_templates.template_format"
+                    ng-init="asset.tosca_templates.template_format='yaml'">
+            </select><br />
+            Ever mins array
+            <input type="text" name="tosca_ever_mins" ng-model="asset.tosca_templates.ever_mins" ng-pattern="/^\d* \d* \d*$/"/>
+            <span ng-show="asset_form.tosca_ever_mins.$error.pattern">Three integers with space separator</span>
+            <br />
+            Ever maxs array
+            <input type="text" name="tosca_ever_maxs" ng-model="asset.tosca_templates.ever_maxs" ng-pattern="/^\d* \d* \d*$/"/>
+            <span ng-show="asset_form.tosca_ever_maxs.$error.pattern">Three integers with space separator</span>
+            <br />
+        </div>
+
+        <div ng-switch-when="bundles">
+
+        </div>
+
+    </div>
+
+    <input type="submit" id="submit" value="Submit" />
+</form>
+
+</body>
+</html>
