@@ -8,41 +8,28 @@
   TypesListController.$inject = [
     '$scope',
     '$http',
-    '$interpolate'
+    '$interpolate',
+    'AssetTypesFactory'
   ];
 
-  function TypesListController($scope, $http, $interpolate) {
+  function TypesListController($scope, $http, $interpolate, AssetTypesFactory) {
     $scope.commonFields = ['name', 'description', 'version', 'license'];
     $scope.assetTypes = {
       types: [],
       selected: null
     };
     var apiEntryPoint = '/api/v2/db';
-    var assetTypesURL = apiEntryPoint + '/artifacts';
     var draftsLinkTemplate = $interpolate(apiEntryPoint + '/artifacts/{{type}}/{{id}}/drafts');
     var publishLinkTemplate = $interpolate(apiEntryPoint + '/artifacts/{{type}}/{{id}}/{{asset_id}}/publish');
     var assetLinkTemplate = $interpolate(apiEntryPoint + '/artifacts/{{type}}/{{id}}/{{asset_id}}');
 
-    $http.get(assetTypesURL).success(function (data) {
-      var assetTypes = data.artifact_types;
-      angular.forEach(assetTypes, function (assetType) {
-        var versions = assetType.versions;
-        angular.forEach(versions, function (version) {
-          var typeAndId = new URL(version.link).pathname.split('/').slice(3);
-          var type = typeAndId[0];
-          var id = typeAndId[1];
-
-          $scope.assetTypes.types.push({
-            'name': assetType.displayed_name + ": " + id,
-            'type': type,
-            'id': id,
-            'drafts': []
-          });
-
-        });
-      });
-      $scope.assetTypes.selected = $scope.assetTypes.types[0];
-      $scope.retrieveAssets();
+    // Get artifact types
+    AssetTypesFactory.getTypes().then(function(types) {
+      $scope.assetTypes.types = types;
+      if ($scope.assetTypes.types.length !== 0) {
+        $scope.assetTypes.selected = $scope.assetTypes.types[0];
+        $scope.retrieveAssets();
+      }
     });
 
     $scope.retrieveAssets = function () {
