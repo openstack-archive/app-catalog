@@ -4,6 +4,10 @@
 
 var glareAssetsControllers = angular.module('glareAssetsControllers', []);
 
+glareAssetsControllers.controller('GlareAddAssetController', ['$scope', '$http',
+    function ($scope, $http) {
+}]);
+
 glareAssetsControllers.controller('GlareAssetTypesListController', ['$scope', '$http', '$interpolate',
     function ($scope, $http, $interpolate) {
         $scope.commonFields = ['name', 'description', 'version', 'license'];

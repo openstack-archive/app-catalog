@@ -75,6 +75,7 @@
               <li><a href="#glance-images">Glance Images</a></li>
               <li id="addContent"><a href="#addContent">Add New Content</a></li>
               <li><a href="#assets-drafts">View draft assets</a></li>
+              <li><a href="#add-asset">Add Asset</a></li>
             </ul>
           </div>
     </div>
@@ -293,6 +294,7 @@
 
       </div>
 
+  <div ng-app="glareAssetsApp">
       <div id="murano-apps" class="content" style="display:none">
 
     <div class="row">
@@ -324,7 +326,12 @@
 
       </div>
 
-    <div id="assets-drafts" class="content" style="display:none" ng-app="glareAssetsApp">
+    <div id="add-asset" class="content" style="display:none" ng-controller="GlareAddAssetController">
+        <h2> Add Asset </h2>
+        <div class="row" ng-include="'static/apps/manage-glare-assets/html/create_asset.html'"></div>
+    </div>
+
+    <div id="assets-drafts" class="content" style="display:none">
         <h2> Assets drafts </h2>
         <div class="row" ng-controller="GlareAssetTypesListController">
             <div class="col-md-12" ng-show="!detailedDraft">
@@ -380,6 +387,7 @@
             </div>
         </div>
     </div>
+  <div>
 
 
 
