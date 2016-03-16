@@ -10,7 +10,7 @@
 # License for the specific language governing permissions and limitations
 # under the License.
 
-from flask import request
+from flask import request as flask_request
 from flask import Response
 from flask import stream_with_context
 import requests
@@ -29,7 +29,8 @@ def index_v2():
 
 
 @api.route('/v2/db/<path:url>',
-           methods=['GET', 'POST', 'UPDATE', 'DELETE', 'HEAD', 'OPTIONS'])
+           methods=['GET', 'POST', 'UPDATE', 'PUT',
+                    'DELETE', 'HEAD', 'OPTIONS'])
 def v2_passthrough_with_url(url):
     return v2_passthrough(url)
 
@@ -44,7 +45,11 @@ def v2_passthrough(url):
         glare_url = "{}/v0.1/{}".format(settings.GLARE_URI, url)
     else:
         glare_url = "{}/v0.1".format(settings.GLARE_URI)
-    req = requests.request(request.method, glare_url, stream=True)
+    headers = {'Content-Type': flask_request.headers['Content-Type']}
+    data = flask_request.data
+
+    req = requests.request(flask_request.method, glare_url, headers=headers,
+                           data=data, stream=True)
     resp = Response(
         stream_with_context(req.iter_content()),
         content_type=req.headers['content-type'],
