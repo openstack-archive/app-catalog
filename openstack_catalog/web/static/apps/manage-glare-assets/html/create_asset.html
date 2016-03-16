@@ -1,0 +1,207 @@
+<form novalidate name="asset_form" ng-submit="assetSubmit()" ng-controller="addAssetController" class="add-asset">
+
+  <label for="new-asset-name" class="required">Name: </label>
+  <input id="new-asset-name" type="text" name="assetName" ng-model="asset.name" required placeholder="Asset Name"><br />
+
+  <label for="new-asset-version" class="required">Version: </label>
+  <input id="new-asset-version" type="text" name="assetVersion" ng-model="asset.version" required ng-pattern="/^\d+\.\d+\.\d+$/"><br />
+  <div class="error">
+    <span ng-show="!asset_form.assetVersion.$valid">Version should be a SemVer string (X.Y.Z)</span>
+  </div>
+
+  <label for="new-asset-type">Asset Type: </label>
+  <select id="new-asset-type" ng-model="assetTypes.selected"
+          ng-options="assetType.name for assetType in assetTypes.types track by assetType.name">
+  </select>
+  <br/>
+
+    <!-- Additional fields for different types of assets -->
+  <div ng-switch on="assetTypes.selected.type">
+      <div ng-switch-when="glance_images">
+          <h4>Glance additional data</h4>
+          <label for="new-asset-glance-container-format">Container format:</label>
+          <select id="new-asset-glance-container-format"
+                  ng-options="format for format in ['ami', 'ari', 'aki', 'bare', 'ovf']"
+                  ng-model="typeSpecific.glance_images.container_format"
+                  ng-init="typeSpecific.glance_images.container_format='bare'">
+          </select><br />
+          <label for="new-asset-glance-disk-format">Disk format:</label>
+          <select id="new-asset-glance-disk-format"
+                  ng-options="format for format in ['ami', 'ari', 'aki',
+                                                    'vhd', 'vdmk', 'raw', 'qcow2', 'vdi', 'iso']"
+                  ng-model="typeSpecific.glance_images.disk_format"
+                  ng-init="typeSpecific.glance_images.disk_format='qcow2'">
+          </select><br />
+          <label for="new-asset-glance-min-ram">Min ram:</label>
+          <input id="new-asset-glance-min-ram" type="number"
+                 ng-model="typeSpecific.glance_images.min_ram" ng-init="typeSpecific.glance_images.min_ram=0"
+                 min="0"><br />
+          <label for="new-asset-glance-min-disk">Min disk:</label>
+          <input id="new-asset-glance-min-disk" type="number"
+                 ng-model="typeSpecific.glance_images.min_disk" ng-init="typeSpecific.glance_images.min_disk=0"
+                 min="0" max="10"><br />
+      </div>
+
+      <div ng-switch-when="heat_templates">
+          <h4>Heat additional data</h4>
+          <label for="new-asset-heat-environment">Environment:</label>
+          <input id="new-asset-heat-environment" type="text" ng-model="typeSpecific.heat_templates.environment"><br />
+          <label for="new-asset-heat-template-version">Template version:</label>
+          <select id="new-asset-heat-template-version"
+                  ng-options="date for date in ['2013-05-23', '2014-10-16', '2015-04-30', '2015-10-15']"
+                  ng-model="typeSpecific.heat_templates.template_version"
+                  ng-init="typeSpecific.heat_templates.template_version='2013-05-23'">
+          </select>
+      </div>
+
+      <div ng-switch-when="murano_packages">
+          <h4>Murano additional data</h4>
+          <label for="new-asset-murano-fqn" class="required">Fully Qualified Name:</label>
+          <input id="new-asset-murano-fqn" type="text" ng-model="typeSpecific.murano_packages.fqn" required><br />
+          <label for="new-asset-murano-type">Package Type:</label>
+          <select id="new-asset-murano-type"
+                  ng-options="type for type in ['Application', 'Library']"
+                  ng-model="typeSpecific.murano_packages.package_type"
+                  ng-init="typeSpecific.murano_packages.package_type='Application'">
+          </select>
+      </div>
+
+      <div ng-switch-when="tosca_templates" name="tosca_templates">
+          <h4>Tosca additional data</h4>
+          <label for="new-asset-tosca-template-version">Template version:</label>
+          <select id="new-asset-tosca-template-version"
+                  ng-options="type for type in ['yaml', 'csar']"
+                  ng-model="typeSpecific.tosca_templates.template_format"
+                  ng-init="typeSpecific.tosca_templates.template_format='yaml'">
+          </select><br />
+          <label for="new-asset-tosca-ever-mins">Ever mins array:</label>
+          <input id="new-asset-tosca-ever-mins" type="text" name="tosca_ever_mins"
+                 ng-model="typeSpecific.tosca_templates.ever_mins" ng-pattern="/^\d+ \d+ \d+$/">
+          <br />
+          <label for="new-asset-tosca-ever-maxs">Ever maxs array:</label>
+          <input id="new-asset-tosca-ever-maxs" type="text" name="tosca_ever_maxs"
+                 ng-model="typeSpecific.tosca_templates.ever_maxs" ng-pattern="/^\d+ \d+ \d+$/">
+      </div>
+  </div>
+
+  <label>Releases:</label><br/>
+  <div ng-repeat="(release,enabled) in releases">
+    <span><input id="new-asset-release-{{release}}" type="checkbox" ng-model="releases[release]">
+      <label for="new-asset-release-{{release}}">&nbsp;{{release}}<label/></span>
+    <br/>
+  </div>
+
+  <div class="stored-asset-switch">
+    <label for="new-asset-stored">Store asset binary within App Catalog</label>
+    <input id="new-asset-stored" type="checkbox" ng-model="asset.stored">
+  </div>
+
+  <div ng-switch on="asset.stored" ng-init="asset.stored=false">
+    <div ng-switch-when="true">
+      <label class="required">Asset file:</label>
+      <input type="file" name="file" required ng-file-model="fileData.assetFile"><br />
+    </div>
+
+    <div ng-switch-when="false">
+      <label for="new-asset-remote-url" class="required">Remote url:</label>
+      <input id="new-asset-remote-url" type="url" placeholder="Url of the binary asset"
+             ng-model="asset.remote_object_url" required><br />
+
+      <label for="new-asset-remote-hash" class="required">Asset hash:</label>
+      <input id="new-asset-remote-hash" type="text" placeholder="HD5 hash of the binary"
+             ng-model="asset.remote_object_hash" required><br />
+    </div>
+
+  </div>
+
+  <label for="new-asset-active">Active:</label>
+  <input id="new-asset-active" type="checkbox" ng-model="asset.active" ng-init="asset.active=true"><br />
+
+  <label for="new-asset-description">Description:</label>
+  <textarea id="new-asset-description" type="text" ng-model="asset.description"></textarea><br />
+
+  <label for="new-asset-tags">Tags:</label>
+  <input if="new-asset-tags" type="text" ng-model="asset.tags"><br />
+
+  <label for="new-asset-license" class="required">License:</label>
+  <input id="new-asset-license" name="assetLicense" type="text" placeholder="Apache 2, MIT, Other..." ng-pattern="licensePatternReg"
+         ng-model="asset.license" required><br />
+
+  <div ng-show="!asset_form.assetLicense.$valid" class="error">
+    <div>Please enter a valid license name. We use the following patter to test it:<br/>{{licensePattern}}</div>
+  </div>
+  <label for="new-asset-license-url">License url:</label>
+  <input id="new-asset-license-url" type="url" ng-model="asset.license_url"><br />
+
+  <h4>Provided by:</h4>
+  <label for="new-asset-provided-name" class="required">Name:</label>
+  <input id="new-asset-provided-name" type="text" placeholder="Who provided this asset"
+         ng-model="asset.provided_by.name" required><br />
+
+  <label for="new-asset-provided-url" class="required">Url:</label>
+  <input id="new-asset-provided-url" type="url"
+         ng-model="asset.provided_by.href" required><br />
+
+  <label for="new-asset-provided-company">Company:</label>
+  <input id="new-asset-provided-company" type="text"
+         ng-model="asset.provided_by.company"><br />
+
+  <label for="new-asset-provided-irc">IRC handle:</label>
+  <input id="new-asset-provided-irc" type="text"
+         ng-model="asset.provided_by.irchandle"><br />
+
+
+  <div class="supported-by-switch">
+    <label for="new-asset-has-supported-by">Provide separate 'Supported by' fields</label>
+    <input id="new-asset-has-supported-by" type="checkbox" ng-model="separateSupportedBy">
+  </div>
+
+  <div ng-if="separateSupportedBy">
+    <h4>Supported by:</h4>
+
+    <label for="new-asset-supported-name" class="required">Name:</label>
+    <input id="new-asset-supported-name" type="text" placeholder="Who supports this asset"
+           ng-model="asset.supported_by.name" required><br />
+
+    <label for="new-asset-supported-url" class="required">Url:</label>
+    <input id="new-asset-supported-url" type="url"
+           ng-model="asset.supported_by.href" required><br />
+
+    <label for="new-asset-supported-company">Company:</label>
+    <input id="new-asset-supported-company" type="text"
+           ng-model="asset.supported_by.company"><br />
+
+    <label for="new-asset-supported-irc">IRC handle:</label>
+    <input id="new-asset-supported-irc" type="text"
+           ng-model="asset.supported_by.irchandle"><br />
+  </div>
+
+  <div class="icon-switch">
+    <label for="new-asset-has-icon">Specify icon url for your asset</label>
+    <input id="new-asset-has-icon" type="checkbox" ng-model="specifyIcon">
+  </div>
+  <div ng-if="specifyIcon">
+    <h4>Icon:</h4>
+    <label for="new-asset-icon-top" class="required">Top:</label>
+    <input id="new-asset-icon-top" type="number" ng-model="asset.icon.top" min="0" ng-init="asset.icon.top=0" required><br />
+    <label for="new-asset-icon-left" class="required">Left:</label>
+    <input id="new-asset-icon-left" type="number" ng-model="asset.icon.left" min="0" ng-init="asset.icon.left=0" required><br />
+    <label for="new-asset-icon-height" class="required">Height:</label>
+    <input id="new-asset-icon-height" type="number" ng-model="asset.icon.height" min="0" ng-init="asset.icon.height=0" required><br />
+    <label for="new-asset-icon-url" class="required">Url:</label>
+    <input id="new-asset-icon-url" type="url" ng-model="asset.icon.url" required><br />
+  </div>
+
+  <br />
+
+  <div ng-switch on="asset_form.$valid">
+    <div ng-switch-when="true">
+      <input type="submit" id="submit-asset" value="Submit" ng-disabled="asset_form.$invalid">
+    </div>
+
+    <div ng-switch-when="false">
+      <div>Please fill in all the required fields and correct any errors</div>
+    </div>
+  </div>
+
+</form>
