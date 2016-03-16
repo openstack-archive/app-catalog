@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 # Licensed under the Apache License, Version 2.0 (the "License"); you may
 # not use this file except in compliance with the License. You may obtain
 # a copy of the License at
@@ -12,29 +10,21 @@
 # License for the specific language governing permissions and limitations
 # under the License.
 
-from flask import Flask
 from flask import Response
+from flask import stream_with_context
+import requests
 
-api = Flask('api')
-api.debug = True
-
-
-def cors_allow(resp):
-    h = ['Origin',
-         'Accept-Encoding',
-         'Content-Type',
-         'X-App-Catalog-Versions']
-    resp.headers['Access-Control-Allow-Origin'] = '*'
-    resp.headers['Access-Control-Allow-Headers'] = ', '.join(h)
+from openstack_catalog.api import api
+from openstack_catalog.api import cors_allow
+from openstack_catalog import settings
 
 
-@api.route('/')
-def index():
-    data = "v1\n"
-    resp = Response(data, status=200, mimetype='plain/text')
+@api.route('/v2/<path:url>')
+def v2_index(url):
+    glare_url = "{}/v0.1/{}".format(settings.GLARE_URI, url)
+    req = requests.get(glare_url, stream=True)
+    resp = Response(
+        stream_with_context(req.iter_content()),
+        content_type=req.headers['content-type'])
     cors_allow(resp)
     return resp
-
-# Pull in v1/v2 api into the server.
-from openstack_catalog.api.v1 import *  # noqa
-from openstack_catalog.api.v2 import *  # noqa
