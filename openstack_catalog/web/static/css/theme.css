@@ -148,7 +148,7 @@ a.details i {
     background: #3597da;
     border: none;
 }
-h1 { 
+h1 {
     color: #2A4E68;
     font-weight: 300;
     font-size: 28px;
@@ -241,4 +241,9 @@ input[type=text] {
   padding: 10px;
   border: 1px solid black;
   background: white;
+}
+
+.add-asset .required:before {
+  content: "*";
+  color: red;
 }
