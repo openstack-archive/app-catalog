@@ -32,6 +32,7 @@ function update_url(extra) {
   if (extra !== null) {
     $.extend(ops, extra);
   }
+
   window.location.hash = $.map(ops, function (val, index) {
     return val ? (index + "=" + encodeURIComponent(val)) : null;
   }).join("&");
@@ -214,7 +215,7 @@ function initTabs ()
     event.preventDefault ();
   });
   $( "ul.nav > li" ).not("#addContent").on("click", function (event) {
-    update_url ({ tab : this.children[0].hash.substring (1), asset: "" });
+    update_url ({ tab : this.children[0].hash.substring(1) });
   });
   $( "#addContent").on("click", function (event) {
     window.open('https://wiki.openstack.org/wiki/App-Catalog#How_to_contribute', '_blank');
