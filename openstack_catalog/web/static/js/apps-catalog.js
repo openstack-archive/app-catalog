@@ -1,7 +1,10 @@
-function getUrlVars() {
+function getUrlVars(href) {
   "use strict";
   var vars = {};
-  window.location.href.replace(/[?&#]+([^=&]+)=([^&#]*)/gi, function (m, key, value) {
+  if (typeof href === "undefined") {
+    href = window.location.href;
+  }
+  href.replace(/[?&#]+([^=&]+)=([^&#]*)/gi, function (m, key, value) {
     vars[key] = decodeURIComponent(value);
   });
   return vars;
@@ -32,6 +35,7 @@ function update_url(extra) {
   if (extra !== null) {
     $.extend(ops, extra);
   }
+
   window.location.hash = $.map(ops, function (val, index) {
     return val ? (index + "=" + encodeURIComponent(val)) : null;
   }).join("&");
@@ -214,7 +218,7 @@ function initTabs ()
     event.preventDefault ();
   });
   $( "ul.nav > li" ).not("#addContent").on("click", function (event) {
-    update_url ({ tab : this.children[0].hash.substring (1), asset: "" });
+    update_url ({ tab : this.children[0].hash.substring(1) });
   });
   $( "#addContent").on("click", function (event) {
     window.open('https://wiki.openstack.org/wiki/App-Catalog#How_to_contribute', '_blank');
@@ -381,11 +385,18 @@ function initMarketPlace ()
     });
 }
 
-function navigate ()
+function navigate (ev)
 {
   var tabs_list = $("#navbar")[0].children;
   var selected_tab_name = null;
   var options = getUrlVars ();
+  if (typeof ev !== "undefined") {
+    var oldOptions = getUrlVars(ev.oldURL);
+    if (oldOptions.tab !== options.tab) {
+      //NOTE(kzaitsev): need to override it to allow this code to work with angular code
+      window.location.hash = "tab=" + options.tab;
+    }
+  }
 
   $( "ul.nav > li" ).removeClass ("active");
   if ("tab" in options) {
