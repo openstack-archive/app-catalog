@@ -1,0 +1,116 @@
+<form novalidate name="asset_form" ng-submit="assetSubmit()" ng-controller="addAssetController">
+    Name: <input type="text" ng-model="asset.name" required><br />
+    Version: <input type="text" ng-model="asset.version" required><br />
+    Asset Type:
+    <select id="assetAddTypeSelector" ng-model="assetTypes.selected"
+            ng-options="assetType.name for assetType in assetTypes.types track by assetType.name"
+            >
+    </select>
+
+    <!-- Additional fields for different types of assets -->
+    <div ng-switch on="assetTypes.selected.type">
+        <div ng-switch-when="glance_images">
+            <h4>Glance additional data</h4>
+            Container format
+            <select ng-options="format for format in ['ami', 'ari', 'aki', 'bare', 'ovf']"
+                    ng-model="typeSpecific.glance_images.container_format"
+                    ng-init="typeSpecific.glance_images.container_format='ami'">
+            </select><br />
+            Disk format
+            <select ng-options="format for format in ['ami', 'ari', 'aki',
+                                                      'vhd', 'vdmk', 'raw', 'qcow2', 'vdi', 'iso']"
+                    ng-model="typeSpecific.glance_images.disk_format"
+                    ng-init="typeSpecific.glance_images.disk_format='ami'">
+            </select><br />
+            Min ram
+            <input type="number" ng-model="typeSpecific.glance_images.min_ram" ng-init="glance.min_ram=0"
+                   min="0" max="10"/><br />
+            Max ram
+            <input type="number" ng-model="typeSpecific.glance_images.max_ram" ng-init="glance.max_ram=0"
+                   min="0" max="10"/><br />
+        </div>
+
+        <div ng-switch-when="heat_templates">
+            <h4>Heat additional data</h4>
+            Environment
+            <input type="text" ng-model="typeSpecific.heat_templates.environment" required /><br />
+            Template version
+            <select ng-options="date for date in ['2013-05-23', '2014-10-16', '2015-04-30', '2015-10-15']"
+                    ng-model="typeSpecific.heat_templates.template_version"
+                    ng-init="typeSpecific.heat_templates.template_version='2013-05-23'">
+            </select>
+        </div>
+
+        <div ng-switch-when="murano_packages">
+            <h4>Murano additional data</h4>
+            Fully qualified name
+            <input type="text" ng-model="typeSpecific.murano_packages.fqn" required /><br />
+            Package type
+            <select ng-options="type for type in ['Application', 'Library']"
+                    ng-model="typeSpecific.murano_packages.package_type"
+                    ng-init="typeSpecific.murano_packages.package_type='Application'">
+            </select>
+        </div>
+
+        <div ng-switch-when="tosca_templates" name="tosca_templates">
+            <h4>Tosca additional data</h4>
+            Template version
+            <select ng-options="type for type in ['yaml', 'csar']"
+                    ng-model="typeSpecific.tosca_templates.template_format"
+                    ng-init="typeSpecific.tosca_templates.template_format='yaml'">
+            </select><br />
+            Ever mins array
+            <input type="text" name="tosca_ever_mins" ng-model="typeSpecific.tosca_templates.ever_mins" ng-pattern="/^\d* \d* \d*$/"/>
+            <span ng-show="asset_form.tosca_ever_mins.$error.pattern">Three integers with space separator</span>
+            <br />
+            Ever maxs array
+            <input type="text" name="tosca_ever_maxs" ng-model="typeSpecific.tosca_templates.ever_maxs" ng-pattern="/^\d* \d* \d*$/"/>
+            <span ng-show="asset_form.tosca_ever_maxs.$error.pattern">Three integers with space separator</span>
+            <br />
+        </div>
+    </div>
+
+    <br />
+    Release:<br />
+    <label ng-repeat="(release,enabled) in releases">
+      <input type="checkbox" ng-model="releases[release]">{{release}}<br/>
+    </label>
+
+    <br />
+    Provided by:<br />
+    name:<input type="text" ng-model="asset.provided_by.name" required /><br />
+    url:<input type="url" ng-model="asset.provided_by.href" required /><br />
+    company:<input type="text" ng-model="asset.provided_by.company" /><br />
+    irc handle:<input type="text" ng-model="asset.provided_by.irchandle" /><br />
+
+    <br />
+    Supported by:<br />
+    name:<input type="text" ng-model="asset.supported_by.name" required /><br />
+    url:<input type="url" ng-model="asset.supported_by.href" required /><br />
+    company:<input type="text" ng-model="asset.supported_by.company" /><br />
+    irc handle:<input type="text" ng-model="asset.supported_by.irchandle" /><br />
+
+    <br />
+    Icon:<br />
+    top:<input type="number" ng-model="asset.icon.top" min="0" required /><br />
+    left:<input type="number" ng-model="asset.icon.left" min="0" required /><br />
+    height:<input type="number" ng-model="asset.icon.height" min="0" required /><br />
+    url:<input type="url" ng-model="asset.icon.url" required /><br />
+
+    <br />
+    License:<input type="text" ng-model="asset.license"
+                      ng-pattern="/^(GPL .*)|(Apache .*)|(BSD .*)|(MIT)|(Free <= [0-9]+ (Users|Nodes))|(Multi-licensed OpenSource)|(Other)|(Unknown)$/"
+                      required><br />
+    <span ng-show="asset_form.license.$error.pattern">Wrong license pattern!</span><br />
+    license url:<input type="url" ng-model="asset.license_url" /><br />
+
+    <br />
+    File:<input type="file" id="file" name="file" required /><br />
+
+    <br />
+    Active:<input type="checkbox" ng-model="asset.active" /><br />
+    Description:<input type="text" ng-model="asset.description" /><br />
+    Tags:<input type="text" ng-model="asset.tags" /><br />
+
+    <input type="submit" id="submit-asset" value="Submit" />
+</form>
