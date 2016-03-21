@@ -199,6 +199,15 @@ function show_murano_apps ()
       filterData (murano_apps.assets, getUrlVars ()));
 }
 
+var tosca_templates = { assets: [] };
+
+function show_tosca_templates ()
+{
+  populate_table ("tosca-templates-table",
+      ["name_html", "description", "release_html", "service.template_format"],
+      filterData (tosca_templates.assets, getUrlVars ()));
+}
+
 function initTabs ()
 {
   $( "ul.nav > li > a" ).on("click", function (event) {
@@ -260,6 +269,9 @@ function build_recently_added ()
                (sorted_assets[i].service.type == 'bundle')) {
       divclass = "murano";
       hreftab = "#tab=murano-apps&asset=";
+    }else if (sorted_assets[i].service.type == 'tosca') {
+      divclass = "tosca";
+      hreftab = "#tab=tosca-templates&asset=";
     }
     $('.featured').append(
         $('<div>', {class: "col-md-2 col-sm-6"})
@@ -310,6 +322,8 @@ function initMarketPlace ()
             murano_apps.assets.push(asset);
             asset.service.format = 'bundle';
           }
+        }else if (asset.service.type == 'tosca') {
+          tosca_templates.assets.push(asset);
         }
       }
 
@@ -325,7 +339,12 @@ function initMarketPlace ()
 
       tableData = heat_templates.assets;
       for (var i = 0; i < tableData.length; i++) {
-        tableData[i].release_html = tableData[i].release.join (", ");
+        if (tableData[i].release == null){
+            tableData[i].release == "";
+        }
+        else {
+          tableData[i].release == tableData[i].release.join (", ");
+        }
         setupInfoHandler ("heat-templates", i, tableData[i]);
       }
 
@@ -336,7 +355,12 @@ function initMarketPlace ()
 
       tableData = murano_apps.assets;
       for (var i = 0; i < tableData.length; i++) {
-        tableData[i].release_html = tableData[i].release.join (", ");
+        if (tableData[i].release == null){
+            tableData[i].release == "";
+        }
+        else {
+          tableData[i].release == tableData[i].release.join (", ");
+        }
         setupInfoHandler ("murano-apps", i, tableData[i]);
       }
 
@@ -344,6 +368,22 @@ function initMarketPlace ()
       show_murano_apps ();
 
       initSingleSelector ("murano-release", "release", tableData, show_murano_apps);
+
+      tableData = tosca_templates.assets;
+      for (var i = 0; i < tableData.length; i++) {
+        if (tableData[i].release == null){
+            tableData[i].release == "";
+        }
+        else {
+          tableData[i].release == tableData[i].release.join (", ");
+        }
+        setupInfoHandler ("tosca-templates", i, tableData[i]);
+      }
+
+      show_asset ("tosca-templates", tableData);
+      show_tosca_templates ();
+
+      initSingleSelector ("tosca-release", "release", tableData, show_tosca_templates);
     });
 }
 
@@ -375,6 +415,7 @@ function navigate ()
     show_asset ("murano-apps", murano_apps.assets);
     show_asset ("heat-templates", heat_templates.assets);
     show_asset ("glance-images", glance_images.assets);
+    show_asset ("tosca-templates", tosca_templates.assets);
   } else {
     $( "#" + selected_tab_name ).show ();
   }
