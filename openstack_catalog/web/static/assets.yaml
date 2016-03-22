@@ -1277,6 +1277,8 @@
         package_name: io.murano.databases
       release:
         - Kilo
+        - Liberty
+        - Mitaka
       license: Apache 2.0
       hash: 0d543e5ed464488118a946b32546696f
       attributes:
@@ -1302,6 +1304,8 @@
         package_name: io.murano.apps.docker.Interfaces
       release:
         - Kilo
+        - Liberty
+        - Mitaka
       license: Apache 2.0
       hash: f980112cbcd3becfe080729757d6a780
       attributes:
@@ -1332,6 +1336,8 @@
         package_name: io.murano.apps.apache.ApacheHttpServer
       release:
         - Kilo
+        - Liberty
+        - Mitaka
       license: Multi-licensed OpenSource
       depends:
         - name: Debian 8 x64 (pre-installed murano-agent)
@@ -1363,6 +1369,8 @@
         package_name: io.murano.apps.apache.Tomcat
       release:
         - Kilo
+        - Liberty
+        - Mitaka
       license: Multi-licensed OpenSource
       depends:
         - name: Debian 8 x64 (pre-installed murano-agent)
@@ -1390,6 +1398,8 @@
         package_name: com.apcera.Apcera
       release:
         - Kilo
+        - Liberty
+        - Mitaka
       license: Unknown
       depends:
         - name: Apcera HCOS Trial Edition
@@ -1424,6 +1434,8 @@
         package_name: io.murano.apps.paas.CloudFoundry
       release:
         - Kilo
+        - Liberty
+        - Mitaka
       license: Unknown
       depends:
         - name: Ubuntu 14.04 x64 (pre-installed murano-agent)
@@ -1454,6 +1466,7 @@
       release:
         - Kilo
         - Liberty
+        - Mitaka
       license: Multi-licensed OpenSource
       depends:
         - name: SqlDatabase Library
@@ -1486,6 +1499,8 @@
         package_name: com.oracle.db.muranoPdb.OraclePDB
       release:
         - Kilo
+        - Liberty
+        - Mitaka
       license: Apache 2.0
       depends:
         - name: SqlDatabase Library
@@ -1515,6 +1530,7 @@
       release:
         - Kilo
         - Liberty
+        - Mitaka
       license: Multi-licensed OpenSource
       depends:
         - name: SqlDatabase Library
@@ -1543,6 +1559,8 @@
         - Icehouse
         - Juno
         - Kilo
+        - Liberty
+        - Mitaka
       license: Multi-licensed OpenSource
       depends:
         - name: Ubuntu 14.04 x64 (pre-installed murano-agent)
@@ -1565,6 +1583,8 @@
         package_name: io.murano.apps.WordPress
       release:
         - Kilo
+        - Liberty
+        - Mitaka
       license: Multi-licensed OpenSource
       depends:
         - name: MySQL
@@ -1595,6 +1615,8 @@
         package_name: io.murano.apps.ZabbixAgent
       release:
         - Kilo
+        - Liberty
+        - Mitaka
       license: Multi-licensed OpenSource
       depends:
         - name: Zabbix
@@ -1622,6 +1644,8 @@
         package_name: io.murano.apps.ZabbixServer
       release:
         - Kilo
+        - Liberty
+        - Mitaka
       license: Multi-licensed OpenSource
       depends:
         - name: Debian 8 x64 (pre-installed murano-agent)
@@ -1652,6 +1676,8 @@
         package_name: io.murano.apps.activestate.StackatoNode
       release:
         - Kilo
+        - Liberty
+        - Mitaka
       license: Multi-licensed OpenSource
       supported_by:
         name: ActiveState
@@ -1689,6 +1715,8 @@
         package_name: io.murano.apps.docker.DockerStandaloneHost
       release:
         - Kilo
+        - Liberty
+        - Mitaka
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Interfaces Library
@@ -1730,6 +1758,8 @@
         package_name: io.murano.apps.docker.kubernetes.KubernetesCluster
       release:
         - Kilo
+        - Liberty
+        - Mitaka
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Interfaces Library
@@ -1772,6 +1802,8 @@
         package_name: io.murano.apps.docker.kubernetes.KubernetesPod
       release:
         - Kilo
+        - Liberty
+        - Mitaka
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Interfaces Library
@@ -1807,6 +1839,7 @@
       release:
         - Kilo
         - Liberty
+        - Mitaka
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Standalone Host
@@ -1839,6 +1872,7 @@
       release:
         - Kilo
         - Liberty
+        - Mitaka
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Standalone Host
@@ -1882,6 +1916,7 @@
       release:
         - Kilo
         - Liberty
+        - Mitaka
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Standalone Host
@@ -1924,6 +1959,7 @@
       release:
         - Kilo
         - Liberty
+        - Mitaka
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Standalone Host
@@ -1955,6 +1991,7 @@
       release:
         - Kilo
         - Liberty
+        - Mitaka
       license: Multi-licensed OpenSource
       depends:
         - name: Kubernetes Cluster
@@ -1988,6 +2025,7 @@
       release:
         - Kilo
         - Liberty
+        - Mitaka
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Standalone Host
@@ -2025,6 +2063,7 @@
       release:
         - Kilo
         - Liberty
+        - Mitaka
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Standalone Host
@@ -2059,6 +2098,7 @@
       release:
         - Kilo
         - Liberty
+        - Mitaka
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Standalone Host
@@ -2102,6 +2142,7 @@
       release:
         - Kilo
         - Liberty
+        - Mitaka
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Standalone Host
@@ -2143,6 +2184,7 @@
       release:
         - Kilo
         - Liberty
+        - Mitaka
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Standalone Host
@@ -2187,6 +2229,7 @@
       release:
         - Kilo
         - Liberty
+        - Mitaka
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Standalone Host
@@ -2221,6 +2264,7 @@
       release:
         - Kilo
         - Liberty
+        - Mitaka
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Standalone Host
@@ -2257,6 +2301,7 @@
       release:
         - Kilo
         - Liberty
+        - Mitaka
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Standalone Host
@@ -2296,6 +2341,7 @@
       release:
         - Kilo
         - Liberty
+        - Mitaka
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Standalone Host
@@ -2350,6 +2396,7 @@
       release:
         - Kilo
         - Liberty
+        - Mitaka
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Standalone Host
@@ -2385,6 +2432,7 @@
       release:
         - Kilo
         - Liberty
+        - Mitaka
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Standalone Host
@@ -2421,6 +2469,7 @@
       release:
         - Kilo
         - Liberty
+        - Mitaka
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Standalone Host
@@ -2456,6 +2505,8 @@
         murano_package_name: app-servers
       release:
         - Kilo
+        - Liberty
+        - Mitaka
       license: Multi-licensed OpenSource
       depends:
         - name: Apache HTTP Server
@@ -2500,6 +2551,8 @@
         murano_package_name: container-based-apps
       release:
         - Kilo
+        - Liberty
+        - Mitaka
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Crate
@@ -2543,6 +2596,8 @@
         murano_package_name: databases
       release:
         - Kilo
+        - Liberty
+        - Mitaka
       license: Multi-licensed OpenSource
       depends:
         - name: MySQL
@@ -2575,6 +2630,8 @@
         murano_package_name: docker-n-kubernetes
       release:
         - Kilo
+        - Liberty
+        - Mitaka
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Standalone Host
@@ -2613,6 +2670,8 @@
         murano_package_name: monitoring
       release:
         - Kilo
+        - Liberty
+        - Mitaka
       license: Multi-licensed OpenSource
       depends:
         - name: Zabbix Agent
