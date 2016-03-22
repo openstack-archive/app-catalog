@@ -1303,7 +1303,7 @@
       release:
         - Kilo
       license: Apache 2.0
-      hash: f980112cbcd3becfe080729757d6a780
+      hash: 72634e26b562e756b4136791abaec0ad 
       attributes:
         "Source URL": "https://github.com/stackforge/murano-apps"
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.Interfaces.zip"
