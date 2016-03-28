@@ -1974,7 +1974,7 @@
       name: Docker GuestBook
       tags: ['app']
       provided_by:
-        name: Dmitry Dovbii
+        name: Dmytro Dovbii
         href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
@@ -1998,7 +1998,7 @@
         - name: Kubernetes Pod
         - name: Docker Redis
         - name: Docker Interfaces Library
-      hash: 188eba7c6097a0b237b8271ccf3406b5
+      hash: bd4d42ac4cdd529c7e559aefab4f4b5d 
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.GuestBook.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/GuestBook/package"
