@@ -1,0 +1,8 @@
+Code-Review+2: Kirill Zaitsev <kzaitsev@mirantis.com>
+Workflow+1: Christopher Aedo <doc@aedo.net>
+Verified+2: Jenkins
+Submitted-by: Jenkins
+Submitted-at: Wed, 30 Mar 2016 22:29:17 +0000
+Reviewed-on: https://review.openstack.org/299594
+Project: openstack/app-catalog
+Branch: refs/heads/master
