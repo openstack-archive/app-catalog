@@ -1005,45 +1005,33 @@
         url: https://chef-server-glance-images.s3-us-west-2.amazonaws.com/chef-server-12.1.2-1437522600.qcow2
         docs: https://docs.chef.io
     -
-      name: kloudbuster_v5
+      name: KloudBuster Image v6
       provided_by:
-        name: KloudBuster team
+        name: KloudBuster Team
         href: https://github.com/openstack/kloudbuster
-        company: Cisco
+        company: Cisco Systems, Inc.
       description: >
-                  VM image version 5 needed for any KloudBuster scale testing.
+                  KloudBuster is a tool that can load the data or storage plane
+                  of any OpenStack cloud at massive scale and can measure how
+                  well the cloud behaves under load. This image is launched by
+                  the KloudBuster application in potentially large number of
+                  VMs. This image also includes a Web UI which offers a nice
+                  and straight forward way to interactive with KloudBuster.
+                  Refer to the documentation for installation and usage.
 
-                  KloudBuster provides a quick and easy way to load any
-                  OpenStack data plane with massive HTTP scale (hundreds of
-                  thousands of flows) on any size of cloud and measure the
-                  scale very accurately. This image is launched by the
-                  KloudBuster application in potentially large number of VMs.
-
-                  Starting from v5, KloudBuster image has a Web UI built-in
-                  which can be directly launched by the user, the same as
-                  launching a regular cloud image. The Web UI implements 90%
-                  of the KloudBuster features, along with a very straight
-                  forward and user friendly interface. Refer to our documents
-                  for the instructions to run KloudBuster, as well as the
-                  video tutorial.
-
-                  This image is based off Ubuntu 14.04.3 with pre-installed
+                  This image is based off Ubuntu 14.04.4 with pre-installed
                   software required to run the KloudBuster scale test:
                   KloudBuster agent, Redis server, Nginx HTTP server, wrk2
-                  HTTP traffic generator. VM instances are created with this
-                  image by KloudBuster to perform the various roles of a scale
-                  session (HTTP server, HTTP clients, Redis server). For more
-                  information, refer to the documentation.
-      service:
+                  HTTP traffic generator, and FIO I/O tester.
         type: glance
         disk_format: qcow2
         container_format: bare
         min_ram: 2048
         min_disk: 10
       license: Multi-licensed OpenSource
-      hash: 9d51ac7d0ea465d9a42b5bd5e38ceb5e
+      hash: f04addef8bd721a4554bb14ef3e16f73
       attributes:
-        url: http://storage.apps.openstack.org/images/kloudbuster_v5.qcow2
+        url: http://storage.apps.openstack.org/images/kloudbuster_v6.qcow2
         docs: http://kloudbuster.readthedocs.org
     -
       name: Hello World
