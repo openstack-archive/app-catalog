@@ -38,13 +38,30 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = 'notused'
 
 DEBUG = True
-TEMPLATE_DEBUG = True
 ALLOWED_HOSTS = []
 
 PROJECT_PATH = os.path.realpath(os.path.dirname(__file__))
-TEMPLATE_DIRS = (
-    PROJECT_PATH + '/templates/',
-)
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [
+            PROJECT_PATH + '/templates/'
+        ],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.contrib.auth.context_processors.auth',
+                'django.template.context_processors.debug',
+                'django.template.context_processors.i18n',
+                'django.template.context_processors.media',
+                'django.template.context_processors.static',
+                'django.template.context_processors.tz',
+                'django.contrib.messages.context_processors.messages',
+            ],
+            'debug': True
+        },
+    },
+]
 
 COMPRESS_ENABLED = False
 COMPRESS_CSS_HASHING_METHOD = 'hash'
