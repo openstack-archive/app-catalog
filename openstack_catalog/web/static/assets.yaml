@@ -1,6 +1,33 @@
 ---
   assets:
     -
+      name: Hyperglance (500 node 14 day free trial)
+      tags: ['app']
+      provided_by:
+        name: Hyperglance
+        href: https://www.hyperglance.com
+        company: Hyperglance LTD.
+      description: >
+                  The Hyperglance application has pre-integrated with OpenStack APIs to automatically provide an interactive, data-rich, 3D topology visualization of current OpenStack compute and networking resources.  The browser client allows users to easily navigate through topology(ies) in 360°. Clearly see network segments, dive into data details, analyze Ceilometer metrics, plus take immediate actions such as: suspend, terminate, resize, etc. directly from our topology view.  If using Nagios with OpenStack, Hyperglance includes the ability to layer Nagios data so you can see where alerts are occurring and immediately tend to the alerts.  Hyperglance also includes integration with AWS for true hybrid cloud visibility on the same screen.  Through RBAC security, cloud managers can enjoy multi-tenant views and actions, while tenants can enjoy their own relevant views and actions.  Hyperglance provides greater cloud resource clarity and control.
+      service:
+        type: glance
+        disk_format: qcow2
+        container_format: bare
+        min_ram: 2048
+        min_disk: 8
+      icon:
+        url: https://hyperglance.com/wp-content/uploads/2016/03/HG-logo-320x72.png
+        top: 15
+        left: -25
+        height: 72
+      license: Other
+      license_url: https://hyperglance.com/eula/
+      attributes:
+        url: http://cdn.hyperglance.com/Hyperglance-OpenStack-Marketplace.qcow2
+        hyperglance docs: https://support.hyperglance.com
+        install instructions: https://support.hyperglance.com/support/solutions/folders/11000001005
+
+    -
       name: Fedora 21 Atomic (for use with Magnum)
       provided_by:
         name: OpenStack Magnum Project
