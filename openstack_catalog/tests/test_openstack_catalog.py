@@ -50,6 +50,11 @@ class TestOpenstack_catalog(testtools.TestCase):
             if name in names:
                 self.fail("Duplicate asset name: %s" % name)
             names[name] = True
+        for asset in data['assets']:
+            if 'depends' in asset:
+                for dep in asset['depends']:
+                    if dep['name'] not in names:
+                        self.fail("Dependency %s not found in assets" % dep['name'])
         try:
             jsonschema.validate(data, schema)
         except jsonschema.ValidationError as e:
