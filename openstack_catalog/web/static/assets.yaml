@@ -2731,3 +2731,84 @@
       license: Apache 2.0
       attributes:
         url: https://raw.githubusercontent.com/openstack/tosca-parser/master/toscaparser/tests/data/tosca_helloworld.yaml
+    -
+      name: TOSCA Hello World Cloud Service Archive
+      provided_by:
+        name: OpenStack
+        href: https://wiki.openstack.org/wiki/TOSCA-Parser
+        company: OpenStack TOSCA-Parser and Heat-Translator Project Community
+      description: >
+        TOSCA template for deploying a single server with predefined
+        properties. It contains a very simple topology template with single
+        TOSCA Compute node template that declares some basic values for
+        properties within two of the several capabilities that are built into
+        the TOSCA Compute node type definition. This demonstrates a simple
+        example of packaging TOSCA template in to TOSCA CSAR format.
+      service:
+        type: tosca
+        template_format: csar
+      license: Apache 2.0
+      attributes:
+        url: https://raw.githubusercontent.com/openstack/tosca-parser/master/toscaparser/tests/data/CSAR/csar_hello_world.zip
+    -
+      name: TOSCA Single Instance WordPress
+      provided_by:
+        name: OpenStack
+        href: https://wiki.openstack.org/wiki/TOSCA-Parser
+        company: OpenStack TOSCA-Parser and Heat-Translator Project Community
+      description: >
+        TOSCA simple profile with wordpress, web server and mysql on the same server.
+      service:
+        type: tosca
+        template_format: yaml
+      license: Apache 2.0
+      attributes:
+        url: https://raw.githubusercontent.com/openstack/tosca-parser/master/toscaparser/tests/data/tosca_single_instance_wordpress.yaml
+    -
+      name: TOSCA Single Instance WordPress Cloud Service Archive
+      provided_by:
+        name: OpenStack
+        href: https://wiki.openstack.org/wiki/TOSCA-Parser
+        company: OpenStack TOSCA-Parser and Heat-Translator Project Community
+      description: >
+        TOSCA simple profile with wordpress, web server and mysql on the same server.
+      service:
+        type: tosca
+        template_format: csar
+      license: Apache 2.0
+      attributes:
+        url: https://raw.githubusercontent.com/openstack/tosca-parser/master/toscaparser/tests/data/CSAR/csar_wordpress.zip
+    -
+      name: TOSCA ELK Monitoring
+      provided_by:
+        name: OpenStack
+        href: https://wiki.openstack.org/wiki/TOSCA-Parser
+        company: OpenStack TOSCA-Parser and Heat-Translator Project Community
+      description: >
+          This TOSCA simple profile deploys nodejs, mongodb, elasticsearch,
+          logstash and kibana each on a separate server with monitoring
+          enabled for nodejs server where a sample nodejs application is
+          running. The rsyslog and collectd are installed on a nodejs server.
+      service:
+        type: tosca
+        template_format: yaml
+      license: Apache 2.0
+      attributes:
+        url: https://raw.githubusercontent.com/openstack/tosca-parser/master/toscaparser/tests/data/tosca_elk.yaml
+    -
+      name: TOSCA ELK Monitoring Cloud Service Archive
+      provided_by:
+        name: OpenStack
+        href: https://wiki.openstack.org/wiki/TOSCA-Parser
+        company: OpenStack TOSCA-Parser and Heat-Translator Project Community
+      description: >
+          This TOSCA simple profile deploys nodejs, mongodb, elasticsearch,
+          logstash and kibana each on a separate server with monitoring
+          enabled for nodejs server where a sample nodejs application is
+          running. The rsyslog and collectd are installed on a nodejs server.
+      service:
+        type: tosca
+        template_format: csar
+      license: Apache 2.0
+      attributes:
+        url: https://raw.githubusercontent.com/openstack/tosca-parser/master/toscaparser/tests/data/CSAR/csar_elk.zip
