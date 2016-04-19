@@ -495,11 +495,6 @@
         type: glance
         disk_format: qcow2
         container_format: bare
-      icon:
-        url: https://pbs.twimg.com/profile_images/514286722545250304/jpRmJQoY_normal.png
-        top: 0
-        left: 0
-        height: 128
       license: Unknown
       hash: 1055116f26f2ea36a51217ab33ddec3f
       attributes:
