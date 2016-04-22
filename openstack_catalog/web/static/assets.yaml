@@ -2812,3 +2812,28 @@
       license: Apache 2.0
       attributes:
         url: https://raw.githubusercontent.com/openstack/tosca-parser/master/toscaparser/tests/data/CSAR/csar_elk.zip
+    -
+      name: Jenkins
+      tags: ['app']
+      provided_by:
+        name: Artem Silenkov
+        href: "mailto:asilenkov@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+           Jenkins is an open source continuous integration tool written in Java.
+           Beta version for opaas initiative and still in development.
+      service:
+        type: murano
+        format: package
+        package_name: io.murano.opaas.Jenkins
+      release:
+        - Liberty
+        - Mitaka
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Puppet
+        - name: ProjectConfig
+        - name: OpenLDAP
+      hash: 6344887f5e586a4681ea56535593c043
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.opaas.Jenkins.zip"
