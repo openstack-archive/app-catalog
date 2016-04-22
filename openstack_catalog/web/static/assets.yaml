@@ -2812,3 +2812,29 @@
       license: Apache 2.0
       attributes:
         url: https://raw.githubusercontent.com/openstack/tosca-parser/master/toscaparser/tests/data/CSAR/csar_elk.zip
+    -
+      name: Gerrit
+      tags: ['app']
+      provided_by:
+        name: Artem Silenkov
+        href: "mailto:asilenkov@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+          Gerrit it's an application written in Java which provides web based code
+          review and repository management for the Git version control system.
+          Beta version for opaas initiative and still in development.
+      service:
+        type: murano
+        format: package
+        package_name: io.murano.opaas.Gerrit
+      release:
+        - Liberty
+        - Mitaka
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Puppet
+        - name: ProjectConfig
+        - name: OpenLDAP
+      hash: c4bd18610f50c9e5abf005225b282220
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.opaas.Gerrit.zip"
