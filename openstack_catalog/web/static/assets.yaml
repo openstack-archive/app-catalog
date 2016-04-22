@@ -2812,3 +2812,26 @@
       license: Apache 2.0
       attributes:
         url: https://raw.githubusercontent.com/openstack/tosca-parser/master/toscaparser/tests/data/CSAR/csar_elk.zip
+    -
+      name: Puppet
+      tags: ['Server, Puppet']
+      provided_by:
+        name: Artem Silenkov
+        href: "mailto:asilenkov@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+           Puppet is an open-source configuration management tool. It runs on
+           many Unix-like systems as well as on Microsoft Windows, and includes
+           its own declarative language to describe system configuration.
+           Beta version for opaas initiative and still in development.
+      service:
+        type: murano
+        format: package
+        package_name: io.murano.opaas.puppet.Puppet
+      release:
+        - Liberty
+        - Mitaka
+      license: Multi-licensed OpenSource
+      hash: 3baf2680413f70f557ce5c447ca2d824
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.opaas.puppet.Puppet.zip"
