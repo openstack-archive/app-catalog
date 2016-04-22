@@ -2812,3 +2812,26 @@
       license: Apache 2.0
       attributes:
         url: https://raw.githubusercontent.com/openstack/tosca-parser/master/toscaparser/tests/data/CSAR/csar_elk.zip
+    -
+      name: OpenLDAP
+      tags: ['app']
+      provided_by:
+        name: Artem Silenkov
+        href: "mailto:asilenkov@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+           OpenLDAP is an open source implementation of the Lightweight
+           Directory Access Protocol.
+      service:
+        type: murano
+        format: package
+        package_name: io.murano.opaas.OpenLDAP
+      release:
+        - Liberty
+        - Mitaka
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Puppet
+      hash: 6cf14de92fa4f949a1efcfac834d021d
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.opaas.OpenLDAP.zip"
