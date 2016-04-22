@@ -2812,3 +2812,26 @@
       license: Apache 2.0
       attributes:
         url: https://raw.githubusercontent.com/openstack/tosca-parser/master/toscaparser/tests/data/CSAR/csar_elk.zip
+    -
+      name: ProjectConfig
+      tags: ['app']
+      provided_by:
+        name: Artem Silenkov
+        href: "mailto:asilenkov@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+           Tools for opaas environment.
+           Beta version for opaas initiative and still in development.
+      service:
+        type: murano
+        format: package
+        package_name: io.murano.opaas.ProjectConfig
+      release:
+        - Liberty
+        - Mitaka
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Puppet
+      hash: 9d6fb15281ab82a2cf87cbd94f9ad495
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.opaas.ProjectConfig.zip"
