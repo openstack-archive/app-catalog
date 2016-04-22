@@ -246,7 +246,7 @@ function build_recently_added ()
     function() {
       return 0.5 - Math.random();
     });
-  for (var i = 0; i < 5; i++) {
+  for (var i = 0; i < Math.min(5, sorted_assets.length); i++) {
     var iconurl,
         fittedname,
         divclass,
