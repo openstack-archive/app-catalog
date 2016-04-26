@@ -1,5 +1,5 @@
 (function () {
-  "use strict";
+  //"use strict";
 
   angular
     .module('glareassets')
@@ -9,15 +9,49 @@
     '$scope',
     '$rootScope',
     '$http',
+    '$interpolate',
+    '$location',
     'AssetTypesFactory'
   ];
 
-  function addAssetController($scope, $rootScope, $http, AssetTypesFactory) {
+  function addAssetController($scope, $rootScope, $http, $interpolate, $location, AssetTypesFactory) {
+
+    $scope.asset = {};
+    $scope.operation = "Add asset";
+    
+    $scope.$on('$locationChangeStart', function () {
+        var params = $location.search();
+        if (!!params.id) {
+          $scope.operation = "Edit asset";
+          var t_name = {
+            'MuranoPackageAsset': 'murano_packages',
+            'GlanceImageAsset': 'glance_images',
+            'BundleAsset': 'bundles',
+            'TOSCATemplateAsset': 'tosca_templates',
+            'MyArtifact': 'myartifact'
+          }[params.t_name];
+          var t_version = 'v' + params.t_ver;
+          var assetLinkTemplate = $interpolate('/api/v2/db/artifacts/{{type}}/{{id}}/{{asset_id}}');
+          $scope.assetUrl = assetLinkTemplate({
+            type: t_name,
+            id: t_version,
+            asset_id: params.id
+          });
+          $http.get($scope.assetUrl)
+          .success(function (data) {
+            $scope.asset = data;
+          });
+        } else {
+          $scope.asset = {};
+          $scope.operation = "Add asset";
+        }
+      }
+    );
+
     $scope.assetTypes = {
       types: [],
       selected: null
     };
-    $scope.asset = {};
     $scope.typeSpecific = {};
     $scope.releases = {
       'Austin': false,
@@ -43,6 +77,13 @@
         $scope.assetTypes.selected = $scope.assetTypes.types[0];
       }
     });
+    
+    $scope.$watch('asset', function () {
+      $scope.assetTypes.selected = $scope.assetTypes.types.filter(function (item) {
+        return item.name == $scope.asset.type_name + ": v" + $scope.asset.type_version;
+      })[0];
+    });
+
 
     $scope.assetSubmit = function() {
       var data = angular.copy($scope.asset);
@@ -80,21 +121,40 @@
 
       console.log(dataToSend);
 
-      $http({
-        method: "POST",
-        url: glareUrl,
-        data: data,
-        headers: {
-          "Content-Type": "application/json"
-        }
-      }).success(function(result) {
-        $rootScope.$broadcast('assetAdded');
-        console.log(result);
-        alert('Artefact draft successfully created!');
-      }).error(function(result) {
-        console.log(result);
-        alert('Artefact creation failed!');
-      });
+      if (!!!data.id){
+        $http({
+          method: "POST",
+          url: glareUrl,
+          data: data,
+          headers: {
+            "Content-Type": "application/json"
+          }
+        }).success(function(result) {
+          $rootScope.$broadcast('assetAdded');
+          console.log(result);
+          alert('Artefact draft successfully created!');
+        }).error(function(result) {
+          console.log(result);
+          alert('Artefact creation failed!');
+        });
+      } else {
+        $http({
+          method: "PATCH",
+          url: $scope.assetUrl + '/update',
+          data: data,
+          headers: {
+            "Content-Type": "application/json"
+          }
+        }).success(function(result) {
+          $rootScope.$broadcast('assetAdded');
+          console.log(result);
+          alert('Artefact successfully edited!');
+        }).error(function(result) {
+          console.log(result);
+          alert('Artefact update failed!');
+        });
+      }
+
     };
   }
 })();
