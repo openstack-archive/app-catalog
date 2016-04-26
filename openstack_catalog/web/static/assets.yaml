@@ -79,7 +79,7 @@
       attributes:
         url: https://fedorapeople.org/groups/magnum/fedora-21-atomic-5.qcow2
     -
-      name: Ubuntu 14.04 x64 (pre-installed Kubernetes)
+      name: Ubuntu 14.04 x64 (pre-installed Kubernetes and murano-agent)
       provided_by:
         name: Dmytro Dovbii
         href: mailto:ddovbii@mirantis.com
@@ -87,14 +87,65 @@
       description: >
                   Ubuntu 14.04 x64 with Docker & Kubernetes pre-installed
                   used by Kubernetes Cluster application.
+
+                  This image contains the following packages:
+
+                  * etcd v2.2.5;
+                  * kubernetes v1.3.0;
+                  * flannel v0.5.5;
+                  * Go v1.6.2;
+                  * confd v0.7.1;
+                  * docker v1.11.2.
       service:
         type: glance
         disk_format: qcow2
         container_format: bare
       license: Multi-licensed OpenSource
-      hash: c98e90e1ff5ed3730dbecb00716cf8a9
+      hash: 16e36fe2c6abac0103af1faae6203213
       attributes:
         url: http://storage.apps.openstack.org/images/ubuntu14.04-x64-kubernetes.qcow2
+    -
+      name: Debian 8 x64 (pre-installed Kubernetes and murano-agent)
+      provided_by:
+        name: Dmytro Dovbii
+        href: mailto:ddovbii@mirantis.com
+        company: Mirantis, Inc.
+      description: >
+                  Debian 8 x64 with Docker & Kubernetes pre-installed
+                  used by Kubernetes Cluster application.
+
+                  This image contains the following packages:
+
+                  * etcd v2.2.5;
+                  * kubernetes v1.3.0;
+                  * flannel v0.5.5;
+                  * Go v1.6.2;
+                  * confd v0.7.1;
+                  * docker v1.11.2.
+      service:
+        type: glance
+        disk_format: qcow2
+        container_format: bare
+      license: Multi-licensed OpenSource
+      hash: c6372d7ce9ee914468f0a6a99049da9f
+      attributes:
+        url: http://storage.apps.openstack.org/images/debian8-x64-kubernetes.qcow2
+        size: 2.8 Gb
+    -
+      name: Ubuntu 14.04 x64 (pre-installed Docker and murano-agent)
+      provided_by:
+        name: Dmytro Dovbii
+        href: mailto:ddovbii@mirantis.com
+        company: Mirantis, Inc.
+      description: Ubuntu 14.04 x64 with docker and murano-agent pre-installed
+      service:
+        type: glance
+        disk_format: qcow2
+        container_format: bare
+      license: Multi-licensed OpenSource
+      hash: 158e19b86e7532aea708267cc8092e32
+      attributes:
+        url: http://storage.apps.openstack.org/images/ubuntu14.04-x64-docker.qcow2
     -
       name: Ubuntu 14.04 x64 (pre-installed murano-agent)
       provided_by:
@@ -111,7 +162,7 @@
         disk_format: qcow2
         container_format: bare
       license: Multi-licensed OpenSource
-      hash: cbd9ded8587b98d144d9cf0faea991a9
+      hash: 393d4f2a7446ab9804fc96f98b3c9ba1
       attributes:
         url: http://storage.apps.openstack.org/images/ubuntu-14.04-m-agent.qcow2
     -
@@ -126,7 +177,7 @@
         disk_format: qcow2
         container_format: bare
       license: Multi-licensed OpenSource
-      hash: c05398176ff18ca4d011b3550fa174e3
+      hash: 0070bf11fd7ee9c32bc060d8c49b0283
       attributes:
         url: http://storage.apps.openstack.org/images/debian-8-m-agent.qcow2
     -
@@ -386,7 +437,7 @@
       attributes:
         url: http://cdimage.debian.org/cdimage/openstack/archive/8.0.0/debian-8.0.0-openstack-amd64.qcow2
     -
-      name: Debian Jessie 8.4.0 x64
+      name: Debian Jessie 8.5.0 x64
       tags: ['app']
       provided_by:
         name: Debian
@@ -400,7 +451,7 @@
                   by a group of individuals known as the Debian
                   project.
 
-                  This is a Debian Stable 8.4.0 (aka Jessie) official
+                  This is a Debian Stable 8.5.0 (aka Jessie) official
                   base image with cloud_init, cloud-utils, and
                   cloud-initramfs-growroot pre-installed.
       service:
@@ -413,9 +464,9 @@
         left: 10
         height: 124
       license: Multi-licensed OpenSource
-      hash: 94e8ed064876c477f5774697237416f976520d36dbc4cdce897508957f783e15
+      hash: 0a53b82077c44ec29d8774a9ed9df9216d3689c286949f7f500f5d4b359f5ddd
       attributes:
-        url: http://cdimage.debian.org/cdimage/openstack/current/debian-8.4.0-openstack-amd64.qcow2
+        url: http://cdimage.debian.org/cdimage/openstack/current/debian-8.5.0-openstack-amd64.qcow2
     -
       name: Debian Testing weekly build x64
       tags: ['app']
@@ -480,11 +531,6 @@
         type: glance
         disk_format: qcow2
         container_format: bare
-      icon:
-        url: https://pbs.twimg.com/profile_images/514286722545250304/jpRmJQoY_normal.png
-        top: 0
-        left: 0
-        height: 128
       license: Unknown
       hash: 1055116f26f2ea36a51217ab33ddec3f
       attributes:
@@ -916,7 +962,7 @@
                   trusted operating system platforms to deliver an end-to-end
                   hosting architecture that's modern, reliable, and secure.
                   This Atomic image is based on Fedora 23 and was released
-                  2016-02-23.
+                  2016-06-07.
       service:
         type: glance
         disk_format: qcow2
@@ -927,9 +973,9 @@
         left: -40
         height: 210
       license: Multi-licensed OpenSource
-      hash: a3ac307222d52f6934f3f59394cc71140a721bb0b39cec542c8aafe7b0d63060
+      hash: 7575c41952eb5beeb8f41edd122a760087f10323d3f8f92f7625a6c5fa6b68a4
       attributes:
-        url: https://download.fedoraproject.org/pub/alt/atomic/stable/Cloud-Images/x86_64/Images/Fedora-Cloud-Atomic-23-20160223.x86_64.qcow2
+        url: https://download.fedoraproject.org/pub/alt/atomic/stable/Cloud-Images/x86_64/Images/Fedora-Cloud-Atomic-23-20160607.x86_64.qcow2
         docs: http://www.projectatomic.io/docs/
         gpg: https://getfedora.org/static/fedora.gpg
         digest: https://alt.fedoraproject.org/pub/alt/atomic/stable/Cloud-Images/x86_64/Images/Fedora-Cloud-Images-x86_64-23-CHECKSUM
@@ -1078,7 +1124,7 @@
         min_ram: 2048
         min_disk: 10
       license: Multi-licensed OpenSource
-      hash: f04addef8bd721a4554bb14ef3e16f73
+      hash: 0959edbd167d39fd2244041847c78150
       attributes:
         url: http://storage.apps.openstack.org/images/kloudbuster_v6.qcow2
         docs: http://kloudbuster.readthedocs.org
@@ -1279,16 +1325,20 @@
          - 32 vCPUs
          - 1 TB of storage
          - Neutron networking with floating IP support
+
+         Changes:
+         July 2016 - The package name was changed. You can still access the application with
+         the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
-        package_name: io.murano.apps.pivotal.OpsManager
+        package_name: com.example.pivotal.OpsManager
       release:
         - Kilo
       license: Multi-licensed OpenSource
-      hash: 28b433b9cd6491637b3b34318f46f461
+      hash: ee054e4e19cd276aba5b82e0f3a69da9
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.pivotal.OpsManager.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.example.pivotal.OpsManager.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/stable/kilo/PivotalOperationsManager"
     -
       name: SqlDatabase Library
@@ -1308,18 +1358,22 @@
          specific database for these
          three basic functions (creating a database, users, or retrieving a
          connection string).
+
+         Changes:
+         July 2016 - The package name was changed. You can still access the application with
+         the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
-        package_name: io.murano.databases
+        package_name: com.example.databases
       release:
         - Kilo
         - Liberty
         - Mitaka
       license: Apache 2.0
-      hash: 0d543e5ed464488118a946b32546696f
+      hash: 900187847439c43ddcdaf0b62f4dfcfd
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.databases.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.example.databases.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/SQLDatabaseLibrary/package"
     -
       name: Docker Interfaces Library
@@ -1335,25 +1389,29 @@
         DockerHost, DockerVolume, ApplicationPort and all other classes
         that are used to pass information between docker
         applications and docker host providers.
+
+        Changes:
+        July 2016 - The package name was changed. You can still access the application with
+        the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
-        package_name: io.murano.apps.docker.Interfaces
+        package_name: com.mirantis.docker.Interfaces
       release:
         - Kilo
         - Liberty
         - Mitaka
       license: Apache 2.0
-      hash: 72634e26b562e756b4136791abaec0ad 
+      hash: 00aced0990a4d7c03c9efa3422512885
       attributes:
         "Source URL": "https://github.com/stackforge/murano-apps"
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.Interfaces.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.mirantis.docker.Interfaces.zip"
         Documentation: "https://github.com/stackforge/murano-apps/blob/master/Docker/Kubernetes/readme.md"
     -
       name: Apache HTTP Server
       tags: ['app']
       provided_by:
-        name: Dmitry Dovbii
+        name: Dmytro Dovbii
         href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
@@ -1367,10 +1425,14 @@
          has remained the most popular HTTP server in use since April 1996.
 
          Murano creates one or more VM(s) for you from the image listed in the dependencies.
+
+         Changes:
+         July 2016 - The package name was changed. You can still access the application with
+         the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
-        package_name: io.murano.apps.apache.ApacheHttpServer
+        package_name: com.example.apache.ApacheHttpServer
       release:
         - Kilo
         - Liberty
@@ -1378,15 +1440,15 @@
       license: Multi-licensed OpenSource
       depends:
         - name: Debian 8 x64 (pre-installed murano-agent)
-      hash: 27bb020b93304952a5544b88fa212a06
+      hash: 750769703ab070e32cd7fcd017fa3688
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.apache.ApacheHttpServer.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.example.apache.ApacheHttpServer.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/ApacheHTTPServer/package"
     -
       name: Apache Tomcat
       tags: ['app']
       provided_by:
-        name: Dmitry Dovbii
+        name: Dmytro Dovbii
         href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
@@ -1400,10 +1462,14 @@
          the Tomcat process in a separate thread.
 
          Murano creates one or more VM(s) for you from the image listed in the dependencies.
+
+         Changes:
+         July 2016 - The package name was changed. You can still access the application with
+         the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
-        package_name: io.murano.apps.apache.Tomcat
+        package_name: com.example.apache.Tomcat
       release:
         - Kilo
         - Liberty
@@ -1411,9 +1477,9 @@
       license: Multi-licensed OpenSource
       depends:
         - name: Debian 8 x64 (pre-installed murano-agent)
-      hash: 805df99024defff7ace5d377e59a52ab
+      hash: 800a3f707dec01bf7eff7ea9705f945b
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.apache.Tomcat.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.example.apache.Tomcat.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Tomcat/package"
     -
       name: Apcera
@@ -1465,10 +1531,15 @@
                   contributing code and supporting the project, with
                   sponsorship provided via the Cloud Foundry Foundation,
                   http://www.cloudfoundry.org
+
+                  Changes:
+                  July 2016 - The package name was changed. You can still access
+                  the application with the old name by the link. But now it is
+                  preferable to use the new application.
       service:
         type: murano
         format: package
-        package_name: io.murano.apps.paas.CloudFoundry
+        package_name: com.example.paas.CloudFoundry
       release:
         - Kilo
         - Liberty
@@ -1476,15 +1547,15 @@
       license: Unknown
       depends:
         - name: Ubuntu 14.04 x64 (pre-installed murano-agent)
-      hash: f51977620be42f5b58221b1dc31fc707
+      hash: e506f99f09de587854a5899b7cb0eff7
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.paas.CloudFoundry.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.example.paas.CloudFoundry.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/CloudFoundry/package"
     -
       name: MySQL
       tags: ['app']
       provided_by:
-        name: Dmitry Dovbii
+        name: Dmytro Dovbii
         href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
@@ -1496,10 +1567,14 @@
          proven reliability, ease and flexibility of use.
 
          Murano creates one or more VM(s) for you from the image listed in the dependencies.
+
+         Changes:
+         July 2016 - The package name was changed. You can still access the application with
+         the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
-        package_name: io.murano.databases.MySql
+        package_name: com.example.databases.MySql
       release:
         - Kilo
         - Liberty
@@ -1508,9 +1583,9 @@
       depends:
         - name: SqlDatabase Library
         - name: Debian 8 x64 (pre-installed murano-agent)
-      hash: 0a1ef0d17f2af1c3f3d3be626d8910c5
+      hash: 2e0e50297eb9aab7fcf8119e7e6396c3
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.databases.MySql.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.example.databases.MySql.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/MySQL/package"
     -
       name: Oracle Pluggable Database
@@ -1550,7 +1625,7 @@
       name: PostgreSql
       tags: ['app']
       provided_by:
-        name: Dmitry Dovbii
+        name: Dmytro Dovbii
         href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
@@ -1560,10 +1635,14 @@
          for reliability, data integrity, and correctness.
 
          Murano creates one or more VM(s) for you from the image listed in the dependencies.
+
+         Changes:
+         July 2016 - The package name was changed. You can still access the application with
+         the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
-        package_name: io.murano.databases.PostgreSql
+        package_name: com.example.databases.PostgreSql
       release:
         - Kilo
         - Liberty
@@ -1572,9 +1651,9 @@
       depends:
         - name: SqlDatabase Library
         - name: Ubuntu 14.04 x64 (pre-installed murano-agent)
-      hash: 1bae28b44dba6cc9d06fed3024eed469
+      hash: 84d805a577317ac8d8ce4ba816ccca7d
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.databases.PostgreSql.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.example.databases.PostgreSql.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/PostgreSQL/package"
     -
       name: Rally
@@ -1609,15 +1688,19 @@
       name: WordPress
       tags: ['app']
       provided_by:
-        name: Dmitry Dovbii
+        name: Dmytro Dovbii
         href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
          WordPress is a free and open source blogging tool and a content management system (CMS) based on PHP and MySQL.
+
+         Changes:
+         July 2016 - The package name was changed. You can still access the application with
+         the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
-        package_name: io.murano.apps.WordPress
+        package_name: com.example.WordPress
       release:
         - Kilo
         - Liberty
@@ -1627,14 +1710,14 @@
         - name: MySQL
         - name: Apache HTTP Server
         - name: Zabbix Agent
-      hash: c3e90b3ad40aaa272e5433f6d3db0a9e
+      hash: 1b110db10d337f89a6060c41ea84892d
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.WordPress.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.example.WordPress.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/WordPress/package"
     -
       name: Zabbix Agent
       provided_by:
-        name: Dmitry Dovbii
+        name: Dmytro Dovbii
         href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
@@ -1646,10 +1729,14 @@
          monitoring solution. Zabbix offer advance monitoring, alerting, and
          visualization features today which are missing in other monitoring
          system, even some of the best commercial ones.
+
+         Changes:
+         July 2016 - The package name was changed. You can still access the application with
+         the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
-        package_name: io.murano.apps.ZabbixAgent
+        package_name: com.example.ZabbixAgent
       release:
         - Kilo
         - Liberty
@@ -1657,15 +1744,15 @@
       license: Multi-licensed OpenSource
       depends:
         - name: Zabbix
-      hash: e9466e43ccbde6e6c0a08642e4c9ba58
+      hash: da71c2695ec15eaa555ed7ec7d8a64d6
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.ZabbixAgent.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.example.ZabbixAgent.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/ZabbixAgent/package"
     -
       name: Zabbix
       tags: ['app']
       provided_by:
-        name: Dmitry Dovbii
+        name: Dmytro Dovbii
         href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
@@ -1675,10 +1762,14 @@
          system, even some of the best commercial ones.
 
          Murano creates one or more VM(s) for you from the image listed in the dependencies.
+
+         Changes:
+         July 2016 - The package name was changed. You can still access the application with
+         the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
-        package_name: io.murano.apps.ZabbixServer
+        package_name: com.example.ZabbixServer
       release:
         - Kilo
         - Liberty
@@ -1686,9 +1777,9 @@
       license: Multi-licensed OpenSource
       depends:
         - name: Debian 8 x64 (pre-installed murano-agent)
-      hash: 99a59eec5a5d3b6400054ffc954e562d
+      hash: c3144545f899282472f5aaf46c92f37d
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.ZabbixServer.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.example.ZabbixServer.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/ZabbixServer/package"
     -
       name: Stackato
@@ -1746,10 +1837,14 @@
 
           The Docker service is accessed using CLI client from within the same
           VM, so the docker API is not exposed outside that VM.
+
+          Changes:
+          July 2016 - The package name was changed. You can still access the application with
+          the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
-        package_name: io.murano.apps.docker.DockerStandaloneHost
+        package_name: com.mirantis.docker.DockerStandaloneHost 
       release:
         - Kilo
         - Liberty
@@ -1758,9 +1853,10 @@
       depends:
         - name: Docker Interfaces Library
         - name: Debian 8 x64 (pre-installed Docker)
-      hash: 7eee1d5cbd3f8fbd33d115e090b0a602
+        - name: Ubuntu 14.04 x64 (pre-installed Docker and murano-agent)
+      hash: bb3b2191fa769bfd655e06ea7d21021c
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerStandaloneHost.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.mirantis.docker.DockerStandaloneHost.zip"
         "Source URL": "https://github.com/stackforge/murano-apps"
         Documentation: "https://github.com/stackforge/murano-apps/blob/master/Docker/Kubernetes/readme.md"
     -
@@ -1789,10 +1885,14 @@
         The application also provides API access to other applications, so
         they can create/delete Kubernetes services and Pods/Replication
         Controllers from its JSON definitions.
+
+        Changes:
+        July 2016 - The package name was changed. You can still access the application with
+        the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
-        package_name: io.murano.apps.docker.kubernetes.KubernetesCluster
+        package_name: com.mirantis.docker.kubernetes.KubernetesCluster
       release:
         - Kilo
         - Liberty
@@ -1800,10 +1900,11 @@
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Interfaces Library
-        - name: Ubuntu 14.04 x64 (pre-installed Kubernetes)
-      hash: c991ce0d15bffef0fa32d03dc7e76d6e
+        - name: Ubuntu 14.04 x64 (pre-installed Kubernetes and murano-agent)
+        - name: Debian 8 x64 (pre-installed Kubernetes and murano-agent)
+      hash: b828c7747b070f388b5b4c41e82f4e17
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.kubernetes.KubernetesCluster.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.mirantis.docker.kubernetes.KubernetesCluster.zip"
         "Source URL": "https://github.com/stackforge/murano-apps"
         Documentation: "https://github.com/stackforge/murano-apps/blob/master/Docker/Kubernetes/readme.md"
     -
@@ -1833,10 +1934,14 @@
         The Kubernetes Pod provides an API to the host docker container that
         is compatible with Docker Standalone Host so that any Docker
         Application can be hosted on any one of them.
+
+        Changes:
+        July 2016 - The package name was changed. You can still access the application with
+        the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
-        package_name: io.murano.apps.docker.kubernetes.KubernetesPod
+        package_name: com.mirantis.docker.kubernetes.KubernetesPod
       release:
         - Kilo
         - Liberty
@@ -1845,16 +1950,16 @@
       depends:
         - name: Docker Interfaces Library
         - name: Kubernetes Cluster
-      hash: d16234097d6ba6e69d96248f5d910200
+      hash: ddc4f72caff601ef5234df0c8fa905e0
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.kubernetes.KubernetesPod.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.mirantis.docker.kubernetes.KubernetesPod.zip"
         "Source URL": "https://github.com/stackforge/murano-apps"
         Documentation: "https://github.com/stackforge/murano-apps/blob/master/Docker/Kubernetes/readme.md"
     -
       name: Docker Container
       tags: ['app']
       provided_by:
-        name: Dmitry Dovbii
+        name: Dmytro Dovbii
         href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
@@ -1869,10 +1974,14 @@
         Murano will deploy this in the docker service of your choice;
         you'll be prompted to create a docker service or choose one
         you have deployed (e.g., via Kubernetes Pod).
+
+        Changes:
+        July 2016 - The package name was changed. You can still access the application with
+        the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
-        package_name: io.murano.apps.docker.DockerApp
+        package_name: com.example.docker.DockerApp
       release:
         - Kilo
         - Liberty
@@ -1882,15 +1991,15 @@
         - name: Docker Standalone Host
         - name: Kubernetes Pod
         - name: Docker Interfaces Library
-      hash: a2e15d5025f5c8a1d0b67f3a5750b22d
+      hash: 7eeb7fb26a0eb98fcd2d9f36c334495f
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerApp.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.example.docker.DockerApp.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/DockerApp/package"
     -
       name: Docker Crate
       tags: ['app']
       provided_by:
-        name: Dmitry Dovbii
+        name: Dmytro Dovbii
         href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
@@ -1902,10 +2011,14 @@
         Murano will deploy this in the docker service of your choice;
         you'll be prompted to create a docker service or choose one
         you have deployed (e.g., via Kubernetes Pod).
+
+        Changes:
+        July 2016 - The package name was changed. You can still access the application with
+        the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
-        package_name: io.murano.apps.docker.DockerCrate
+        package_name: com.example.docker.DockerCrate
       release:
         - Kilo
         - Liberty
@@ -1915,15 +2028,15 @@
         - name: Docker Standalone Host
         - name: Kubernetes Pod
         - name: Docker Interfaces Library
-      hash: 69d5c598f64529819faced9c8dcf3986
+      hash: 8206b643fe62906a5ae923293fba24d9
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerCrate.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.example.docker.DockerCrate.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/Crate/package"
     -
       name: Docker GlassFish
       tags: ['app']
       provided_by:
-        name: Dmitry Dovbii
+        name: Dmytro Dovbii
         href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
@@ -1946,10 +2059,14 @@
         Murano will deploy this in the docker service of your choice;
         you'll be prompted to create a docker service or choose one
         you have deployed (e.g., via Kubernetes Pod).
+
+        Changes:
+        July 2016 - The package name was changed. You can still access the application with
+        the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
-        package_name: io.murano.apps.docker.DockerGlassFish
+        package_name: com.example.docker.DockerGlassFish
       release:
         - Kilo
         - Liberty
@@ -1959,15 +2076,15 @@
         - name: Docker Standalone Host
         - name: Kubernetes Pod
         - name: Docker Interfaces Library
-      hash: dcf8ce8e3cd87745ea30470429822e59
+      hash: 1c5bf911605d10a9f38e2b6d14d942f5
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerGlassFish.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.example.docker.DockerGlassFish.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/GlassFish/package"
     -
       name: Docker Grafana
       tags: ['app']
       provided_by:
-        name: Dmitry Dovbii
+        name: Dmytro Dovbii
         href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
@@ -1989,10 +2106,14 @@
         Murano will deploy this in the docker service of your choice;
         you'll be prompted to create a docker service or choose one
         you have deployed (e.g., via Kubernetes Pod).
+
+        Changes:
+        July 2016 - The package name was changed. You can still access the application with
+        the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
-        package_name: io.murano.apps.docker.DockerGrafana
+        package_name: com.example.docker.DockerGrafana
       release:
         - Kilo
         - Liberty
@@ -2003,9 +2124,9 @@
         - name: Kubernetes Pod
         - name: Docker InfluxDB
         - name: Docker Interfaces Library
-      hash: 07ea26704766a9b86822fab93a8cc7f7
+      hash: 73eb553f2ee025111866664c051b74e2
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerGrafana.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.example.docker.DockerGrafana.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/Grafana/package"
     -
       name: Docker GuestBook
@@ -2021,10 +2142,14 @@
         implementation. To use 'GuestBook' you need to import following
         applications to the catalog:
         Docker Redis, Kubernetes Pod, Kubernetes Cluster
+
+        Changes:
+        July 2016 - The package name was changed. You can still access the application with
+        the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
-        package_name: io.murano.apps.docker.GuestBook
+        package_name: com.example.docker.GuestBook
       release:
         - Kilo
         - Liberty
@@ -2035,15 +2160,15 @@
         - name: Kubernetes Pod
         - name: Docker Redis
         - name: Docker Interfaces Library
-      hash: bd4d42ac4cdd529c7e559aefab4f4b5d
+      hash: 873b741bb7be325ba6ee35e669ec9b32
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.GuestBook.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.example.docker.GuestBook.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/GuestBook/package"
     -
       name: Docker HTTPd
       tags: ['app']
       provided_by:
-        name: Dmitry Dovbii
+        name: Dmytro Dovbii
         href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
@@ -2055,10 +2180,14 @@
         the most popular HTTP server in use since April 1996.
         Murano will deploy this in the docker service of your choice; you'll be prompted to create a docker service or choose one
         you have deployed (e.g., via Kubernetes Pod).
+
+        Changes:
+        July 2016 - The package name was changed. You can still access the application with
+        the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
-        package_name: io.murano.apps.docker.DockerHTTPd
+        package_name: com.example.docker.DockerHTTPd
       release:
         - Kilo
         - Liberty
@@ -2068,15 +2197,15 @@
         - name: Docker Standalone Host
         - name: Kubernetes Pod
         - name: Docker Interfaces Library
-      hash: 408d0685d3299a64f48a030f9703e4d0
+      hash: 97c0e62b98b21e525a9aad9b4079e83e
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerHTTPd.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.example.docker.DockerHTTPd.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/HTTPdServer/package"
     -
       name: Docker HTTPd Site
       tags: ['app']
       provided_by:
-        name: Dmitry Dovbii
+        name: Dmytro Dovbii
         href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
@@ -2093,10 +2222,14 @@
         Murano will deploy this in the docker service of your choice;
         you'll be prompted to create a docker service or choose one
         you have deployed (e.g., via Kubernetes Pod).
+
+        Changes:
+        July 2016 - The package name was changed. You can still access the application with
+        the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
-        package_name: io.murano.apps.docker.DockerHTTPdSite
+        package_name: com.example.docker.DockerHTTPdSite
       release:
         - Kilo
         - Liberty
@@ -2106,15 +2239,15 @@
         - name: Docker Standalone Host
         - name: Kubernetes Pod
         - name: Docker Interfaces Library
-      hash: ce873d90d946f59b06af65e17d952b8a
+      hash: c7098e7a7c77c9ce5c0e0f0df35b4575
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerHTTPdSite.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.example.docker.DockerHTTPdSite.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/HTTPdSite/package"
     -
       name: Docker InfluxDB
       tags: ['app']
       provided_by:
-        name: Dmitry Dovbii
+        name: Dmytro Dovbii
         href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
@@ -2128,10 +2261,14 @@
         Murano will deploy this in the docker service of your choice;
         you'll be prompted to create a docker service or choose one
         you have deployed (e.g., via Kubernetes Pod).
+
+        Changes:
+        July 2016 - The package name was changed. You can still access the application with
+        the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
-        package_name: io.murano.apps.docker.DockerInfluxDB
+        package_name: com.example.docker.DockerInfluxDB
       release:
         - Kilo
         - Liberty
@@ -2141,15 +2278,15 @@
         - name: Docker Standalone Host
         - name: Kubernetes Pod
         - name: Docker Interfaces Library
-      hash: 862e80bdb04e21a569d9a0a17547641d
+      hash: 3981adf1a484df76d0991ed5d90f4bd4
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerInfluxDB.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.example.docker.DockerInfluxDB.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/InfluxDB/package"
     -
       name: Docker Jenkins
       tags: ['app']
       provided_by:
-        name: Dmitry Dovbii
+        name: Dmytro Dovbii
         href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
@@ -2172,10 +2309,14 @@
         Murano will deploy this in the docker service of your choice;
         you'll be prompted to create a docker service or choose one
         you have deployed (e.g., via Kubernetes Pod).
+
+        Changes:
+        July 2016 - The package name was changed. You can still access the application with
+        the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
-        package_name: io.murano.apps.docker.DockerJenkins
+        package_name: com.example.docker.DockerJenkins
       release:
         - Kilo
         - Liberty
@@ -2185,15 +2326,15 @@
         - name: Docker Standalone Host
         - name: Kubernetes Pod
         - name: Docker Interfaces Library
-      hash: 816a32598ca7a12b5db8f3d6d598e8bf
+      hash: 5635241b7e0373777fa785c6bd737800
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerJenkins.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.example.docker.DockerJenkins.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/Jenkins/package"
     -
       name: Docker MariaDB
       tags: ['app']
       provided_by:
-        name: Dmitry Dovbii
+        name: Dmytro Dovbii
         href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
@@ -2214,10 +2355,14 @@
         Murano will deploy this in the docker service of your choice;
         you'll be prompted to create a docker service or choose one
         you have deployed (e.g., via Kubernetes Pod).
+
+        Changes:
+        July 2016 - The package name was changed. You can still access the application with
+        the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
-        package_name: io.murano.apps.docker.DockerMariaDB
+        package_name: com.example.docker.DockerMariaDB
       release:
         - Kilo
         - Liberty
@@ -2227,15 +2372,15 @@
         - name: Docker Standalone Host
         - name: Kubernetes Pod
         - name: Docker Interfaces Library
-      hash: d2b66714adba398045199019d2a1dd3a
+      hash: 5721494a219313c7cea4acf5599eb080
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerMariaDB.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.example.docker.DockerMariaDB.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/MariaDB/package"
     -
       name: Docker MongoDB
       tags: ['app']
       provided_by:
-        name: Dmitry Dovbii
+        name: Dmytro Dovbii
         href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
@@ -2259,10 +2404,14 @@
         Murano will deploy this in the docker service of your choice;
         you'll be prompted to create a docker service or choose one
         you have deployed (e.g., via Kubernetes Pod).
+
+        Changes:
+        July 2016 - The package name was changed. You can still access the application with
+        the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
-        package_name: io.murano.apps.docker.DockerMongoDB
+        package_name: com.example.docker.DockerMongoDB
       release:
         - Kilo
         - Liberty
@@ -2272,15 +2421,15 @@
         - name: Docker Standalone Host
         - name: Kubernetes Pod
         - name: Docker Interfaces Library
-      hash: a0f99ae24cdc7c5da7f62cc8bb919f64
+      hash: 153863e2a09daebf1b3ecc39d61e8cf0
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerMongoDB.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.example.docker.DockerMongoDB.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/MongoDB/package"
     -
       name: Docker MySQL
       tags: ['app']
       provided_by:
-        name: Dmitry Dovbii
+        name: Dmytro Dovbii
         href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
@@ -2294,10 +2443,14 @@
         Murano will deploy this in the docker service of your choice;
         you'll be prompted to create a docker service or choose one
         you have deployed (e.g., via Kubernetes Pod).
+
+        Changes:
+        July 2016 - The package name was changed. You can still access the application with
+        the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
-        package_name: io.murano.apps.docker.DockerMySQL
+        package_name: com.example.docker.DockerMySQL
       release:
         - Kilo
         - Liberty
@@ -2307,15 +2460,15 @@
         - name: Docker Standalone Host
         - name: Kubernetes Pod
         - name: Docker Interfaces Library
-      hash: 25f0a51d04c6959214dc28ebf443497f
+      hash: 3a20ad21ad812995a9bbad51e9705e52
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerMySQL.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.example.docker.DockerMySQL.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/MySQL/package"
     -
       name: Docker Nginx
       tags: ['app']
       provided_by:
-        name: Dmitry Dovbii
+        name: Dmytro Dovbii
         href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
@@ -2331,10 +2484,14 @@
         Murano will deploy this in the docker service of your choice;
         you'll be prompted to create a docker service or choose one
         you have deployed (e.g., via Kubernetes Pod).
+
+        Changes:
+        July 2016 - The package name was changed. You can still access the application with
+        the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
-        package_name: io.murano.apps.docker.DockerNginx
+        package_name: com.example.docker.DockerNginx
       release:
         - Kilo
         - Liberty
@@ -2344,15 +2501,15 @@
         - name: Docker Standalone Host
         - name: Kubernetes Pod
         - name: Docker Interfaces Library
-      hash: 4bb119bd0434b865fffbf9c44a44d65f
+      hash: 9c18fc83ac35a206f5eb1620b527d742
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerNginx.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.example.docker.DockerNginx.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/Nginx/package"
     -
       name: Docker Nginx Site
       tags: ['app']
       provided_by:
-        name: Dmitry Dovbii
+        name: Dmytro Dovbii
         href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
@@ -2371,10 +2528,14 @@
         Murano will deploy this in the docker service of your choice;
         you'll be prompted to create a docker service or choose one
         you have deployed (e.g., via Kubernetes Pod).
+
+        Changes:
+        July 2016 - The package name was changed. You can still access the application with
+        the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
-        package_name: io.murano.apps.docker.DockerNginxSite
+        package_name: com.example.docker.DockerNginxSite
       release:
         - Kilo
         - Liberty
@@ -2384,15 +2545,15 @@
         - name: Docker Standalone Host
         - name: Kubernetes Pod
         - name: Docker Interfaces Library
-      hash: 3cf9aae5bd1c77faa99e88537317a289
+      hash: 0acbbab1b8d98416c734a4e713e25cb2
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerNginxSite.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.example.docker.DockerNginxSite.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/NginxSite/package"
     -
       name: Docker PostgreSQL
       tags: ['app']
       provided_by:
-        name: Dmitry Dovbii
+        name: Dmytro Dovbii
         href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
@@ -2426,10 +2587,14 @@
         Murano will deploy this in the docker service of your choice;
         you'll be prompted to create a docker service or choose one
         you have deployed (e.g., via Kubernetes Pod).
+
+        Changes:
+        July 2016 - The package name was changed. You can still access the application with
+        the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
-        package_name: io.murano.apps.docker.DockerPostgreSQL
+        package_name: com.example.docker.DockerPostgreSQL
       release:
         - Kilo
         - Liberty
@@ -2439,15 +2604,15 @@
         - name: Docker Standalone Host
         - name: Kubernetes Pod
         - name: Docker Interfaces Library
-      hash: 4d0200b151c6d50800d433283080888c
+      hash: 3bba519011243cdfc705c76af6dc72e2
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerPostgreSQL.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.example.docker.DockerPostgreSQL.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/PostgreSQL/package"
     -
       name: Docker Redis
       tags: ['app']
       provided_by:
-        name: Dmitry Dovbii
+        name: Dmytro Dovbii
         href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
@@ -2462,10 +2627,14 @@
         Murano will deploy this in the docker service of your choice;
         you'll be prompted to create a docker service or choose one
         you have deployed (e.g., via Kubernetes Pod).
+
+        Changes:
+        July 2016 - The package name was changed. You can still access the application with
+        the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
-        package_name: io.murano.apps.docker.DockerRedis
+        package_name: com.example.docker.DockerRedis
       release:
         - Kilo
         - Liberty
@@ -2475,15 +2644,15 @@
         - name: Docker Standalone Host
         - name: Kubernetes Pod
         - name: Docker Interfaces Library
-      hash: f725f78055f300c4ef8f37a69a81b5ce
+      hash: 7902cbabd16f08daa50147caf56366d9
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerRedis.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.example.docker.DockerRedis.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/Redis/package"
     -
       name: Docker Tomcat
       tags: ['app']
       provided_by:
-        name: Dmitry Dovbii
+        name: Dmytro Dovbii
         href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
@@ -2499,10 +2668,14 @@
         Murano will deploy this in the docker service of your choice;
         you'll be prompted to create a docker service or choose one
         you have deployed (e.g., via Kubernetes Pod).
+
+        Changes:
+        July 2016 - The package name was changed. You can still access the application with
+        the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
-        package_name: io.murano.apps.docker.DockerTomcat
+        package_name: com.example.docker.DockerTomcat
       release:
         - Kilo
         - Liberty
@@ -2512,9 +2685,9 @@
         - name: Docker Standalone Host
         - name: Kubernetes Pod
         - name: Docker Interfaces Library
-      hash: b470fb1788d423a6e627b30137659a88
+      hash: 1d7a3477d386ce1ffcad890a242c9237
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerTomcat.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.example.docker.DockerTomcat.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/Tomcat/package"
     -
       name: Application Servers Bundle
@@ -2731,3 +2904,637 @@
       license: Apache 2.0
       attributes:
         url: https://raw.githubusercontent.com/openstack/tosca-parser/master/toscaparser/tests/data/tosca_helloworld.yaml
+    -
+      name: TOSCA Hello World Cloud Service Archive
+      provided_by:
+        name: OpenStack
+        href: https://wiki.openstack.org/wiki/TOSCA-Parser
+        company: OpenStack TOSCA-Parser and Heat-Translator Project Community
+      description: >
+        TOSCA template for deploying a single server with predefined
+        properties. It contains a very simple topology template with single
+        TOSCA Compute node template that declares some basic values for
+        properties within two of the several capabilities that are built into
+        the TOSCA Compute node type definition. This demonstrates a simple
+        example of packaging TOSCA template in to TOSCA CSAR format.
+      service:
+        type: tosca
+        template_format: csar
+      license: Apache 2.0
+      attributes:
+        url: https://raw.githubusercontent.com/openstack/tosca-parser/master/toscaparser/tests/data/CSAR/csar_hello_world.zip
+    -
+      name: TOSCA Single Instance WordPress
+      provided_by:
+        name: OpenStack
+        href: https://wiki.openstack.org/wiki/TOSCA-Parser
+        company: OpenStack TOSCA-Parser and Heat-Translator Project Community
+      description: >
+        TOSCA simple profile with wordpress, web server and mysql on the same server.
+      service:
+        type: tosca
+        template_format: yaml
+      license: Apache 2.0
+      attributes:
+        url: https://raw.githubusercontent.com/openstack/tosca-parser/master/toscaparser/tests/data/tosca_single_instance_wordpress.yaml
+    -
+      name: TOSCA Single Instance WordPress Cloud Service Archive
+      provided_by:
+        name: OpenStack
+        href: https://wiki.openstack.org/wiki/TOSCA-Parser
+        company: OpenStack TOSCA-Parser and Heat-Translator Project Community
+      description: >
+        TOSCA simple profile with wordpress, web server and mysql on the same server.
+      service:
+        type: tosca
+        template_format: csar
+      license: Apache 2.0
+      attributes:
+        url: https://raw.githubusercontent.com/openstack/tosca-parser/master/toscaparser/tests/data/CSAR/csar_wordpress.zip
+    -
+      name: TOSCA ELK Monitoring
+      provided_by:
+        name: OpenStack
+        href: https://wiki.openstack.org/wiki/TOSCA-Parser
+        company: OpenStack TOSCA-Parser and Heat-Translator Project Community
+      description: >
+          This TOSCA simple profile deploys nodejs, mongodb, elasticsearch,
+          logstash and kibana each on a separate server with monitoring
+          enabled for nodejs server where a sample nodejs application is
+          running. The rsyslog and collectd are installed on a nodejs server.
+      service:
+        type: tosca
+        template_format: yaml
+      license: Apache 2.0
+      attributes:
+        url: https://raw.githubusercontent.com/openstack/tosca-parser/master/toscaparser/tests/data/tosca_elk.yaml
+    -
+      name: TOSCA ELK Monitoring Cloud Service Archive
+      provided_by:
+        name: OpenStack
+        href: https://wiki.openstack.org/wiki/TOSCA-Parser
+        company: OpenStack TOSCA-Parser and Heat-Translator Project Community
+      description: >
+          This TOSCA simple profile deploys nodejs, mongodb, elasticsearch,
+          logstash and kibana each on a separate server with monitoring
+          enabled for nodejs server where a sample nodejs application is
+          running. The rsyslog and collectd are installed on a nodejs server.
+      service:
+        type: tosca
+        template_format: csar
+      license: Apache 2.0
+      attributes:
+        url: https://raw.githubusercontent.com/openstack/tosca-parser/master/toscaparser/tests/data/CSAR/csar_elk.zip
+    -
+      name: Gerrit
+      tags: ['app']
+      provided_by:
+        name: Artem Silenkov
+        href: "mailto:asilenkov@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+          Gerrit it's an application written in Java which provides web based code
+          review and repository management for the Git version control system.
+          Beta version for opaas initiative and still in development.
+          IRC:#murano-apps on freenode.net
+      service:
+        type: murano
+        format: package
+        package_name: org.openstack.ci_cd_pipeline_murano_app.Gerrit
+      release:
+        - Liberty
+        - Mitaka
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Puppet
+        - name: SystemConfig
+        - name: OpenLDAP
+      hash: cac40436ce1fe044cdc8cdffdb5aa6e3
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/org.openstack.ci_cd_pipeline_murano_app.Gerrit.zip"
+    -
+      name: Puppet
+      tags: ['app']
+      provided_by:
+        name: Artem Silenkov
+        href: "mailto:asilenkov@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+           Puppet is an open-source configuration management tool. It runs on
+           many Unix-like systems as well as on Microsoft Windows, and includes
+           its own declarative language to describe system configuration.
+           Beta version for opaas initiative and still in development.
+           IRC:#murano-apps on freenode.net
+      service:
+        type: murano
+        format: package
+        package_name: org.openstack.ci_cd_pipeline_murano_app.puppet.Puppet
+      release:
+        - Liberty
+        - Mitaka
+      license: Multi-licensed OpenSource
+      depends:
+        - name: CiCdUtils
+      hash: e5e93d6091d05e294fc330b78861083a
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/org.openstack.ci_cd_pipeline_murano_app.puppet.Puppet.zip"
+    -
+      name: Jenkins
+      tags: ['app']
+      provided_by:
+        name: Artem Silenkov
+        href: "mailto:asilenkov@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+           Jenkins is an open source continuous integration tool written in Java.
+           Beta version for opaas initiative and still in development.
+           IRC:#murano-apps on freenode.net
+      service:
+        type: murano
+        format: package
+        package_name: org.openstack.ci_cd_pipeline_murano_app.Jenkins
+      release:
+        - Liberty
+        - Mitaka
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Puppet
+        - name: SystemConfig
+        - name: OpenLDAP
+        - name: Gerrit
+      hash: e929e73bc691498edd1aa655557d8285
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/org.openstack.ci_cd_pipeline_murano_app.Jenkins.zip"
+    -
+      name: OpenLDAP
+      tags: ['app']
+      provided_by:
+        name: Artem Silenkov
+        href: "mailto:asilenkov@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+           OpenLDAP is an open source implementation of the Lightweight
+           Directory Access Protocol.
+           Beta version for opaas initiative and still in development.
+           IRC:#murano-apps on freenode.net
+      service:
+        type: murano
+        format: package
+        package_name: org.openstack.ci_cd_pipeline_murano_app.OpenLDAP
+      release:
+        - Liberty
+        - Mitaka
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Puppet
+      hash: 5c11677018fac7377e1e9d0336683e8d
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/org.openstack.ci_cd_pipeline_murano_app.OpenLDAP.zip"
+    -
+      name: SystemConfig
+      tags: ['app']
+      provided_by:
+        name: Artem Silenkov
+        href: "mailto:asilenkov@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+           Tools for opaas environment.
+           Beta version for opaas initiative and still in development.
+           IRC:#murano-apps on freenode.net
+      service:
+        type: murano
+        format: package
+        package_name: org.openstack.ci_cd_pipeline_murano_app.puppet.SystemConfig
+      release:
+        - Liberty
+        - Mitaka
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Puppet
+      hash: 40ba2f7b6aa1517b6890f7755c363ea7
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/org.openstack.ci_cd_pipeline_murano_app.puppet.SystemConfig.zip"
+    -
+      name: CiCdUtils
+      tags: ['app']
+      provided_by:
+        name: Artem Silenkov
+        href: "mailto:asilenkov@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+           Library for opaas environment.
+           Beta version for opaas initiative and still in development.
+           IRC:#murano-apps on freenode.net
+      service:
+        type: murano
+        format: package
+        package_name: org.openstack.ci_cd_pipeline_murano_app.utils.CiCdUtils
+      release:
+        - Liberty
+        - Mitaka
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Puppet
+      hash: 1993c600a782c19a40fc3a9eaefef90f
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/org.openstack.ci_cd_pipeline_murano_app.utils.CiCdUtils.zip"
+    -
+      name: CiCdEnvironment
+      tags: ['app']
+      provided_by:
+        name: Artem Silenkov
+        href: "mailto:asilenkov@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+           The One-click CI/CD installer.
+           Beta version for opaas initiative and still in development.
+           IRC:#murano-apps on freenode.net
+      service:
+        type: murano
+        format: package
+        package_name: org.openstack.ci_cd_pipeline_murano_app.CiCdEnvironment
+      release:
+        - Liberty
+        - Mitaka
+      license: Multi-licensed OpenSource
+      depends:
+        - name: OpenLDAP
+        - name: Jenkins
+        - name: Gerrit
+        - name: Puppet
+        - name: Nodepool
+        - name: ZuulNodepoolHelper
+        - name: Zuul
+      hash: 0267b340fc9397db02e202ded9c94c70
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/org.openstack.ci_cd_pipeline_murano_app.CiCdEnvironment.zip"
+    -
+      name: Nodepool
+      tags: ['app']
+      provided_by:
+        name: Nikolay Makhotkin
+        href: "mailto:nmakhotkin@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+           Nodepool is a system for launching single-use test nodes on demand based on
+           images built with cached data. It is designed to work with any OpenStack
+           based cloud, and is part of a suite of tools that form a comprehensive
+           test system including Jenkins and Zuul.
+
+           IRC:#murano-apps on freenode.net
+      service:
+        type: murano
+        format: package
+        package_name: org.openstack.ci_cd_pipeline_murano_app.Nodepool
+      release:
+        - Liberty
+        - Mitaka
+      license: Multi-licensed OpenSource
+      depends:
+        - name: SystemConfig
+        - name: Puppet
+        - name: Jenkins
+        - name: Zuul
+      hash: 0a291db5bd2c633780e55f2c985354f4
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/org.openstack.ci_cd_pipeline_murano_app.Nodepool.zip"
+    -
+      name: Zuul
+      tags: ['app']
+      provided_by:
+        name: Nikolay Makhotkin
+        href: "mailto:nmakhotkin@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+           Zuul is a pipeline oriented project gating and automation system.
+
+           IRC:#murano-apps on freenode.net
+      service:
+        type: murano
+        format: package
+        package_name: org.openstack.ci_cd_pipeline_murano_app.Zuul
+      release:
+        - Liberty
+        - Mitaka
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Puppet
+        - name: SystemConfig
+        - name: Gerrit
+      hash: 0ff53ac6246ae57d830962dabd9dd4e2
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/org.openstack.ci_cd_pipeline_murano_app.Zuul.zip"
+    -
+      name: ZuulNodepoolHelper
+      tags: ['app']
+      provided_by:
+        name: Nikolay Makhotkin
+        href: "mailto:nmakhotkin@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+           Zuul and Nodepool Install Helper for CI/CD application.
+
+           IRC:#murano-apps on freenode.net
+      service:
+        type: murano
+        format: package
+        package_name: org.openstack.ci_cd_pipeline_murano_app.ZuulNodepoolHelper
+      release:
+        - Liberty
+        - Mitaka
+      license: Multi-licensed OpenSource
+      hash: 9e725d83e22e6390fff0e71a064c1a13
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/org.openstack.ci_cd_pipeline_murano_app.ZuulNodepoolHelper.zip"
+    -
+      name: MagnumBayApp
+      tags: ['app']
+      provided_by:
+        name: Madhuri Kumari
+        href: "mailto:madhuri.kumari@intel.com"
+        company: Intel, Inc.
+      description: >
+           App to deploy Kubernetes cluster using Magnum.
+      service:
+        type: murano
+        format: package
+        package_name: io.murano.apps.magnum.plugin.MagnumBayApp
+      release:
+        - Mitaka
+      license: Multi-licensed OpenSource
+      hash: 561b664b51802696c90625ccc6d02365
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.magnum.plugin.MagnumBayApp.zip"
+        "Source URL": "https://github.com/openstack/murano/tree/master/contrib/plugins/magnum_plugin/magnum-app/io.murano.apps.MagnumApp"
+    -
+      name: IronMQ
+      tags: ['app']
+      provided_by:
+        name: Derek Schultz
+        href: "mailto:derek@iron.io"
+        company: Iron.io
+      description: >
+        IronMQ is a cloud native message queue solution built for modern
+        distributed applications. It provides the backbone for a microservices
+        architecture by allowing services to communicate. Legacy message queue
+        and ESB solutions are difficult to operate and can weigh down the entire
+        system. IronMQ is a lightweight containerized service that communicates
+        via HTTP through a REST API.
+      service:
+        type: murano
+        format: package
+        package_name: io.iron.IronMQ
+      release:
+        - Liberty
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Docker Standalone Host
+        - name: Docker Interfaces Library
+      hash: 8445a88d56eb558c0751b46290554898
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/io.iron.IronMQ.zip"
+    -
+      name: F5 BIG-IP VE Onboard
+      tags: ['app']
+      provided_by:
+        name: F5 Networks
+        href: https://f5.com/openstack
+        company: F5 Networks
+      service:
+        type: heat
+        format: HOT
+      description: >
+          This is a template that can be use to prepare a F5 Networks BIG-IP
+          Virtual Edition (VE) image for use in an OpenStack cloud.  This
+          template will add the required functionality for OpenStack
+          compatibility and upload the image into the Glance service.  Prior to
+          using this template a VE image with a version of 11.5, 11.6, or 12.0
+          must have been downloaded from the F5 Networks downloads site
+          (https://downloads.f5.com).  More information on this template
+          can be found at
+          http://f5-openstack-heat.readthedocs.io/en/latest/templates/supported/ref_images_patch-upload-ve-image.html
+          General information on F5 Networks' Heat templates can be found at
+          http://f5-openstack-heat.readthedocs.io
+          Information on F5's OpenStack support policy can be found at
+          https://support.f5.com/kb/en-us/solutions/public/k/80/sol80012344.html
+      release:
+        - Kilo
+        - Liberty
+      supported_by:
+        name: F5 Networks, with a valid support contract.
+      icon:
+        url: http://apps.openstack.org/static/images/logo-f5.png
+        top: 5
+        left: -45
+        height: 170
+      license: Apache 2.0
+      attributes:
+        url: https://github.com/F5Networks/f5-openstack-heat/blob/liberty/f5_supported/ve/images/patch_upload_ve_image.yaml
+    -
+      name: F5 BIG-IP VE Standalone 2 Interface
+      tags: ['app']
+      provided_by:
+        name: F5 Networks
+        href: https://f5.com/openstack
+        company: F5 Networks
+      service:
+        type: heat
+        format: HOT
+      description: >
+          This template can be used to deploy and license an F5 Networks
+          BIG-IP Virtual Edition (VE) and configure it with two interfaces.
+          In this deployment, generally referred to as 'single-arm', it is
+          assumed that one interface will be used for management of the BIG-IP
+          VE, while the other will be used for load balancing or other
+          traffic. Use of this template requires an existing VE glance image
+          that has been properly onboarded.
+          To onboard an image see our F5 BIG-IP VE Onboard HOT template in the
+          OpenStack Application Catalog at https://apps.openstack.org/.
+          More information on this template can be found at
+          http://f5-openstack-heat.readthedocs.io/en/latest/templates/supported/ref_common_f5-ve-standalone-2nic.html
+          General information on F5 Networks' Heat templates can be found at
+          http://f5-openstack-heat.readthedocs.io
+          Information on F5's OpenStack support policy can be found at
+          https://support.f5.com/kb/en-us/solutions/public/k/80/sol80012344.html
+      release:
+        - Kilo
+        - Liberty
+      supported_by:
+        name: F5 Networks, with a valid support contract.
+      icon:
+        url: http://apps.openstack.org/static/images/logo-f5.png
+        top: 5
+        left: -45
+        height: 170
+      license: Apache 2.0
+      attributes:
+        url: https://github.com/F5Networks/f5-openstack-heat/blob/liberty/f5_supported/ve/standalone/f5_ve_standalone_2_nic.yaml
+    -
+      name: F5 BIG-IP VE Standalone 3 Interface
+      tags: ['app']
+      provided_by:
+        name: F5 Networks
+        href: https://f5.com/openstack
+        company: F5 Networks
+      service:
+        type: heat
+        format: HOT
+      description: >
+          This template can be used to deploy and license an F5 Networks
+          BIG-IP Virtual Edition (VE) and configure it with three interfaces.
+          In this deployment, generally referred to as 'single-arm', it is
+          assumed that one interface will be used for management of the BIG-IP
+          VE, while the other two will be used for load balancing or other
+          traffic. Use of this template requires an existing VE glance image
+          that has been properly onboarded.
+          To onboard an image see our F5 BIG-IP VE Onboard HOT template in the
+          OpenStack Application Catalog at https://apps.openstack.org/.
+          More information on this template can be found at
+          http://f5-openstack-heat.readthedocs.io/en/latest/templates/supported/ref_common_f5-ve-standalone-3nic.html
+          General information on F5 Networks' Heat templates can be found at
+          http://f5-openstack-heat.readthedocs.io
+          Information on F5's OpenStack support policy can be found at
+          https://support.f5.com/kb/en-us/solutions/public/k/80/sol80012344.html
+      release:
+        - Kilo
+        - Liberty
+      supported_by:
+        name: F5 Networks, with a valid support contract.
+      icon:
+        url: http://apps.openstack.org/static/images/logo-f5.png
+        top: 5
+        left: -45
+        height: 170
+      license: Apache 2.0
+      attributes:
+        url: https://github.com/F5Networks/f5-openstack-heat/blob/liberty/f5_supported/ve/standalone/f5_ve_standalone_3_nic.yaml
+
+    -
+      name: Elasticsearch-Logstash-Kibana
+      tags: ['app']
+      provided_by:
+        name: lakshminarayanan np 
+        href: http://www.imaginea.com
+        company: Imaginea Technologies Inc.
+      description: >
+          This is a template for deploying Elasticsearch, Logstash
+          and Kibana on Ubuntu 14.04 VM. This template also includes filebeat which is used to gather syslog of your servers.
+          More details on usage can be found at:
+          https://github.com/lnarayanan68/ELK-Heat-Template/blob/master/README.md
+      release:
+        - Kilo
+        - Liberty
+      service:
+        type: heat
+        format: HOT
+      supported_by:
+        name: Imaginea Technologies Inc.
+      license: Apache 2.0
+      attributes:
+        url: https://github.com/lnarayanan68/ELK-Heat-Template/blob/master/elkstack.yml
+
+    -
+
+      name: Clearwater demo
+      tags: ['app']
+      provided_by:
+        name: Konstantin Snihyr
+        href: "mailto:ksnihyr@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+        Clearwater is an open source implementation of IMS (the IP Multimedia
+        Subsystem) designed from the ground up for massively scalable deployment
+        in the Cloud to provide voice, video and messaging services to millions
+        of users. Clearwater combines the economics of over-the-top style service
+        platforms with the standards compliance expected of telco-grade communications
+        network solutions, and its Cloud-oriented design makes it extremely
+        well suited for deployment in a
+        Network Functions Virtualization (NFV) environment.
+
+        This application is PoC and demonstrate Murano capabilities in vIMS deploy
+      service:
+        type: murano
+        format: package
+        package_name: com.mirantis.clearwater.Clearwater
+      release:
+        - Mitaka
+      license: Multi-licensed OpenSource
+      depends:
+        - name: BIND DNS server
+        - name: Ubuntu Trusty 14
+      hash: cb0d37228d8f78b62b42964136f9a75b
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/com.mirantis.clearwater.Clearwater.zip"
+        "Source URL": "https://github.com/openstack/murano-apps/tree/master/Clearwater/package"
+
+    -
+
+      name: BIND DNS server
+      tags: ['app']
+      provided_by:
+        name: Konstantin Snihyr
+        href: "mailto:ksnihyr@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+        BIND is open source software that implements the Domain Name System (DNS)
+        protocols for the Internet.
+        It is a reference implementation of those protocols,
+        but it is also production-grade software, suitable for use in high-volume
+        and high-reliability applications.
+        The name BIND stands for “Berkeley Internet Name Domain”,
+        because the software originated in the early 1980s
+        at the University of California at Berkeley.
+
+        BIND is by far the most widely used DNS software on the Internet,
+        providing a robust and stable platform on top of which organizations
+        can build distributed computing systems with the knowledge that those
+        systems are fully compliant with published DNS standards.
+      service:
+        type: murano
+        format: package
+        package_name: com.mirantis.network.dns.Bind
+      release:
+        - Mitaka
+      license: Apache License, Version 2.0
+      depends:
+        - name: Ubuntu Trusty 14
+      hash: da88780bc2c08a1c56c358fe03566e35
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/com.mirantis.network.dns.Bind.zip"
+        "Source URL": "https://github.com/openstack/murano-apps/tree/master/BIND/package"
+
+    -
+      name: RefStack client
+      tags: ['app']
+      provided_by:
+        name: Sergey Slipushenko
+        href: "mailto:sslypushenko@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+         refstack-client is a command line utility that allows you to execute
+         Tempest test runs based on configurations you specify. When finished
+         running Tempest it can send the passed test data to a RefStack API server.
+         More information about restack-client and how to use it can be found in README
+         https://github.com/openstack/refstack-client. To become more familiar 
+         with RefStack project it self, please visit https://refstack.openstack.org/
+
+         Murano creates one VM with assigned floating IP from the image
+         listed in the dependencies. After deployment, you can just ssh to this
+         VM and use installed refstack-client. NOTE: Installation script uses 
+         as a source the master branch from refstack-client repository.
+      service:
+        type: murano
+        format: package
+        package_name: org.openstack.RefStackClient
+      release:
+        - Liberty
+        - Mitaka
+      license: Apache 2.0
+      depends:
+        - name: Debian 8 x64 (pre-installed murano-agent)
+      hash: ae5fe88faa2f556c552a56950323e605
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/org.openstack.RefStackClient.zip"
+        "Source URL": "https://github.com/openstack/murano-apps/tree/master/RefStackClient/package"
+
+
