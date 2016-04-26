@@ -1,4 +1,5 @@
-<form novalidate name="asset_form" ng-submit="assetSubmit()" ng-controller="addAssetController">
+<h2> {{ operation }} </h2>
+<form novalidate name="asset_form" ng-submit="assetSubmit()">
     Name: <input type="text" ng-model="asset.name" required><br />
     Version: <input type="text" ng-model="asset.version" required><br />
     Asset Type:
