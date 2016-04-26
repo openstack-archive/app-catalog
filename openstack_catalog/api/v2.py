@@ -29,7 +29,7 @@ def index_v2():
 
 
 @api.route('/v2/db/<path:url>',
-           methods=['GET', 'POST', 'UPDATE', 'DELETE', 'HEAD', 'OPTIONS'])
+           methods=['GET', 'PUT', 'POST', 'PATCH', 'UPDATE', 'DELETE', 'HEAD', 'OPTIONS'])
 def v2_passthrough_with_url(url):
     return v2_passthrough(url)
 

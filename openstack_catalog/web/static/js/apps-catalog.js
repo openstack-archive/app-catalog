@@ -121,6 +121,16 @@ function filterData (tableData, filters) {
 
 function populate_table (table_id, table_column_names, tableData)
 {
+  table_column_names.push("editUrl");
+  for(var i = 0; i < tableData.length; ++i) {
+    var url = "";
+    url = "#/tab=add-asset&?id=" + tableData[i].id;
+    url += "&t_name=" + tableData[i].type_name;
+    url += "&t_ver=" + tableData[i].type_version;
+    tableData[i]["editUrl"] = "<a href='" + url +
+        "'><button type='button' class='btn btn-info'><span aria-hidden='true' class='glyphicon glyphicon-edit'></span>Edit</button></a>";
+  }
+
   var tableColumns = [];
   for (var i = 0; i < table_column_names.length; i++) {
     tableColumns.push({"mData": table_column_names[i]});
@@ -130,6 +140,7 @@ function populate_table (table_id, table_column_names, tableData)
       }
     }
   }
+
 
   if (table_id) {
     $("#" + table_id).dataTable({

@@ -1,5 +1,5 @@
 (function () {
-  "use strict";
+  //"use strict";
 
   angular
     .module('glareassets')
@@ -9,16 +9,16 @@
     '$scope',
     '$rootScope',
     '$http',
+    '$interpolate',
+    '$location',
     'AssetTypesFactory'
   ];
 
-  function addAssetController($scope, $rootScope, $http, AssetTypesFactory) {
-    $scope.assetTypes = {
-      types: [],
-      selected: null
-    };
+  function addAssetController($scope, $rootScope, $http, $interpolate, $location, AssetTypesFactory) {
+
     $scope.asset = {};
-    $scope.typeSpecific = {};
+    $scope.loadedAsset = {};
+    $scope.operation = "Add asset";
     $scope.releases = {
       'Austin': false,
       'Bexar': false,
@@ -36,6 +36,46 @@
       'Newton': false,
       'Ocata': false
     };
+    $scope.$on('$locationChangeStart', function () {
+        var params = $location.search();
+        if (!!params.id) {
+          $scope.operation = "Edit asset";
+          var t_name = {
+            'MuranoPackageAsset': 'murano_packages',
+            'GlanceImageAsset': 'glance_images',
+            'BundleAsset': 'bundles',
+            'TOSCATemplateAsset': 'tosca_templates',
+            'MyArtifact': 'myartifact'
+          }[params.t_name];
+          var t_version = 'v' + params.t_ver;
+          var assetLinkTemplate = $interpolate('/api/v2/db/artifacts/{{type}}/{{id}}/{{asset_id}}');
+          $scope.assetUrl = assetLinkTemplate({
+            type: t_name,
+            id: t_version,
+            asset_id: params.id
+          });
+          $http.get($scope.assetUrl)
+          .success(function (data) {
+            $scope.asset = data;
+            $scope.loadedAsset = JSON.parse(JSON.stringify(data));
+            for (var i=0; i < $scope.asset.release.length; ++i) {
+              $scope.releases[$scope.asset.release[i]] = true;
+            }
+
+          });
+        } else {
+          $scope.asset = {};
+          $scope.operation = "Add asset";
+        }
+      }
+    );
+
+    $scope.assetTypes = {
+      types: [],
+      selected: null
+    };
+    $scope.typeSpecific = {};
+
 
     AssetTypesFactory.getTypes().then(function(types) {
       $scope.assetTypes.types = types;
@@ -43,6 +83,13 @@
         $scope.assetTypes.selected = $scope.assetTypes.types[0];
       }
     });
+    
+    $scope.$watch('asset', function () {
+      $scope.assetTypes.selected = $scope.assetTypes.types.filter(function (item) {
+        return item.name == $scope.asset.type_name + ": v" + $scope.asset.type_version;
+      })[0];
+    });
+
 
     $scope.assetSubmit = function() {
       var data = angular.copy($scope.asset);
@@ -80,21 +127,53 @@
 
       console.log(dataToSend);
 
-      $http({
-        method: "POST",
-        url: glareUrl,
-        data: data,
-        headers: {
-          "Content-Type": "application/json"
+      if (!data.id){
+        $http({
+          method: "POST",
+          url: glareUrl,
+          data: data,
+          headers: {
+            "Content-Type": "application/json"
+          }
+        }).success(function(result) {
+          $rootScope.$broadcast('assetAdded');
+          console.log(result);
+          alert('Artefact draft successfully created!');
+        }).error(function(result) {
+          console.log(result);
+          alert('Artefact creation failed!');
+        });
+      } else {
+        var patch_content = [];
+        for(var fieldname in data) {
+          if (data.hasOwnProperty(fieldname)) {
+            if (!angular.equals(data[fieldname], $scope.loadedAsset[fieldname])) {
+              patch_content.push({
+                "op": "replace",
+                "path": "/"+fieldname,
+                "value": data[fieldname] || {}
+              });
+            }
+          }
         }
-      }).success(function(result) {
-        $rootScope.$broadcast('assetAdded');
-        console.log(result);
-        alert('Artefact draft successfully created!');
-      }).error(function(result) {
-        console.log(result);
-        alert('Artefact creation failed!');
-      });
+        console.log(JSON.stringify(patch_content));
+        $http({
+          method: "PATCH",
+          url: $scope.assetUrl,
+          data: patch_content,
+          headers: {
+            "Content-Type": "application/json"
+          }
+        }).success(function(result) {
+          $rootScope.$broadcast('assetAdded');
+          console.log(result);
+          alert('Artefact successfully edited!');
+        }).error(function(result) {
+          console.log(result);
+          alert('Artefact update failed!');
+        });
+      }
+
     };
   }
 })();
