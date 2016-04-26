@@ -1,4 +1,5 @@
-<form novalidate name="asset_form" ng-submit="assetSubmit()" ng-controller="addAssetController" class="add-asset">
+<h2> {{ operation }} </h2>
+<form novalidate name="asset_form" ng-submit="assetSubmit()" class="add-asset">
 
   <label for="new-asset-name" class="required">Name: </label>
   <input id="new-asset-name" type="text" name="assetName" ng-model="asset.name" required placeholder="Asset Name"><br />
@@ -87,7 +88,7 @@
   <label>Releases:</label><br/>
   <div ng-repeat="(release,enabled) in releases">
     <span><input id="new-asset-release-{{release}}" type="checkbox" ng-model="releases[release]">
-      <label for="new-asset-release-{{release}}">&nbsp;{{release}}<label/></span>
+      <label for="new-asset-release-{{release}}">&nbsp;{{release}}</label></span>
     <br/>
   </div>
 
@@ -197,6 +198,13 @@
 
     <div ng-switch-when="false">
       <div>Please fill in all the required fields and correct any errors</div>
+        <ul>
+          <li ng-repeat="(key, errors) in asset_form.$error track by $index"> <strong>{{ key }}</strong> errors
+            <ul>
+              <li ng-repeat="e in errors">{{ e.$name }} has an error: <strong>{{ key }}</strong>.</li>
+            </ul>
+          </li>
+        </ul>
     </div>
   </div>
 

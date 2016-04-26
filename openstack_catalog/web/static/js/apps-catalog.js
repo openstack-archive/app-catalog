@@ -121,6 +121,16 @@ function filterData (tableData, filters) {
 
 function populate_table (table_id, table_column_names, tableData)
 {
+  table_column_names.push("editUrl");
+  for (var i = 0; i < tableData.length; ++i) {
+    tableData[i].editUrl =
+        "<button type='button' class='btn btn-info' onclick='editAsset(\"" +
+        tableData[i].id + "\",\"" +
+        tableData[i].type_version + "\",\"" +
+        tableData[i].type_name + "\");" +
+        "'><span aria-hidden='true' class='glyphicon glyphicon-edit'></span>Edit</button></a>";
+  }
+
   var tableColumns = [];
   for (var i = 0; i < table_column_names.length; i++) {
     tableColumns.push({"mData": table_column_names[i]});
@@ -130,6 +140,7 @@ function populate_table (table_id, table_column_names, tableData)
       }
     }
   }
+
 
   if (table_id) {
     $("#" + table_id).dataTable({
@@ -146,6 +157,13 @@ function populate_table (table_id, table_column_names, tableData)
       "aoColumns": tableColumns
     });
   }
+}
+
+function editAsset(id, version, name) {
+  document.cookie = "asset_id=" + id;
+  document.cookie = "asset_version=" + version;
+  document.cookie = "asset_name=" + name;
+  window.location = "/#/tab=add-asset";
 }
 
 function showInfoDialog (tab, info) {
