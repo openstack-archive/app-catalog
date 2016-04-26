@@ -271,6 +271,7 @@
           <th>Description</th>
           <th>Release</th>
           <th>Format</th>
+            <th>Edit</th>
         </tr>
               </thead>
         </table>
@@ -303,6 +304,7 @@
           <th>Description</th>
           <th>Release</th>
           <th>Format</th>
+            <th>Edit</th>
         </tr>
               </thead>
         </table>
@@ -339,11 +341,9 @@
         </table>
       </div>
     </div>
-
       </div>
 
     <div id="add-asset" class="content" style="display:none" ng-controller="addAssetController">
-        <h2> Add Asset </h2>
         <div class="row" ng-include="'static/apps/manage-glare-assets/html/create_asset.html'"></div>
     </div>
 
@@ -418,6 +418,7 @@
       </div>
 
     </div>
+      </div> <!-- ng-app -->
 
     <!-- core JavaScript
     ================================================== -->
@@ -523,6 +524,7 @@
 
       <h3>Description</h3>
       <div><span class="value">${description}</span></div>
+
 
       <h3>Supported OpenStack Releases</h3>
       <div><span class="value">${release_html}</span></div>
