@@ -2933,3 +2933,23 @@
       hash: 9d6fb15281ab82a2cf87cbd94f9ad495
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.opaas.ProjectConfig.zip"
+    -
+      name: MagnumBayApp
+      tags: ['app']
+      provided_by:
+        name: Madhuri Kumari
+        href: "mailto:madhuri.kumari@intel.com"
+        company: Intel, Inc.
+      description: >
+           App to deploy Kubernetes cluster using Magnum.
+      service:
+        type: murano
+        format: package
+        package_name: io.murano.apps.magnum.plugin.MagnumBayApp
+      release:
+        - Mitaka
+      license: Multi-licensed OpenSource
+      hash: 561b664b51802696c90625ccc6d02365
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.magnum.plugin.MagnumBayApp.zip"
+        "Source URL": "https://github.com/openstack/murano/tree/master/contrib/plugins/magnum_plugin/magnum-app/io.murano.apps.MagnumApp"
