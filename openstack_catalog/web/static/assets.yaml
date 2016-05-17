@@ -2953,3 +2953,30 @@
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.magnum.plugin.MagnumBayApp.zip"
         "Source URL": "https://github.com/openstack/murano/tree/master/contrib/plugins/magnum_plugin/magnum-app/io.murano.apps.MagnumApp"
+    -
+      name: IronMQ
+      tags: ['app']
+      provided_by:
+        name: Derek Schultz
+        href: "mailto:derek@iron.io"
+        company: Iron.io
+      description: >
+        IronMQ is a cloud native message queue solution built for modern
+        distributed applications. It provides the backbone for a microservices
+        architecture by allowing services to communicate. Legacy message queue
+        and ESB solutions are difficult to operate and can weigh down the entire
+        system. IronMQ is a lightweight containerized service that communicates
+        via HTTP through a REST API.
+      service:
+        type: murano
+        format: package
+        package_name: io.murano.apps.docker.IronMQ
+      release:
+        - Liberty
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Docker Standalone Host
+        - name: Docker Interfaces Library
+      hash: 87a89c5383e500295295bf0e8bb07b4d
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.IronMQ.zip"
