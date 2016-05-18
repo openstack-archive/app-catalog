@@ -2980,3 +2980,118 @@
       hash: 87a89c5383e500295295bf0e8bb07b4d
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.IronMQ.zip"
+    -
+      name: F5 BIG-IP VE Onboard
+      tags: ['app']
+      provided_by:
+        name: F5 Networks
+        href: https://f5.com/openstack
+        company: F5 Networks
+      service:
+        type: heat
+        format: HOT
+      description: >
+          This is a template that can be use to prepare a F5 Networks BIG-IP
+          Virtual Edition (VE) image for use in an OpenStack cloud.  This
+          template will add the required functionality for OpenStack
+          compatibility and upload the image into the Glance service.  Prior to
+          using this template a VE image with a version of 11.5, 11.6, or 12.0
+          must have been downloaded from the F5 Networks downloads site
+          (https://downloads.f5.com).  More information on this template
+          can be found at
+          http://f5-openstack-heat.readthedocs.io/en/latest/templates/supported/ref_images_patch-upload-ve-image.html.
+          General information on F5 Networks' Heat templates can be found at
+          http://f5-openstack-heat.readthedocs.io.
+          Information on F5's OpenStack support policy can be found at
+          https://support.f5.com/kb/en-us/solutions/public/k/80/sol80012344.html.
+      release:
+        - Kilo
+        - Liberty
+      supported_by:
+        name: F5 Networks, with a valid support contract.
+      icon:
+        url: http://apps.openstack.org/static/images/logo-f5.png
+        top: 5
+        left: -45
+        height: 170
+      license: Apache 2.0
+      attributes:
+        url: https://github.com/F5Networks/f5-openstack-heat/blob/liberty/f5_supported/ve/images/patch_upload_ve_image.yaml
+    -
+      name: F5 BIG-IP VE Standalone 2 Interface
+      tags: ['app']
+      provided_by:
+        name: F5 Networks
+        href: https://f5.com/openstack
+        company: F5 Networks
+      service:
+        type: heat
+        format: HOT
+      description: >
+          This template can be used to deploy and license an F5 Networks
+          BIG-IP Virtual Edition (VE) and configure it with two interfaces.
+          In this deployment, generally referred to as 'single-arm', it is
+          assumed that one interface will be used for management of the BIG-IP
+          VE, while the other will be used for load balancing or other
+          traffic. Use of this template requires an existing VE glance image
+          that has been properly onboarded.
+          To onboard an image see our F5 BIG-IP VE Onboard HOT template in the
+          OpenStack Application Catalog at https://apps.openstack.org/.
+          More information on this template can be found at
+          http://f5-openstack-heat.readthedocs.io/en/latest/templates/supported/ref_common_f5-ve-standalone-2nic.html
+          General information on F5 Networks' Heat templates can be found at
+          http://f5-openstack-heat.readthedocs.io.
+          Information on F5's OpenStack support policy can be found at
+          https://support.f5.com/kb/en-us/solutions/public/k/80/sol80012344.html.
+      release:
+        - Kilo
+        - Liberty
+      supported_by:
+        name: F5 Networks, with a valid support contract.
+      icon:
+        url: http://apps.openstack.org/static/images/logo-f5.png
+        top: 5
+        left: -45
+        height: 170
+      license: Apache 2.0
+      attributes:
+        url: https://github.com/F5Networks/f5-openstack-heat/blob/liberty/f5_supported/ve/standalone/f5_ve_standalone_2_nic.yaml
+    -
+      name: F5 BIG-IP VE Standalone 3 Interface
+      tags: ['app']
+      provided_by:
+        name: F5 Networks
+        href: https://f5.com/openstack
+        company: F5 Networks
+      service:
+        type: heat
+        format: HOT
+      description: >
+          This template can be used to deploy and license an F5 Networks
+          BIG-IP Virtual Edition (VE) and configure it with three interfaces.
+          In this deployment, generally referred to as 'single-arm', it is
+          assumed that one interface will be used for management of the BIG-IP
+          VE, while the other two will be used for load balancing or other
+          traffic. Use of this template requires an existing VE glance image
+          that has been properly onboarded.
+          To onboard an image see our F5 BIG-IP VE Onboard HOT template in the
+          OpenStack Application Catalog at https://apps.openstack.org/.
+          More information on this template can be found at
+          http://f5-openstack-heat.readthedocs.io/en/latest/templates/supported/ref_common_f5-ve-standalone-3nic.html
+          General information on F5 Networks' Heat templates can be found at
+          http://f5-openstack-heat.readthedocs.io.
+          Information on F5's OpenStack support policy can be found at
+          https://support.f5.com/kb/en-us/solutions/public/k/80/sol80012344.html.
+      release:
+        - Kilo
+        - Liberty
+      supported_by:
+        name: F5 Networks, with a valid support contract.
+      icon:
+        url: http://apps.openstack.org/static/images/logo-f5.png
+        top: 5
+        left: -45
+        height: 170
+      license: Apache 2.0
+      attributes:
+        url: https://github.com/F5Networks/f5-openstack-heat/blob/liberty/f5_supported/ve/standalone/f5_ve_standalone_3_nic.yaml
