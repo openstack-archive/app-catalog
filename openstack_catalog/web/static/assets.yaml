@@ -1344,7 +1344,7 @@
         - Liberty
         - Mitaka
       license: Apache 2.0
-      hash: 72634e26b562e756b4136791abaec0ad 
+      hash: 657aff11cf9b8d42afb866d6209c29c3
       attributes:
         "Source URL": "https://github.com/stackforge/murano-apps"
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.Interfaces.zip"
@@ -1758,7 +1758,7 @@
       depends:
         - name: Docker Interfaces Library
         - name: Debian 8 x64 (pre-installed Docker)
-      hash: 7eee1d5cbd3f8fbd33d115e090b0a602
+      hash: ff24df7fdb7004876c734204a21ccb82
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerStandaloneHost.zip"
         "Source URL": "https://github.com/stackforge/murano-apps"
@@ -1801,7 +1801,7 @@
       depends:
         - name: Docker Interfaces Library
         - name: Ubuntu 14.04 x64 (pre-installed Kubernetes)
-      hash: c991ce0d15bffef0fa32d03dc7e76d6e
+      hash: f631c9bbf43135e3cc0c48f7f2e52da0
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.kubernetes.KubernetesCluster.zip"
         "Source URL": "https://github.com/stackforge/murano-apps"
@@ -1845,7 +1845,7 @@
       depends:
         - name: Docker Interfaces Library
         - name: Kubernetes Cluster
-      hash: d16234097d6ba6e69d96248f5d910200
+      hash: 0d90137f32b1a434692830c3ad5c61d0
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.kubernetes.KubernetesPod.zip"
         "Source URL": "https://github.com/stackforge/murano-apps"
