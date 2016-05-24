@@ -2823,6 +2823,7 @@
           Gerrit it's an application written in Java which provides web based code
           review and repository management for the Git version control system.
           Beta version for opaas initiative and still in development.
+          IRC:#murano on freenode.net
       service:
         type: murano
         format: package
@@ -2833,9 +2834,9 @@
       license: Multi-licensed OpenSource
       depends:
         - name: Puppet
-        - name: ProjectConfig
+        - name: SystemConfig
         - name: OpenLDAP
-      hash: c4bd18610f50c9e5abf005225b282220
+      hash: 27b5af51db736f513977cc5c8327066e
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.opaas.Gerrit.zip"
     -
@@ -2850,6 +2851,7 @@
            many Unix-like systems as well as on Microsoft Windows, and includes
            its own declarative language to describe system configuration.
            Beta version for opaas initiative and still in development.
+           IRC:#murano on freenode.net
       service:
         type: murano
         format: package
@@ -2858,7 +2860,7 @@
         - Liberty
         - Mitaka
       license: Multi-licensed OpenSource
-      hash: 3baf2680413f70f557ce5c447ca2d824
+      hash: 4e9398a2e1a08a931b733fd2d55a75c4
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.opaas.puppet.Puppet.zip"
     -
@@ -2871,6 +2873,7 @@
       description: >
            Jenkins is an open source continuous integration tool written in Java.
            Beta version for opaas initiative and still in development.
+           IRC:#murano on freenode.net
       service:
         type: murano
         format: package
@@ -2881,9 +2884,9 @@
       license: Multi-licensed OpenSource
       depends:
         - name: Puppet
-        - name: ProjectConfig
+        - name: SystemConfig
         - name: OpenLDAP
-      hash: 6344887f5e586a4681ea56535593c043
+      hash: 68d2cc1d8fe99c2f36481e370dc62116
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.opaas.Jenkins.zip"
     -
@@ -2897,6 +2900,7 @@
            OpenLDAP is an open source implementation of the Lightweight
            Directory Access Protocol.
            Beta version for opaas initiative and still in development.
+           IRC:#murano on freenode.net
       service:
         type: murano
         format: package
@@ -2907,11 +2911,11 @@
       license: Multi-licensed OpenSource
       depends:
         - name: Puppet
-      hash: 6cf14de92fa4f949a1efcfac834d021d
+      hash: 404fd6054a03f4eb0e52cdc049cd1fb6 
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.opaas.OpenLDAP.zip"
     -
-      name: ProjectConfig
+      name: SystemConfig
       tags: ['app']
       provided_by:
         name: Artem Silenkov
@@ -2920,19 +2924,47 @@
       description: >
            Tools for opaas environment.
            Beta version for opaas initiative and still in development.
+           IRC:#murano on freenode.net
       service:
         type: murano
         format: package
-        package_name: io.murano.opaas.ProjectConfig
+        package_name: io.murano.opaas.SystemConfig
       release:
         - Liberty
         - Mitaka
       license: Multi-licensed OpenSource
       depends:
         - name: Puppet
-      hash: 9d6fb15281ab82a2cf87cbd94f9ad495
+      hash: 0530814894fe21021b26d3b7c654df91
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.opaas.ProjectConfig.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.opaas.SystemConfig.zip"
+    -
+      name: CiCdEnvironment
+      tags: ['app']
+      provided_by:
+        name: Artem Silenkov
+        href: "mailto:asilenkov@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+           The One-click CI/CD installer.
+           Beta version for opaas initiative and still in development.
+           IRC:#murano on freenode.net
+      service:
+        type: murano
+        format: package
+        package_name: io.murano.opaas.CiCdEnvironment
+      release:
+        - Liberty
+        - Mitaka
+      license: Multi-licensed OpenSource
+      depends:
+        - name: OpenLDAP
+        - name: Jenkins
+        - name: Gerrit
+        - name: Puppet
+      hash: 505f661b35ac997aa9c50a29a80c8d50
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.opaas.CiCdEnvironment.zip"
     -
       name: MagnumBayApp
       tags: ['app']
