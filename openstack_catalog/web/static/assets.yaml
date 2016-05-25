@@ -92,7 +92,7 @@
         disk_format: qcow2
         container_format: bare
       license: Multi-licensed OpenSource
-      hash: c98e90e1ff5ed3730dbecb00716cf8a9
+      hash: b39c4c7c56be5e1773d6ac0e2081c617
       attributes:
         url: http://storage.apps.openstack.org/images/ubuntu14.04-x64-kubernetes.qcow2
     -
@@ -111,7 +111,7 @@
         disk_format: qcow2
         container_format: bare
       license: Multi-licensed OpenSource
-      hash: cbd9ded8587b98d144d9cf0faea991a9
+      hash: 393d4f2a7446ab9804fc96f98b3c9ba1
       attributes:
         url: http://storage.apps.openstack.org/images/ubuntu-14.04-m-agent.qcow2
     -
@@ -126,7 +126,7 @@
         disk_format: qcow2
         container_format: bare
       license: Multi-licensed OpenSource
-      hash: c05398176ff18ca4d011b3550fa174e3
+      hash: 0070bf11fd7ee9c32bc060d8c49b0283
       attributes:
         url: http://storage.apps.openstack.org/images/debian-8-m-agent.qcow2
     -
