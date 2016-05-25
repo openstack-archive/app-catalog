@@ -3002,16 +3002,16 @@
       service:
         type: murano
         format: package
-        package_name: io.murano.apps.docker.IronMQ
+        package_name: io.iron.IronMQ
       release:
         - Liberty
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Standalone Host
         - name: Docker Interfaces Library
-      hash: 87a89c5383e500295295bf0e8bb07b4d
+      hash: 8445a88d56eb558c0751b46290554898
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.IronMQ.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/io.iron.IronMQ.zip"
     -
       name: F5 BIG-IP VE Onboard
       tags: ['app']
