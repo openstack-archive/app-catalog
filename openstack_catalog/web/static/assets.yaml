@@ -96,6 +96,21 @@
       attributes:
         url: http://storage.apps.openstack.org/images/ubuntu14.04-x64-kubernetes.qcow2
     -
+      name: Ubuntu 14.04 x64 (pre-installed Docker and murano-agent)
+      provided_by:
+        name: Dmytro Dovbii
+        href: mailto:ddovbii@mirantis.com
+        company: Mirantis, Inc.
+      description: Ubuntu 14.04 x64 with docker amd murano-agent pre-installed
+      service:
+        type: glance
+        disk_format: qcow2
+        container_format: bare
+      license: Multi-licensed OpenSource
+      hash: 499bc2d7e9b5f5dea6900c2dbeb54930
+      attributes:
+        url: http://storage.apps.openstack.org/images/ubuntu14.04-x64-docker.qcow2
+    -
       name: Ubuntu 14.04 x64 (pre-installed murano-agent)
       provided_by:
         name: Alexey Deryugin
