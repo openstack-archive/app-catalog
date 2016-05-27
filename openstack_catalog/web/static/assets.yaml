@@ -2999,11 +2999,11 @@
           must have been downloaded from the F5 Networks downloads site
           (https://downloads.f5.com).  More information on this template
           can be found at
-          http://f5-openstack-heat.readthedocs.io/en/latest/templates/supported/ref_images_patch-upload-ve-image.html.
+          http://f5-openstack-heat.readthedocs.io/en/latest/templates/supported/ref_images_patch-upload-ve-image.html
           General information on F5 Networks' Heat templates can be found at
-          http://f5-openstack-heat.readthedocs.io.
+          http://f5-openstack-heat.readthedocs.io
           Information on F5's OpenStack support policy can be found at
-          https://support.f5.com/kb/en-us/solutions/public/k/80/sol80012344.html.
+          https://support.f5.com/kb/en-us/solutions/public/k/80/sol80012344.html
       release:
         - Kilo
         - Liberty
@@ -3040,9 +3040,9 @@
           More information on this template can be found at
           http://f5-openstack-heat.readthedocs.io/en/latest/templates/supported/ref_common_f5-ve-standalone-2nic.html
           General information on F5 Networks' Heat templates can be found at
-          http://f5-openstack-heat.readthedocs.io.
+          http://f5-openstack-heat.readthedocs.io
           Information on F5's OpenStack support policy can be found at
-          https://support.f5.com/kb/en-us/solutions/public/k/80/sol80012344.html.
+          https://support.f5.com/kb/en-us/solutions/public/k/80/sol80012344.html
       release:
         - Kilo
         - Liberty
@@ -3079,9 +3079,9 @@
           More information on this template can be found at
           http://f5-openstack-heat.readthedocs.io/en/latest/templates/supported/ref_common_f5-ve-standalone-3nic.html
           General information on F5 Networks' Heat templates can be found at
-          http://f5-openstack-heat.readthedocs.io.
+          http://f5-openstack-heat.readthedocs.io
           Information on F5's OpenStack support policy can be found at
-          https://support.f5.com/kb/en-us/solutions/public/k/80/sol80012344.html.
+          https://support.f5.com/kb/en-us/solutions/public/k/80/sol80012344.html
       release:
         - Kilo
         - Liberty
