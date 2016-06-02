@@ -92,7 +92,7 @@
         disk_format: qcow2
         container_format: bare
       license: Multi-licensed OpenSource
-      hash: b39c4c7c56be5e1773d6ac0e2081c617
+      hash: 542aaea14e3b84a849c19d1edcde03c8
       attributes:
         url: http://storage.apps.openstack.org/images/ubuntu14.04-x64-kubernetes.qcow2
     -
@@ -101,7 +101,7 @@
         name: Dmytro Dovbii
         href: mailto:ddovbii@mirantis.com
         company: Mirantis, Inc.
-      description: Ubuntu 14.04 x64 with docker amd murano-agent pre-installed
+      description: Ubuntu 14.04 x64 with docker and murano-agent pre-installed
       service:
         type: glance
         disk_format: qcow2
