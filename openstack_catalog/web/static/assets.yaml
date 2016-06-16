@@ -107,7 +107,7 @@
         disk_format: qcow2
         container_format: bare
       license: Multi-licensed OpenSource
-      hash: 499bc2d7e9b5f5dea6900c2dbeb54930
+      hash: 158e19b86e7532aea708267cc8092e32
       attributes:
         url: http://storage.apps.openstack.org/images/ubuntu14.04-x64-docker.qcow2
     -
