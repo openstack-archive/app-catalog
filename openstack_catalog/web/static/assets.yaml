@@ -935,7 +935,7 @@
                   trusted operating system platforms to deliver an end-to-end
                   hosting architecture that's modern, reliable, and secure.
                   This Atomic image is based on Fedora 23 and was released
-                  2016-04-20.
+                  2016-06-07.
       service:
         type: glance
         disk_format: qcow2
@@ -946,9 +946,9 @@
         left: -40
         height: 210
       license: Multi-licensed OpenSource
-      hash: 817d304d886f759af807f81bc0b6ad39a45d26a8619d7143a6d5cdc731f9bbfa
+      hash: 7575c41952eb5beeb8f41edd122a760087f10323d3f8f92f7625a6c5fa6b68a4
       attributes:
-        url: https://download.fedoraproject.org/pub/alt/atomic/stable/Cloud-Images/x86_64/Images/Fedora-Cloud-Atomic-23-20160420.x86_64.qcow2
+        url: https://download.fedoraproject.org/pub/alt/atomic/stable/Cloud-Images/x86_64/Images/Fedora-Cloud-Atomic-23-20160607.x86_64.qcow2
         docs: http://www.projectatomic.io/docs/
         gpg: https://getfedora.org/static/fedora.gpg
         digest: https://alt.fedoraproject.org/pub/alt/atomic/stable/Cloud-Images/x86_64/Images/Fedora-Cloud-Images-x86_64-23-CHECKSUM
