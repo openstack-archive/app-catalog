@@ -1820,7 +1820,7 @@
       depends:
         - name: Docker Interfaces Library
         - name: Ubuntu 14.04 x64 (pre-installed Kubernetes)
-      hash: 3975d02d0a248632fdff726c7f2357df
+      hash: 4fae5c09355a2ffb4c8193c96357fcad
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.kubernetes.KubernetesCluster.zip"
         "Source URL": "https://github.com/stackforge/murano-apps"
