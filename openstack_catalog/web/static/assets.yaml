@@ -3172,3 +3172,31 @@
       license: Apache 2.0
       attributes:
         url: https://github.com/F5Networks/f5-openstack-heat/blob/liberty/f5_supported/ve/standalone/f5_ve_standalone_3_nic.yaml
+
+    -
+      name: Elasticsearch-Logstash-Kibana
+      tags: ['app']
+      provided_by:
+        name: lakshminarayanan np
+        href: http://www.imaginea.com
+        company: Imaginea Technologies Inc.
+      description: >
+          This is a template for deploying Elasticsearch, Logstash
+          and Kibana on Ubuntu 14.04 VM. This template also includes filebeat which is used to gather syslog of your servers.
+          More details on usage can be found at:
+          https://github.com/lnarayanan68/ELK-Heat-Template/blob/master/README.md
+      release:
+        - Kilo
+        - Liberty
+      service:
+        type: heat
+        format: HOT
+      supported_by:
+        name: Imaginea Technologies Inc.
+      license: Apache 2.0
+      attributes:
+        url: https://github.com/lnarayanan68/ELK-Heat-Template/blob/master/elkstack.yml
+
+
+
+

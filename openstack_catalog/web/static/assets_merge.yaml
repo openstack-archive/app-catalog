@@ -1,0 +1,110 @@
+assets:
+  AeroFS Private Cloud: {last_modified: '2016-01-27 12:59:14-08:00'}
+  Apache HTTP Server: {last_modified: '2016-03-22 18:14:37+02:00'}
+  Apache Tomcat: {last_modified: '2016-03-22 18:14:37+02:00'}
+  Apcera: {last_modified: '2016-03-22 18:14:37+02:00'}
+  Apcera HCOS Trial Edition: {last_modified: '2016-01-22 15:35:10-08:00'}
+  Application Servers Bundle: {last_modified: '2016-03-22 18:14:37+02:00'}
+  CentOS 6: {last_modified: '2016-01-22 15:35:10-08:00'}
+  CentOS 7: {last_modified: '2016-01-22 15:35:10-08:00'}
+  Chef - Standalone Server: {last_modified: '2015-08-23 12:25:20-07:00'}
+  Chef Server: {last_modified: '2016-01-22 15:35:10-08:00'}
+  CiCdEnvironment: {last_modified: '2016-06-16 19:30:38+03:00'}
+  CiCdUtils: {last_modified: '2016-06-16 19:30:38+03:00'}
+  CirrOS: {last_modified: '2015-08-23 12:25:20-07:00'}
+  Cloud Foundry: {last_modified: '2016-03-22 18:14:37+02:00'}
+  Container-based Apps Bundle: {last_modified: '2016-03-22 18:14:37+02:00'}
+  CoreOS v647.0.0: {last_modified: '2016-01-22 15:35:10-08:00'}
+  CoreOS v668.3.0: {last_modified: '2016-01-22 15:35:10-08:00'}
+  CoreOS v681.0.0: {last_modified: '2016-01-22 15:35:10-08:00'}
+  Databases Bundle: {last_modified: '2016-03-22 18:14:37+02:00'}
+  Debian 8 x64 (pre-installed Docker): {last_modified: '2016-01-22 15:35:10-08:00'}
+  Debian 8 x64 (pre-installed murano-agent): {last_modified: '2016-05-25 14:14:49+03:00'}
+  Debian Jessie 8.0.0 x64: {last_modified: '2016-01-22 15:35:10-08:00'}
+  Debian Jessie 8.4.0 x64: {last_modified: '2016-04-05 08:58:44-07:00'}
+  Debian Testing weekly build x64: {last_modified: '2016-01-12 08:39:41-08:00'}
+  Docker & Kubernetes Bundle: {last_modified: '2016-03-22 18:14:37+02:00'}
+  Docker Container: {last_modified: '2016-03-22 18:14:37+02:00'}
+  Docker Crate: {last_modified: '2016-03-22 18:14:37+02:00'}
+  Docker GlassFish: {last_modified: '2016-03-22 18:14:37+02:00'}
+  Docker Grafana: {last_modified: '2016-03-22 18:14:37+02:00'}
+  Docker GuestBook: {last_modified: '2016-03-28 16:42:13+03:00'}
+  Docker HTTPd: {last_modified: '2016-03-22 18:14:37+02:00'}
+  Docker HTTPd Site: {last_modified: '2016-03-22 18:14:37+02:00'}
+  Docker InfluxDB: {last_modified: '2016-03-22 18:14:37+02:00'}
+  Docker Interfaces Library: {last_modified: '2016-05-24 14:02:18-07:00'}
+  Docker Jenkins: {last_modified: '2016-03-22 18:14:37+02:00'}
+  Docker MariaDB: {last_modified: '2016-03-22 18:14:37+02:00'}
+  Docker MongoDB: {last_modified: '2016-03-22 18:14:37+02:00'}
+  Docker MySQL: {last_modified: '2016-03-22 18:14:37+02:00'}
+  Docker Nginx: {last_modified: '2016-03-22 18:14:37+02:00'}
+  Docker Nginx Site: {last_modified: '2016-03-22 18:14:37+02:00'}
+  Docker PostgreSQL: {last_modified: '2016-03-22 18:14:37+02:00'}
+  Docker Redis: {last_modified: '2016-03-22 18:14:37+02:00'}
+  Docker Standalone Host: {last_modified: '2016-05-24 14:02:18-07:00'}
+  Docker Tomcat: {last_modified: '2016-03-22 18:14:37+02:00'}
+  Elasticsearch-Logstash-Kibana: {last_modified: '2016-06-20 16:34:43+05:30'}
+  F5 BIG-IP VE Onboard: {last_modified: '2016-05-27 08:46:01-06:00'}
+  F5 BIG-IP VE Standalone 2 Interface: {last_modified: '2016-05-27 08:46:01-06:00'}
+  F5 BIG-IP VE Standalone 3 Interface: {last_modified: '2016-06-20 16:34:43+05:30'}
+  Fedora 21 Atomic (for use with Magnum): {last_modified: '2016-04-04 11:35:58+01:00'}
+  Fedora 23: {last_modified: '2016-01-28 12:00:33-05:00'}
+  Fedora 23 Atomic Cloud: {last_modified: '2016-06-16 14:19:01-04:00'}
+  Gerrit: {last_modified: '2016-06-16 19:30:38+03:00'}
+  Hello World: {last_modified: '2015-09-25 13:07:16-07:00'}
+  Hyperglance (500 node 14 day free trial): {last_modified: '2016-04-04 11:35:58+01:00'}
+  IronMQ: {last_modified: '2016-05-24 15:35:31-06:00'}
+  Jenkins: {last_modified: '2016-06-16 19:30:38+03:00'}
+  Jenkins powered by Bitnami: {last_modified: '2015-08-23 12:25:20-07:00'}
+  KloudBuster Image v6: {last_modified: '2016-03-31 15:46:17-07:00'}
+  Kubernetes Cluster: {last_modified: '2016-06-16 15:05:44+03:00'}
+  Kubernetes Pod: {last_modified: '2016-05-24 14:02:18-07:00'}
+  LAMP Stack powered by Bitnami: {last_modified: '2016-01-22 15:35:10-08:00'}
+  Lattice: {last_modified: '2015-08-23 12:25:20-07:00'}
+  MEAN Stack powered by Bitnami: {last_modified: '2016-01-22 15:35:10-08:00'}
+  MagnumBayApp: {last_modified: '2016-05-04 15:19:34+03:00'}
+  ManageIQ Capablanca (stable): {last_modified: '2016-01-28 12:26:15-05:00'}
+  Monitoring Bundle: {last_modified: '2016-03-22 18:14:37+02:00'}
+  MySQL: {last_modified: '2016-03-22 18:14:37+02:00'}
+  OpenLDAP: {last_modified: '2016-06-16 19:30:38+03:00'}
+  OpenShift Origin 3: {last_modified: '2015-11-14 09:53:13-05:00'}
+  OpenShift-CentOS65: {last_modified: '2015-08-23 12:25:20-07:00'}
+  OpenShift-F19: {last_modified: '2015-08-23 12:25:20-07:00'}
+  Oracle Pluggable Database: {last_modified: '2016-03-22 18:14:37+02:00'}
+  Pivotal Ops Manager: {last_modified: '2016-01-29 16:22:21+02:00'}
+  PostgreSql: {last_modified: '2016-03-22 18:14:37+02:00'}
+  Puppet: {last_modified: '2016-06-16 19:30:38+03:00'}
+  Rally: {last_modified: '2016-03-22 18:14:37+02:00'}
+  Ruby Stack powered by Bitnami: {last_modified: '2016-01-22 15:35:10-08:00'}
+  Sahara Apache Spark 1.0.0 (Ubuntu 14.04): {last_modified: '2016-01-22 15:35:10-08:00'}
+  Sahara Apache Storm 0.9.1 (Ubuntu 14.04): {last_modified: '2016-01-22 15:35:10-08:00'}
+  Sahara CDH 5.3.0 (CentOS 6.6): {last_modified: '2016-01-22 15:35:10-08:00'}
+  Sahara CDH 5.3.0 (Ubuntu 12.04): {last_modified: '2016-01-22 15:35:10-08:00'}
+  Sahara HDP 2.0.6 (CentOS 6.6): {last_modified: '2016-01-22 15:35:10-08:00'}
+  Sahara MapR 4.0.2 (CentOS 6.6): {last_modified: '2016-01-22 15:35:10-08:00'}
+  SqlDatabase Library: {last_modified: '2016-03-22 18:14:37+02:00'}
+  Stackato: {last_modified: '2016-03-22 18:14:37+02:00'}
+  SystemConfig: {last_modified: '2016-06-16 19:30:38+03:00'}
+  TOSCA ELK Monitoring: {last_modified: '2016-04-14 07:34:15-07:00'}
+  TOSCA ELK Monitoring Cloud Service Archive: {last_modified: '2016-04-14 07:34:15-07:00'}
+  TOSCA Hello World: {last_modified: '2016-03-06 20:13:43-08:00'}
+  TOSCA Hello World Cloud Service Archive: {last_modified: '2016-04-14 07:34:15-07:00'}
+  TOSCA Single Instance WordPress: {last_modified: '2016-04-14 07:34:15-07:00'}
+  TOSCA Single Instance WordPress Cloud Service Archive: {last_modified: '2016-04-14
+      07:34:15-07:00'}
+  Ubuntu 14.04 x64 (pre-installed Docker and murano-agent): {last_modified: '2016-06-16
+      16:40:36+03:00'}
+  Ubuntu 14.04 x64 (pre-installed Kubernetes): {last_modified: '2016-06-16 13:51:48+03:00'}
+  Ubuntu 14.04 x64 (pre-installed murano-agent): {last_modified: '2016-05-25 14:14:49+03:00'}
+  Ubuntu 14.04 x64 (pre-installed packages to be used with CloudBees PSE): {last_modified: '2016-01-22
+      15:35:10-08:00'}
+  Ubuntu Trusty 14: {last_modified: '2015-11-03 16:07:33-08:00'}
+  Ubuntu Utopic 14: {last_modified: '2015-08-23 12:25:20-07:00'}
+  Ubuntu Vivid 15: {last_modified: '2015-08-23 12:25:20-07:00'}
+  Windows Server 2012 R2: {last_modified: '2015-08-23 12:25:20-07:00'}
+  WordPress: {last_modified: '2016-03-22 18:14:37+02:00'}
+  Wordpress powered by Bitnami: {last_modified: '2016-01-22 15:35:10-08:00'}
+  Zabbix: {last_modified: '2016-03-22 18:14:37+02:00'}
+  Zabbix Agent: {last_modified: '2016-03-22 18:14:37+02:00'}
+  openSUSE 13.2: {last_modified: '2015-08-23 12:25:20-07:00'}
+  stackato-3.4.2-murano-agent: {last_modified: '2016-01-22 15:35:10-08:00'}
