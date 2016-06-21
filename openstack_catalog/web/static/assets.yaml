@@ -3177,7 +3177,7 @@
       name: Elasticsearch-Logstash-Kibana
       tags: ['app']
       provided_by:
-        name: lakshminarayanan np
+        name: lakshminarayanan np 
         href: http://www.imaginea.com
         company: Imaginea Technologies Inc.
       description: >
