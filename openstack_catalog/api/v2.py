@@ -10,6 +10,8 @@
 # License for the specific language governing permissions and limitations
 # under the License.
 
+import re
+
 from flask import request as flask_request
 from flask import Response
 from flask import stream_with_context
@@ -17,8 +19,14 @@ import requests
 
 from openstack_catalog.api import api
 from openstack_catalog.api import cors_allow
+from openstack_catalog import auth
 from openstack_catalog import settings
 
+RESTRICTED_URLS = (
+    ('POST',
+     re.compile(r'artifacts/glance_images/v1.0/[a-f\-\d]{36}/publish',
+                re.IGNORECASE)),
+)
 
 @api.route('/v2/')
 def index_v2():
@@ -32,6 +40,15 @@ def index_v2():
            methods=['GET', 'POST', 'UPDATE', 'PUT',
                     'DELETE', 'HEAD', 'OPTIONS'])
 def v2_passthrough_with_url(url):
+    for method, url_re in RESTRICTED_URLS:
+        if flask_request.method == method:
+            m = url_re.search(url)
+            if m:
+                auth_info = auth.get_auth_info(flask_request)
+                if auth_info["admin"]:
+                    break
+                return Response("Unauthorized", status=401,
+                                mimetype="text/plain")
     return v2_passthrough(url)
 
 
@@ -41,6 +58,7 @@ def v2_passthrough_without_url():
 
 
 def v2_passthrough(url):
+    print url
     if (url):
         glare_url = "{}/v0.1/{}".format(settings.GLARE_URI, url)
     else:
