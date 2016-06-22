@@ -416,3 +416,11 @@ function navigate ()
 }
 
 window.onhashchange = navigate;
+
+$.ajax({url: "auth/info"}).done(function(data) {
+  console.log(data["fullname"]);
+  if(data.fullname) {
+      $("#sign_out").css("display", "inline").html("Sign out("+data.fullname+")");
+      $("#sign_in").css("display", "none");
+  }
+});
