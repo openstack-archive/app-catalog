@@ -26,6 +26,17 @@ import os.path
 
 from static_settings import get_staticfiles_dirs
 
+BASE_URL = "http://r-ci.tk:8001"
+OPENID_RETURN_URL = BASE_URL + "/auth/process"
+MEMCACHED_SERVER = "127.0.0.1:11211"
+SESSION_COOKIE_NAME = 'aoo.sid'
+SESSION_EXPIRES = 86400
+SESSION_SECURE = False
+
+LAUNCHPAD_API_URL = 'https://api.launchpad.net/devel'
+LAUNCHPAD_LOGIN_URL = 'https://login.launchpad.net/'
+LAUNCHPAD_ADMIN_GROUPS = set(('app-catalog-core', 'rally-core', ))
+
 ASSETS_USE_GLARE = True
 GLARE_URI = "http://127.0.0.1:9494"
 ASSETS_FILE = 'openstack_catalog/web/api/v1/assets'
