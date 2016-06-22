@@ -58,8 +58,13 @@ function ctrl_c() {
   fi
 }
 
+
 function run_server {
   echo "Starting development server..."
+  if ! ss --listening --tcp  --numeric | grep -q ":11211"; then
+      echo 'Error! No memcached detected. Please install and run memcached server. (sudo apt-get install memcached)'
+      exit 1
+  fi
   $root/tools/update_assets.sh
   if [ ! -d $venv ]; then
     virtualenv $venv
