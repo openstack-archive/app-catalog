@@ -441,3 +441,15 @@ function navigate ()
 }
 
 window.onhashchange = navigate;
+var auth_info;
+
+$.ajax({url: "auth/info"}).done(function(data) {
+  if (data.fullname) {
+    auth_info = data;
+    $("#sign_out").css("display", "inline").html("Sign out(" + data.fullname + ")");
+    $("#sign_in").css("display", "none");
+    if (data.admin) {
+      $("#assets_drafts").css("display", "block");
+    }
+  }
+});
