@@ -31,6 +31,8 @@ def v1_index():
 
 @api.route('/v1/assets', methods=['GET', 'OPTIONS'])
 def assets_index():
+    # from openstack_catalog.auth import get_auth_info
+    # get_auth_info(request)
     if request.method == 'OPTIONS':
         data = ''
     else:

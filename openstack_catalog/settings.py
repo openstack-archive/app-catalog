@@ -26,6 +26,14 @@ import os.path
 
 from static_settings import get_staticfiles_dirs
 
+
+BASE_URL = "http://r-ci.tk:8001"
+OPENID_RETURN_URL = BASE_URL + "/auth/process"
+MEMCACHED_SERVER = "127.0.0.1:11211"
+SESSION_COOKIE_NAME = 'aoo.sid'
+SESSION_EXPIRES = 86400
+SESSION_SECURE = False
+
 ASSETS_FILE = 'openstack_catalog/web/api/v1/assets'
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__),
