@@ -410,7 +410,7 @@
       attributes:
         url: http://cdimage.debian.org/cdimage/openstack/archive/8.0.0/debian-8.0.0-openstack-amd64.qcow2
     -
-      name: Debian Jessie 8.4.0 x64
+      name: Debian Jessie 8.5.0 x64
       tags: ['app']
       provided_by:
         name: Debian
@@ -424,7 +424,7 @@
                   by a group of individuals known as the Debian
                   project.
 
-                  This is a Debian Stable 8.4.0 (aka Jessie) official
+                  This is a Debian Stable 8.5.0 (aka Jessie) official
                   base image with cloud_init, cloud-utils, and
                   cloud-initramfs-growroot pre-installed.
       service:
@@ -437,9 +437,9 @@
         left: 10
         height: 124
       license: Multi-licensed OpenSource
-      hash: 94e8ed064876c477f5774697237416f976520d36dbc4cdce897508957f783e15
+      hash: 0a53b82077c44ec29d8774a9ed9df9216d3689c286949f7f500f5d4b359f5ddd
       attributes:
-        url: http://cdimage.debian.org/cdimage/openstack/current/debian-8.4.0-openstack-amd64.qcow2
+        url: http://cdimage.debian.org/cdimage/openstack/current/debian-8.5.0-openstack-amd64.qcow2
     -
       name: Debian Testing weekly build x64
       tags: ['app']
