@@ -1,0 +1,9 @@
+Code-Review+2: Kevin Fox <kevin@efox.cc>
+Code-Review+2: Kirill Zaitsev <kzaitsev@mirantis.com>
+Workflow+1: Kirill Zaitsev <kzaitsev@mirantis.com>
+Verified+2: Jenkins
+Submitted-by: Jenkins
+Submitted-at: Tue, 28 Jun 2016 11:58:52 +0000
+Reviewed-on: https://review.openstack.org/334869
+Project: openstack/app-catalog
+Branch: refs/heads/master
