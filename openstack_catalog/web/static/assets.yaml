@@ -1097,7 +1097,7 @@
         min_ram: 2048
         min_disk: 10
       license: Multi-licensed OpenSource
-      hash: f04addef8bd721a4554bb14ef3e16f73
+      hash: 0959edbd167d39fd2244041847c78150
       attributes:
         url: http://storage.apps.openstack.org/images/kloudbuster_v6.qcow2
         docs: http://kloudbuster.readthedocs.org
