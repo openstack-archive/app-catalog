@@ -101,7 +101,7 @@
         disk_format: qcow2
         container_format: bare
       license: Multi-licensed OpenSource
-      hash: 5d2bc41b9f8ef0797933c9dfe80c195a
+      hash: 16e36fe2c6abac0103af1faae6203213
       attributes:
         url: http://storage.apps.openstack.org/images/ubuntu14.04-x64-kubernetes.qcow2
     -
