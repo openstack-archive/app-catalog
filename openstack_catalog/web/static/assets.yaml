@@ -1269,6 +1269,40 @@
       attributes:
         url: https://raw.githubusercontent.com/chef-partners/chef-heat-templates/master/single_chef_server-HOT.yml
     -
+      name: BIND
+      tags: ['app']
+      provided_by:
+        name: Kostiantyn Snihyr
+        href: "ksnihyr@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+         BIND is open source software that implements the Domain
+         Name System (DNS) protocols for the Internet. It is a reference
+         implementation of those protocols, but it is also production-grade
+         software, suitable for use in high-volume and high-reliability
+         applications. The name BIND stands for “Berkeley Internet Name Domain”,
+         because the software originated in the early 1980s at the University
+         of California at Berkeley.
+
+         BIND is by far the most widely used DNS software on the Internet,
+         providing a robust and stable platform on top of which organizations
+         can build distributed computing systems with the knowledge that those
+         systems are fully compliant with published DNS standards.
+      service:
+        type: murano
+        format: package
+        package_name: com.mirantis.network.dns.Bind
+      release:
+        - Mitaka
+        - Newton
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Ubuntu 14.04 x64 (pre-installed murano-agent)
+      hash: a4896d5e0ad1caae625cc7e9a7ea3fb6
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/com.mirantis.network.dns.Bind.zip"
+        "Source URL": "https://github.com/openstack/murano-apps/tree/master/BIND/package"
+    -
       name: Pivotal Ops Manager
       tags: ['app']
       provided_by:
