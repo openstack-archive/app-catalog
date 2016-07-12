@@ -1302,6 +1302,40 @@
         "Package URL": "http://storage.apps.openstack.org/apps/com.mirantis.network.dns.Bind.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/BIND/package"
     -
+      name: Clearwater
+      tags: ['app']
+      provided_by:
+        name: Kostiantyn Snihyr
+        href: "mailto:ksnihyr@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+         Clearwater is an open source implementation of
+         IMS (the IP Multimedia Subsystem) designed from the ground up
+         for massively scalable deployment in the Cloud to provide voice, video
+         and messaging services to millions of users. Clearwater combines the
+         economics of over-the-top style service platforms with the standards
+         compliance expected of telco-grade communications network solutions, and
+         its Cloud-oriented design makes it extremely well suited for deployment
+         in a Network Functions Virtualization (NFV) environment.
+
+         *Requirements:*
+
+         * Ubuntu 14.04 image with cloudinit
+         * Tenant must be able to spawn 7 VMs with minimum requirements: 2GB RAM, 1 VCPU
+      service:
+        type: murano
+        format: package
+        package_name: com.mirantis.clearwater.Clearwater
+      release:
+        - Mitaka
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Ubuntu 14.04 x64 (pre-installed murano-agent)
+      hash: 2631a0f77dbe0d8cfc41bc9315d10e49
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/com.mirantis.clearwater.Clearwater.zip"
+        "Source URL": "https://github.com/openstack/murano-apps/tree/master/Clearwater/package"
+    -
       name: Pivotal Ops Manager
       tags: ['app']
       provided_by:
