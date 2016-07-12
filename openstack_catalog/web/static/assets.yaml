@@ -3197,6 +3197,74 @@
       attributes:
         url: https://github.com/lnarayanan68/ELK-Heat-Template/blob/master/elkstack.yml
 
+    -
+
+      name: Clearwater demo
+      tags: ['app']
+      provided_by:
+        name: Konstantin Snihyr
+        href: "mailto:ksnihyr@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+        Clearwater is an open source implementation of IMS (the IP Multimedia
+        Subsystem) designed from the ground up for massively scalable deployment
+        in the Cloud to provide voice, video and messaging services to millions
+        of users. Clearwater combines the economics of over-the-top style service
+        platforms with the standards compliance expected of telco-grade communications
+        network solutions, and its Cloud-oriented design makes it extremely
+        well suited for deployment in a
+        Network Functions Virtualization (NFV) environment.
+
+        This application is PoC and demonstrate Murano capabilities in vIMS deploy
+      service:
+        type: murano
+        format: package
+        package_name: com.mirantis.clearwater.Clearwater
+      release:
+        - Mitaka
+      license: Multi-licensed OpenSource
+      depends:
+        - name: BIND DNS server
+      hash: cb0d37228d8f78b62b42964136f9a75b
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/com.mirantis.clearwater.Clearwater.zip"
+        "Source URL": "https://github.com/openstack/murano-apps/tree/master/Clearwater/package"
+
+    -
+
+      name: BIND DNS server
+      tags: ['app']
+      provided_by:
+        name: Konstantin Snihyr
+        href: "mailto:ksnihyr@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+        BIND is open source software that implements the Domain Name System (DNS)
+        protocols for the Internet.
+        It is a reference implementation of those protocols,
+        but it is also production-grade software, suitable for use in high-volume
+        and high-reliability applications.
+        The name BIND stands for “Berkeley Internet Name Domain”,
+        because the software originated in the early 1980s
+        at the University of California at Berkeley.
+
+        BIND is by far the most widely used DNS software on the Internet,
+        providing a robust and stable platform on top of which organizations
+        can build distributed computing systems with the knowledge that those
+        systems are fully compliant with published DNS standards.
+      service:
+        type: murano
+        format: package
+        package_name: com.mirantis.network.dns.Bind
+      release:
+        - Mitaka
+      license: Apache License, Version 2.0
+      hash: da88780bc2c08a1c56c358fe03566e35
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/com.mirantis.network.dns.Bind.zip"
+        "Source URL": "https://github.com/openstack/murano-apps/tree/master/BIND/package"
+
+
 
 
 
