@@ -2855,7 +2855,7 @@
         - name: Puppet
         - name: SystemConfig
         - name: OpenLDAP
-      hash: 4aa76c573002b823a4ca5a6eafbc9631
+      hash: cac40436ce1fe044cdc8cdffdb5aa6e3
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/org.openstack.ci_cd_pipeline_murano_app.Gerrit.zip"
     -
@@ -2881,7 +2881,7 @@
       license: Multi-licensed OpenSource
       depends:
         - name: CiCdUtils
-      hash: 642471e47cec74e41c8785b48580c04b
+      hash: e5e93d6091d05e294fc330b78861083a
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/org.openstack.ci_cd_pipeline_murano_app.puppet.Puppet.zip"
     -
@@ -2907,7 +2907,8 @@
         - name: Puppet
         - name: SystemConfig
         - name: OpenLDAP
-      hash: 6712d93449c8620986c0af939de568aa
+        - name: Gerrit
+      hash: e929e73bc691498edd1aa655557d8285
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/org.openstack.ci_cd_pipeline_murano_app.Jenkins.zip"
     -
@@ -2932,7 +2933,7 @@
       license: Multi-licensed OpenSource
       depends:
         - name: Puppet
-      hash: 0e2600bbfb74bb5f832c16039b2d1aeb
+      hash: 5c11677018fac7377e1e9d0336683e8d
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/org.openstack.ci_cd_pipeline_murano_app.OpenLDAP.zip"
     -
@@ -2956,7 +2957,7 @@
       license: Multi-licensed OpenSource
       depends:
         - name: Puppet
-      hash: 9e46d18a5f1039790202e3c47bd131e7
+      hash: 40ba2f7b6aa1517b6890f7755c363ea7
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/org.openstack.ci_cd_pipeline_murano_app.puppet.SystemConfig.zip"
     -
@@ -2980,7 +2981,7 @@
       license: Multi-licensed OpenSource
       depends:
         - name: Puppet
-      hash: 4e770c56e1efca7ba8a1d93ca4d5cf21
+      hash: 1993c600a782c19a40fc3a9eaefef90f
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/org.openstack.ci_cd_pipeline_murano_app.utils.CiCdUtils.zip"
     -
@@ -3007,9 +3008,90 @@
         - name: Jenkins
         - name: Gerrit
         - name: Puppet
-      hash: 41060cc45d2d40576ede65131ae9afad
+        - name: Nodepool
+        - name: ZuulNodepoolHelper
+        - name: Zuul
+      hash: 0267b340fc9397db02e202ded9c94c70
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/org.openstack.ci_cd_pipeline_murano_app.CiCdEnvironment.zip"
+    -
+      name: Nodepool
+      tags: ['app']
+      provided_by:
+        name: Nikolay Makhotkin
+        href: "mailto:nmakhotkin@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+           Nodepool is a system for launching single-use test nodes on demand based on
+           images built with cached data. It is designed to work with any OpenStack
+           based cloud, and is part of a suite of tools that form a comprehensive
+           test system including Jenkins and Zuul.
+
+           IRC:#murano-apps on freenode.net
+      service:
+        type: murano
+        format: package
+        package_name: org.openstack.ci_cd_pipeline_murano_app.Nodepool
+      release:
+        - Liberty
+        - Mitaka
+      license: Multi-licensed OpenSource
+      depends:
+        - name: SystemConfig
+        - name: Puppet
+        - name: Jenkins
+        - name: Zuul
+      hash: 0a291db5bd2c633780e55f2c985354f4
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/org.openstack.ci_cd_pipeline_murano_app.Nodepool.zip"
+    -
+      name: Zuul
+      tags: ['app']
+      provided_by:
+        name: Nikolay Makhotkin
+        href: "mailto:nmakhotkin@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+           Zuul is a pipeline oriented project gating and automation system.
+
+           IRC:#murano-apps on freenode.net
+      service:
+        type: murano
+        format: package
+        package_name: org.openstack.ci_cd_pipeline_murano_app.Zuul
+      release:
+        - Liberty
+        - Mitaka
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Puppet
+        - name: SystemConfig
+        - name: Gerrit
+      hash: 0ff53ac6246ae57d830962dabd9dd4e2
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/org.openstack.ci_cd_pipeline_murano_app.Zuul.zip"
+    -
+      name: ZuulNodepoolHelper
+      tags: ['app']
+      provided_by:
+        name: Nikolay Makhotkin
+        href: "mailto:nmakhotkin@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+           Zuul and Nodepool Install Helper for CI/CD application.
+
+           IRC:#murano-apps on freenode.net
+      service:
+        type: murano
+        format: package
+        package_name: org.openstack.ci_cd_pipeline_murano_app.ZuulNodepoolHelper
+      release:
+        - Liberty
+        - Mitaka
+      license: Multi-licensed OpenSource
+      hash: 9e725d83e22e6390fff0e71a064c1a13
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/org.openstack.ci_cd_pipeline_murano_app.ZuulNodepoolHelper.zip"
     -
       name: MagnumBayApp
       tags: ['app']
