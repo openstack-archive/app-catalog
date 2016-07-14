@@ -3264,7 +3264,35 @@
         "Package URL": "http://storage.apps.openstack.org/apps/com.mirantis.network.dns.Bind.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/BIND/package"
 
+    -
+      name: RefStack client
+      tags: ['app']
+      provided_by:
+        name: Sergey Slipushenko
+        href: "mailto:sslypushenko@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+         refstack-client is a command line utility that allows you to execute
+         Tempest test runs based on configurations you specify. When finished
+         running Tempest it can send the passed test data to a RefStack API server.
 
-
+         Murano creates one VM with assigned floating ip for you from the image
+         listed in the dependencies. After deployment you can just ssh to this
+         VM and use installed refstack-client.
+      service:
+        type: murano
+        format: package
+        package_name: org.openstack.RefStackClient
+      release:
+        - Kilo
+        - Liberty
+        - Mitaka
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Debian 8 x64 (pre-installed murano-agent)
+      hash: TBD
+      attributes:
+        "Package URL": "TBD"
+        "Source URL": "https://github.com/openstack/murano-apps/tree/master/RefStackClient/package"
 
 
