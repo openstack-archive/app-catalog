@@ -105,6 +105,33 @@
       attributes:
         url: http://storage.apps.openstack.org/images/ubuntu14.04-x64-kubernetes.qcow2
     -
+      name: Debian 8 x64 (pre-installed Kubernetes and murano-agent)
+      provided_by:
+        name: Dmytro Dovbii
+        href: mailto:ddovbii@mirantis.com
+        company: Mirantis, Inc.
+      description: >
+                  Debian 8 x64 with Docker & Kubernetes pre-installed
+                  used by Kubernetes Cluster application.
+
+                  This image contains the following packages:
+
+                  * etcd v2.2.5;
+                  * kubernetes v1.3.0;
+                  * flannel v0.5.5;
+                  * Go v1.6.2;
+                  * confd v0.7.1;
+                  * docker v1.11.2.
+      service:
+        type: glance
+        disk_format: qcow2
+        container_format: bare
+      license: Multi-licensed OpenSource
+      hash: c6372d7ce9ee914468f0a6a99049da9f
+      attributes:
+        url: http://storage.apps.openstack.org/images/debian8-x64-kubernetes.qcow2
+        size: 2.8 Gb
+    -
       name: Ubuntu 14.04 x64 (pre-installed Docker and murano-agent)
       provided_by:
         name: Dmytro Dovbii
