@@ -1,6 +1,51 @@
 {% load compress %}
 
 {% compress js %}
-<script src="{{ STATIC_URL }}lib/angular/angular.js" type='text/javascript' charset="utf-8"></script>
-<script src="{{ STATIC_URL }}lib/magic_search/magic_search.js" type='text/javascript' charset="utf-8"></script>
+
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+
+<script>
+
+var app = angular.module("AppCatalog", ["ngRoute"]);
+app.config(function($routeProvider) {
+    $routeProvider
+    .when("/", {
+      templateUrl: "static/html/index.html"
+    })
+    .when("/assets/:type", {
+      templateUrl: "static/html/assets.html",
+      controller: "AssetsController"
+    });
+});
+
+var assetDetails = {
+  "tosca_template": {
+    "title": "Tosca template",
+    "fields": [["Name", "name"],
+               ["Description", "description"],
+               ["Template format", "template_format"]
+    ]
+  },
+  "glance_image": {
+    "title": "Glance image",
+    "fields": [["Name", "name"],
+               ["Description", "description"],
+               ["License", "license"]
+    ]
+  }
+};
+
+app.controller("AssetsController", function($scope, $http, $routeParams) {
+  var type = $routeParams.type
+  $scope.assetDetails = assetDetails[type];
+  $http.get("/api/v2/db/artifacts/" + type)
+    .then(function(response){
+      console.log(response);
+      $scope.items = response.data[type];
+    });
+});
+
+</script>
+
 {% endcompress %}

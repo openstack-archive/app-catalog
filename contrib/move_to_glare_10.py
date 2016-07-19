@@ -113,6 +113,7 @@ class AssetUploader(object):
                       "container_format", "image_indirect_url")
         image = self._create_asset("glance_image", data)
         image_url = asset["attributes"].get("url")
+        image_url = "https://ya.ru"
         self._create_blob("glance_image", image["id"], "image", image_url)
         self._activate_asset("glance_image", image["id"])
 

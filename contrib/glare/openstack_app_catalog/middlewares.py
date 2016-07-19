@@ -16,7 +16,7 @@ from oslo_context import context
 import webob.dec
 
 
-class DummyMiddleware(object):
+class UnsafeMiddleware(object):
 
     def __init__(self, app):
         self.app = app
