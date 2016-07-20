@@ -1390,10 +1390,10 @@
         - Liberty
         - Mitaka
       license: Apache 2.0
-      hash: 657aff11cf9b8d42afb866d6209c29c3
+      hash: 2082512a727a1ec3999287ba6e4e169a
       attributes:
         "Source URL": "https://github.com/stackforge/murano-apps"
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.Interfaces.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.mirantis.docker.Interfaces.zip"
         Documentation: "https://github.com/stackforge/murano-apps/blob/master/Docker/Kubernetes/readme.md"
     -
       name: Apache HTTP Server
