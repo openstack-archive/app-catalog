@@ -1918,7 +1918,7 @@
       service:
         type: murano
         format: package
-        package_name: io.murano.apps.docker.DockerApp
+        package_name: com.example.docker.DockerApp
       release:
         - Kilo
         - Liberty
@@ -1928,9 +1928,9 @@
         - name: Docker Standalone Host
         - name: Kubernetes Pod
         - name: Docker Interfaces Library
-      hash: a2e15d5025f5c8a1d0b67f3a5750b22d
+      hash: 7eeb7fb26a0eb98fcd2d9f36c334495f
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerApp.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.example.docker.DockerApp.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/DockerApp/package"
     -
       name: Docker Crate
@@ -1951,7 +1951,7 @@
       service:
         type: murano
         format: package
-        package_name: io.murano.apps.docker.DockerCrate
+        package_name: com.example.docker.DockerCrate
       release:
         - Kilo
         - Liberty
@@ -1961,9 +1961,9 @@
         - name: Docker Standalone Host
         - name: Kubernetes Pod
         - name: Docker Interfaces Library
-      hash: 69d5c598f64529819faced9c8dcf3986
+      hash: 8206b643fe62906a5ae923293fba24d9
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerCrate.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.example.docker.DockerCrate.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/Crate/package"
     -
       name: Docker GlassFish
@@ -1995,7 +1995,7 @@
       service:
         type: murano
         format: package
-        package_name: io.murano.apps.docker.DockerGlassFish
+        package_name: com.example.docker.DockerGlassFish
       release:
         - Kilo
         - Liberty
@@ -2005,9 +2005,9 @@
         - name: Docker Standalone Host
         - name: Kubernetes Pod
         - name: Docker Interfaces Library
-      hash: dcf8ce8e3cd87745ea30470429822e59
+      hash: 1c5bf911605d10a9f38e2b6d14d942f5
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerGlassFish.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.example.docker.DockerGlassFish.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/GlassFish/package"
     -
       name: Docker Grafana
@@ -2038,7 +2038,7 @@
       service:
         type: murano
         format: package
-        package_name: io.murano.apps.docker.DockerGrafana
+        package_name: com.example.docker.DockerGrafana
       release:
         - Kilo
         - Liberty
@@ -2049,9 +2049,9 @@
         - name: Kubernetes Pod
         - name: Docker InfluxDB
         - name: Docker Interfaces Library
-      hash: 07ea26704766a9b86822fab93a8cc7f7
+      hash: 73eb553f2ee025111866664c051b74e2
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerGrafana.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.example.docker.DockerGrafana.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/Grafana/package"
     -
       name: Docker GuestBook
@@ -2070,7 +2070,7 @@
       service:
         type: murano
         format: package
-        package_name: io.murano.apps.docker.GuestBook
+        package_name: com.example.docker.GuestBook
       release:
         - Kilo
         - Liberty
@@ -2081,9 +2081,9 @@
         - name: Kubernetes Pod
         - name: Docker Redis
         - name: Docker Interfaces Library
-      hash: bd4d42ac4cdd529c7e559aefab4f4b5d
+      hash: 873b741bb7be325ba6ee35e669ec9b32
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.GuestBook.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.example.docker.GuestBook.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/GuestBook/package"
     -
       name: Docker HTTPd
@@ -2104,7 +2104,7 @@
       service:
         type: murano
         format: package
-        package_name: io.murano.apps.docker.DockerHTTPd
+        package_name: com.example.docker.DockerHTTPd
       release:
         - Kilo
         - Liberty
@@ -2114,9 +2114,9 @@
         - name: Docker Standalone Host
         - name: Kubernetes Pod
         - name: Docker Interfaces Library
-      hash: 408d0685d3299a64f48a030f9703e4d0
+      hash: 97c0e62b98b21e525a9aad9b4079e83e
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerHTTPd.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.example.docker.DockerHTTPd.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/HTTPdServer/package"
     -
       name: Docker HTTPd Site
@@ -2142,7 +2142,7 @@
       service:
         type: murano
         format: package
-        package_name: io.murano.apps.docker.DockerHTTPdSite
+        package_name: com.example.docker.DockerHTTPdSite
       release:
         - Kilo
         - Liberty
@@ -2152,9 +2152,9 @@
         - name: Docker Standalone Host
         - name: Kubernetes Pod
         - name: Docker Interfaces Library
-      hash: ce873d90d946f59b06af65e17d952b8a
+      hash: c7098e7a7c77c9ce5c0e0f0df35b4575
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerHTTPdSite.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.example.docker.DockerHTTPdSite.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/HTTPdSite/package"
     -
       name: Docker InfluxDB
@@ -2177,7 +2177,7 @@
       service:
         type: murano
         format: package
-        package_name: io.murano.apps.docker.DockerInfluxDB
+        package_name: com.example.docker.DockerInfluxDB
       release:
         - Kilo
         - Liberty
@@ -2187,9 +2187,9 @@
         - name: Docker Standalone Host
         - name: Kubernetes Pod
         - name: Docker Interfaces Library
-      hash: 862e80bdb04e21a569d9a0a17547641d
+      hash: 3981adf1a484df76d0991ed5d90f4bd4
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerInfluxDB.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.example.docker.DockerInfluxDB.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/InfluxDB/package"
     -
       name: Docker Jenkins
@@ -2221,7 +2221,7 @@
       service:
         type: murano
         format: package
-        package_name: io.murano.apps.docker.DockerJenkins
+        package_name: com.example.docker.DockerJenkins
       release:
         - Kilo
         - Liberty
@@ -2231,9 +2231,9 @@
         - name: Docker Standalone Host
         - name: Kubernetes Pod
         - name: Docker Interfaces Library
-      hash: 816a32598ca7a12b5db8f3d6d598e8bf
+      hash: 5635241b7e0373777fa785c6bd737800
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerJenkins.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.example.docker.DockerJenkins.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/Jenkins/package"
     -
       name: Docker MariaDB
@@ -2263,7 +2263,7 @@
       service:
         type: murano
         format: package
-        package_name: io.murano.apps.docker.DockerMariaDB
+        package_name: com.example.docker.DockerMariaDB
       release:
         - Kilo
         - Liberty
@@ -2273,9 +2273,9 @@
         - name: Docker Standalone Host
         - name: Kubernetes Pod
         - name: Docker Interfaces Library
-      hash: d2b66714adba398045199019d2a1dd3a
+      hash: 5721494a219313c7cea4acf5599eb080
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerMariaDB.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.example.docker.DockerMariaDB.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/MariaDB/package"
     -
       name: Docker MongoDB
@@ -2308,7 +2308,7 @@
       service:
         type: murano
         format: package
-        package_name: io.murano.apps.docker.DockerMongoDB
+        package_name: com.example.docker.DockerMongoDB
       release:
         - Kilo
         - Liberty
@@ -2318,9 +2318,9 @@
         - name: Docker Standalone Host
         - name: Kubernetes Pod
         - name: Docker Interfaces Library
-      hash: a0f99ae24cdc7c5da7f62cc8bb919f64
+      hash: 153863e2a09daebf1b3ecc39d61e8cf0
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerMongoDB.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.example.docker.DockerMongoDB.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/MongoDB/package"
     -
       name: Docker MySQL
@@ -2343,7 +2343,7 @@
       service:
         type: murano
         format: package
-        package_name: io.murano.apps.docker.DockerMySQL
+        package_name: com.example.docker.DockerMySQL
       release:
         - Kilo
         - Liberty
@@ -2353,9 +2353,9 @@
         - name: Docker Standalone Host
         - name: Kubernetes Pod
         - name: Docker Interfaces Library
-      hash: 25f0a51d04c6959214dc28ebf443497f
+      hash: 3a20ad21ad812995a9bbad51e9705e52
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerMySQL.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.example.docker.DockerMySQL.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/MySQL/package"
     -
       name: Docker Nginx
@@ -2380,7 +2380,7 @@
       service:
         type: murano
         format: package
-        package_name: io.murano.apps.docker.DockerNginx
+        package_name: com.example.docker.DockerNginx
       release:
         - Kilo
         - Liberty
@@ -2390,9 +2390,9 @@
         - name: Docker Standalone Host
         - name: Kubernetes Pod
         - name: Docker Interfaces Library
-      hash: 4bb119bd0434b865fffbf9c44a44d65f
+      hash: 9c18fc83ac35a206f5eb1620b527d742
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerNginx.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.example.docker.DockerNginx.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/Nginx/package"
     -
       name: Docker Nginx Site
@@ -2420,7 +2420,7 @@
       service:
         type: murano
         format: package
-        package_name: io.murano.apps.docker.DockerNginxSite
+        package_name: com.example.docker.DockerNginxSite
       release:
         - Kilo
         - Liberty
@@ -2430,9 +2430,9 @@
         - name: Docker Standalone Host
         - name: Kubernetes Pod
         - name: Docker Interfaces Library
-      hash: 3cf9aae5bd1c77faa99e88537317a289
+      hash: 0acbbab1b8d98416c734a4e713e25cb2
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerNginxSite.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.example.docker.DockerNginxSite.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/NginxSite/package"
     -
       name: Docker PostgreSQL
@@ -2475,7 +2475,7 @@
       service:
         type: murano
         format: package
-        package_name: io.murano.apps.docker.DockerPostgreSQL
+        package_name: com.example.docker.DockerPostgreSQL
       release:
         - Kilo
         - Liberty
@@ -2485,9 +2485,9 @@
         - name: Docker Standalone Host
         - name: Kubernetes Pod
         - name: Docker Interfaces Library
-      hash: 4d0200b151c6d50800d433283080888c
+      hash: 3bba519011243cdfc705c76af6dc72e2
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerPostgreSQL.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.example.docker.DockerPostgreSQL.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/PostgreSQL/package"
     -
       name: Docker Redis
@@ -2511,7 +2511,7 @@
       service:
         type: murano
         format: package
-        package_name: io.murano.apps.docker.DockerRedis
+        package_name: com.example.docker.DockerRedis
       release:
         - Kilo
         - Liberty
@@ -2521,9 +2521,9 @@
         - name: Docker Standalone Host
         - name: Kubernetes Pod
         - name: Docker Interfaces Library
-      hash: f725f78055f300c4ef8f37a69a81b5ce
+      hash: 7902cbabd16f08daa50147caf56366d9
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerRedis.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.example.docker.DockerRedis.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/Redis/package"
     -
       name: Docker Tomcat
@@ -2548,7 +2548,7 @@
       service:
         type: murano
         format: package
-        package_name: io.murano.apps.docker.DockerTomcat
+        package_name: com.example.docker.DockerTomcat
       release:
         - Kilo
         - Liberty
@@ -2558,9 +2558,9 @@
         - name: Docker Standalone Host
         - name: Kubernetes Pod
         - name: Docker Interfaces Library
-      hash: b470fb1788d423a6e627b30137659a88
+      hash: 1d7a3477d386ce1ffcad890a242c9237
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.DockerTomcat.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.example.docker.DockerTomcat.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Docker/Applications/Tomcat/package"
     -
       name: Application Servers Bundle
