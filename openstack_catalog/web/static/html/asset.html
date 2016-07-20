@@ -1,0 +1,49 @@
+<h2>{{item.name}}</h2>
+<img src="{{item.icon.url}}" style="float:right" ng-if="item.icon"></img>
+
+<div><span class=label>Last modified:</span><span class=value>{{item.updated_at}}</span></div>
+
+<div ng-if="type == 'glance_image'">
+<span class=label>glance image-create:</span><input type="text" readonly="readonly" value="glance --os-image-api-version 1 image-create --copy-from {{item | blobLink:type:'image'}} --disk-format {{item.disk_format}} --container-format {{item.container_format}} --name '{{item.name}}'" onfocus="this.select();"></input>
+</div>
+
+<div ng-if="type == 'murano_package'">
+<span class=label>Package name:</span><input type="text" readonly="readonly" value="{{item.package_name}}" onfocus="this.select();"</input>
+</div>
+
+<div ng-if="type == 'murano_package'">
+<span class=label>Package URL:</span><a href="{{item|blobLink:type:'package'}}">{{item|blobLink:type:'package'}}</a>
+</div>
+
+<div ng-if="type == 'heat_template' || type == 'tosca_template'">
+<span class=label>Template URL:</span><a href="{{item|blobLink:type:'template'}}">{{item|blobLink:type:'template'}}</a>
+</div>
+
+<div ng-if="type == 'glance_image'">
+<span class=label>Image URL:</span><a href="{{item|blobLink:type:'image'}}">{{item|blobLink:type:'image'}}</a>
+</div>
+
+<div ng-if="type == 'glance_image'">
+<span class=label>Image size:</span><span class="value">{{item.image.size}}</span>
+</div>
+
+<div><span class=label>License:</span><span class=value><a href="{{item.license_url}}">{{item.license}}</a></span></div>
+
+<div><span class="label">Description:</span><span class="value">{{item.description}}</span></div>
+
+<h3 ng-if="item.release.length">Supported OpenStack Releases</h3>
+<div ng-if="item.release.length">{{item.release.join(', ')}}</div>
+
+<h3>Author</h3>
+<div><span class="label">Contact:</span><a href="{{item.provided_by.href}}">{{item.provided_by.name}}</a></div>
+<div><span class="label">Company:</span>{{item.provided_by.company}}</div>
+
+<h3 ng-if="item.depends">Depends on</h3>
+<p ng-if="item.depends">Package may depend on image and on other packages, during import of this package to Murano following dependencies will be also downloaded and imported, but existing entries will not be overwritten.</p>
+<ul>
+    <li ng-repeat="dep in item.depends"><a href="{{dep | assetLink}}">{{dep}}</a></li>
+</ul>
+
+
+<h3 ng-if="item.metadata">Metadata</h3>
+<div ng-repeat="(name, value) in item.metadata"><span class="label">{{name}}:</span>{{value}}</div>
