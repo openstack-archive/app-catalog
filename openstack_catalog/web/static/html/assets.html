@@ -1,0 +1,33 @@
+<h2>{{vm.assetDetails.title}}</h2>
+
+<p ng-if="logged_in">
+  [<a href="#/add/{{vm.type}}">Propose new</a>]
+  [<a href="#/list/my/{{vm.type}}/">My artifacts</a>]
+  [<a ng-if="is_admin" href="#/list/private/{{vm.type}}/">Drafts</a>]
+</p>
+
+<a ng-if="vm.first" href="{{vm.first}}">First page</a>
+<a ng-if="vm.next" href="{{vm.next}}">Next page &rarr;</a>
+
+<table class=assets>
+  <thead>
+    <tr>
+     <td><a>Name</a></td>
+     <td><a>Description</a></td>
+     <td ng-if="vm.type != 'glance_image'"><a>Release</a></td>
+     <td ng-if="vm.type != 'heat_template'"><a>Format</a></td>
+     <td ng-if="vm.type == 'glance_image'"><a>License</a></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="item in vm.data[vm.type]">
+      <td><a href="#/{{vm.action}}/{{vm.type}}/{{item.id}}">{{item.name}}</a></td>
+      <td>{{item.description}}</td>
+      <td ng-if="vm.type != 'glance_image'">{{item.release.join(", ")}}</td>
+      <td ng-if="vm.type == 'murano_package'">{{item.package ? 'Package' : 'Bundle'}}</td>
+      <td ng-if="vm.type == 'glance_image'">{{item.disk_format}}</td>
+      <td ng-if="vm.type == 'tosca_template'">{{item.template_format}}</td>
+      <td ng-if="vm.type == 'glance_image'">{{item.license}}</td>
+    </tr>
+  </tbody>
+</table>

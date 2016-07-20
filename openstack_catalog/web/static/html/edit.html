@@ -1,0 +1,49 @@
+<h3 ng-if="vm.type">{{vm.type}}</h3>
+
+<form name="artifactForm">
+<table>
+
+  <tr ng-repeat="i in vm.formFields">
+    <td><label for="{{i.name}}">{{i.name}}</label></td>
+
+    <td ng-if="i.widget == 'input'"><input type="{{i.type}}" name="{{i.name}}" ng-model="vm.artifact[i.name]" ng-required="i.required"></input></td>
+    <td ng-if="i.widget == 'textarea'"><textarea name="{{i.name}}" ng-model="vm.artifact[i.name]" ng-required="{{i.required}}"></textarea></td>
+    <td ng-if="i.widget == 'select'"><select name="{{i.name}}" ng-model="vm.artifact[i.name]" ng-required={{i.required}}>
+      <option ng-repeat="opt in i.options">{{opt}}</option>
+    </select></td>
+    <td ng-if="i.type == 'multisel'"><select name="{{i.name}}" multiple ng-model="vm.artifact[i.name]" ng-required={{i.required}}>
+      <option ng-repeat="opt in i.options">{{opt}}</option>
+    </select></td>
+    <td ng-if="i.widget == 'blob'">
+      <input type="file" name="{{i.name}}" id="blob_{{i.name}}"></input>
+    </td>
+  </tr>
+  <tr><td><label>Metadata</label></td>
+    <td>
+      <table>
+        <tr ng-repeat="(key, val) in vm.artifact.metadata">
+          <td>{{key}}</td>
+          <td><input type="text" ng-model="vm.artifact.metadata[key]" name="metadata-{{key}}"></input></td>
+          <td><button ng-click="vm.DelMetadataEntry(key)">-</button></td>
+        </tr>
+        <tr><td><input type="text" name="md-new-key" ng-model="vm.md_new_key"></input></td>
+            <td colspan=2><button ng-click="vm.AddMetadataEntry()">Add new key</button></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+</table>
+</form>
+
+<button ng-if="artifactForm.$valid && artifactForm.$dirty" ng-click="vm.Save(artifactForm)">Save</button>
+<button ng-if="vm.is_admin && vm.artifact.status == 'active'" ng-click="vm.approve()">Approve</button>
+<button ng-if"vm.artifact.status != 'active'" ng-click="vm.Activate()">Activate</button>
+
+<h2 ng-if="vm.status">{{vm.status}}</h2>
+<div ng-if="vm.error" class=xhr_error>
+<p>{{vm.error.status}} {{vm.error.statusText}}</p>
+<p>{{vm.error.data.error.message}}</p>
+</div>
+
+<h2 id="upload_progress"></h2>
