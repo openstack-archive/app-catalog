@@ -30,10 +30,11 @@ def cors_allow(resp):
 
 @api.route('/')
 def index():
-    data = "v1\n"
+    data = "v1\nv2\n"
     resp = Response(data, status=200, mimetype='plain/text')
     cors_allow(resp)
     return resp
 
 # Pull in v1 api into the server.
 from openstack_catalog.api.v1 import *  # noqa
+from openstack_catalog.api.v2 import *  # noqa
