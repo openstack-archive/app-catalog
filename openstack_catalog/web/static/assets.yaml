@@ -1399,7 +1399,7 @@
       name: Apache HTTP Server
       tags: ['app']
       provided_by:
-        name: Dmitry Dovbii
+        name: Dmytro Dovbii
         href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
@@ -1432,7 +1432,7 @@
       name: Apache Tomcat
       tags: ['app']
       provided_by:
-        name: Dmitry Dovbii
+        name: Dmytro Dovbii
         href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
@@ -1530,7 +1530,7 @@
       name: MySQL
       tags: ['app']
       provided_by:
-        name: Dmitry Dovbii
+        name: Dmytro Dovbii
         href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
@@ -1596,7 +1596,7 @@
       name: PostgreSql
       tags: ['app']
       provided_by:
-        name: Dmitry Dovbii
+        name: Dmytro Dovbii
         href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
@@ -1655,7 +1655,7 @@
       name: WordPress
       tags: ['app']
       provided_by:
-        name: Dmitry Dovbii
+        name: Dmytro Dovbii
         href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
@@ -1680,7 +1680,7 @@
     -
       name: Zabbix Agent
       provided_by:
-        name: Dmitry Dovbii
+        name: Dmytro Dovbii
         href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
@@ -1711,7 +1711,7 @@
       name: Zabbix
       tags: ['app']
       provided_by:
-        name: Dmitry Dovbii
+        name: Dmytro Dovbii
         href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
@@ -1900,7 +1900,7 @@
       name: Docker Container
       tags: ['app']
       provided_by:
-        name: Dmitry Dovbii
+        name: Dmytro Dovbii
         href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
@@ -1936,7 +1936,7 @@
       name: Docker Crate
       tags: ['app']
       provided_by:
-        name: Dmitry Dovbii
+        name: Dmytro Dovbii
         href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
@@ -1969,7 +1969,7 @@
       name: Docker GlassFish
       tags: ['app']
       provided_by:
-        name: Dmitry Dovbii
+        name: Dmytro Dovbii
         href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
@@ -2013,7 +2013,7 @@
       name: Docker Grafana
       tags: ['app']
       provided_by:
-        name: Dmitry Dovbii
+        name: Dmytro Dovbii
         href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
@@ -2089,7 +2089,7 @@
       name: Docker HTTPd
       tags: ['app']
       provided_by:
-        name: Dmitry Dovbii
+        name: Dmytro Dovbii
         href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
@@ -2122,7 +2122,7 @@
       name: Docker HTTPd Site
       tags: ['app']
       provided_by:
-        name: Dmitry Dovbii
+        name: Dmytro Dovbii
         href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
@@ -2160,7 +2160,7 @@
       name: Docker InfluxDB
       tags: ['app']
       provided_by:
-        name: Dmitry Dovbii
+        name: Dmytro Dovbii
         href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
@@ -2195,7 +2195,7 @@
       name: Docker Jenkins
       tags: ['app']
       provided_by:
-        name: Dmitry Dovbii
+        name: Dmytro Dovbii
         href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
@@ -2239,7 +2239,7 @@
       name: Docker MariaDB
       tags: ['app']
       provided_by:
-        name: Dmitry Dovbii
+        name: Dmytro Dovbii
         href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
@@ -2281,7 +2281,7 @@
       name: Docker MongoDB
       tags: ['app']
       provided_by:
-        name: Dmitry Dovbii
+        name: Dmytro Dovbii
         href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
@@ -2326,7 +2326,7 @@
       name: Docker MySQL
       tags: ['app']
       provided_by:
-        name: Dmitry Dovbii
+        name: Dmytro Dovbii
         href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
@@ -2361,7 +2361,7 @@
       name: Docker Nginx
       tags: ['app']
       provided_by:
-        name: Dmitry Dovbii
+        name: Dmytro Dovbii
         href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
@@ -2398,7 +2398,7 @@
       name: Docker Nginx Site
       tags: ['app']
       provided_by:
-        name: Dmitry Dovbii
+        name: Dmytro Dovbii
         href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
@@ -2438,7 +2438,7 @@
       name: Docker PostgreSQL
       tags: ['app']
       provided_by:
-        name: Dmitry Dovbii
+        name: Dmytro Dovbii
         href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
@@ -2493,7 +2493,7 @@
       name: Docker Redis
       tags: ['app']
       provided_by:
-        name: Dmitry Dovbii
+        name: Dmytro Dovbii
         href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
@@ -2529,7 +2529,7 @@
       name: Docker Tomcat
       tags: ['app']
       provided_by:
-        name: Dmitry Dovbii
+        name: Dmytro Dovbii
         href: "mailto:ddovbii@mirantis.com"
         company: Mirantis, Inc.
       description: >
