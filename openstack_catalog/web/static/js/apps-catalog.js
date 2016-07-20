@@ -1,418 +1,254 @@
-function getUrlVars() {
-  "use strict";
-  var vars = {};
-  window.location.href.replace(/[?&#]+([^=&]+)=([^&#]*)/gi, function (m, key, value) {
-    vars[key] = decodeURIComponent(value);
-  });
-  return vars;
-}
-
-function make_uri(uri, options) {
-  "use strict";
-  var ops = {};
-  $.extend(ops, getUrlVars());
-  if (options !== null) {
-    $.extend(ops, options);
-  }
-  var str = $.map(ops, function (val, index) {
-    return index + "=" + encodeURIComponent(val).toLowerCase();
-  }).join("&");
-
-  return (str === "") ? uri : uri + "?" + str;
-}
-
-function reload(extra) {
-  "use strict";
-  window.location.search = make_uri ("", extra);
-}
-
-function update_url(extra) {
-  var ops = {};
-  $.extend(ops, getUrlVars ());
-  if (extra !== null) {
-    $.extend(ops, extra);
-  }
-  window.location.hash = $.map(ops, function (val, index) {
-    return val ? (index + "=" + encodeURIComponent(val)) : null;
-  }).join("&");
-}
-
-function initSingleSelector(selector_id, property, dataSet, update_handler) {
-  var values = {};
-  var result = [];
-  var value, key;
-
-  for (var i = 0; i < dataSet.length; i++) {
-    var element = dataSet[i][property];
-    if (element instanceof Array) {
-      for (key in element)
-        if (key) {
-          values[element[key]] = element[key];
-        }
-    } else {
-      values[element] = element;
-    }
-  }
-
-  for (value in values)
-    if (value) {
-      result.push({"id": value, "text": value});
-    }
-
-  $("#" + selector_id).
-    val (getUrlVars()[property]).
-    on("select2-selecting", function (e) {
-      var options = {};
-      options[property] = e.val;
-      update_url (options);
-      update_handler ();
-    }).
-  on("select2-removed", function (e) {
-    var options = {};
-    options[property] = '';
-    update_url (options);
-    update_handler ();
-  }).
-  select2({data: result, allowClear: true});
-}
-
-function filterData (tableData, filters) {
-  var filteredData = [];
-  var key, column;
-
-  for (var i = 0; i < tableData.length; i++) {
-    var row = tableData[i];
-    var filtered = true;
-
-    for (column in filters) {
-      if (column in row) {
-        if (row[column] instanceof Array) {
-          filtered = false;
-          for (key in row[column])
-            if (filters[column] == row[column][key]) {
-              filtered = true;
-            }
+(function(){
+  'use srict';
+  var openstackReleases = ["Grizzly", "Havana", "Mitaka", "Newton"];
+  var forms = {
+    _common: [
+      {name: "name", widget: "input", type: "text", required: true},
+      {name: "version", widget: "input", type: "text", required: true},
+      {name: "description", widget: "textarea", required: true},
+      {name: "license", widget: "input", type: "text", required: true},
+      {name: "license_url", widget: "input", type: "text"},
+    ],
+    glance_image: [
+      {name: "disk_format", widget: "select", options: ["raw", "vhd", "vmdk", "vdi", "aki", "ari",
+                                                        "ami", "qcow2", "iso"]},
+      {name: "container_format", widget: "select", options: ["bare", "ovf", "aki", "ari", "ami",
+                                                             "ova", "docker"]},
+      {name: "min_ram", widget: "input", type: "number"},
+      {name: "min_disk", widget: "input", type: "number"},
+      {name: "image", widget: "blob"}
+    ],
+    murano_package: [
+      {name: "release", type: "multisel", options: openstackReleases},
+      {name: "package_name", type: "text"}
+    ],
+    heat_template: [
+      {name: "release", type: "multisel", options: openstackReleases},
+    ],
+    tosca_template: [
+      {name: "release", type: "multisel", options: openstackReleases},
+      {name: "template_format", widget: "input", type: "text", required: true},
+      {name: "template", widget: "blob"}
+    ]
+  };
+  var glareUrl = "/api/v2/db";
+  var glareUrlFull = window.location.protocol + "//" + window.location.host + glareUrl;
+  angular
+    .module("AppCatalog", ["ngRoute"])
+    .filter("assetLink", function() {
+      // Convert dependency into app catalog link
+      return function(input) {
+      var bits = input.split("/");
+      return "#/assets/" + bits[2] + "/" + bits[3];
+    }})
+    .filter("blobLink", function() {
+    // Generate link to blob
+      return function(artifact, type, blobFieldName) {
+        return glareUrlFull + "artifacts/" + type + "/" + artifact.id + "/" + blobFieldName;
+      };
+    })
+    .config(function($routeProvider) {
+      $routeProvider
+      .when("/", {
+        templateUrl: "static/html/index.html"
+      })
+      .when("/add/:type", {
+        templateUrl: "static/html/edit.html",
+        controller: "editAssetController"
+      })
+      .when("/artifacts/:type/:id", {
+        templateUrl: "static/html/asset.html",
+        controller: "displayAssetController"
+      })
+      .when("/list/:visibility/:type/", {
+        templateUrl: "static/html/assets.html",
+        controller: "listArtifactsController"
+      })
+      .when("/edit/:type/:id", {
+        templateUrl: "static/html/edit.html",
+        controller: "editAssetController",
+      });
+    })
+    .run(function($rootScope, $http) {
+      $rootScope.$on("$locationChangeStart", function(event, next, current) {
+      var nav = document.getElementById("navbar").children;
+      var type = next.split('/');
+      type = type[type.length - 2];
+      for (var i = 0; i < nav.length; i++) {
+        if (type.length > 5 && (nav[i].firstChild.href.indexOf(type) > 0)) {
+          nav[i].className = "active";
         } else {
-          if (filters[column] != row[column]) {
-            filtered = false;
-          }
+          nav[i].className = "";
+        }
+      }});
+      $http.get("/auth/info").then(function(response){
+        $rootScope.auth_info = response.data;
+        if ('launchpad_teams' in response.data) {
+          $rootScope.logged_in = true;
+          $rootScope.is_admin = response.data.launchpad_teams.indexOf('mirantis') >= 0;
+        }
+      });
+      $http.defaults.headers.patch = {'Content-Type': 'application/json-patch+json'};
+    })
+    .controller("listArtifactsController", ['$scope', '$http', '$routeParams', '$location', '$rootScope',
+    function($scope, $http, $routeParams, $location, $rootScope) {
+      $scope.type = $routeParams.type;
+      $scope.visibility = $routeParams.visibility;
+      $scope.routeParams = $routeParams;
+      var args = {};
+      if ($routeParams.visibility == "my") {
+        $scope.action = "edit";
+        $scope.visibility = "private";
+        args.owner = $rootScope.auth_info.launchpad_name;
+      } else {
+        $scope.action = "artifacts";
+        if ($scope.visibility == "private") {
+          args.status = "eq:active";
         }
       }
-      if (filtered == false) {
-        break;
+      args.visibility = $scope.visibility;
+      args.sort = $location.search().sort;
+      args.marker = $location.search().marker;
+      if (args.marker) {
+        $scope.first = getUrl('#', ["list", $scope.status, $routeParams.type], {sort: args.sort});
+      } else {
+        $scope.first = false;
+      }
+      $http.get(getUrl(glareUrl, ["artifacts", $scope.type], args)).then(function(response) {
+        $scope.data = response.data;
+        if (response.data.next) {
+          var marker = getUrlParams(response.data.next).marker;
+          $scope.next = getUrl('#', ['list', $scope.status, $routeParams.type], {sort: args.sort, marker: marker});
+        } else {
+          $scope.next = false;
+        }
+      });
+    }])
+    .controller("editAssetController", ["$scope", "$http", "$routeParams", "$location",
+    function($scope, $http, $routeParams, $location) {
+      $scope.type = $routeParams.type;
+      $scope.id = $routeParams.id;
+      $scope.formFields = forms._common.concat(forms[$scope.type]);
+      if ($scope.id) {
+        $http.get(getUrl(glareUrl, ["artifacts", $scope.type, $scope.id], {}))
+        .then(function(response){
+          $scope.artifact = response.data;
+        });
+      } else {
+        $scope.artifact = {metadata: {}};
+      }
+      $scope.addMetadataEntry = function() {
+        $scope.artifact.metadata[$scope.md_new_key] = "";
+        $scope.md_new_key = "";
+      }
+      $scope.delMetadataEntry = function(key) {
+        delete($scope.artifact.metadata[key]);
+      }
+      $scope.save = function(form) {
+        $scope.status = "Creating...";
+        if (!$scope.id) {
+          $http.post(getUrl(glareUrl, ["artifacts", $scope.type], {}), $scope.artifact)
+          .then(function(response){
+            $scope.id = response.data.id;
+            uploadBlobs($http, $scope, false);
+          }, function(response) {
+            $scope.error = response;
+            $scope.status = "Error"
+          });
+        } else {
+          var patch = [];
+          angular.forEach($scope.artifact, function(value, key) {
+            var _metadata_clean = true;
+            if (form[key] && form[key].$dirty) {
+              patch.push({op: "replace", path: "/" + key, value: value});
+            } else if ((key.search("metadata-") == 0) && form[key].$dirty) {
+              _metadata_clean = false;
+            }
+          });
+          patch.push({op: "replace", path: "/metadata", value: $scope.artifact.metadata});
+          $http.patch(getUrl(glareUrl, ["artifacts", $scope.type, $scope.id], {}), patch)
+          .then(function(response){
+            uploadBlobs($http, $scope, false);
+          }, function(response) {
+            $scope.error = response;
+          });
+        }
+      };
+      $scope.status = false;
+      $scope.error = false;
+    }])
+    .controller("displayAssetController", ['$scope', '$http', '$routeParams',
+    function($scope, $http, $routeParams) {
+      var url = getUrl(glareUrl, ["artifacts", $routeParams.type, $routeParams.id], {});
+      $http.get(url).then(function(response) {
+        $scope.item = response.data;
+        $scope.type = $routeParams.type;
+      });
+      $scope.approve = function () {
+        var patch = [{
+          "op": "replace",
+          "path": "/visibility",
+          "value": "public"
+        }];
+        $http.patch(getUrl(glareUrl, ['artifacts', $scope.type, $scope.item.id], {}), patch)
+        .then(function(response) {
+          location.reload();
+        }, function(response) {
+          $scope.error = response;
+        });
+      };
+    }]);
+
+  function getUrlParams(url) {
+    // Parse URL params into dictionary
+    var params = {};
+    var pairs = url.split("?")[1].split("&");
+    for (var i = 0; i < pairs.length; i++) {
+      var pair = pairs[i].split("=");
+      params[pair[0]] = decodeURIComponent(pair[1]);
+    }
+    return params;
+  }
+
+  function getUrl(start, bits, args) {
+    var url = start;
+    for (var i = 0; i < bits.length; i++) {
+      url += "/" + bits[i];
+    }
+    var query = []
+    for (var arg in args) {
+      if ('undefined' !== typeof args[arg]) {
+        query.push(arg + "=" + args[arg]);
       }
     }
-
-    if (filtered) {
-      filteredData.push(row);
+    if (query) {
+      url += "?" + query.join("&");
     }
+    return url;
   }
 
-  return filteredData;
-}
-
-function populate_table (table_id, table_column_names, tableData)
-{
-  var tableColumns = [];
-  for (var i = 0; i < table_column_names.length; i++) {
-    tableColumns.push({"mData": table_column_names[i]});
-    for (var j = 0; j < tableData.length; j++) {
-      if (!(table_column_names[i] in tableData[j])) {
-        tableData[j][table_column_names[i]] = "";
-      }
+  function uploadBlobs($http, $scope, blobs) {
+    if (blobs === false) {
+      var collection = document.querySelectorAll('input[type=file]');
+      var blobs = [];
+      for(var i = 0; i < collection.length; i++) blobs.push(collection[i]);
     }
-  }
-
-  if (table_id) {
-    $("#" + table_id).dataTable({
-      "aLengthMenu": [
-        [5, 10, 25, 50, -1],
-        [5, 10, 25, 50, "All"]
-      ],
-      "bDestroy": true,
-      "iDisplayLength": -1,
-      "bAutoWidth": false,
-      "bPaginate": true,
-      "pagingType": "full_numbers",
-      "aaData": tableData,
-      "aoColumns": tableColumns
-    });
-  }
-}
-
-function showInfoDialog (tab, info) {
-  $("#info-container").empty();
-  $("#" + tab + "-info").tmpl(info).appendTo("#info-container");
-  $("#info-dialog").dialog("open");
-  $("button").focus ();
-}
-
-function showInfoPage (tab, info)
-{
-  $("#info-content").empty();
-  $("#" + tab + "-info").tmpl(info).appendTo("#info-content");
-  $( ".content" ).hide ();
-  $( "#info-page" ).show ();
-  update_url ({ tab : tab, asset : info.name});
-  $(".value").replaceWith (function(idx, element) {
-    return element.replace (/https?:\/\/[^ \t\n\r]+/gi, '<a target="_blank" href="$&">$&</a>');
-  });
-}
-
-function setupInfoHandler (tab, element_id, info) {
-  info.name_html = "<a id=\"" + tab + "-" + element_id +
-                   "\" href=\"#\" title=\"Show details\">" + info.name + "</a>";
-
-  $("#" + tab + "-table").on("click", "#" + tab + "-" + element_id, function (event) {
-    event.preventDefault();
-    event.stopPropagation();
-
-    showInfoPage (tab, info);
-  });
-}
-
-var assets = { assets: [] };
-var glance_images = { assets: [] };
-
-function show_glance_images ()
-{
-  populate_table ("glance-images-table",
-      ["name_html", "description", "service.disk_format", "license"],
-      filterData (glance_images.assets, getUrlVars ()));
-}
-
-var heat_templates = { assets: [] };
-
-function show_heat_templates ()
-{
-  populate_table ("heat-templates-table",
-      ["name_html", "description", "release_html", "service.format"],
-      filterData (heat_templates.assets, getUrlVars ()));
-}
-
-var murano_apps = { assets: [] };
-
-function show_murano_apps ()
-{
-  populate_table ("murano-apps-table",
-      ["name_html", "description", "release_html", "service.format"],
-      filterData (murano_apps.assets, getUrlVars ()));
-}
-
-var tosca_templates = { assets: [] };
-
-function show_tosca_templates ()
-{
-  populate_table ("tosca-templates-table",
-      ["name_html", "description", "release_html", "service.template_format"],
-      filterData (tosca_templates.assets, getUrlVars ()));
-}
-
-function initTabs ()
-{
-  $( "ul.nav > li > a" ).on("click", function (event) {
-    event.preventDefault ();
-  });
-  $( "ul.nav > li" ).not(":last-child").on("click", function (event) {
-    update_url ({ tab : this.children[0].hash.substring (1), asset: "" });
-  });
-  $( "ul.nav > li:last-child").on("click", function (event) {
-    window.open('https://wiki.openstack.org/wiki/App-Catalog#How_to_contribute', '_blank');
-  });
-}
-
-function show_asset (tab, tableData)
-{
-  var options = getUrlVars ();
-  if ((tab == options.tab) && ("asset" in options)) {
-    for (var i = 0; i < tableData.length; ++i) {
-      if (tableData[i].name == options.asset) {
-        showInfoPage (tab, tableData[i]);
-      }
+    if (blobs.length < 1) {
+      $scope.status = "Saved";
+      location.href = "#/edit/" + $scope.type + "/" + $scope.id;
+      return;
     }
-  }
-}
-
-var recent_apps = [];
-
-function build_recently_added ()
-{
-  assets.assets.sort(function(a,b) {
-    return new Date(b.last_modified) - new Date(a.last_modified);
-  });
-  sorted_assets = assets.assets.slice(0,15);
-  sorted_assets.sort(
-    function() {
-      return 0.5 - Math.random();
-    });
-  for (var i = 0; i < 5; i++) {
-    var iconurl,
-        fittedname,
-        divclass,
-        hreftab;
-    if (typeof (sorted_assets[i].icon) === 'undefined') {
-      iconurl = "static/images/openstack-icon.png";
+    var blob = blobs.pop();
+    if (blob.files.length > 0) {
+      $http.put(getUrl(glareUrl, ["artifacts", $scope.type, $scope.id, blob.name], {}), blob.files[0])
+      .then(function(response) {
+        uploadBlobs($http, $scope, blobs);
+      }, function(response) {
+        $scope.error = response;
+      });
     } else {
-      iconurl = sorted_assets[i].icon.url;
-    }
-    if (sorted_assets[i].name.length > 15) {
-      fittedname = sorted_assets[i].name.slice(0,13) + "...";
-    } else
-    { fittedname = sorted_assets[i].name; }
-    if (sorted_assets[i].service.type == 'glance') {
-      divclass = "glance";
-      hreftab = "#tab=glance-images&asset=";
-    } else if (sorted_assets[i].service.type == 'heat') {
-      divclass = "heat";
-      hreftab = "#tab=heat-templates&asset=";
-    } else if ((sorted_assets[i].service.type == 'murano') ||
-               (sorted_assets[i].service.type == 'bundle')) {
-      divclass = "murano";
-      hreftab = "#tab=murano-apps&asset=";
-    }else if (sorted_assets[i].service.type == 'tosca') {
-      divclass = "tosca";
-      hreftab = "#tab=tosca-templates&asset=";
-    }
-    $('.featured').append(
-        $('<div>', {class: "col-md-2 col-sm-6"})
-            .append($('<div>', {class: "inner " + divclass})
-            .append($("<a>", {href: hreftab + sorted_assets[i].name})
-            .append($('<img>', {src: iconurl, height: 90}))
-            .append($('<p>', {text: fittedname})))
-            )
-    );
-  }
-}
-
-function initMarketPlace ()
-{
-  navigate ();
-  initTabs ();
-  $( ".inner" ).matchHeight ();
-
-  $("#info-dialog").dialog({
-    autoOpen: false,
-    width: "70%",
-    modal: true,
-    buttons: {
-      Close: function () {
-        $(this).dialog("close");
-      }
-    },
-    close: function () { }
-  });
-
-  $.ajax({ url: "api/v1/assets" }).
-    done (function (data) {
-      assets = data;
-      build_recently_added ();
-      for (var i = 0; i < assets.assets.length; i++) {
-        var asset = assets.assets[i];
-        if (asset.service.type == 'glance') {
-          glance_images.assets.push(asset);
-        } else if (asset.service.type == 'heat') {
-          heat_templates.assets.push(asset);
-        } else if (asset.service.type == 'murano') {
-          murano_apps.assets.push(asset);
-          if (asset.service.type === 'bundle') {
-            asset.service.format = 'bundle';
-          }
-        } else if (asset.service.type == 'bundle') {
-          if ('murano_package_name' in asset.service) {
-            murano_apps.assets.push(asset);
-            asset.service.format = 'bundle';
-          }
-        }else if (asset.service.type == 'tosca') {
-          tosca_templates.assets.push(asset);
-        }
-      }
-
-      var tableData;
-
-      tableData = glance_images.assets;
-      for (var i = 0; i < tableData.length; i++) {
-        setupInfoHandler ("glance-images", i, tableData[i]);
-      }
-
-      show_asset ("glance-images", tableData);
-      show_glance_images ();
-
-      tableData = heat_templates.assets;
-      for (var i = 0; i < tableData.length; i++) {
-        tableData[i].release_html = "";
-        if (tableData[i].release) {
-          tableData[i].release_html = tableData[i].release.join(", ");
-        }
-        setupInfoHandler ("heat-templates", i, tableData[i]);
-      }
-
-      show_asset ("heat-templates", tableData);
-      show_heat_templates ();
-
-      initSingleSelector ("heat-release", "release", tableData, show_heat_templates);
-
-      tableData = murano_apps.assets;
-      for (var i = 0; i < tableData.length; i++) {
-        tableData[i].release_html = "";
-        if (tableData[i].release) {
-          tableData[i].release_html = tableData[i].release.join(", ");
-        }
-        setupInfoHandler ("murano-apps", i, tableData[i]);
-      }
-
-      show_asset ("murano-apps", tableData);
-      show_murano_apps ();
-
-      initSingleSelector ("murano-release", "release", tableData, show_murano_apps);
-
-      tableData = tosca_templates.assets;
-      for (var i = 0; i < tableData.length; i++) {
-        tableData[i].release_html = "";
-        if (tableData[i].release) {
-          tableData[i].release_html = tableData[i].release.join(", ");
-        }
-        setupInfoHandler ("tosca-templates", i, tableData[i]);
-      }
-
-      show_asset ("tosca-templates", tableData);
-      show_tosca_templates ();
-
-      initSingleSelector ("tosca-release", "release", tableData, show_tosca_templates);
-    });
-}
-
-function navigate ()
-{
-  var tabs_list = $("#navbar")[0].children;
-  var selected_tab_name = null;
-  var options = getUrlVars ();
-
-  $( "ul.nav > li" ).removeClass ("active");
-  if ("tab" in options) {
-    for (var i = 0; i < tabs_list.length; ++i) {
-      var tab_name = tabs_list[i].children[0].hash.substring (1);
-      if (tab_name == options.tab) {
-        selected_tab_name = tab_name;
-        if (!("asset" in options)) {
-          tabs_list[i].className = "active";
-        }
-        break;
-      }
+      uploadBlobs($http, $scope, blobs);
     }
   }
 
-  $( ".content" ).hide ();
-
-  if (selected_tab_name === null) {
-    $( "#landing-page" ).show ();
-  } else if ("asset" in options) {
-    show_asset ("murano-apps", murano_apps.assets);
-    show_asset ("heat-templates", heat_templates.assets);
-    show_asset ("glance-images", glance_images.assets);
-    show_asset ("tosca-templates", tosca_templates.assets);
-  } else {
-    $( "#" + selected_tab_name ).show ();
-  }
-}
-
-window.onhashchange = navigate;
+})();
