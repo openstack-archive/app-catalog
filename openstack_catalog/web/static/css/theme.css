@@ -223,3 +223,26 @@ h1 {
 input[type=text] {
     width: 250px;
 }
+
+table.assets {
+    width: 100%;
+}
+table.assets thead tr td {
+    font-weight: bold;
+}
+table.assets td {
+    border-top: 1px solid #ddd;
+    vertical-align: top;
+    padding: 7pt 3pt;
+}
+table.assets tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+table.metadata tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+div.xhr_error {color: red;}
+
+form[name=artifactForm] td { padding: 1px; border: 1px solid; border-color: white; background-color: #eee;}
+form[name=artifactForm] input {width: 100%; }
+form[name=artifactForm] textarea {width: 100%; }
