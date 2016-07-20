@@ -1,6 +1,79 @@
 {% load compress %}
 
 {% compress js %}
-<script src="{{ STATIC_URL }}lib/angular/angular.js" type='text/javascript' charset="utf-8"></script>
-<script src="{{ STATIC_URL }}lib/magic_search/magic_search.js" type='text/javascript' charset="utf-8"></script>
+
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+
+<script>
+
+var assetDetails = {
+  "tosca_template": {
+    "title": "Tosca template",
+    "fields": [
+        ["Template format", "template_format"],
+    ]
+  },
+  "heat_template": {
+    "title": "Heat template",
+    "fields": [
+        ["Release", "release"],
+    ]
+  },
+  "murano_package": {
+    "title": "Murano package",
+    "fields": [
+        ["Release", "release"],
+        ["Format", "format"],
+    ]
+  },
+  "glance_image": {
+    "title": "Glance image",
+    "fields": [
+        ["License", "license"]
+    ]
+  }
+};
+
+var app = angular.module("AppCatalog", ["ngRoute"]);
+
+app.run(function($rootScope) {
+    $rootScope.$on("$locationChangeStart", function(event, next, current) {
+
+      var nav = document.getElementById("navbar").children;
+      for(var i=0; i<nav.length; i++) {
+          if (nav[i].firstChild.href == next) {
+              nav[i].className = "active";
+          } else {
+              nav[i].className = "";
+          }
+      }
+
+    })
+});
+
+app.config(function($routeProvider) {
+    $routeProvider
+    .when("/", {
+      templateUrl: "static/html/index.html"
+    })
+    .when("/assets/:type/", {
+      templateUrl: "static/html/assets.html",
+      controller: "AssetsController"
+    });
+});
+
+app.controller("AssetsController", function($scope, $http, $routeParams) {
+  var type = $routeParams.type;
+
+
+  $scope.assetDetails = assetDetails[type];
+  $http.get("/api/v2/db/artifacts/" + type + '?status=active')
+    .then(function(response){
+      $scope.items = response.data[type];
+    });
+});
+
+</script>
+
 {% endcompress %}

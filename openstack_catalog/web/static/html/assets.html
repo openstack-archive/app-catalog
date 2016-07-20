@@ -1,0 +1,17 @@
+<h2>{{assetDetails.title}}</h2>
+<table class=assets>
+  <thead>
+    <tr>
+     <td><a>Name</a></td>
+     <td><a>Description</a></td>
+     <td ng-repeat="field in assetDetails.fields"><a>{{field[0]}}</a></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="item in items">
+      <td>{{item.name}}</td>
+      <td>{{item.description}}</td>
+      <td ng-repeat="field in assetDetails.fields">{{item[field[1]]}}</td>
+    </tr>
+  </tbody>
+</table>
