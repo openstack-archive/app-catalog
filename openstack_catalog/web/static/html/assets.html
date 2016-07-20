@@ -1,0 +1,19 @@
+<h2>{{assetDetails.title}}</h2>
+<a ng-if="first" href="{{first}}">First page</a>
+<a ng-if="next" href="{{next}}">Next page &rarr;</a>
+<table class=assets>
+  <thead>
+    <tr>
+     <td><a>Name</a></td>
+     <td><a>Description</a></td>
+     <td ng-if="type == 'murano_package' || type == 'heat_template'"><a>Release</a></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="item in data[type]">
+      <td><a href="#/assets/{{type}}/{{item.id}}">{{item.name}}</a></td>
+      <td>{{item.description}}</td>
+      <td ng-if="type == 'murano_package' || type == 'heat_template'">{{item.release.join(", ")}}</td>
+    </tr>
+  </tbody>
+</table>
