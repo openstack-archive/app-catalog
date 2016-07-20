@@ -1,0 +1,26 @@
+<h3 ng-if="type">{{type}}</h3>
+
+<form name="artifactForm">
+<table>
+
+  <tr ng-repeat="i in formFields">
+    <td><label for="{{i.name}}">{{i.name}}</label></td>
+    <td ng-if="i.type == 'string'"><input type="text" name="{{i.name}}" ng-model="artifact[i.name]"></input></td>
+    <td ng-if="i.type == 'textarea'"><textarea name="{{i.name}}" ng-model="artifact[i.name]"></textarea></td>
+    <td ng-if="i.type == 'select'"><select name="{{i.name}}" ng-model="artifact[i.name]">
+      <option ng-repeat="opt in i.options">{{opt}}</option>
+    </select></td>
+    <td ng-if="i.type == 'multisel'"><select name="{{i.name}}" multiple ng-model="artifact[i.name]">
+      <option ng-repeat="opt in i.options">{{opt}}</option>
+    </select></td>
+  </tr>
+
+</table>
+</form>
+
+<button ng-if="artifactForm.$dirty || !artifact.id" ng-click="save(artifactForm)">Save</button>
+<h2 ng-if="status">{{status}}</h2>
+<div ng-if="error">
+<p>{{error.status}} {{error.statusText}}</p>
+<p>{{error.data.error.message}}</p>
+</div>
