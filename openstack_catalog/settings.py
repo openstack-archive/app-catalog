@@ -26,7 +26,23 @@ import os.path
 
 from static_settings import get_staticfiles_dirs
 
-ASSETS_FILE = 'openstack_catalog/web/api/v1/assets'
+DOMAIN = "localhost.localdomain"
+BASE_URL = "http://r-ci.tk:8100"
+BASE_URL = "http://%s:8000" % DOMAIN
+OPENID_RETURN_URL = BASE_URL + "/auth/process"
+SESSION_COOKIE_NAME = "s.aoo"
+SESSION_EXPIRES = 86400
+SESSION_SECURE = False
+MEMCACHED_SERVER = "127.0.0.1:11211"
+
+LAUNCHPAD_API_URL = "https://api.launchpad.net/devel"
+LAUNCHPAD_LOGIN_URL = 'https://login.launchpad.net/'
+LAUNCHPAD_ADMIN_GROUPS = {'app-catalog-core', 'rally-core'}
+
+GLARE_URL = 'http://127.0.0.1:9494'
+GLARE_TENANT = 'dummy'
+
+ASSETS_FILE = 'openstack_catalog/web/static/assets.yaml'
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__),
                                            'web',
