@@ -1,0 +1,2 @@
+tosca-parser>=0.5.0
+python-memcached>=1.56 # PSF
