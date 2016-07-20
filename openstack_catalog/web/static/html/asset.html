@@ -1,0 +1,20 @@
+<h2>{{item.name}}</h2>
+<img src="{{item.icon.url}}" style="float:right" ng-if="item.icon"></img>
+<div>{{item.description}}</div>
+
+<h3 ng-if="item.release.length">Supported OpenStack Releases</h3>
+<div ng-if="item.release.length">{{item.release.join(', ')}}</div>
+
+<h3>Author</h3>
+<div><span class="label">Contact:</span><a href="{{item.provided_by.href}}">{{item.provided_by.name}}</a></div>
+<div><span class="label">Company:</span>{{item.provided_by.company}}</div>
+
+<h3 ng-if="item.depends">Depends on</h3>
+<p ng-if="item.depends">Package may depend on image and on other packages, during import of this package to Murano following dependencies will be also downloaded and imported, but existing entries will not be overwritten.</p>
+<ul>
+  <li ng-repeat="dep in item.depends">{{dep}}</li>
+</ul>
+
+
+<h3 ng-if="item.metadata">Metadata</h3>
+<div ng-repeat="(name, value) in item.metadata"><span class="label">{{name}}:</span>{{value}}</div>

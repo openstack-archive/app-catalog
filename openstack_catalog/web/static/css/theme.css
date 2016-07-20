@@ -223,3 +223,21 @@ h1 {
 input[type=text] {
     width: 250px;
 }
+
+table.assets {
+    width: 100%;
+}
+table.assets thead tr td {
+    font-weight: bold;
+}
+table.assets td {
+    border-top: 1px solid #ddd;
+    vertical-align: top;
+    padding: 7pt 3pt;
+}
+table.assets tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+table.metadata tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
