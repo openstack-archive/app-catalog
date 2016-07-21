@@ -1883,7 +1883,7 @@
       service:
         type: murano
         format: package
-        package_name: io.murano.apps.docker.kubernetes.KubernetesPod
+        package_name: com.mirantis.docker.kubernetes.KubernetesPod
       release:
         - Kilo
         - Liberty
@@ -1892,9 +1892,9 @@
       depends:
         - name: Docker Interfaces Library
         - name: Kubernetes Cluster
-      hash: 0d90137f32b1a434692830c3ad5c61d0
+      hash: 2d181c34691d49ed2eba26404b7f8f8e
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.docker.kubernetes.KubernetesPod.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.mirantis.docker.kubernetes.KubernetesPod.zip"
         "Source URL": "https://github.com/stackforge/murano-apps"
         Documentation: "https://github.com/stackforge/murano-apps/blob/master/Docker/Kubernetes/readme.md"
     -
