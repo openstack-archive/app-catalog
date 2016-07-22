@@ -1325,16 +1325,20 @@
          - 32 vCPUs
          - 1 TB of storage
          - Neutron networking with floating IP support
+
+         Changes:
+         July 2016 - The package name was changed. You can still access the application with
+         the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
-        package_name: io.murano.apps.pivotal.OpsManager
+        package_name: com.example.pivotal.OpsManager
       release:
         - Kilo
       license: Multi-licensed OpenSource
-      hash: 28b433b9cd6491637b3b34318f46f461
+      hash: ee054e4e19cd276aba5b82e0f3a69da9
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.pivotal.OpsManager.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.example.pivotal.OpsManager.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/stable/kilo/PivotalOperationsManager"
     -
       name: SqlDatabase Library
@@ -1354,18 +1358,22 @@
          specific database for these
          three basic functions (creating a database, users, or retrieving a
          connection string).
+
+         Changes:
+         July 2016 - The package name was changed. You can still access the application with
+         the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
-        package_name: io.murano.databases
+        package_name: com.example.databases
       release:
         - Kilo
         - Liberty
         - Mitaka
       license: Apache 2.0
-      hash: 0d543e5ed464488118a946b32546696f
+      hash: 900187847439c43ddcdaf0b62f4dfcfd
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.databases.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.example.databases.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/SQLDatabaseLibrary/package"
     -
       name: Docker Interfaces Library
@@ -1413,10 +1421,14 @@
          has remained the most popular HTTP server in use since April 1996.
 
          Murano creates one or more VM(s) for you from the image listed in the dependencies.
+
+         Changes:
+         July 2016 - The package name was changed. You can still access the application with
+         the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
-        package_name: io.murano.apps.apache.ApacheHttpServer
+        package_name: com.example.apache.ApacheHttpServer
       release:
         - Kilo
         - Liberty
@@ -1424,9 +1436,9 @@
       license: Multi-licensed OpenSource
       depends:
         - name: Debian 8 x64 (pre-installed murano-agent)
-      hash: 27bb020b93304952a5544b88fa212a06
+      hash: 750769703ab070e32cd7fcd017fa3688
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.apache.ApacheHttpServer.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.example.apache.ApacheHttpServer.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/ApacheHTTPServer/package"
     -
       name: Apache Tomcat
@@ -1446,10 +1458,14 @@
          the Tomcat process in a separate thread.
 
          Murano creates one or more VM(s) for you from the image listed in the dependencies.
+
+         Changes:
+         July 2016 - The package name was changed. You can still access the application with
+         the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
-        package_name: io.murano.apps.apache.Tomcat
+        package_name: com.example.apache.Tomcat
       release:
         - Kilo
         - Liberty
@@ -1457,9 +1473,9 @@
       license: Multi-licensed OpenSource
       depends:
         - name: Debian 8 x64 (pre-installed murano-agent)
-      hash: 805df99024defff7ace5d377e59a52ab
+      hash: 800a3f707dec01bf7eff7ea9705f945b
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.apache.Tomcat.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.example.apache.Tomcat.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Tomcat/package"
     -
       name: Apcera
@@ -1511,10 +1527,15 @@
                   contributing code and supporting the project, with
                   sponsorship provided via the Cloud Foundry Foundation,
                   http://www.cloudfoundry.org
+
+                  Changes:
+                  July 2016 - The package name was changed. You can still access
+                  the application with the old name by the link. But now it is
+                  preferable to use the new application.
       service:
         type: murano
         format: package
-        package_name: io.murano.apps.paas.CloudFoundry
+        package_name: com.example.paas.CloudFoundry
       release:
         - Kilo
         - Liberty
@@ -1522,9 +1543,9 @@
       license: Unknown
       depends:
         - name: Ubuntu 14.04 x64 (pre-installed murano-agent)
-      hash: f51977620be42f5b58221b1dc31fc707
+      hash: e506f99f09de587854a5899b7cb0eff7
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.paas.CloudFoundry.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.example.paas.CloudFoundry.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/CloudFoundry/package"
     -
       name: MySQL
@@ -1542,10 +1563,14 @@
          proven reliability, ease and flexibility of use.
 
          Murano creates one or more VM(s) for you from the image listed in the dependencies.
+
+         Changes:
+         July 2016 - The package name was changed. You can still access the application with
+         the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
-        package_name: io.murano.databases.MySql
+        package_name: com.example.databases.MySql
       release:
         - Kilo
         - Liberty
@@ -1554,9 +1579,9 @@
       depends:
         - name: SqlDatabase Library
         - name: Debian 8 x64 (pre-installed murano-agent)
-      hash: 0a1ef0d17f2af1c3f3d3be626d8910c5
+      hash: 2e0e50297eb9aab7fcf8119e7e6396c3
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.databases.MySql.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.example.databases.MySql.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/MySQL/package"
     -
       name: Oracle Pluggable Database
@@ -1606,10 +1631,14 @@
          for reliability, data integrity, and correctness.
 
          Murano creates one or more VM(s) for you from the image listed in the dependencies.
+
+         Changes:
+         July 2016 - The package name was changed. You can still access the application with
+         the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
-        package_name: io.murano.databases.PostgreSql
+        package_name: com.example.databases.PostgreSql
       release:
         - Kilo
         - Liberty
@@ -1618,9 +1647,9 @@
       depends:
         - name: SqlDatabase Library
         - name: Ubuntu 14.04 x64 (pre-installed murano-agent)
-      hash: 1bae28b44dba6cc9d06fed3024eed469
+      hash: 84d805a577317ac8d8ce4ba816ccca7d
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.databases.PostgreSql.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.example.databases.PostgreSql.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/PostgreSQL/package"
     -
       name: Rally
@@ -1660,10 +1689,14 @@
         company: Mirantis, Inc.
       description: >
          WordPress is a free and open source blogging tool and a content management system (CMS) based on PHP and MySQL.
+
+         Changes:
+         July 2016 - The package name was changed. You can still access the application with
+         the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
-        package_name: io.murano.apps.WordPress
+        package_name: com.example.WordPress
       release:
         - Kilo
         - Liberty
@@ -1673,9 +1706,9 @@
         - name: MySQL
         - name: Apache HTTP Server
         - name: Zabbix Agent
-      hash: c3e90b3ad40aaa272e5433f6d3db0a9e
+      hash: 1b110db10d337f89a6060c41ea84892d
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.WordPress.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.example.WordPress.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/WordPress/package"
     -
       name: Zabbix Agent
@@ -1692,10 +1725,14 @@
          monitoring solution. Zabbix offer advance monitoring, alerting, and
          visualization features today which are missing in other monitoring
          system, even some of the best commercial ones.
+
+         Changes:
+         July 2016 - The package name was changed. You can still access the application with
+         the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
-        package_name: io.murano.apps.ZabbixAgent
+        package_name: com.example.ZabbixAgent
       release:
         - Kilo
         - Liberty
@@ -1703,9 +1740,9 @@
       license: Multi-licensed OpenSource
       depends:
         - name: Zabbix
-      hash: e9466e43ccbde6e6c0a08642e4c9ba58
+      hash: da71c2695ec15eaa555ed7ec7d8a64d6
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.ZabbixAgent.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.example.ZabbixAgent.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/ZabbixAgent/package"
     -
       name: Zabbix
@@ -1721,10 +1758,14 @@
          system, even some of the best commercial ones.
 
          Murano creates one or more VM(s) for you from the image listed in the dependencies.
+
+         Changes:
+         July 2016 - The package name was changed. You can still access the application with
+         the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
-        package_name: io.murano.apps.ZabbixServer
+        package_name: com.example.ZabbixServer
       release:
         - Kilo
         - Liberty
@@ -1732,9 +1773,9 @@
       license: Multi-licensed OpenSource
       depends:
         - name: Debian 8 x64 (pre-installed murano-agent)
-      hash: 99a59eec5a5d3b6400054ffc954e562d
+      hash: c3144545f899282472f5aaf46c92f37d
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.ZabbixServer.zip"
+        "Package URL": "http://storage.apps.openstack.org/apps/com.example.ZabbixServer.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/ZabbixServer/package"
     -
       name: Stackato
