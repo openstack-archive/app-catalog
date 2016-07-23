@@ -1389,6 +1389,10 @@
         DockerHost, DockerVolume, ApplicationPort and all other classes
         that are used to pass information between docker
         applications and docker host providers.
+
+        Changes:
+        July 2016 - The package name was changed. You can still access the application with
+        the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
@@ -1833,6 +1837,10 @@
 
           The Docker service is accessed using CLI client from within the same
           VM, so the docker API is not exposed outside that VM.
+
+          Changes:
+          July 2016 - The package name was changed. You can still access the application with
+          the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
@@ -1877,6 +1885,10 @@
         The application also provides API access to other applications, so
         they can create/delete Kubernetes services and Pods/Replication
         Controllers from its JSON definitions.
+
+        Changes:
+        July 2016 - The package name was changed. You can still access the application with
+        the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
@@ -1922,6 +1934,10 @@
         The Kubernetes Pod provides an API to the host docker container that
         is compatible with Docker Standalone Host so that any Docker
         Application can be hosted on any one of them.
+
+        Changes:
+        July 2016 - The package name was changed. You can still access the application with
+        the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
@@ -1958,6 +1974,10 @@
         Murano will deploy this in the docker service of your choice;
         you'll be prompted to create a docker service or choose one
         you have deployed (e.g., via Kubernetes Pod).
+
+        Changes:
+        July 2016 - The package name was changed. You can still access the application with
+        the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
@@ -1991,6 +2011,10 @@
         Murano will deploy this in the docker service of your choice;
         you'll be prompted to create a docker service or choose one
         you have deployed (e.g., via Kubernetes Pod).
+
+        Changes:
+        July 2016 - The package name was changed. You can still access the application with
+        the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
@@ -2035,6 +2059,10 @@
         Murano will deploy this in the docker service of your choice;
         you'll be prompted to create a docker service or choose one
         you have deployed (e.g., via Kubernetes Pod).
+
+        Changes:
+        July 2016 - The package name was changed. You can still access the application with
+        the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
@@ -2078,6 +2106,10 @@
         Murano will deploy this in the docker service of your choice;
         you'll be prompted to create a docker service or choose one
         you have deployed (e.g., via Kubernetes Pod).
+
+        Changes:
+        July 2016 - The package name was changed. You can still access the application with
+        the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
@@ -2110,6 +2142,10 @@
         implementation. To use 'GuestBook' you need to import following
         applications to the catalog:
         Docker Redis, Kubernetes Pod, Kubernetes Cluster
+
+        Changes:
+        July 2016 - The package name was changed. You can still access the application with
+        the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
@@ -2144,6 +2180,10 @@
         the most popular HTTP server in use since April 1996.
         Murano will deploy this in the docker service of your choice; you'll be prompted to create a docker service or choose one
         you have deployed (e.g., via Kubernetes Pod).
+
+        Changes:
+        July 2016 - The package name was changed. You can still access the application with
+        the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
@@ -2182,6 +2222,10 @@
         Murano will deploy this in the docker service of your choice;
         you'll be prompted to create a docker service or choose one
         you have deployed (e.g., via Kubernetes Pod).
+
+        Changes:
+        July 2016 - The package name was changed. You can still access the application with
+        the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
@@ -2217,6 +2261,10 @@
         Murano will deploy this in the docker service of your choice;
         you'll be prompted to create a docker service or choose one
         you have deployed (e.g., via Kubernetes Pod).
+
+        Changes:
+        July 2016 - The package name was changed. You can still access the application with
+        the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
@@ -2261,6 +2309,10 @@
         Murano will deploy this in the docker service of your choice;
         you'll be prompted to create a docker service or choose one
         you have deployed (e.g., via Kubernetes Pod).
+
+        Changes:
+        July 2016 - The package name was changed. You can still access the application with
+        the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
@@ -2303,6 +2355,10 @@
         Murano will deploy this in the docker service of your choice;
         you'll be prompted to create a docker service or choose one
         you have deployed (e.g., via Kubernetes Pod).
+
+        Changes:
+        July 2016 - The package name was changed. You can still access the application with
+        the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
@@ -2348,6 +2404,10 @@
         Murano will deploy this in the docker service of your choice;
         you'll be prompted to create a docker service or choose one
         you have deployed (e.g., via Kubernetes Pod).
+
+        Changes:
+        July 2016 - The package name was changed. You can still access the application with
+        the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
@@ -2383,6 +2443,10 @@
         Murano will deploy this in the docker service of your choice;
         you'll be prompted to create a docker service or choose one
         you have deployed (e.g., via Kubernetes Pod).
+
+        Changes:
+        July 2016 - The package name was changed. You can still access the application with
+        the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
@@ -2420,6 +2484,10 @@
         Murano will deploy this in the docker service of your choice;
         you'll be prompted to create a docker service or choose one
         you have deployed (e.g., via Kubernetes Pod).
+
+        Changes:
+        July 2016 - The package name was changed. You can still access the application with
+        the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
@@ -2460,6 +2528,10 @@
         Murano will deploy this in the docker service of your choice;
         you'll be prompted to create a docker service or choose one
         you have deployed (e.g., via Kubernetes Pod).
+
+        Changes:
+        July 2016 - The package name was changed. You can still access the application with
+        the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
@@ -2515,6 +2587,10 @@
         Murano will deploy this in the docker service of your choice;
         you'll be prompted to create a docker service or choose one
         you have deployed (e.g., via Kubernetes Pod).
+
+        Changes:
+        July 2016 - The package name was changed. You can still access the application with
+        the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
@@ -2551,6 +2627,10 @@
         Murano will deploy this in the docker service of your choice;
         you'll be prompted to create a docker service or choose one
         you have deployed (e.g., via Kubernetes Pod).
+
+        Changes:
+        July 2016 - The package name was changed. You can still access the application with
+        the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
@@ -2588,6 +2668,10 @@
         Murano will deploy this in the docker service of your choice;
         you'll be prompted to create a docker service or choose one
         you have deployed (e.g., via Kubernetes Pod).
+
+        Changes:
+        July 2016 - The package name was changed. You can still access the application with
+        the old name by the link. But now it is preferable to use the new application.
       service:
         type: murano
         format: package
