@@ -3377,6 +3377,7 @@
       license: Multi-licensed OpenSource
       depends:
         - name: BIND DNS server
+        - name: Ubuntu Trusty 14
       hash: cb0d37228d8f78b62b42964136f9a75b
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/com.mirantis.clearwater.Clearwater.zip"
@@ -3411,6 +3412,8 @@
       release:
         - Mitaka
       license: Apache License, Version 2.0
+      depends:
+        - name: Ubuntu Trusty 14
       hash: da88780bc2c08a1c56c358fe03566e35
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/com.mirantis.network.dns.Bind.zip"
