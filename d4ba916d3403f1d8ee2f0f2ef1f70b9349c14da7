@@ -1,0 +1,10 @@
+Code-Review+2: Christopher Aedo <doc@aedo.net>
+Code-Review+1: Aleksandr Kholkin <akholkin@mirantis.com>
+Code-Review+2: Tom Fifield <tom@openstack.org>
+Workflow+1: Tom Fifield <tom@openstack.org>
+Verified+2: Jenkins
+Submitted-by: Jenkins
+Submitted-at: Tue, 26 Jul 2016 13:23:14 +0000
+Reviewed-on: https://review.openstack.org/346956
+Project: openstack/app-catalog
+Branch: refs/heads/master
