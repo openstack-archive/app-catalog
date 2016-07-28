@@ -1,0 +1,10 @@
+Code-Review+1: Mykola Stolyarenko <mstolyarenko@mirantis.com>
+Code-Review+1: Tetiana Lashchova <tlashchova@mirantis.com>
+Code-Review+2: Christopher Aedo <doc@aedo.net>
+Workflow+1: Christopher Aedo <doc@aedo.net>
+Verified+2: Jenkins
+Submitted-by: Jenkins
+Submitted-at: Thu, 28 Jul 2016 22:50:03 +0000
+Reviewed-on: https://review.openstack.org/348311
+Project: openstack/app-catalog
+Branch: refs/heads/master
