@@ -1583,7 +1583,7 @@
       depends:
         - name: SqlDatabase Library
         - name: Debian 8 x64 (pre-installed murano-agent)
-      hash: 2e0e50297eb9aab7fcf8119e7e6396c3
+      hash: bf717d552d3a040f819960ef237cfcba
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/com.example.databases.MySql.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/MySQL/package"
@@ -1651,7 +1651,7 @@
       depends:
         - name: SqlDatabase Library
         - name: Ubuntu 14.04 x64 (pre-installed murano-agent)
-      hash: 84d805a577317ac8d8ce4ba816ccca7d
+      hash: 861136bbbad18b5cb0623c72adfbf10b
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/com.example.databases.PostgreSql.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/PostgreSQL/package"
@@ -1680,7 +1680,7 @@
       license: Multi-licensed OpenSource
       depends:
         - name: Ubuntu 14.04 x64 (pre-installed murano-agent)
-      hash: 841304d6cf7ae5a5cfc0b3bb165a48fd
+      hash: cdd93e6977fefabab763f3af12bad893
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/org.openstack.Rally.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Rally/package"
@@ -3462,7 +3462,7 @@
       depends:
         - name: BIND DNS server
         - name: Ubuntu Trusty 14
-      hash: 5fb023aab3a2eca8375f32a567e8143b
+      hash: 5e44511fe9d036d03b9950b0af3f69df
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/com.mirantis.clearwater.Clearwater.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Clearwater/package"
@@ -3498,7 +3498,7 @@
       license: Apache License, Version 2.0
       depends:
         - name: Ubuntu Trusty 14
-      hash: da88780bc2c08a1c56c358fe03566e35
+      hash: 97a7d12d6ab7219466332e1839c051ba
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/com.mirantis.network.dns.Bind.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/BIND/package"
