@@ -1710,7 +1710,7 @@
         - name: MySQL
         - name: Apache HTTP Server
         - name: Zabbix Agent
-      hash: 1b110db10d337f89a6060c41ea84892d
+      hash: 712b7fa9a798693f298f843aa94b4bf6
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/com.example.WordPress.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/WordPress/package"
@@ -1744,7 +1744,7 @@
       license: Multi-licensed OpenSource
       depends:
         - name: Zabbix
-      hash: da71c2695ec15eaa555ed7ec7d8a64d6
+      hash: 293fc61b2ee068e73db6988636c7e77e 
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/com.example.ZabbixAgent.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/ZabbixAgent/package"
