@@ -63,6 +63,8 @@
                 - Kilo
                 - Liberty
                 - Mitaka
+                - Newton
+                - Ocata
             minItems: 1
           provided_by:
             type: object
