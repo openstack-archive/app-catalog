@@ -1,0 +1,9 @@
+Code-Review+2: Christopher Aedo <doc@aedo.net>
+Workflow+1: Christopher Aedo <doc@aedo.net>
+Code-Review+1: Nikolay Mahotkin <nmakhotkin@mirantis.com>
+Verified+2: Jenkins
+Submitted-by: Jenkins
+Submitted-at: Wed, 03 Aug 2016 17:40:17 +0000
+Reviewed-on: https://review.openstack.org/350589
+Project: openstack/app-catalog
+Branch: refs/heads/master
