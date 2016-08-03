@@ -120,6 +120,8 @@
           license_url:
             type: string
             pattern: "^((https?://)[a-z][a-z0-9_-]+(\\.[a-z][a-z0-9_-]+)+(/[a-z0-9\\._/~%\\-\\+&\\#\\?!=\\(\\)@]*)?)$"
+          cloud_user:
+            type: string
           attributes:
             type: object
             additionalProperties: true
