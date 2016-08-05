@@ -1744,7 +1744,7 @@
       license: Multi-licensed OpenSource
       depends:
         - name: Zabbix
-      hash: 293fc61b2ee068e73db6988636c7e77e 
+      hash: 293fc61b2ee068e73db6988636c7e77e
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/com.example.ZabbixAgent.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/ZabbixAgent/package"
@@ -1844,7 +1844,7 @@
       service:
         type: murano
         format: package
-        package_name: com.mirantis.docker.DockerStandaloneHost 
+        package_name: com.mirantis.docker.DockerStandaloneHost
       release:
         - Kilo
         - Liberty
@@ -3413,7 +3413,7 @@
       name: Elasticsearch-Logstash-Kibana
       tags: ['app']
       provided_by:
-        name: lakshminarayanan np 
+        name: lakshminarayanan np
         href: http://www.imaginea.com
         company: Imaginea Technologies Inc.
       description: >
@@ -3515,12 +3515,12 @@
          Tempest test runs based on configurations you specify. When finished
          running Tempest it can send the passed test data to a RefStack API server.
          More information about restack-client and how to use it can be found in README
-         https://github.com/openstack/refstack-client. To become more familiar 
+         https://github.com/openstack/refstack-client. To become more familiar
          with RefStack project it self, please visit https://refstack.openstack.org/
 
          Murano creates one VM with assigned floating IP from the image
          listed in the dependencies. After deployment, you can just ssh to this
-         VM and use installed refstack-client. NOTE: Installation script uses 
+         VM and use installed refstack-client. NOTE: Installation script uses
          as a source the master branch from refstack-client repository.
       service:
         type: murano
@@ -3536,5 +3536,83 @@
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/org.openstack.RefStackClient.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/RefStackClient/package"
-
-
+    -
+      name: Docker Artifactory
+      tags: ['app']
+      provided_by:
+        name: Artem Silenkov
+        href: "mailto:asilenkov@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+         The world's most advanced repository manager. Artifactory offers
+         powerful enterprise feature and fine-grained permission control
+         behind a sleek and easy-to-use UI.
+         Free OSS version powered by Oracle jre8 and Tomcat8
+      service:
+        type: murano
+        format: package
+        package_name: com.example.docker.DockerArtifactory
+      release:
+        - Kilo
+        - Liberty
+        - Mitaka
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Docker Standalone Host
+        - name: Kubernetes Pod
+        - name: Docker Interfaces Library
+      hash: 4231750291184b827c360ae0bbf6bf0c
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/com.example.docker.DockerArtifactory.zip"
+    -
+      name: Docker ELK
+      tags: ['app']
+      provided_by:
+        name: Artem Silenkov
+        href: "mailto:asilenkov@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+        Elasticsearch-Logstash-Kibana bundle.
+      service:
+        type: murano
+        format: package
+        package_name: com.example.docker.DockerELK
+      release:
+        - Kilo
+        - Liberty
+        - Mitaka
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Docker Standalone Host
+        - name: Kubernetes Pod
+        - name: Docker Interfaces Library
+      hash: beefbcc0e4f2092c24fc8811815d022a
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/com.example.docker.DockerELK.zip"
+    -
+      name: Docker Nexus
+      tags: ['app']
+      provided_by:
+        name: Artem Silenkov
+        href: "mailto:asilenkov@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+         The world's most popular solution for managing software binaries, Repository OSS is
+         completely free and includes support for all popular formats including
+         Java, NPM, Docker, RubyGems, NuGet, Bower, and more.
+      service:
+        type: murano
+        format: package
+        package_name: com.example.docker.DockerNexus
+      release:
+        - Kilo
+        - Liberty
+        - Mitaka
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Docker Standalone Host
+        - name: Kubernetes Pod
+        - name: Docker Interfaces Library
+      hash: f8e6d0ddf8e0527d6027a583e6e955c2
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/com.example.docker.DockerNexus.zip"
