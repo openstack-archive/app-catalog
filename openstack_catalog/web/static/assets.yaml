@@ -3642,3 +3642,29 @@
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/com.mirantis.GoCDApp.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/GoCD/package"
+    -
+      name: Plone Standlone Server
+      tags: ['app']
+      provided_by:
+        name: Evgeniy Mashkin
+        href: "mailto:e.n.mashkin@gmail.com"
+        company: OpenStack community
+      description: >
+        Plone is the Ultimate Enterprise Open Source CMS. The Plone CMS is one of the
+        most secure website systems available. This high security standard has
+        garnered the attention of many security conscious organizations and government
+        agencies including NASA and the FBI, who picked Plone for their Enterprise Web
+        CMS solution.
+      service:
+        type: murano
+        format: package
+        package_name: org.openstack.apps.plone.PloneServer
+      release:
+        - Mitaka
+      license: GNU version 2.0
+      depends:
+        - name: Ubuntu 14.04 x64 (pre-installed murano-agent)
+      hash: cfa8d48dac18a6564c8dba87bc785715
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/org.openstack.apps.plone.PloneServer.zip"
+        "Source URL": "https://github.com/openstack/murano-apps/tree/master/Plone/package"
