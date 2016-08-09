@@ -3616,3 +3616,29 @@
       hash: f8e6d0ddf8e0527d6027a583e6e955c2
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/com.example.docker.DockerNexus.zip"
+    -
+      name: GoCD
+      tags: ['app']
+      provided_by:
+        name: Bartosz Kupidura
+        href: "mailto:bkupidura@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+        GoCD is open source continuous delivery server specializing in advanced
+        workflow modeling and visualization.
+
+        This application will deploy GoCD server and number of GoCD agents.
+      service:
+        type: murano
+        format: package
+        package_name: com.mirantis.GoCDApp
+      release:
+        - Liberty
+        - Mitaka
+      license: Apache 2.0
+      depends:
+        - name: Ubuntu 14.04 x64 (pre-installed murano-agent)
+      hash: b992cc757b5f615806af083583742232
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/com.mirantis.GoCDApp.zip"
+        "Source URL": "https://github.com/openstack/murano-apps/tree/master/GoCD/package"
