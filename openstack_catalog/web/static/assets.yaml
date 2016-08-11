@@ -236,6 +236,7 @@
         left: 6
         height: 110
       license: Multi-licensed OpenSource
+      cloud_user: ubuntu
       attributes:
         url: http://uec-images.ubuntu.com/trusty/current/trusty-server-cloudimg-amd64-disk1.img
     -
@@ -256,6 +257,7 @@
         left: 6
         height: 110
       license: Multi-licensed OpenSource
+      cloud_user: ubuntu
       attributes:
         url: http://uec-images.ubuntu.com/utopic/current/utopic-server-cloudimg-amd64-disk1.img
     -
@@ -276,6 +278,7 @@
         left: 6
         height: 110
       license: Multi-licensed OpenSource
+      cloud_user: ubuntu
       attributes:
         url: http://uec-images.ubuntu.com/vivid/current/vivid-server-cloudimg-amd64-disk1.img
     -
@@ -309,6 +312,7 @@
         left: -12
         height: 150
       license: Multi-licensed OpenSource
+      cloud_user: centos
       hash: f5729dd91bb45d3210a3bcc52534cc7307fbed4d01b0e7810533f727763c1038
       attributes:
         url: http://cloud.centos.org/centos/6/images/CentOS-6-x86_64-GenericCloud-20141129_01.qcow2
@@ -343,6 +347,7 @@
         left: -12
         height: 150
       license: Multi-licensed OpenSource
+      cloud_user: centos
       hash: e324e3ab1d24a1bbf035ddb365e7f9058c0b454acf48d7aa15c5519fae5998ab
       attributes:
         url: http://cloud.centos.org/centos/7/images/CentOS-7-x86_64-GenericCloud.qcow2
@@ -364,6 +369,7 @@
         left: -2
         height: 130
       license: Multi-licensed OpenSource
+      cloud_user: cirros
       attributes:
         url: http://download.cirros-cloud.net/0.3.4/cirros-0.3.4-x86_64-disk.img
     -
@@ -397,6 +403,7 @@
         left: -40
         height: 210
       license: Multi-licensed OpenSource
+      cloud_user: fedora
       hash: 0c30ef4f0c2e1bc621193d0ee42b7692e19e93aa286abc6e08683397f35d7b0f
       attributes:
         url: https://download.fedoraproject.org/pub/fedora/linux/releases/23/Cloud/x86_64/Images/Fedora-Cloud-Base-23-20151030.x86_64.qcow2
@@ -433,6 +440,7 @@
         left: 10
         height: 124
       license: Multi-licensed OpenSource
+      cloud_user: debian
       hash: 0fcf78a066da0fe489b61176eba11f12e55f60081556693a0c5652d1acfbda57
       attributes:
         url: http://cdimage.debian.org/cdimage/openstack/archive/8.0.0/debian-8.0.0-openstack-amd64.qcow2
@@ -464,6 +472,7 @@
         left: 10
         height: 124
       license: Multi-licensed OpenSource
+      cloud_user: debian
       hash: 0a53b82077c44ec29d8774a9ed9df9216d3689c286949f7f500f5d4b359f5ddd
       attributes:
         url: http://cdimage.debian.org/cdimage/openstack/current/debian-8.5.0-openstack-amd64.qcow2
@@ -495,6 +504,7 @@
         left: 10
         height: 124
       license: Multi-licensed OpenSource
+      cloud_user: debian
       hash_url: http://cdimage.debian.org/cdimage/openstack/testing/MD5SUMS
       attributes:
         url: http://cdimage.debian.org/cdimage/openstack/testing/debian-testing-openstack-amd64.qcow2
@@ -973,6 +983,7 @@
         left: -40
         height: 210
       license: Multi-licensed OpenSource
+      cloud_user: fedora
       hash: 7575c41952eb5beeb8f41edd122a760087f10323d3f8f92f7625a6c5fa6b68a4
       attributes:
         url: https://download.fedoraproject.org/pub/alt/atomic/stable/Cloud-Images/x86_64/Images/Fedora-Cloud-Atomic-23-20160607.x86_64.qcow2
