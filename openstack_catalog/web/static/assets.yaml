@@ -3643,7 +3643,7 @@
         "Package URL": "http://storage.apps.openstack.org/apps/com.mirantis.GoCDApp.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/GoCD/package"
     -
-      name: Plone Standlone Server
+      name: Plone Standalone Server
       tags: ['app']
       provided_by:
         name: Evgeniy Mashkin
