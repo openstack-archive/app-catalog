@@ -90,7 +90,7 @@
 
                   This image contains the following packages:
 
-                  * etcd v2.2.5;
+                  * etcd v3.0.4;
                   * kubernetes v1.3.0;
                   * flannel v0.5.5;
                   * Go v1.6.2;
@@ -101,7 +101,7 @@
         disk_format: qcow2
         container_format: bare
       license: Multi-licensed OpenSource
-      hash: 16e36fe2c6abac0103af1faae6203213
+      hash: 23f37d3d9d73740cf12e68b998e53338
       attributes:
         url: http://storage.apps.openstack.org/images/ubuntu14.04-x64-kubernetes.qcow2
     -
@@ -116,7 +116,7 @@
 
                   This image contains the following packages:
 
-                  * etcd v2.2.5;
+                  * etcd v3.0.4;
                   * kubernetes v1.3.0;
                   * flannel v0.5.5;
                   * Go v1.6.2;
@@ -127,7 +127,7 @@
         disk_format: qcow2
         container_format: bare
       license: Multi-licensed OpenSource
-      hash: c6372d7ce9ee914468f0a6a99049da9f
+      hash: e77f172ede183f8ab98ba1725ecb78c2 
       attributes:
         url: http://storage.apps.openstack.org/images/debian8-x64-kubernetes.qcow2
         size: 2.8 Gb
