@@ -3679,3 +3679,27 @@
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/org.openstack.apps.plone.PloneServer.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Plone/package"
+    -
+      name: PaloAlto
+      tags: ['app']
+      provided_by:
+        name: Damian Szeluga
+        href: "mailto:dszeluga@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+        PaloAlto Networks virtual Firewall application with http loadbalancer and configurable number of backends.
+
+      service:
+        type: murano
+        format: package
+        package_name: com.mirantis.PaloAltoApp
+      release:
+        - Liberty
+        - Mitaka
+      license: Apache 2.0
+      depends:
+        - name: Ubuntu 14.04 x64 (pre-installed murano-agent)
+      hash: c600d1a57a535d712d857df717a6b3b4
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/com.mirantis.PaloAltoApp.zip"
+        "Source URL": "https://github.com/openstack/murano-apps/tree/master/PaloAlto/package"
