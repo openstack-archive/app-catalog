@@ -1865,7 +1865,7 @@
         - name: Docker Interfaces Library
         - name: Debian 8 x64 (pre-installed Docker)
         - name: Ubuntu 14.04 x64 (pre-installed Docker and murano-agent)
-      hash: 8913424de8db84409eb5499114f312de
+      hash: 03c2cb5f3695bc675748764bc82d6162
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/com.mirantis.docker.DockerStandaloneHost.zip"
         "Source URL": "https://github.com/stackforge/murano-apps"
