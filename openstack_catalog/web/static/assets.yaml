@@ -1182,7 +1182,7 @@
       supported_by:
         name: Red Hat
       icon:
-        url: https://upload.wikimedia.org/wikipedia/en/thumb/3/3a/OpenShift-LogoType.svg/240px-OpenShift-LogoType.svg.png
+        url: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/OpenShift-LogoType.svg/200px-OpenShift-LogoType.svg.png
         top: -10
         left: -30
         height: 180
@@ -1211,7 +1211,7 @@
       supported_by:
         name: Red Hat
       icon:
-        url: https://upload.wikimedia.org/wikipedia/en/thumb/3/3a/OpenShift-LogoType.svg/240px-OpenShift-LogoType.svg.png
+        url: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/OpenShift-LogoType.svg/200px-OpenShift-LogoType.svg.png
         top: -10
         left: -30
         height: 180
@@ -1270,7 +1270,7 @@
       supported_by:
         name: Community
       icon:
-        url: https://upload.wikimedia.org/wikipedia/en/thumb/3/3a/OpenShift-LogoType.svg/240px-OpenShift-LogoType.svg.png
+        url: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/OpenShift-LogoType.svg/200px-OpenShift-LogoType.svg.png
         top: -10
         left: -30
         height: 180
