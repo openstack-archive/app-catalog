@@ -1415,9 +1415,9 @@
       license: Apache 2.0
       hash: 2082512a727a1ec3999287ba6e4e169a
       attributes:
-        "Source URL": "https://github.com/stackforge/murano-apps"
+        "Source URL": "https://github.com/openstack/murano-apps"
         "Package URL": "http://storage.apps.openstack.org/apps/com.mirantis.docker.Interfaces.zip"
-        Documentation: "https://github.com/stackforge/murano-apps/blob/master/Docker/Kubernetes/readme.md"
+        Documentation: "https://github.com/openstack/murano-apps/blob/master/Docker/Kubernetes/README.rst"
     -
       name: Apache HTTP Server
       tags: ['app']
@@ -1868,8 +1868,8 @@
       hash: 03c2cb5f3695bc675748764bc82d6162
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/com.mirantis.docker.DockerStandaloneHost.zip"
-        "Source URL": "https://github.com/stackforge/murano-apps"
-        Documentation: "https://github.com/stackforge/murano-apps/blob/master/Docker/Kubernetes/readme.md"
+        "Source URL": "https://github.com/openstack/murano-apps"
+        Documentation: "https://github.com/openstack/murano-apps/blob/master/Docker/Kubernetes/README.rst"
     -
       name: Kubernetes Cluster
       provided_by:
@@ -1916,8 +1916,8 @@
       hash: 6ebbc00d73ce730e13abdeb986a10ef8
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/com.mirantis.docker.kubernetes.KubernetesCluster.zip"
-        "Source URL": "https://github.com/stackforge/murano-apps"
-        Documentation: "https://github.com/stackforge/murano-apps/blob/master/Docker/Kubernetes/readme.md"
+        "Source URL": "https://github.com/openstack/murano-apps"
+        Documentation: "https://github.com/openstack/murano-apps/blob/master/Docker/Kubernetes/README.rst"
     -
       name: Kubernetes Pod
       provided_by:
@@ -1964,8 +1964,8 @@
       hash: 2d181c34691d49ed2eba26404b7f8f8e
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/com.mirantis.docker.kubernetes.KubernetesPod.zip"
-        "Source URL": "https://github.com/stackforge/murano-apps"
-        Documentation: "https://github.com/stackforge/murano-apps/blob/master/Docker/Kubernetes/readme.md"
+        "Source URL": "https://github.com/openstack/murano-apps"
+        Documentation: "https://github.com/openstack/murano-apps/blob/master/Docker/Kubernetes/README.rst"
     -
       name: Docker Container
       tags: ['app']
