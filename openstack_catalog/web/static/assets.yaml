@@ -3310,6 +3310,34 @@
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.iron.IronMQ.zip"
     -
+      name: IronWorker
+      tags: ['app']
+      provided_by:
+        name: Vitaly Lopatkin
+        href: "mailto:vitalyl@iron.io"
+        company: Iron.io
+      description: >
+        IronWorker provides the muscle for modern applications by efficiently isolating
+        the code and dependencies of individual tasks to be processed on demand.
+        Run in a multi-language containerized environment with streamlined
+        orchestration, IronWorker gives you the flexibility to power any task
+        in parallel at massive scale.
+      service:
+        type: murano
+        format: package
+        package_name: io.iron.IronWorker
+      release:
+        - Kilo
+        - Liberty
+        - Mitaka
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Docker Standalone Host
+        - name: Docker Interfaces Library
+      hash: 27ba40000dc1885b830d3d370b3fb5b2
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/io.iron.IronWorker.zip"
+    -
       name: F5 BIG-IP VE Onboard
       tags: ['app']
       provided_by:
