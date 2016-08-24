@@ -2991,10 +2991,15 @@
         name: Artem Silenkov
         href: "mailto:asilenkov@mirantis.com"
         company: Mirantis, Inc.
-      description: >
+      description: |
            The One-click CI/CD installer.
            Beta version for opaas initiative and still in development.
-           IRC:#murano-apps on freenode.net
+
+           Demonstration videos:
+           Demo CI/CD Murano application - https://www.youtube.com/watch?v=waTqsHfnVSo
+           Demo CI/CD Murano application (with Zuul & Nodepool) - https://www.youtube.com/watch?v=p8ce-j2-a1M
+
+           IRC: #murano-apps on freenode.net
       service:
         type: murano
         format: package
