@@ -16,4 +16,4 @@ import pbr.version
 
 
 __version__ = pbr.version.VersionInfo(
-    'openstack_catalog').version_string()
+    'openstack_app_catalog').version_string()
