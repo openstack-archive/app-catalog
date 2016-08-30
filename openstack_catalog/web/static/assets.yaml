@@ -3600,6 +3600,11 @@
         - Kilo
         - Liberty
         - Mitaka
+      icon:
+        url: https://github.com/openstack/ci-cd-pipeline-app-murano/blob/master/Docker/Artifactory/package/logo.png
+        top: -10
+        left: -30
+        height: 180
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Standalone Host
@@ -3625,6 +3630,11 @@
         - Kilo
         - Liberty
         - Mitaka
+      icon:
+        url: https://github.com/openstack/ci-cd-pipeline-app-murano/blob/master/Docker/Nexus/package/logo.png
+        top: -10
+        left: -30
+        height: 180
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Standalone Host
@@ -3652,6 +3662,11 @@
         - Kilo
         - Liberty
         - Mitaka
+      icon:
+        url: 
+        top: -10
+        left: -30
+        height: 180
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Standalone Host
