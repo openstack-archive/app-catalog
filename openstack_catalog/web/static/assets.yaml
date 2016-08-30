@@ -960,7 +960,7 @@
         pubkey: https://coreos.com/security/image-signing-key
         releases: https://coreos.com/releases/
     -
-      name: Fedora 23 Atomic Cloud
+      name: Fedora Atomic 24
       tags: ['app']
       provided_by:
         name: Project Atomic
@@ -971,8 +971,8 @@
                   container-based application and service deployment with
                   trusted operating system platforms to deliver an end-to-end
                   hosting architecture that's modern, reliable, and secure.
-                  This Atomic image is based on Fedora 23 and was released
-                  2016-06-07.
+                  This Atomic image is based on Fedora 24 and was released
+                  2016-08-20.
       service:
         type: glance
         disk_format: qcow2
@@ -984,13 +984,13 @@
         height: 210
       license: Multi-licensed OpenSource
       cloud_user: fedora
-      hash: 7575c41952eb5beeb8f41edd122a760087f10323d3f8f92f7625a6c5fa6b68a4
+      hash: ba817139e7edb22665278cdd1248575131fb2ffffcfecd73c9a44a3facb15903
       attributes:
-        url: https://download.fedoraproject.org/pub/alt/atomic/stable/Cloud-Images/x86_64/Images/Fedora-Cloud-Atomic-23-20160607.x86_64.qcow2
+        url: https://download.fedoraproject.org/pub/alt/atomic/stable/CloudImages/x86_64/images/Fedora-Atomic-24-20160820.0.x86_64.qcow2
         docs: http://www.projectatomic.io/docs/
         gpg: https://getfedora.org/static/fedora.gpg
-        digest: https://alt.fedoraproject.org/pub/alt/atomic/stable/Cloud-Images/x86_64/Images/Fedora-Cloud-Images-x86_64-23-CHECKSUM
-        pubkey: https://getfedora.org/static/34EC9CBA.txt
+        digest: https://dl.fedoraproject.org/pub/alt/atomic/stable/CloudImages/x86_64/images/Fedora-CloudImages-24-20160820.0-x86_64-CHECKSUM
+        pubkey: https://getfedora.org/static/81B46521.txt
         releases: https://getfedora.org/en/cloud/download/atomic.html
     -
       name: ManageIQ Capablanca (stable)
