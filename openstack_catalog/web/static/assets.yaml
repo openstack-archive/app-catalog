@@ -3601,7 +3601,7 @@
         - Liberty
         - Mitaka
       icon:
-        url: https://github.com/openstack/ci-cd-pipeline-app-murano/blob/master/Docker/Artifactory/package/logo.png
+        url: https://raw.githubusercontent.com/openstack/ci-cd-pipeline-app-murano/master/Docker/Artifactory/package/logo.png
         top: -10
         left: -30
         height: 180
@@ -3631,7 +3631,7 @@
         - Liberty
         - Mitaka
       icon:
-        url: https://github.com/openstack/ci-cd-pipeline-app-murano/blob/master/Docker/Nexus/package/logo.png
+        url: https://raw.githubusercontent.com/openstack/ci-cd-pipeline-app-murano/master/Docker/Elk/package/logo.png
         top: -10
         left: -30
         height: 180
@@ -3663,7 +3663,7 @@
         - Liberty
         - Mitaka
       icon:
-        url: https://github.com/openstack/ci-cd-pipeline-app-murano/blob/master/Docker/Nexus/package/logo.png
+        url: https://raw.githubusercontent.com/openstack/ci-cd-pipeline-app-murano/master/Docker/Nexus/package/logo.png
         top: -10
         left: -30
         height: 180
