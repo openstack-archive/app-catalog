@@ -79,7 +79,7 @@
       attributes:
         url: https://fedorapeople.org/groups/magnum/fedora-21-atomic-5.qcow2
     -
-      name: Ubuntu 14.04 x64 (pre-installed Kubernetes and murano-agent)
+      name: Ubuntu 14.04 x64 v1.0.0 (pre-installed Kubernetes and murano-agent) 
       provided_by:
         name: Dmytro Dovbii
         href: mailto:ddovbii@mirantis.com
@@ -105,7 +105,7 @@
       attributes:
         url: http://storage.apps.openstack.org/images/ubuntu14.04-x64-kubernetes.qcow2
     -
-      name: Debian 8 x64 (pre-installed Kubernetes and murano-agent)
+      name: Debian 8 x64 v1.0.0 (pre-installed Kubernetes and murano-agent)
       provided_by:
         name: Dmytro Dovbii
         href: mailto:ddovbii@mirantis.com
@@ -1871,7 +1871,7 @@
         "Source URL": "https://github.com/openstack/murano-apps"
         Documentation: "https://github.com/openstack/k8s-docker-suite-app-murano/tree/master/Kubernetes/README.rst"
     -
-      name: Kubernetes Cluster
+      name: Kubernetes Cluster v1.0.0
       provided_by:
         name: Stan Lagun
         href: "mailto:slagun@mirantis.com"
@@ -1919,7 +1919,7 @@
         "Source URL": "https://github.com/openstack/murano-apps"
         Documentation: "https://github.com/openstack/k8s-docker-suite-app-murano/tree/master/Kubernetes/README.rst"
     -
-      name: Kubernetes Pod
+      name: Kubernetes Pod v1.0.0
       provided_by:
         name: Stan Lagun
         href: "mailto:slagun@mirantis.com"
@@ -2824,7 +2824,7 @@
         - name: MySQL
         - name: PostgreSql
     -
-      name: Docker & Kubernetes Bundle
+      name: Docker & Kubernetes Bundle v1.0.0
       provided_by:
         name: Serg Melikyan
         href: "mailto:smelikyan@mirantis.com"
