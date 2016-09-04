@@ -3697,7 +3697,7 @@
       license: Apache 2.0
       depends:
         - name: Ubuntu 14.04 x64 (pre-installed murano-agent)
-      hash: b992cc757b5f615806af083583742232
+      hash: bbb45a220c3f0a1e21b2e7fe77a4bc23
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/com.mirantis.GoCDApp.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/GoCD/package"
