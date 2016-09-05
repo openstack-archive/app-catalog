@@ -3015,6 +3015,11 @@
       release:
         - Liberty
         - Mitaka
+      icon:
+        url: https://raw.githubusercontent.com/openstack/ci-cd-pipeline-app-murano/master/murano-apps/Gerrit/package/logo.png
+        top: -10
+        left: -30
+        height: 180
       license: Multi-licensed OpenSource
       depends:
         - name: Puppet
@@ -3067,6 +3072,11 @@
       release:
         - Liberty
         - Mitaka
+      icon:
+        url: https://raw.githubusercontent.com/openstack/ci-cd-pipeline-app-murano/master/murano-apps/Jenkins/package/logo.png
+        top: -10
+        left: -30
+        height: 180
       license: Multi-licensed OpenSource
       depends:
         - name: Puppet
@@ -3095,6 +3105,11 @@
       release:
         - Liberty
         - Mitaka
+      icon:
+        url: https://raw.githubusercontent.com/openstack/ci-cd-pipeline-app-murano/master/murano-apps/OpenLDAP/package/logo.png
+        top: -10
+        left: -30
+        height: 180
       license: Multi-licensed OpenSource
       depends:
         - name: Puppet
@@ -3172,6 +3187,11 @@
       release:
         - Liberty
         - Mitaka
+      icon:
+        url: https://raw.githubusercontent.com/openstack/ci-cd-pipeline-app-murano/master/murano-apps/CiCdEnvironment/package/logo.png
+        top: -10
+        left: -30
+        height: 180
       license: Multi-licensed OpenSource
       depends:
         - name: OpenLDAP
@@ -3205,6 +3225,11 @@
       release:
         - Liberty
         - Mitaka
+      icon:
+        url: https://raw.githubusercontent.com/openstack/ci-cd-pipeline-app-murano/master/murano-apps/Nodepool/package/logo.png
+        top: -10
+        left: -30
+        height: 180
       license: Multi-licensed OpenSource
       depends:
         - name: SystemConfig
