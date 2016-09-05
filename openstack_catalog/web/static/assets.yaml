@@ -1905,8 +1905,6 @@
         format: package
         package_name: com.mirantis.docker.kubernetes.KubernetesCluster
       release:
-        - Kilo
-        - Liberty
         - Mitaka
       license: Multi-licensed OpenSource
       depends:
@@ -1954,8 +1952,6 @@
         format: package
         package_name: com.mirantis.docker.kubernetes.KubernetesPod
       release:
-        - Kilo
-        - Liberty
         - Mitaka
       license: Multi-licensed OpenSource
       depends:
@@ -2850,8 +2846,6 @@
         type: bundle
         murano_package_name: docker-n-kubernetes
       release:
-        - Kilo
-        - Liberty
         - Mitaka
       license: Multi-licensed OpenSource
       depends:
