@@ -1860,6 +1860,11 @@
         - Kilo
         - Liberty
         - Mitaka
+      icon:
+        url: https://raw.githubusercontent.com/openstack/k8s-docker-suite-app-murano/master/DockerStandaloneHost/package/logo.png
+        top: -10
+        left: -30
+        height: 180
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Interfaces Library
@@ -1908,6 +1913,11 @@
         - Kilo
         - Liberty
         - Mitaka
+      icon:
+        url: https://raw.githubusercontent.com/openstack/k8s-docker-suite-app-murano/master/Kubernetes/KubernetesCluster/package/logo.png
+        top: -10
+        left: -30
+        height: 180
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Interfaces Library
@@ -1957,6 +1967,11 @@
         - Kilo
         - Liberty
         - Mitaka
+      icon:
+        url: https://raw.githubusercontent.com/openstack/k8s-docker-suite-app-murano/master/Kubernetes/KubernetesPod/package/logo.png
+        top: -10
+        left: -30
+        height: 180
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Interfaces Library
