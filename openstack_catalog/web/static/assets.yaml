@@ -1900,6 +1900,15 @@
         Changes:
         July 2016 - The package name was changed. You can still access the application with
         the old name by the link. But now it is preferable to use the new application.
+
+        This application uses image with follow components:
+            * etcd v3.0.4;
+            * kubernetes v1.3.0;
+            * flannel v0.5.5;
+            * Go v1.6.2;
+            * confd v0.7.1;
+            * docker v1.11.2.
+
       service:
         type: murano
         format: package
@@ -1949,6 +1958,15 @@
         Changes:
         July 2016 - The package name was changed. You can still access the application with
         the old name by the link. But now it is preferable to use the new application.
+
+        Depended application - "Kubernetes Cluster" uses image with follow
+        components:
+            * etcd v3.0.4;
+            * kubernetes v1.3.0;
+            * flannel v0.5.5;
+            * Go v1.6.2;
+            * confd v0.7.1;
+            * docker v1.11.2.
       service:
         type: murano
         format: package
@@ -2846,6 +2864,15 @@
         deployment units. Kubernetes Pod also contains the Kubernetes
         Replication Controller, which can auto-replicate and redeploy a
         Pod with given contents in the event of Pod failure.
+
+        With this bundle automatically will be installed application -
+        "Kubernetes Cluster". It uses image with follow components:
+            * etcd v3.0.4;
+            * kubernetes v1.3.0;
+            * flannel v0.5.5;
+            * Go v1.6.2;
+            * confd v0.7.1;
+            * docker v1.11.2.
       service:
         type: bundle
         murano_package_name: docker-n-kubernetes
