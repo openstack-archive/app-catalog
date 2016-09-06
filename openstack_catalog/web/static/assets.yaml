@@ -1993,6 +1993,11 @@
         - Kilo
         - Liberty
         - Mitaka
+      icon:
+        url: https://raw.githubusercontent.com/openstack/k8s-docker-suite-app-murano/master/Applications/DockerApp/package/logo.png
+        top: -10
+        left: -30
+        height: 180
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Standalone Host
@@ -2030,6 +2035,11 @@
         - Kilo
         - Liberty
         - Mitaka
+      icon:
+        url: https://raw.githubusercontent.com/openstack/k8s-docker-suite-app-murano/master/Applications/Crate/package/logo.png
+        top: -10
+        left: -30
+        height: 180
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Standalone Host
@@ -2078,6 +2088,11 @@
         - Kilo
         - Liberty
         - Mitaka
+      icon:
+        url: https://raw.githubusercontent.com/openstack/k8s-docker-suite-app-murano/master/Applications/GlassFish/package/logo.png
+        top: -10
+        left: -30
+        height: 180
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Standalone Host
@@ -2125,6 +2140,11 @@
         - Kilo
         - Liberty
         - Mitaka
+      icon:
+        url: https://raw.githubusercontent.com/openstack/k8s-docker-suite-app-murano/master/Applications/Grafana/package/logo.png
+        top: -10
+        left: -30
+        height: 180
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Standalone Host
@@ -2161,6 +2181,11 @@
         - Kilo
         - Liberty
         - Mitaka
+      icon:
+        url: https://raw.githubusercontent.com/openstack/k8s-docker-suite-app-murano/master/Applications/GuestBook/package/logo.png
+        top: -10
+        left: -30
+        height: 180
       license: Multi-licensed OpenSource
       depends:
         - name: Kubernetes Cluster
@@ -2199,6 +2224,11 @@
         - Kilo
         - Liberty
         - Mitaka
+      icon:
+        url: https://raw.githubusercontent.com/openstack/k8s-docker-suite-app-murano/master/Applications/HTTPdServer/package/logo.png
+        top: -10
+        left: -30
+        height: 180
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Standalone Host
@@ -2241,6 +2271,11 @@
         - Kilo
         - Liberty
         - Mitaka
+      icon:
+        url: https://raw.githubusercontent.com/openstack/k8s-docker-suite-app-murano/master/Applications/HTTPdSite/package/logo.png
+        top: -10
+        left: -30
+        height: 180
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Standalone Host
@@ -2280,6 +2315,11 @@
         - Kilo
         - Liberty
         - Mitaka
+      icon:
+        url: https://raw.githubusercontent.com/openstack/k8s-docker-suite-app-murano/master/Applications/InfluxDB/package/logo.png
+        top: -10
+        left: -30
+        height: 180
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Standalone Host
@@ -2328,6 +2368,11 @@
         - Kilo
         - Liberty
         - Mitaka
+      icon:
+        url: https://raw.githubusercontent.com/openstack/k8s-docker-suite-app-murano/master/Applications/Jenkins/package/logo.png
+        top: -10
+        left: -30
+        height: 180
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Standalone Host
@@ -2374,6 +2419,11 @@
         - Kilo
         - Liberty
         - Mitaka
+      icon:
+        url: https://raw.githubusercontent.com/openstack/k8s-docker-suite-app-murano/master/Applications/MariaDB/package/logo.png
+        top: -10
+        left: -30
+        height: 180
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Standalone Host
@@ -2423,6 +2473,11 @@
         - Kilo
         - Liberty
         - Mitaka
+      icon:
+        url: https://raw.githubusercontent.com/openstack/k8s-docker-suite-app-murano/master/Applications/MongoDB/package/logo.png
+        top: -10
+        left: -30
+        height: 180
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Standalone Host
@@ -2462,6 +2517,11 @@
         - Kilo
         - Liberty
         - Mitaka
+      icon:
+        url: https://raw.githubusercontent.com/openstack/k8s-docker-suite-app-murano/master/Applications/MySQL/package/logo.png
+        top: -10
+        left: -30
+        height: 180
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Standalone Host
@@ -2503,6 +2563,11 @@
         - Kilo
         - Liberty
         - Mitaka
+      icon:
+        url: https://raw.githubusercontent.com/openstack/k8s-docker-suite-app-murano/master/Applications/Nginx/package/logo.png
+        top: -10
+        left: -30
+        height: 180
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Standalone Host
@@ -2547,6 +2612,11 @@
         - Kilo
         - Liberty
         - Mitaka
+      icon:
+        url: https://raw.githubusercontent.com/openstack/k8s-docker-suite-app-murano/master/Applications/NginxSite/package/logo.png
+        top: -10
+        left: -30
+        height: 180
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Standalone Host
@@ -2606,6 +2676,11 @@
         - Kilo
         - Liberty
         - Mitaka
+      icon:
+        url: https://raw.githubusercontent.com/openstack/k8s-docker-suite-app-murano/master/Applications/PostgreSQL/package/logo.png
+        top: -10
+        left: -30
+        height: 180
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Standalone Host
@@ -2646,6 +2721,11 @@
         - Kilo
         - Liberty
         - Mitaka
+      icon:
+        url: https://raw.githubusercontent.com/openstack/k8s-docker-suite-app-murano/master/Applications/Redis/package/logo.png
+        top: -10
+        left: -30
+        height: 180
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Standalone Host
@@ -2687,6 +2767,11 @@
         - Kilo
         - Liberty
         - Mitaka
+      icon:
+        url: https://raw.githubusercontent.com/openstack/k8s-docker-suite-app-murano/master/Applications/Tomcat/package/logo.png
+        top: -10
+        left: -30
+        height: 180
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Standalone Host
