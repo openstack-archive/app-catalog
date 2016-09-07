@@ -235,10 +235,11 @@
         top: 0
         left: 6
         height: 110
+      hash: 742ec3c3d8a6b4f8caa7f14569d58eef
       license: Multi-licensed OpenSource
       cloud_user: ubuntu
       attributes:
-        url: http://uec-images.ubuntu.com/trusty/current/trusty-server-cloudimg-amd64-disk1.img
+        url: https://cloud-images.ubuntu.com/releases/14.04/14.04.4/ubuntu-14.04-server-cloudimg-amd64-disk1.img
     -
       name: Ubuntu Utopic 14
       tags: ['app']
@@ -311,9 +312,9 @@
         top: -12
         left: -12
         height: 150
+      hash: 62ac2565e3527377860361f57639f334
       license: Multi-licensed OpenSource
       cloud_user: centos
-      hash: f5729dd91bb45d3210a3bcc52534cc7307fbed4d01b0e7810533f727763c1038
       attributes:
         url: http://cloud.centos.org/centos/6/images/CentOS-6-x86_64-GenericCloud-20141129_01.qcow2
     -
@@ -348,9 +349,9 @@
         height: 150
       license: Multi-licensed OpenSource
       cloud_user: centos
-      hash: e324e3ab1d24a1bbf035ddb365e7f9058c0b454acf48d7aa15c5519fae5998ab
+      hash: c2ebde45f03aa35c6d996c3de984a9d6
       attributes:
-        url: http://cloud.centos.org/centos/7/images/CentOS-7-x86_64-GenericCloud.qcow2
+        url: http://cloud.centos.org/centos/7/images/CentOS-7-x86_64-GenericCloud-1608.qcow2
     -
       name: CirrOS
       tags: ['app']
@@ -368,6 +369,7 @@
         top: 0
         left: -2
         height: 130
+      hash: ee1eca47dc88f4879d8a229cc70a07c6
       license: Multi-licensed OpenSource
       cloud_user: cirros
       attributes:
@@ -404,7 +406,7 @@
         height: 210
       license: Multi-licensed OpenSource
       cloud_user: fedora
-      hash: 0c30ef4f0c2e1bc621193d0ee42b7692e19e93aa286abc6e08683397f35d7b0f
+      hash: 38d62e2e1909c89f72ba4d5f5c0005d5
       attributes:
         url: https://download.fedoraproject.org/pub/fedora/linux/releases/23/Cloud/x86_64/Images/Fedora-Cloud-Base-23-20151030.x86_64.qcow2
         docs: https://docs.fedoraproject.org/en-US/index.html
@@ -441,7 +443,7 @@
         height: 124
       license: Multi-licensed OpenSource
       cloud_user: debian
-      hash: 0fcf78a066da0fe489b61176eba11f12e55f60081556693a0c5652d1acfbda57
+      hash: 63e449dce64d86c9e97da74673656857
       attributes:
         url: http://cdimage.debian.org/cdimage/openstack/archive/8.0.0/debian-8.0.0-openstack-amd64.qcow2
     -
@@ -473,7 +475,7 @@
         height: 124
       license: Multi-licensed OpenSource
       cloud_user: debian
-      hash: 0a53b82077c44ec29d8774a9ed9df9216d3689c286949f7f500f5d4b359f5ddd
+      hash: 740726dfbcea90768cad44ce20eaae51
       attributes:
         url: http://cdimage.debian.org/cdimage/openstack/current/debian-8.5.0-openstack-amd64.qcow2
     -
@@ -673,6 +675,7 @@
         top: 0
         left: 20
         height: 128
+      hash: a9899d51e5667118d7a91f84438062a4
       license: Multi-licensed OpenSource
       attributes:
         url: https://downloads.bitnami.com/files/download/openstack/bitnami-jenkins-1.613-0-ubuntu-14.04.qcow
@@ -899,7 +902,7 @@
         left: 10
         height: 114
       license: Multi-licensed OpenSource
-      hash: 298d349fa3facdcc533758ce6611ab290094bf11c1cb1fd994ac34e2b47ec384ee0421edfdfd8ae5f7acd7933a46859f7455045230cc5b1a8201481dc859f4c8
+      hash: 37f5c22f13527d0c5c3a146370d39eb6
       attributes:
         url: http://stable.release.core-os.net/amd64-usr/647.0.0/coreos_production_openstack_image.img.bz2
         docs: https://coreos.com/docs/
@@ -925,7 +928,7 @@
         left: 10
         height: 114
       license: Multi-licensed OpenSource
-      hash: 2209106e9243559f9da5707586ffae567ccf5b806420cfeb0673870a91a068115ca924b77f2e9a88240a03dbf3e790a0190d0a8730cf6172034e5033e7622e05
+      hash: f63dbd117fce4ee66bd4850ae2d8081e
       attributes:
         url: http://beta.release.core-os.net/amd64-usr/668.3.0/coreos_production_openstack_image.img.bz2
         docs: https://coreos.com/docs/
@@ -951,7 +954,7 @@
         left: 10
         height: 114
       license: Multi-licensed OpenSource
-      hash: b30cfb18add5497298efef80cfb2eb9727b2f4e5267d3dfd2c3339ea6190403fe3c2d2417239e7d37327d817ff5b4786f51d41810ad3a63d91e077742bddffa0
+      hash: fef1a26baa9ffca9883aa3ba234e8580
       attributes:
         url: http://alpha.release.core-os.net/amd64-usr/681.0.0/coreos_production_openstack_image.img.bz2
         docs: https://coreos.com/docs/
@@ -984,7 +987,7 @@
         height: 210
       license: Multi-licensed OpenSource
       cloud_user: fedora
-      hash: ba817139e7edb22665278cdd1248575131fb2ffffcfecd73c9a44a3facb15903
+      hash: 8a51bd627f44aa512179a6a6b6291c74
       attributes:
         url: https://download.fedoraproject.org/pub/alt/atomic/stable/CloudImages/x86_64/images/Fedora-Atomic-24-20160820.0.x86_64.qcow2
         docs: http://www.projectatomic.io/docs/
@@ -993,7 +996,7 @@
         pubkey: https://getfedora.org/static/81B46521.txt
         releases: https://getfedora.org/en/cloud/download/atomic.html
     -
-      name: ManageIQ Capablanca (stable)
+      name: ManageIQ Darga (stable)
       tags: ['app']
       provided_by:
         name: ManageIQ
@@ -1008,7 +1011,7 @@
                   platforms. ManageIQ lets you control everything, completely,
                   from one end of a virtual machine lifecycle to the other.
                   ManageIQ is the open source project that powers Red Hat
-                  CloudForms. This is the stable version of the 'Capablanca'
+                  CloudForms. This is the stable version of the 'Darga'
                   release.
       service:
         type: glance
@@ -1020,9 +1023,9 @@
         left: 0
         height: 128
       license: Multi-licensed OpenSource
-      hash: 263152a236d4e5fcea9c1e567eb32adfb992242a2c232d2e1f07b44e670d82e3
+      hash: 2c5d026004faaffbeeb4bfa9179f1df2
       attributes:
-        url:  http://manageiq.org/download/manageiq-openstack-capablanca-2.qc2
+        url: http://manageiq.org/download/manageiq-openstack-darga-3.qc2
         docs: http://manageiq.org/documentation/
         releases: http://releases.manageiq.org/
     -
@@ -1042,6 +1045,7 @@
         top: -10
         left: -10
         height: 140
+      hash: abec1b30081cd299663bf497f9bdd2f1
       license: Multi-licensed OpenSource
       attributes:
         url: http://download.opensuse.org/repositories/Cloud:/Images:/openSUSE_13.2/images/openSUSE-13.2-OpenStack-Guest.x86_64.qcow2
@@ -1068,6 +1072,7 @@
         top: 15
         left: -25
         height: 150
+      hash: 94f490a2c30540a6a8277e0a84e46373
       license: Free <= 30 Users
       license_url: https://www.aerofs.com/
       attributes:
@@ -3482,7 +3487,7 @@
         - name: Docker Interfaces Library
       hash: 27ba40000dc1885b830d3d370b3fb5b2
       attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/io.iron.IronWorker.zip"
+        "Package URL": "https://www.dropbox.com/s/1id7bph8760aak3/io.iron.IronWorker.zip?dl=0"
     -
       name: F5 BIG-IP VE Onboard
       tags: ['app']
