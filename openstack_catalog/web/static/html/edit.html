@@ -1,0 +1,145 @@
+<h3 ng-if="vm.type">{{vm.type|displayName}}</h3>
+<form name="artifactForm">
+  <div ng-repeat="i in vm.formFields" class="row">
+    <div class="col-xs-2">
+      <label for="{{i.name}}">{{i.name|displayName}}</label>
+    </div>
+    <div ng-switch="i.widget" class="col-xs-4 forms">
+
+      <select ng-switch-when="select" name="{{i.name}}" ng-model="vm.artifact[i.name]" ng-options="o as o for o in i.enum"></select>
+
+      <select ng-switch-when="multisel" multiple="multiple" name="{{i.name}}" ng-model="vm.artifact[i.name]" ng-options="o as o for o in i.options"></select>
+
+      <input ng-switch-when="input" type="{{i.type}}" ng-model="vm.artifact[i.name]" name="{{i.name}}"
+        ng-required="i.required" ng-class="i.type == 'file' || 'form-control'"></input>
+
+      <div ng-switch-when="uploaded_blob">
+
+        <div class="sub-label">checksum</div>
+        <div>{{vm.artifact[i.name].checksum}}</div>
+
+        <div ng-if="vm.artifact[i.name].external">
+          <div class="sub-label">url</div>
+          <div>{{vm.artifact[i.name].url}}</div>
+        </div>
+        <span ng-if="!vm.artifact[i.name].external">
+          <div class="sub-label">Details</div>
+          <div>
+            {{vm.artifact[i.name].content_type}}&nbsp;{{vm.artifact[i.name].size|blobSize}}
+          </div>
+        </span>
+      </div>
+
+      <div ng-switch-when="external_blob" class="row">
+        <div class="col-xs-12">
+          <label for="{{i.name}}{{i.key}}" class="sub-label">Url</label>
+          <input name="{{i.name}}{{i.key}}" ng-model="vm.externalBlob[i.name]"
+            id="{{i.name}}{{i.key}}" class="form-control" />
+        </div>
+        <div class="col-xs-12">
+          <label for="{{i.name}}{{i.key}}.checksum" class="sub-label">Checksum</label>
+          <input name="{{i.name}}{{i.key}}.checksum" ng-model="vm.externalBlobChecksum[i.name]" 
+            id="{{i.name}}{{i.key}}.checksum" class="form-control" />
+        </div>
+      </div>
+
+      <textarea ng-switch-when="textarea" ng-model="vm.artifact[i.name]"
+                name="{{i.name}}" id="{{i.name}}" ng-required="{{i.required}}" class="form-control"></textarea>
+
+      <span ng-switch-when="array">
+        <ul><li ng-repeat="item in vm.artifact[i.name] track by $index">
+          <input ng-model="vm.artifact[i.name][$index]" type="{{i.itemType}}"
+                 name="{{i.name}}.{{$index}}" class="form-control">
+          </input>
+          <button ng-click="vm.artifact[i.name].splice($index, 1)" class="btn btn-link">
+            <i class="glyphicon glyphicon-minus-sign"></i>
+          </button>
+        </li></ul>
+        <button ng-click="vm.addItem(i.name)" class="btn btn-link">
+          <i class="glyphicon glyphicon-plus-sign"></i>
+        </button>
+      </span>
+
+      <span ng-switch-when="dict">
+        <div ng-if="i.itemType != 'file'">
+          <div ng-repeat="(key, val) in vm.artifact[i.name]" class="row dict">
+            <div class="col-xs-12">
+              <label for="{{i.name}}.{{key}}" class="sub-label">{{key}}</label>
+              <input ng-model="vm.artifact[i.name][key]" type="{{i.itemType}}"
+                     name="{{i.name}}.{{key}}" id="{{i.name}}.{{key}}" class="form-control">
+              </input>
+              <button ng-click="vm.delKey(i.name, key, 'artifact')" ng-if="!i.locked" class="btn btn-link">
+                <i class="glyphicon glyphicon-minus-sign"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <table ng-if="i.itemType == 'file'">
+          <tr ng-repeat="(key, val) in vm.artifact[i.name]">
+            <td>{{key}}</td>
+            <td>{{val.content_type}} {{val.size|blobSize}}</td>
+          </tr>
+          <tr ng-repeat="(key, val) in vm.blobdict[i.name]">
+            <td>{{key}}</td>
+            <td>
+              <input ng-model="vm.blobdict[i.name][key]" type="{{i.itemType}}"
+                ng-blobdict-key="{{key}}" name="{{i.name}}.{{key}}">
+              </input>
+            </td>
+            <td>
+              <button ng-click="vm.delKey(i.name, key, 'blobdict')" ng-if="!i.locked" class="btn btn-link">
+                <i class="glyphicon glyphicon-minus-sign"></i>
+              </button>
+            </td>
+          </tr>
+        </table>
+
+        <div ng-if="!i.locked && i.itemType != 'file'">
+          <input ng-model="vm.newKey[i.name]" class="form-control"></input>
+          <button ng-click="vm.addKey(i.name, 'artifact', 'newKey')" class="btn btn-link">
+            <i class="glyphicon glyphicon-plus-sign"></i>
+          </button>
+        </div>
+
+        <div ng-if="!i.locked && i.itemType == 'file'">
+          <input ng-model="vm.newBlobDictKey[i.name]" class="form-control"></input>
+          <button ng-click="vm.addKey(i.name, 'blobdict', 'newBlobDictKey')" class="btn btn-link">
+            <i class="glyphicon glyphicon-plus-sign"></i>
+          </button>
+        </div>
+      </span>
+    </div>
+    <div class="col-xs-6 description">
+      {{i.description}}
+    </div>
+  </div>
+
+</form>
+
+<button ng-if="artifactForm.$valid" ng-click="vm.Save(artifactForm)" class="btn btn-default">Save</button>
+<button ng-if="vm.is_admin && vm.artifact.status == 'active'" ng-click="vm.approve()" class="btn btn-default">Approve</button>
+<button ng-if"vm.artifact.status != 'active'" ng-click="vm.Activate()" class="btn btn-default">Activate</button>
+
+<div id="uploads">
+  <div ng-repeat="upload in vm.uploading" class="row">
+    <div class="progress-name col-xs-2">{{upload.name}}</div>
+    <div class="col-xs-4">
+      <div class="progress">
+        <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar"
+        aria-valuenow="{{upload.progress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{upload.progress}}%">
+          {{upload.progress}}% Complete
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-6">{{upload.error}}</div>
+  </div>
+</div>
+
+<h2 ng-if="vm.status">{{vm.status}}</h2>
+<div ng-if="vm.error" class="xhr_error alert alert-danger">
+<p>{{vm.error.status}} {{vm.error.statusText}}</p>
+<p>{{vm.error.data.error.message}}</p>
+</div>
+
+<h2 id="upload_progress"></h2>

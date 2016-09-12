@@ -1,0 +1,104 @@
+ <div class="artifact">
+  <h2>{{vm.item.name}}</h2>
+
+  <h2 style="background-color: red;" ng-if="vm.item.status == 'deactivated'">DEACTIVATED</h2>
+
+  <div class="icon-container row">
+    <div class="col-xs-3 image-container">
+      <img src="{{vm.item|blobLink:vm.type:'icon'}}" ng-if="vm.item.icon"></img>
+    </div>
+  </div>
+
+  <div class="row">
+    <label class="col-xs-2">Last modified:</label>
+    <div class="col-xs-10">{{vm.item.updated_at}}</div>
+  </div>
+
+  <div ng-if="vm.type == 'images' && vm.item.image" class="row">
+    <label class="col-xs-2">glance image-create:</label>
+    <div class="col-xs-10">
+      <input type="text" readonly="readonly" value="glance --os-image-api-version 1 image-create --copy-from {{vm.item | blobLink:vm.type:'image'}} --disk-format {{vm.item.disk_format}} --container-format {{vm.item.container_format}} --name '{{vm.item.name}}'" onfocus="this.select();" />
+    </div>
+  </div>
+
+  <div ng-if="vm.type == 'murano_packages'" class="row">
+    <label class="col-xs-2">Package name:</label>
+    <div class="col-xs-7"><input type="text" readonly="readonly" value="{{vm.item.display_name}}" onfocus="this.select();" /></div>
+  </div>
+
+  <div ng-if="vm.type == 'murano_packages'" class="row">
+    <label class="col-xs-2">Package URL:</label>
+    <div class="col-xs-7"><a href="{{vm.item|blobLink:vm.type:'package'}}">{{vm.item|blobLink:vm.type:'package'}}</a></div>
+  </div>
+
+  <div ng-if="vm.type == 'heat_templates' || vm.type == 'tosca_template'" class="row">
+    <label class="col-xs-2">Template URL:</label>
+    <div class="col-xs-7"><a href="{{vm.item|blobLink:vm.type:'template'}}">{{vm.item|blobLink:vm.type:'template'}}</a></div>
+  </div>
+
+  <div ng-if="vm.type == 'images'" class="row">
+    <label class="col-xs-2">Image URL:</label>
+    <div class="col-xs-7"><a href="{{vm.item|blobLink:vm.type:'image'}}">{{vm.item|blobLink:vm.type:'image'}}</a></div>
+  </div>
+
+  <div ng-if="vm.type == 'images'" class="row">
+    <label class="col-xs-2">Image checksum:</label>
+    <div class="col-xs-7">{{vm.item.image.checksum}}</div>
+  </div>
+
+  <div class="row">
+    <label class="col-xs-2">License:</label>
+    <div class="col-xs-7"><a href="{{vm.item.license_url}}">{{vm.item.license}}</a></div>
+  </div>
+
+  <div class="row">
+    <label class="col-xs-2">Description:</label>
+    <div class="col-xs-7">{{vm.item.description}}</div>
+  </div>
+
+  <h3 ng-if="vm.item.release.length">Supported OpenStack Releases</h3>
+  <div ng-if="vm.item.release.length">{{vm.item.release.join(', ')}}</div>
+
+  <h3>Author</h3>
+  <div class="row">
+    <label class="col-xs-2">Launchpad:</label>
+    <div class="col-xs-10"><a href="https://launchpad.net/~{{vm.item.owner}}">{{vm.item.owner}}</a></div>
+  </div>
+  <div class="row">
+    <label class="col-xs-2">Contact:</label>
+    <div class="col-xs-10"><a href="{{vm.item.provided_by.href}}">{{vm.item.provided_by.name}}</a></div>
+  </div>
+  <div class="row">
+    <label class="col-xs-2">Company:</label>
+    <div class="col-xs-10">{{vm.item.provided_by.company}}</div>
+  </div>
+
+  <h3 ng-if="vm.dependencies.length > 0">Depends on</h3>
+  <p ng-if="vm.dependencies.length > 0">
+    Package may depend on image and on other packages, during import of this package to Murano following dependencies will be also downloaded and imported, but existing entries will not be overwritten.
+  </p>
+  <ul>
+      <li ng-repeat="dep in vm.dependencies"><a href="{{dep|assetLink}}">{{dep.name}}</a></li>
+  </ul>
+
+
+  <h3 ng-if="vm.item.metadata">Metadata</h3>
+  <div ng-repeat="(name, value) in vm.item.metadata" class="row">
+    <label class="col-xs-2">{{name}}:</label>
+    <div class="col-xs-10">{{value}}</div>
+  </div>
+
+  <div class="artifact-buttons">
+    <div ng-if="vm.item.visibility == 'private' && vm.item.status == 'active' && is_admin">
+      <button ng-click="vm.Approve()" class="btn btn-default">Approve</button>
+    </div>
+
+    <div ng-if="vm.item.visibility == 'public' && vm.item.status == 'active' && is_admin">
+      <button ng-click="vm.Deactivate()" class="btn btn-default">Deactivate</button>
+    </div>
+
+    <div ng-if="logged_in">
+      <button ng-click="vm.Copy()" class="btn btn-default">Copy</button>
+    </div>
+  </div>
+</div>
