@@ -479,38 +479,6 @@
       attributes:
         url: http://cdimage.debian.org/cdimage/openstack/current/debian-8.5.0-openstack-amd64.qcow2
     -
-      name: Debian Testing weekly build x64
-      tags: ['app']
-      provided_by:
-        name: Debian
-        href: http://debian.org
-        company: Debian Community
-      description: >
-                  Debian is a Unix-like computer operating system
-                  and a Linux distribution that is composed entirely
-                  of free and open-source software, most of which is
-                  under the GNU General Public License, and packaged
-                  by a group of individuals known as the Debian
-                  project.
-
-                  This is a Debian Testing (currently Stretch) official
-                  weekly built base image with cloud_init, cloud-utils,
-                  and cloud-initramfs-growroot pre-installed.
-      service:
-        type: glance
-        disk_format: qcow2
-        container_format: bare
-      icon:
-        url: https://www.debian.org/logos/openlogo-nd-100.jpg
-        top: 0
-        left: 10
-        height: 124
-      license: Multi-licensed OpenSource
-      cloud_user: debian
-      hash_url: http://cdimage.debian.org/cdimage/openstack/testing/MD5SUMS
-      attributes:
-        url: http://cdimage.debian.org/cdimage/openstack/testing/debian-testing-openstack-amd64.qcow2
-    -
       name: Windows Server 2012 R2
       tags: ['app']
       provided_by:

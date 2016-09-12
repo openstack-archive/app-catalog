@@ -1,0 +1,128 @@
+        <h1>The OpenStack Application Catalog will help you make applications available on your cloud. </h1>
+    <div class="row featured">
+
+          <div class="col-md-2 col-sm-6">
+            <div class="inner title">
+              <div>Recently Added Apps</div>
+              <p>(Requires OpenStack)</p>
+            </div>
+          </div>
+
+          <div ng-repeat="i in vm.recent" class="col-md-2 col-sm-6">
+            <div class="inner {{i.type.split('_')[0]}}">
+              <a href="/#/artifacts/{{i.type}}/{{i.id}}">
+              <img src="/api/v2/db/artifacts/{{i.type}}/{{i.id}}/icon" style="height: 90px;" ng-if="i.icon"></img>
+              <img src="/static/images/openstack-icon.png" style="height: 90px;" ng-if="!i.icon"></img>
+              <p>{{i.name}}</p>
+              </a>
+            </div>
+          </div>
+
+    </div>
+    <div class="row pluginbox">
+      <div class="col-sm-2">
+          <a href="https://wiki.openstack.org/wiki/App-Catalog#Horizon_Plugin_for_Native_Access" target="_blank">
+          <img src="static/images/plugin-icon.png">
+          <div class='lbl'>Horizon Plugin</div>
+          </a>
+      </div><div class="col-sm-10">
+        <p><strong>Want this catalog included in your OpenStack environment?</strong></p>
+        <p>There is a Horizon plugin available at <a href="https://git.openstack.org/cgit/openstack/app-catalog-ui" target="_blank">https://git.openstack.org/cgit/openstack/app-catalog-ui</a> which gives users the ability to search and retrieve App Catalog contents directly from Horizon &mdash; see <a href="https://wiki.openstack.org/wiki/App-Catalog#Horizon_Plugin_for_Native_Access" target="_blank">https://wiki.openstack.org/wiki/App-Catalog#Horizon_Plugin_for_Native_Access</a> for more details. Add it to your environment today!</p>
+      </div>
+    </div>
+        <p><strong>Don't have OpenStack yet?</strong></p>
+        <p>Visit the <a href="https://www.openstack.org/marketplace/" target="_blank">OpenStack Marketplace</a> and select tools and methods for building your cloud. Then come back to the OpenStack Application Catalog to make your cloud sing with applications.</p>
+
+        <div class="row">
+
+          <div class="col-md-4 bluebox">
+            <div class="inner">
+              <a href="#tab=murano-apps">
+                <h2>Murano Packages</h2>
+                <img src="static/images/murano-diagram.png">
+              </a>
+              <p>
+                In Murano Packages you will find complete
+                applications, in both simple and clustered configurations, ready to deploy
+                on your cloud. To use them:
+              </p>
+              <ol>
+                <li>Verify that you have <A href="http://docs.openstack.org/developer/murano/" target="_blank">Murano</a> installed</li>
+                <li>Browse the list and find the app package you want</li>
+                <li>Highlight and copy the name of the app package</li>
+                <li>In Horizon, navigate to Murano &gt; Manage &gt; Package Definitions and click Import Package</li>
+        <li>Paste the app package name into the labeled text field, and click Next. This will download and install the package components.</li>
+        <li>Now deploy the app on your cloud by navigating to Application Catalog &gt; Environments, then creating and deploying that environment.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="col-md-4 bluebox">
+        <div class="inner">
+              <a href="#tab=heat-templates">
+            <h2>Heat Templates</h2>
+            <img src="static/images/heat-diagram.png"
+                     class="text-center">
+              </a>
+          <p>
+                In Heat Templates you will find templates for creating
+                complete stacks in your cloud. To use them:
+              </p>
+          <ol>
+                <li>Browse the list and find the one you want</li>
+                <li>Download the template yaml (.yml) file to your local machine</li>
+                <li>Use Horizon to add the template to Heat (by uploading it via file selector, or copy/pasting it into the editable field)</li>
+                <li>Use the <a href="http://docs.openstack.org/cli-reference/heat.html" target="_blank">Heat client</a> to create a stack</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="col-md-4 bluebox">
+        <div class="inner">
+              <a href="#tab=glance-images">
+            <h2>Glance Images</h2>
+            <img src="static/images/glance-diagram.png">
+              </a>
+              <br/><br/>
+          <p>
+                In Glance Images you will find a library of
+                preconfigured images ready to launch virtual machines
+                on your cloud. To use them:
+              </p>
+          <ol>
+                <li>Browse the list and find the one you want</li>
+                <li>Copy the URL for the image file</li>
+                <li>Use the <a href="http://docs.openstack.org/cli-reference/glance.html" target="_blank">Glance client</a> to add it to your cloud with the --copy-from option, or add the image from Horizon by creating a new image, and specifying the URL as the image location.</li>
+                <li>You can use Nova to launch a VM from the new image; or, you can choose an image to launch from the Glance images list shown in Horizon. Of course, if a service is preconfigured to launch VMs by itself directly from specific guest images, you're good to go.
+                </li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="col-md-4 bluebox">
+        <div class="inner">
+              <a href="#tab=tosca-templates">
+            <h2>TOSCA Templates</h2>
+            <img src="static/images/tosca-diagram.png"
+                     class="text-center">
+              </a>
+          <p>
+                In TOSCA Templates you will find templates and Cloud Service Archives (CSAR). To use them:
+              </p>
+          <ol>
+                <li>Browse the list and find the one you want</li>
+                <li>Download the raw template file or CSAR to your local machine</li>
+                <li>Use the template or CSAR per your need</li>
+                <li>To deploy template with OpenStack Heat, provide the template or CSAR to the OpenStack <a href="http://docs.openstack.org/developer/heat-translator/usage.html" target="_blank">Heat-Translator</a> which will produce a Heat Orchestration Template (HOT) as an output.</li>
+                <li>To simply parse the template, use it with OpenStack <a href="http://docs.openstack.org/developer/tosca-parser/usage.html" target="_blank">TOSCA-Parser</a> project.</li>
+          </ol>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <p><strong>Catalogue Disclaimer</strong></p>
+      <p>Please keep in mind that this catalog contains content from many sources,
+         contributed by the community, for the community. The OpenStack Foundation is not endorsing any particular item listed. Read the <a href="https://wiki.openstack.org/wiki/App-Catalog/Catalogue_Disclaimer" target="_blank">Catalog Disclaimer</a> for additional information.</p>
+    </div>

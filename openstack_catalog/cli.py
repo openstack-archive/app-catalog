@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 # Licensed under the Apache License, Version 2.0 (the "License"); you may
@@ -12,8 +13,12 @@
 # License for the specific language governing permissions and limitations
 # under the License.
 
-import pbr.version
+import os
+import sys
 
 
-__version__ = pbr.version.VersionInfo(
-    'openstack_app_catalog').version_string()
+def main():
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE",
+                          "openstack_catalog.settings")
+    from django.core.management import execute_from_command_line
+    execute_from_command_line(sys.argv)
