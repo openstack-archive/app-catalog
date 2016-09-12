@@ -1,0 +1,29 @@
+<input ng-if="i.widget === 'input'" type="{{i.type}}" ng-model="vm.artifact[i.name]"
+       ng-required="i.required"></input>
+
+<textarea ng-if="i.widget == 'textarea'" ng-model="vm.artifact[i.name]"
+          ng-required="{{i.required}}"></textarea>
+
+<span ng-if="i.widget == 'blob'">
+  <input type=file name="{{i.name}}"></input>
+</span>
+
+<span ng-if="i.widget == 'array'">
+  <ul>
+    <li ng-repeat="item in vm.artifact[i.name] track by $index">
+      <input ng-model="vm.artifact[i.name][$index]"></input>
+    </li>
+  </ul>
+  <button ng-click="vm.addItem(i.name)">+</button>
+</span>
+
+<span ng-if="i.widget == 'dict'">
+  <table>
+    <tr ng-repeat="(key, val) in vm.artifact[i.name]">
+      <td>{{key}}</td><td><input ng-model="vm.artifact[i.name][key]"></input></td>
+    </tr>
+  </table>
+  <input ng-model="vm.new_key[i.name]"></input><button ng-click="vm.addKey(i.name)">+</button>
+</span>
+
+
