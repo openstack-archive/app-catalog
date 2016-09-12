@@ -24,9 +24,23 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 
 import os.path
 
-from static_settings import get_staticfiles_dirs
+from openstack_catalog.static_settings import get_staticfiles_dirs
 
-ASSETS_FILE = 'openstack_catalog/web/api/v1/assets'
+DOMAIN = "localhost.localdomain:8000"
+BASE_URL = "http://%s" % DOMAIN
+OPENID_RETURN_URL = BASE_URL + "/auth/process"
+GLARE_URL = 'http://localhost.localdomain:9494'
+DEBUG = True
+
+SESSION_COOKIE_NAME = "s.aoo"
+SESSION_EXPIRES = 86400
+SESSION_SECURE = False
+MEMCACHED_SERVER = "127.0.0.1:11211"
+
+LAUNCHPAD_API_URL = "https://api.launchpad.net/devel"
+LAUNCHPAD_LOGIN_URL = 'https://login.launchpad.net/'
+LAUNCHPAD_ADMIN_GROUPS = ('app-catalog-core', )
+
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__),
                                            'web',
@@ -37,7 +51,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 SECRET_KEY = 'notused'
 
-DEBUG = True
 ALLOWED_HOSTS = []
 
 PROJECT_PATH = os.path.realpath(os.path.dirname(__file__))
@@ -99,9 +112,12 @@ USE_L10N = True
 USE_TZ = True
 
 # Override some values from local_settings.py if found
-try:
-    from openstack_catalog.local_settings import *  # noqa
-except ImportError:
-    pass
+_LOCAL_SETTINGS_PATH = os.environ.get("LOCAL_SETTINGS_PATH",
+                                      "/etc/openstack-catalog")
+if os.path.isfile(os.path.join(_LOCAL_SETTINGS_PATH, 'local_settings.py')):
+    import sys
+    sys.path.insert(0, _LOCAL_SETTINGS_PATH)
+    from local_settings import *  # noqa
+    sys.path.pop(0)
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
