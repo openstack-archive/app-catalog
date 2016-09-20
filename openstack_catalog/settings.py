@@ -26,7 +26,6 @@ import os.path
 
 from static_settings import get_staticfiles_dirs
 
-ASSETS_FILE = 'openstack_catalog/web/api/v1/assets'
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__),
                                            'web',
