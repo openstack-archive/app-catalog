@@ -1,0 +1,10 @@
+Code-Review+1: Mike Fedosin <mfedosin@mirantis.com>
+Code-Review+2: Christopher Aedo <doc@aedo.net>
+Code-Review+2: Kirill Zaitsev <kzaitsev@mirantis.com>
+Workflow+1: Christopher Aedo <doc@aedo.net>
+Verified+2: Jenkins
+Submitted-by: Jenkins
+Submitted-at: Tue, 20 Sep 2016 02:58:45 +0000
+Reviewed-on: https://review.openstack.org/370295
+Project: openstack/app-catalog
+Branch: refs/heads/feature/glare-support
