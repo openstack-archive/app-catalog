@@ -5,12 +5,13 @@
   angular
     .module('AppCatalog')
     .factory('Api', Api);
-  Api.$inject = ['$http'];
-  function Api($http) {
+  Api.$inject = ['$http', '$rootScope'];
+  function Api($http, $rootScope) {
     return {
       GetSchemas: GetSchemas,
       GetFieldType: GetFieldType,
       GetArtifact: GetArtifact,
+      GetArtifacts: GetArtifacts,
       CreateArtifact: CreateArtifact,
       CreateBlob: CreateExternalBlob,
       getUrl: getUrl,
@@ -22,20 +23,23 @@
         url: getApiUrl(["artifacts", type, id, name], {}),
         headers: {"content-type": "application/vnd+openstack.glare-custom-location+json"},
         data: data
-      });
+      }).error(handleApiError);
+    }
+    function GetArtifacts(type, args) {
+      return callApi('get', ['artifacts', type], args, null);
     }
     function GetArtifact(type, id) {
-      return $http.get(getApiUrl(['artifacts', type, id], {}))
+      return callApi('get', ['artifacts', type, id], {}, null)
         .then(function (response) {
           return response.data;
         });
     }
     function CreateArtifact(type, artifact) {
-      return $http.post('/api/v2/db/artifacts/' + type, artifact);
+      return callApi('post', ['artifacts', type], {}, artifact);
     }
     function GetSchemas() {
       if (getSchemasPromise === null) {
-        getSchemasPromise = $http.get('/api/v2/db/schemas').then(function(response) {
+        getSchemasPromise = callApi('get', ['schemas'], {}, null).then(function(response) {
           return response.data.schemas;
         });
       }
@@ -55,7 +59,7 @@
       }
       if (type === 'object') {
         var t = field.properties || null;
-        if (t !== null && t.checksum && t.content_type && t.size) {
+        if (t !== null && t.md5 && t.content_type && t.size) {
           fieldType.type = 'blob';
         } else {
           fieldType.type = 'dict';
@@ -70,6 +74,18 @@
         fieldType.type = type;
       }
       return fieldType;
+    }
+    function callApi(method, bits, args, data) {
+      return $http({method: method, url: getApiUrl(bits, args), data: data}).error(handleApiError);
+    }
+    function handleApiError(data) {
+      var explanation;
+      if (data === null) {
+        explanation = "HTTP Request Error";
+      } else {
+        explanation = data.explanation || data;
+      }
+      $rootScope.error = explanation;
     }
   }
   function getUrl(start, bits, args) {
