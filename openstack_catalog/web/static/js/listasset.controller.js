@@ -36,7 +36,7 @@
     } else {
       vm.first = false;
     }
-    $http.get(Api.getApiUrl(["artifacts", vm.type], args)).then(function(response) {
+    Api.GetArtifacts(vm.type, args).then(function(response) {
       vm.data = response.data;
       if (response.data.next) {
         var marker = getUrlParams(response.data.next).marker;

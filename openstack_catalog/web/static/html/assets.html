@@ -19,14 +19,13 @@
      <td width="20%"><a>Name</a></td>
      <td><a>Description</a></td>
      <td width="15%" ng-if="vm.type != 'glance_image'"><a>Release</a></td>
-     <!--<td ng-if="vm.type != 'heat_template'"><a>Format</a></td>-->
      <td ng-if="vm.type == 'glance_image' || vm.type == 'tosca_template'"><a>Format</a></td>
      <td ng-if="vm.type == 'glance_image'"><a>License</a></td>
     </tr>
   </thead>
   <tbody>
     <tr ng-repeat="item in vm.data[vm.type]">
-      <td><a href="#/{{vm.action}}/{{vm.type}}/{{item.id}}">{{item.name}}</a></td>
+      <td><a href="#/{{vm.action}}/{{vm.type}}/{{item.id}}">{{vm.type == 'murano_packages' ? item.display_name : item.name}}</a></td>
       <td>{{item.description}}</td>
       <td ng-if="vm.type != 'glance_image'">{{item.release.join(", ")}}</td>
       <td ng-if="vm.type == 'murano_package'">{{item.package ? 'Package' : 'Bundle'}}</td>
