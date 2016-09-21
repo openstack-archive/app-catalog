@@ -24,7 +24,7 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 
 import os.path
 
-from static_settings import get_staticfiles_dirs
+from openstack_catalog.static_settings import get_staticfiles_dirs
 
 ASSETS_FILE = 'openstack_catalog/web/api/v1/assets'
 STATIC_URL = '/static/'
