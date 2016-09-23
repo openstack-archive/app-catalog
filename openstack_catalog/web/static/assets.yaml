@@ -3870,3 +3870,29 @@
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/com.mirantis.PaloAltoApp.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/PaloAlto/package"
+    -
+      name: 3-tier Web Application - WordPress/LAMP
+      provided_by:
+        name: Craig Sterrett
+        href: "mailto:craig.sterrett@intel.com"
+        company: OpenStack Enterprise Working Group
+      description: >
+        This is the sample demonstration heat templates for a 3-tier web application
+        produced by OpenStack Enterprise Working Group. The document of the reference
+        architecture can be found at https://www.openstack.org/enterprise.
+        This deploys WordPress on a 3-Tier LAMP architecture. There are two versions
+        of the template - one creates a static environment which does not require
+        ceilometer; the other provides autoscaling of the web and application tiers
+        based on CPU load which requires ceilometer. For more details please refer to
+        the README file in the zip file on how to use the template. The templates are
+        tested on Mitaka release of OpenStack, and Ubuntu Server 14.04 and Centos7.
+      release:
+        - Mitaka
+      service:
+        type: heat
+        format: HOT
+      supported_by:
+        name: OpenStack Enterprise Working Group
+      license: Apache 2.0
+      attributes:
+        url: https://github.com/yihleong/ewg/blob/master/web-application/archive/web-application.zip
