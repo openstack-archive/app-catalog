@@ -105,12 +105,13 @@
       attributes:
         url: http://storage.apps.openstack.org/images/ubuntu14.04-x64-kubernetes.qcow2
     -
-      name: Debian 8 x64 (pre-installed Kubernetes and murano-agent)
+      name: Debian 8 x64 (pre-installed Kubernetes and murano-agent) v1.0.0
       provided_by:
         name: Dmytro Dovbii
         href: mailto:ddovbii@mirantis.com
         company: Mirantis, Inc.
       description: >
+                  v1.0.0
                   Debian 8 x64 with Docker & Kubernetes pre-installed
                   used by Kubernetes Cluster application.
 
@@ -122,12 +123,14 @@
                   * Go v1.6.2;
                   * confd v0.7.1;
                   * docker v1.11.2.
+                  * calico v0.15.0
+                  * calico-cni v1.3.0
       service:
         type: glance
         disk_format: qcow2
         container_format: bare
       license: Multi-licensed OpenSource
-      hash: e77f172ede183f8ab98ba1725ecb78c2 
+      hash: 1c205e74b43ebe1ddf7f034696a468ae
       attributes:
         url: http://storage.apps.openstack.org/images/debian8-x64-kubernetes.qcow2
         size: 2.8 Gb
@@ -1881,12 +1884,13 @@
         "Source URL": "https://github.com/openstack/murano-apps"
         Documentation: "https://github.com/openstack/k8s-docker-suite-app-murano/tree/master/Kubernetes/README.rst"
     -
-      name: Kubernetes Cluster
+      name: Kubernetes Cluster v1.0.0
       provided_by:
         name: Stan Lagun
         href: "mailto:slagun@mirantis.com"
         company: Mirantis, Inc.
       description: >
+        v1.0.0
         Kubernetes is an open source system for managing containerized
         applications across multiple hosts, providing basic mechanisms
         for deployment, maintenance, and scaling of applications.
@@ -1918,6 +1922,8 @@
             * Go v1.6.2;
             * confd v0.7.1;
             * docker v1.11.2.
+            * calico v0.15.0
+            * calico-cni v1.3.0
 
       service:
         type: murano
@@ -1933,20 +1939,20 @@
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Interfaces Library
-        - name: Ubuntu 14.04 x64 (pre-installed Kubernetes and murano-agent)
-        - name: Debian 8 x64 (pre-installed Kubernetes and murano-agent)
-      hash: 6ebbc00d73ce730e13abdeb986a10ef8
+        - name:  Debian 8 x64 (pre-installed Kubernetes and murano-agent) v1.0.0
+      hash: 8bb95403adaa914b753a237996f1de86
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/com.mirantis.docker.kubernetes.KubernetesCluster.zip"
         "Source URL": "https://github.com/openstack/murano-apps"
         Documentation: "https://github.com/openstack/k8s-docker-suite-app-murano/tree/master/Kubernetes/README.rst"
     -
-      name: Kubernetes Pod
+      name: Kubernetes Pod v1.0.0
       provided_by:
         name: Stan Lagun
         href: "mailto:slagun@mirantis.com"
         company: Mirantis, Inc.
       description: >
+        v1.0.0
         Application representing a Kubernetes Pod on a given Kubernetes Cluster
 
         This Pod is a co-located set of docker containers which are deployed
@@ -1980,6 +1986,8 @@
             * Go v1.6.2;
             * confd v0.7.1;
             * docker v1.11.2.
+            * calico v0.15.0
+            * calico-cni v1.3.0
       service:
         type: murano
         format: package
@@ -1995,7 +2003,7 @@
       depends:
         - name: Docker Interfaces Library
         - name: Kubernetes Cluster
-      hash: 2d181c34691d49ed2eba26404b7f8f8e
+      hash: 9c051332056ad687fe43699f28a4f4cb
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/com.mirantis.docker.kubernetes.KubernetesPod.zip"
         "Source URL": "https://github.com/openstack/murano-apps"
@@ -2943,12 +2951,13 @@
         - name: MySQL
         - name: PostgreSql
     -
-      name: Docker & Kubernetes Bundle
+      name: Docker & Kubernetes Bundle v1.0.0
       provided_by:
         name: Serg Melikyan
         href: "mailto:smelikyan@mirantis.com"
         company: Mirantis, Inc.
       description: >
+        v1.0.0
         A bundle is the collection of Murano applications and
         their dependencies. Bundles are designed to allow the
         user to consume a group of related applications to
@@ -2974,6 +2983,8 @@
             * Go v1.6.2;
             * confd v0.7.1;
             * docker v1.11.2.
+            * calico v0.15.0
+            * calico-cni v1.3.0
       service:
         type: bundle
         murano_package_name: docker-n-kubernetes
