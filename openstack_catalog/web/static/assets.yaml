@@ -3630,7 +3630,7 @@
 
     -
 
-      name: Clearwater demo
+      name: Clearwater vIMS
       tags: ['app']
       provided_by:
         name: Konstantin Snihyr
@@ -3646,18 +3646,20 @@
         well suited for deployment in a
         Network Functions Virtualization (NFV) environment.
 
-        This application is PoC and demonstrate Murano capabilities in vIMS deploy
+        This application can be used for quick and easy Clearwater deploy in
+        Openstack. It is possible to provide settings via Horizon dashboard.
+        Also application provides easy scaling possibilies after deployment.
       service:
         type: murano
         format: package
         package_name: com.mirantis.clearwater.Clearwater
       release:
-        - Mitaka
+        - Newton
       license: Multi-licensed OpenSource
       depends:
         - name: BIND DNS server
         - name: Ubuntu Trusty 14
-      hash: 5e44511fe9d036d03b9950b0af3f69df
+      hash: 23e90ca8ea130b18d3bf7afc458075a1
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/com.mirantis.clearwater.Clearwater.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Clearwater/package"
@@ -3689,11 +3691,11 @@
         format: package
         package_name: com.mirantis.network.dns.Bind
       release:
-        - Mitaka
+        - Newton
       license: Apache License, Version 2.0
       depends:
         - name: Ubuntu Trusty 14
-      hash: 97a7d12d6ab7219466332e1839c051ba
+      hash: cf0594e1c808fcef06d7d31e765a1f0e
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/com.mirantis.network.dns.Bind.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/BIND/package"
