@@ -1269,6 +1269,7 @@
       release:
         - Kilo
         - Liberty
+        - Mitaka
       service:
         type: heat
         format: HOT
