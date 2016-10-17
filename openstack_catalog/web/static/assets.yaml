@@ -3957,3 +3957,30 @@
       license: Apache 2.0
       attributes:
         url: https://github.com/yihleong/ewg/blob/master/ecommerce/archive/ecommerce.zip
+    -
+      name: Big Data Application - Hadoop 
+      provided_by:
+        name: Thomas Bludau
+        href: "mailto:Thomas.Bludau@computacenter.com"
+        company: OpenStack Enterprise Working Group
+      description: >
+        This is the sample heat template for the Big Data Application reference
+		architecture (version 1) document produced by the OpenStack Enterprise
+		Working Group. The reference architecture document can be found at
+		https://www.openstack.org/enterprise.
+        This heat template deploys a generic Hadoop cluster with Apache Ambari.
+		For more details please refer to the README file on how to use the
+		template. The templates have been tested on Liberty and Mitaka release
+		of OpenStack.
+      release:
+        - Mitaka
+		- Liberty
+      service:
+        type: heat
+        format: HOT
+      supported_by:
+        name: OpenStack Enterprise Working Group
+      license: Apache 2.0
+      attributes:
+        url: https://github.com/yihleong/ewg/blob/master/big-data/README.rst
+		url: https://github.com/yihleong/ewg/blob/master/big-data/BigData.yaml
