@@ -3982,5 +3982,4 @@
         name: OpenStack Enterprise Working Group
       license: Apache 2.0
       attributes:
-        url: https://github.com/yihleong/ewg/blob/master/big-data/README.rst
-        url: https://github.com/yihleong/ewg/blob/master/big-data/BigData.yaml
+        url: https://github.com/yihleong/ewg/blob/master/big-data/archive/BigData.zip
