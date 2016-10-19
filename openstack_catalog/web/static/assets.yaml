@@ -3940,15 +3940,17 @@
         href: "mailto:craig.sterrett@intel.com"
         company: OpenStack Enterprise Working Group
       description: >
-        This is the sample heat template for the eCommerce reference architecture
-        document produced by the OpenStack Enterprise Working Group. The reference
-        architecture document can be found at https://www.openstack.org/enterprise.
-        This heat template deploys OpenCart on a 3-Tier LAMP architecture. There are
-        two versions of the template - one creates a static environment which does not
-        require ceilometer; the other provides autoscaling of the web and application
-        tiers based on CPU load which requires ceilometer. For more details please refer
-        to the README file in the zip file on how to use the template. The templates
-        have been tested on Mitaka release of OpenStack, and Ubuntu Server 14.04 and Centos7.
+        This is the Heat template associated with the OpenStack Workload
+        Reference Architecture for eCommerce, coming soon to
+        http://www.openstack.org/software/sample-configs/#ecommerce.
+        The Heat template deploys a sample eCommerce app on three-tier web
+        application environment: OpenCart on LAMP.  There are two versions of
+        the template – one creates a static environment which does not require
+        Ceilometer; the other provides auto-scaling of the web and application
+        tiers based on CPU load, and requires Ceilometer. Please refer to the
+        README file in the zip file for more details on how to use the
+        template. The templates have been tested on Mitaka release of
+        OpenStack, and Ubuntu Server 14.04 and Centos 7.
       release:
         - Mitaka
       service:
@@ -3958,7 +3960,7 @@
         name: OpenStack Enterprise Working Group
       license: Apache 2.0
       attributes:
-        url: https://github.com/yihleong/ewg/blob/master/ecommerce/archive/ecommerce.zip
+        url: https://a9913b12a4cd2c87c95f-589461742fc8c857ce7a37ebc26061be.ssl.cf1.rackcdn.com/ecommerce.zip
     -
       name: Big Data Application - Hadoop
       provided_by:
