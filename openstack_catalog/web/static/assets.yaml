@@ -3966,14 +3966,13 @@
         href: http://www.openstack.org/software/sample-configs/#big-data
         company: OpenStack Enterprise Working Group
       description: >
-        This is the sample heat template for the Big Data Application reference
-        architecture (version 1) document produced by the OpenStack Enterprise
-        Working Group. The reference architecture document can be found at
-        https://www.openstack.org/enterprise.
-        This heat template deploys a generic Hadoop cluster with Apache Ambari.
-        For more details please refer to the README file on how to use the
-        template. The templates have been tested on Liberty and Mitaka release
-        of OpenStack.
+        This is the Heat template associated with the OpenStack
+        Workload Reference Architecture for Big Data, at
+        http://www.openstack.org/software/sample-configs/#big-data.
+        The Heat template deploys a generic Hadoop cluster using Apache Ambari.
+        Please refer to the README file for more details on how to use the
+        template. The templates have been tested on the Liberty and Mitaka
+        releases of OpenStack.
       release:
         - Mitaka
         - Liberty
@@ -3984,4 +3983,4 @@
         name: OpenStack Enterprise Working Group
       license: Apache 2.0
       attributes:
-        url: https://github.com/yihleong/ewg/blob/master/big-data/archive/BigData.zip
+        url: https://a9913b12a4cd2c87c95f-589461742fc8c857ce7a37ebc26061be.ssl.cf1.rackcdn.com/BigData.zip
