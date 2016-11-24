@@ -8,6 +8,12 @@ applications available on your OpenStack cloud by providing
 a community driven catalog containing Glance images, Heat
 templates and Murano applications.
 
+Team and repository tags
+------------------------
+
+.. image:: http://governance.openstack.org/badges/app-catalog.svg
+    :target: http://governance.openstack.org/reference/tags/index.html
+
 Overview
 --------
 
