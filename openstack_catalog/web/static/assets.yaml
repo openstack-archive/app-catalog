@@ -3438,8 +3438,8 @@
       name: IronMQ
       tags: ['app']
       provided_by:
-        name: Derek Schultz
-        href: "mailto:derek@iron.io"
+        name: Iron.io
+        href: https://iron.io
         company: Iron.io
       description: >
         IronMQ is a cloud native message queue solution built for modern
@@ -3454,7 +3454,8 @@
         package_name: io.iron.IronMQ
       release:
         - Liberty
-      license: Multi-licensed OpenSource
+        - Mitaka
+      license: Apache 2.0
       depends:
         - name: Docker Standalone Host
         - name: Docker Interfaces Library
@@ -3465,8 +3466,8 @@
       name: IronWorker
       tags: ['app']
       provided_by:
-        name: Vitaly Lopatkin
-        href: "mailto:vitalyl@iron.io"
+        name: Iron.io
+        href: https://iron.io
         company: Iron.io
       description: >
         IronWorker provides the muscle for modern applications by efficiently isolating
