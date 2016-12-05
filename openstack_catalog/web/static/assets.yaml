@@ -3479,16 +3479,35 @@
         format: package
         package_name: io.iron.IronWorker
       release:
-        - Kilo
         - Liberty
         - Mitaka
-      license: Multi-licensed OpenSource
+      license: Apache 2.0
       depends:
         - name: Docker Standalone Host
         - name: Docker Interfaces Library
       hash: 27ba40000dc1885b830d3d370b3fb5b2
       attributes:
         "Package URL": "https://www.dropbox.com/s/1id7bph8760aak3/io.iron.IronWorker.zip?dl=0"
+
+      name: IronFunctions
+      tags: ['app']
+      provided_by:
+        name: Iron.io
+        href: https://iron.io
+        company: Iron.io
+      service:
+        type: murano
+        format: package
+        package_name: io.iron.IronFunctions
+      release:
+        - Mitaka
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Docker Standalone Host
+        - name: Docker Interfaces Library
+      hash: c895f9cf4229b6859244275eb143a80f
+      attributes:
+        "Package URL": "https://www.dropbox.com/s/yxsv7c0ddv23oca/ironfunctions.zip?dl=0"
     -
       name: F5 BIG-IP VE Onboard
       tags: ['app']
