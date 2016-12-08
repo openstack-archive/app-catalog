@@ -3496,19 +3496,23 @@
         name: Iron.io
         href: https://iron.io
         company: Iron.io
+      description: >
+        IronFunctions is an open source serverless platform, or as we like to refer to it,
+        Functions as a Service (FaaS) platform that you can run anywhere.
       service:
         type: murano
         format: package
         package_name: io.iron.IronFunctions
       release:
         - Mitaka
-      license: Multi-licensed OpenSource
+      license: Apache 2.0
       depends:
         - name: Docker Standalone Host
         - name: Docker Interfaces Library
-      hash: c895f9cf4229b6859244275eb143a80f
+      hash: 35511b4cece9b6f375fc90630790e7af
       attributes:
-        "Package URL": "https://www.dropbox.com/s/yxsv7c0ddv23oca/ironfunctions.zip?dl=0"
+        "Package URL": "http://storage.apps.openstack.org/apps/io.iron.IronFunctions.zip"
+        "Source URL": "https://github.com/iron-io/ironfunctions-murano/tree/master/package"
     -
       name: F5 BIG-IP VE Onboard
       tags: ['app']
