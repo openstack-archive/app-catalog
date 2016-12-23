@@ -963,7 +963,7 @@
         pubkey: https://coreos.com/security/image-signing-key
         releases: https://coreos.com/releases/
     -
-      name: Fedora Atomic 25
+      name: Fedora Atomic
       tags: ['app']
       provided_by:
         name: Project Atomic
@@ -975,7 +975,7 @@
                   trusted operating system platforms to deliver an end-to-end
                   hosting architecture that's modern, reliable, and secure.
                   This Atomic image is based on Fedora 25 and was released
-                  2016-12-07.
+                  2016-12-21.
       service:
         type: glance
         disk_format: qcow2
@@ -987,14 +987,14 @@
         height: 210
       license: Multi-licensed OpenSource
       cloud_user: fedora
-      hash: 75f75195e9a0fe44fcdf36d7c39c7758
+      hash: bba22a5f831413bb5fcf096b110baf88
       attributes:
-        url: https://download.fedoraproject.org/pub/alt/atomic/stable/Fedora-Atomic-25-20161207.0/CloudImages/x86_64/images/Fedora-Atomic-25-20161207.0.x86_64.qcow2
+        url: https://getfedora.org/atomic_qcow2_latest
         docs: http://www.projectatomic.io/docs/
         gpg: https://getfedora.org/static/fedora.gpg
-        digest: http://mirror.math.princeton.edu/pub/alt/atomic/stable/Fedora-Atomic-25-20161207.0/CloudImages/x86_64/images/Fedora-CloudImages-25-20161207.0-x86_64-CHECKSUM
+		digest: https://download.fedoraproject.org/pub/alt/atomic/stable/Fedora-Atomic-25-20161221.0/CloudImages/x86_64/images/Fedora-CloudImages-25-20161221.0-x86_64-CHECKSUM
         pubkey: https://getfedora.org/static/FDB19C98.txt
-        releases: https://getfedora.org/en/atomic/download/
+        releases: https://getfedora.org/en/cloud/download/atomic.html
     -
       name: ManageIQ Darga (stable)
       tags: ['app']
