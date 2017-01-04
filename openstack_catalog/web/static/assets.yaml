@@ -1129,7 +1129,7 @@
                   and straight forward way to interactive with KloudBuster.
                   Refer to the documentation for installation and usage.
 
-                  This image is based off Ubuntu 14.04.4 with pre-installed
+                  This image is based off Ubuntu 16.04.1 with pre-installed
                   software required to run the KloudBuster scale test:
                   KloudBuster agent, Redis server, Nginx HTTP server, wrk2
                   HTTP traffic generator, and FIO I/O tester.
@@ -1140,10 +1140,10 @@
         min_ram: 2048
         min_disk: 10
       license: Multi-licensed OpenSource
-      hash: 0959edbd167d39fd2244041847c78150
+      hash: 5b5f7b0cce406b9c25e7f84919bb110b
       attributes:
         url: http://storage.apps.openstack.org/images/kloudbuster_v6.qcow2
-        docs: http://kloudbuster.readthedocs.org
+        docs: http://kloudbuster.readthedocs.io
     -
       name: Hello World
       provided_by:
