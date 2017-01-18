@@ -39,7 +39,7 @@ class TestOpenstack_catalog(testtools.TestCase):
             return content_file.read()
 
     def _read_file(self, file_name):
-        return yaml.load(self._read_raw_file(file_name))
+        return yaml.safe_load(self._read_raw_file(file_name))
 
     def _verify_by_schema(self, file_name, schema):
         data = self._read_file(file_name)

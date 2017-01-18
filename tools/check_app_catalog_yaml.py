@@ -106,7 +106,7 @@ def main():
     yaml.add_representer(OrderedDict, project_representer,
                          Dumper=IndentedDumper)
 
-    data = yaml.load(open('openstack_catalog/web/static/assets.yaml'))
+    data = yaml.safe_load(open('openstack_catalog/web/static/assets.yaml'))
 
     assets = []
     for a in data['assets']:

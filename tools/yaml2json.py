@@ -36,9 +36,9 @@ def dict_merge(a, b):
 
 merge = {}
 for f in args.files:
-    merge = dict_merge(merge, yaml.load(open(f))['assets'])
+    merge = dict_merge(merge, yaml.safe_load(open(f))['assets'])
 
-y = yaml.load(sys.stdin)
+y = yaml.safe_load(sys.stdin)
 for a in y['assets']:
     s = a['service']
     if s['type'] == 'heat':

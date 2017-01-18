@@ -19,7 +19,7 @@ import yaml
 
 def yaml_to_dict(infile, k):
     stream = open(infile, 'r')
-    rdict = yaml.load(stream)[k]
+    rdict = yaml.safe_load(stream)[k]
     return rdict
 
 
