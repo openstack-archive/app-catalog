@@ -65,6 +65,7 @@
                 - Mitaka
                 - Newton
                 - Ocata
+                - Pike
             minItems: 1
           provided_by:
             type: object
