@@ -885,6 +885,31 @@
       attributes:
         url: http://sahara-files.mirantis.com/images/upstream/kilo/sahara-kilo-storm-0.9.1-ubuntu-14.04.qcow2
     -
+      name: Sahara with Ambari pre-installed (Centos 7.2 ppc64le)
+      provided_by:
+        name: Mirantis
+        href: https://www.mirantis.com/
+        company: Mirantis, Inc.
+      description: >
+                  The Apache Ambari project is aimed at making
+                  Hadoop management simpler by developing software
+                  for provisioning, managing, and monitoring Apache
+                  Hadoop clusters.
+
+                  This image is meant to be used with the Sahara
+                  project https://wiki.openstack.org/wiki/Sahara
+                  and you can find more details on how to use this
+                  image at
+                  https://wiki.openstack.org/wiki/Sahara/AppsCatalogHowTo
+      service:
+        type: glance
+        disk_format: qcow2
+        container_format: bare
+      license: Multi-licensed OpenSource
+      hash: b566b48a9b47be7845eccfbaf5da8223
+      attributes:
+        url: http://storage.apps.openstack.org/images/centos-7.2-ppc64le-sahara-ambari.qcow2
+    -
       name: CoreOS v647.0.0
       tags: ['app']
       provided_by:
