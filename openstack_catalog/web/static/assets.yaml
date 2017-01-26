@@ -219,6 +219,21 @@
       attributes:
         url: http://pse-vm-images.s3-us-west-1.amazonaws.com/images/cloudbees-pse-ubuntu-juno-20151030011613.qcow2
     -
+      name: Ubuntu 16.04 ppc64le (pre-installed Docker and murano-agent)
+      provided_by:
+        name: Ander Bubyr
+        href: mailto:abubyr@mirantis.com
+        company: Mirantis, Inc.
+      description: Ubuntu 16.04 ppc64le with docker and murano-agent pre-installed
+      service:
+        type: glance
+        disk_format: qcow2
+        container_format: bare
+      license: Multi-licensed OpenSource
+      hash: 052bf448e6f2a0290a986efdd3081586
+      attributes:
+        url: http://storage.apps.openstack.org/images/ubuntu-16.04-ppc64le-docker.qcow2
+    -
       name: Ubuntu Trusty 14
       tags: ['app']
       provided_by:
