@@ -219,9 +219,28 @@
       attributes:
         url: http://pse-vm-images.s3-us-west-1.amazonaws.com/images/cloudbees-pse-ubuntu-juno-20151030011613.qcow2
     -
+      name: Ubuntu 16.04 ppc64le (pre-installed murano-agent)
+      provided_by:
+        name: Andrii Bubyr
+        href: mailto:abubyr@mirantis.com
+        company: Mirantis, Inc.
+      description: >
+                  Ubuntu 16.04 ppc64le with murano-agent pre-installed
+                  used by Murano applications that does not rely on
+                  pre-installed software in the image and instead provision
+                  applications using murano-agent.
+      service:
+        type: glance
+        disk_format: qcow2
+        container_format: bare
+      license: Multi-licensed OpenSource
+      hash: 0e7ee26b18731e8c342d3c35f6c973c6
+      attributes:
+        url: http://storage.apps.openstack.org/images/ubuntu-16.04-ppc64le-m-agent.qcow2
+    -
       name: Ubuntu 16.04 ppc64le (pre-installed Docker and murano-agent)
       provided_by:
-        name: Ander Bubyr
+        name: Andrii Bubyr
         href: mailto:abubyr@mirantis.com
         company: Mirantis, Inc.
       description: Ubuntu 16.04 ppc64le with docker and murano-agent pre-installed
@@ -1871,6 +1890,29 @@
         "Source URL": "https://github.com/ActiveState/stackato-node-murano"
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.activestate.StackatoNode.zip"
         "Documentation": "https://github.com/ActiveState/stackato-node-murano/blob/master/README.md"
+    -
+      name: Nginx ppc64le
+      tags: ['app']
+      provided_by:
+        name: Alexander Bochkarev
+        href: "mailto:abochkarev@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+        Nginx (pronounced “engine-x”) is an open source reverse proxy server
+        for HTTP, HTTPS, SMTP, POP3, and IMAP protocols, as well as a load
+        balancer, HTTP cache, and a web server (origin server).
+      service:
+        type: murano
+        format: package
+        package_name: io.murano.apps.NginxPPC64LE
+      release:
+        - Mitaka
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Ubuntu 16.04 ppc64le (pre-installed murano-agent)
+      hash: 8fceae2dbf05209977c433fb92a79791
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.NginxPPC64LE.zip"
     -
       name: Docker Standalone Host
       provided_by:
