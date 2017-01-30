@@ -1761,6 +1761,29 @@
         "Package URL": "http://storage.apps.openstack.org/apps/org.openstack.Rally.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Rally/package"
     -
+      name: WebSphere ppc64le
+      tags: ['app']
+      provided_by:
+        name: Alexander Bochkarev
+        href: "mailto:abochkarev@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+        WebSphere Application Server (WAS) is a software product that performs the role
+        of a web application server. More specifically, it is a software framework and
+        middleware that hosts Java based web applications.
+      service:
+        type: murano
+        format: package
+        package_name: io.murano.apps.WebSpherePPC64LE
+      release:
+        - Mitaka
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Ubuntu 16.04 ppc64le (pre-installed murano-agent)
+      hash: dc5e368da634e70068fc6f064e340c87
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.WebSpherePPC64LE.zip"
+    -
       name: WordPress
       tags: ['app']
       provided_by:
