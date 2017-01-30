@@ -1628,6 +1628,28 @@
         "Package URL": "http://storage.apps.openstack.org/apps/com.example.paas.CloudFoundry.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/CloudFoundry/package"
     -
+      name: IBM NodeJs ppc64le
+      tags: ['app']
+      provided_by:
+        name: Alexander Bochkarev
+        href: "mailto:abochkarev@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+        IBM NodeJs is an open-source, cross-platform JavaScript runtime environment for
+        developing a diverse variety of tools and applications.
+      service:
+        type: murano
+        format: package
+        package_name: io.murano.apps.IBMNodeJsPPC64LE
+      release:
+        - Mitaka
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Ubuntu 16.04 ppc64le (pre-installed murano-agent)
+      hash: 239ec2ddf0a4b2cbe407daf042d0eb9b
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.IBMNodeJsPPC64LE.zip"
+    -
       name: MySQL
       tags: ['app']
       provided_by:
