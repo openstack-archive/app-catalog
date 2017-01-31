@@ -1806,6 +1806,28 @@
         "Package URL": "http://storage.apps.openstack.org/apps/org.openstack.Rally.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Rally/package"
     -
+      name: Travis ppc64le
+      tags: ['app']
+      provided_by:
+        name: Alexander Bochkarev
+        href: "mailto:abochkarev@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+        Travis CI is a hosted, distributed continuous integration service used to build
+        and test software projects hosted at GitHub.
+      service:
+        type: murano
+        format: package
+        package_name: io.murano.apps.TravisPPC64LE
+      release:
+        - Mitaka
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Ubuntu 16.04 ppc64le (pre-installed murano-agent)
+      hash: cbcd0265053a112cf17ad3a151c3068e
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.TravisPPC64LE.zip"
+    -
       name: WebSphere ppc64le
       tags: ['app']
       provided_by:
