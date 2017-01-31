@@ -1650,6 +1650,29 @@
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.IBMNodeJsPPC64LE.zip"
     -
+      name: Maven ppc64le
+      tags: ['app']
+      provided_by:
+        name: Alexander Bochkarev
+        href: "mailto:abochkarev@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+        Maven is a software project management and comprehension tool. Based on the concept
+        of a project object model (POM), Maven can manage a project's build, reporting and
+        documentation from a central piece of information.
+      service:
+        type: murano
+        format: package
+        package_name: io.murano.apps.MavenPPC64LE
+      release:
+        - Mitaka
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Ubuntu 16.04 ppc64le (pre-installed murano-agent)
+      hash: 79dc6137ff1a19653c59484f66bac7a2
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.MavenPPC64LE.zip"
+    -
       name: MySQL
       tags: ['app']
       provided_by:
