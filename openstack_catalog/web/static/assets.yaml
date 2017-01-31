@@ -1650,6 +1650,26 @@
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.IBMNodeJsPPC64LE.zip"
     -
+      name: Jenkins ppc64le
+      tags: ['app']
+      provided_by:
+        name: Alexander Bochkarev
+        href: "mailto:abochkarev@mirantis.com"
+        company: Mirantis, Inc.
+      description: Jenkins is an open source continuous integration tool written in Java.
+      service:
+        type: murano
+        format: package
+        package_name: io.murano.apps.JenkinsPPC64LE
+      release:
+        - Mitaka
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Ubuntu 16.04 ppc64le (pre-installed murano-agent)
+      hash: 6c8d5a2cfb16eebd628a62445119994d
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.JenkinsPPC64LE.zip"
+    -
       name: Maven ppc64le
       tags: ['app']
       provided_by:
