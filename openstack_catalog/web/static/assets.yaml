@@ -1936,6 +1936,26 @@
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.activestate.StackatoNode.zip"
         "Documentation": "https://github.com/ActiveState/stackato-node-murano/blob/master/README.md"
     -
+      name: Nexus ppc64le
+      tags: ['app']
+      provided_by:
+        name: Alexander Bochkarev
+        href: "mailto:abochkarev@mirantis.com"
+        company: Mirantis, Inc.
+      description: Nexus is a software repository manager.
+      service:
+        type: murano
+        format: package
+        package_name: io.murano.apps.NexusPPC64LE
+      release:
+        - Mitaka
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Ubuntu 16.04 ppc64le (pre-installed murano-agent)
+      hash: 2cc2ec54b90966625673601381a0bd18
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.NexusPPC64LE.zip"
+    -
       name: Nginx ppc64le
       tags: ['app']
       provided_by:
