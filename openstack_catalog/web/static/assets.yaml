@@ -1849,6 +1849,26 @@
         "Package URL": "http://storage.apps.openstack.org/apps/org.openstack.Rally.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Rally/package"
     -
+      name: Redis ppc64le
+      tags: ['app']
+      provided_by:
+        name: Alexander Bochkarev
+        href: "mailto:abochkarev@mirantis.com"
+        company: Mirantis, Inc.
+      description: Redis is a flexible, open-source, key value data store.
+      service:
+        type: murano
+        format: package
+        package_name: io.murano.databases.RedisPPC64LE
+      release:
+        - Mitaka
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Ubuntu 16.04 ppc64le (pre-installed murano-agent)
+      hash: 3150693f8a877ef0c53394c9fbfd7d2b
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.databases.RedisPPC64LE.zip"
+    -
       name: Travis ppc64le
       tags: ['app']
       provided_by:
