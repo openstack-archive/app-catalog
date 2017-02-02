@@ -1693,6 +1693,29 @@
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.MavenPPC64LE.zip"
     -
+      name: MongoDB ppc64le
+      tags: ['app']
+      provided_by:
+        name: Alexander Bochkarev
+        href: "mailto:abochkarev@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+        MongoDB is a cross-platform document-oriented database. Classified as a NoSQL database,
+        MongoDB eschews the traditional table-based relational database structure in favor of
+        JSON-like documents with dynamic schemas.
+      service:
+        type: murano
+        format: package
+        package_name: io.murano.databases.MongoDBPPC64LE
+      release:
+        - Mitaka
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Ubuntu 16.04 ppc64le (pre-installed murano-agent)
+      hash: d0454dd6deaa02fbac1ef266b3a7ebe7
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.databases.MongoDBPPC64LE.zip"
+    -
       name: MySQL
       tags: ['app']
       provided_by:
