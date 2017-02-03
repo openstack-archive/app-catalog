@@ -1889,6 +1889,26 @@
         "Package URL": "http://storage.apps.openstack.org/apps/com.example.databases.PostgreSql.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/PostgreSQL/package"
     -
+      name: PostgreSQL ppc64le
+      tags: ['app']
+      provided_by:
+        name: Alexander Bochkarev
+        href: "mailto:abochkarev@mirantis.com"
+        company: Mirantis, Inc.
+      description: PostgreSQL is a powerful, open source object-relational database system.
+      service:
+        type: murano
+        format: package
+        package_name: io.murano.databases.PostgreSQLPPC64LE
+      release:
+        - Mitaka
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Ubuntu 16.04 ppc64le (pre-installed murano-agent)
+      hash: b40b39d3d9de87fb85e38edd4c6d3798
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.databases.PostgreSQLPPC64LE.zip"
+    -
       name: Rally
       tags: ['app']
       provided_by:
