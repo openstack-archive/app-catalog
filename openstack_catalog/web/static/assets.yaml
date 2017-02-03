@@ -1583,6 +1583,28 @@
         "Package URL": "http://storage.apps.openstack.org/apps/com.example.apache.Tomcat.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/Tomcat/package"
     -
+      name: Apache Tomcat ppc64le
+      tags: ['app']
+      provided_by:
+        name: Alexander Bochkarev
+        href: "mailto:abochkarev@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+         Apache Tomcat is an open source software implementation of the Java Servlet
+         and JavaServer Pages technologies.
+      service:
+        type: murano
+        format: package
+        package_name: io.murano.apps.TomcatPPC64LE
+      release:
+        - Mitaka
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Ubuntu 16.04 ppc64le (pre-installed murano-agent)
+      hash: a6c9402bd3447a7e293112bd37ac681f
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.TomcatPPC64LE.zip"
+    -
       name: Apcera
       tags: ['app']
       provided_by:
