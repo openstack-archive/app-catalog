@@ -2226,6 +2226,42 @@
         "Source URL": "https://github.com/openstack/murano-apps"
         Documentation: "https://github.com/openstack/k8s-docker-suite-app-murano/tree/master/Kubernetes/README.rst"
     -
+      name: Docker Standalone Host ppc64le
+      provided_by:
+        name: Alexander Bochkarev
+        href: "mailto:abochkarev@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+          Docker is an open platform for developers and sysadmins to build,
+          ship, and run distributed applications. Consisting of Docker Engine,
+          a portable, lightweight runtime and packaging tool, and Docker Hub,
+          a cloud service for sharing applications and automating workflows,
+          Docker enables apps to be quickly assembled from components and
+          eliminates the friction between development, QA, and production
+          environments.
+
+          Standalone docker implementation; employs single VM running docker service.
+
+          Implements DockerHost interface (along with Kubernetes Pod), to unify
+          docker hosting solutions, and make docker applications independent
+          of one another on hosting platform.
+
+          The Docker service is accessed using CLI client from within the same
+          VM, so the docker API is not exposed outside that VM.
+      service:
+        type: murano
+        format: package
+        package_name: com.mirantis.docker.DockerStandaloneHostPPC64LE
+      release:
+        - Mitaka
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Docker Interfaces Library
+        - name: Ubuntu 16.04 ppc64le (pre-installed Docker and murano-agent)
+      hash: d14a67946d3b2e8ecf4cc2d6b9b9a5e9
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/com.mirantis.docker.DockerStandaloneHostPPC64LE.zip"
+    -
       name: Kubernetes Cluster
       provided_by:
         name: Stan Lagun
