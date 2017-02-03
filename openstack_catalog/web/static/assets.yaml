@@ -1521,6 +1521,31 @@
         "Package URL": "http://storage.apps.openstack.org/apps/com.example.apache.ApacheHttpServer.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/ApacheHTTPServer/package"
     -
+      name: Apache HTTP Server ppc64le
+      tags: ['app']
+      provided_by:
+        name: Alexander Bochkarev
+        href: "mailto:abochkarev@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+         The Apache HTTP Server Project is an effort to develop and maintain an
+         open-source HTTP server for modern operating systems including UNIX and
+         Windows NT. The goal of this project is to provide a secure, efficient and
+         extensible server that provides HTTP services in sync with the current HTTP
+         standards.
+      service:
+        type: murano
+        format: package
+        package_name: io.murano.apps.ApacheHttpServerPPC64LE
+      release:
+        - Mitaka
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Ubuntu 16.04 ppc64le (pre-installed murano-agent)
+      hash: 67eb1d393e685c6d5bf3dfcaf6631d6a
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.ApacheHttpServerPPC64LE.zip"
+    -
       name: Apache Tomcat
       tags: ['app']
       provided_by:
