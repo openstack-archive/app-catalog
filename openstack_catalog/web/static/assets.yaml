@@ -3071,6 +3071,29 @@
         "Package URL": "http://storage.apps.openstack.org/apps/com.example.docker.DockerNginxSite.zip"
         "Source URL": "https://github.com/openstack/k8s-docker-suite-app-murano/tree/master/Applications/NginxSite/package"
     -
+      name: Docker Nginx ppc64le
+      provided_by:
+        name: Alexander Bochkarev
+        href: "mailto:abochkarev@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+        Nginx (pronounced “engine-x”) is an open source reverse proxy server for
+        HTTP, HTTPS, SMTP, POP3, and IMAP protocols, as well as a load balancer,
+        HTTP cache, and a web server (origin server).
+      service:
+        type: murano
+        format: package
+        package_name: io.murano.docker.DockerNginxPPC64LE
+      release:
+        - Mitaka
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Docker Standalone Host ppc64le
+        - name: Docker Interfaces Library
+      hash: c62df6729e6e6285463754c861900419
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.docker.DockerNginxPPC64LE.zip"
+    -
       name: Docker PostgreSQL
       tags: ['app']
       provided_by:
