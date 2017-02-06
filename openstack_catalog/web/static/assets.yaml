@@ -3249,6 +3249,28 @@
         "Package URL": "http://storage.apps.openstack.org/apps/com.example.docker.DockerTomcat.zip"
         "Source URL": "https://github.com/openstack/k8s-docker-suite-app-murano/tree/master/Applications/Tomcat/package"
     -
+      name: Docker Tomcat ppc64le
+      provided_by:
+        name: Alexander Bochkarev
+        href: "mailto:abochkarev@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+        Apache Tomcat is an open source software implementation of the Java Servlet
+        and JavaServer Pages technologies.
+      service:
+        type: murano
+        format: package
+        package_name: io.murano.docker.DockerTomcatPPC64LE
+      release:
+        - Mitaka
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Docker Standalone Host ppc64le
+        - name: Docker Interfaces Library
+      hash: 186815da40e6ac3c2f3243f92708d9c1
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.docker.DockerTomcatPPC64LE.zip"
+    -
       name: Application Servers Bundle
       provided_by:
         name: Serg Melikyan
