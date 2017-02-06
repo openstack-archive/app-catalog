@@ -2494,6 +2494,25 @@
         "Package URL": "http://storage.apps.openstack.org/apps/com.example.docker.DockerCrate.zip"
         "Source URL": "https://github.com/openstack/k8s-docker-suite-app-murano/tree/master/Applications/Crate/package"
     -
+      name: Docker DashDB ppc64le
+      provided_by:
+        name: Alexander Bochkarev
+        href: "mailto:abochkarev@mirantis.com"
+        company: Mirantis, Inc.
+      description: DashDB is a data warehousing and analytics solution.
+      service:
+        type: murano
+        format: package
+        package_name: io.murano.docker.DockerDashDBPPC64LE
+      release:
+        - Mitaka
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Ubuntu 16.04 ppc64le (pre-installed Docker and murano-agent)
+      hash: 7e17bf7693bdad3cc0dd43383f514357
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.docker.DockerDashDBPPC64LE.zip"
+    -
       name: Docker GlassFish
       tags: ['app']
       provided_by:
