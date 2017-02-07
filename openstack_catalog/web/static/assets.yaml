@@ -2427,6 +2427,31 @@
         "Package URL": "http://storage.apps.openstack.org/apps/com.example.docker.DockerApp.zip"
         "Source URL": "https://github.com/openstack/k8s-docker-suite-app-murano/tree/master/Applications/DockerApp/package"
     -
+      name: Docker Apache HTTP Server ppc64le
+      provided_by:
+        name: Alexander Bochkarev
+        href: "mailto:abochkarev@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+        The Apache HTTP Server Project is an effort to develop and maintain an
+        open-source HTTP server for modern operating systems including UNIX and
+        Windows NT. The goal of this project is to provide a secure, efficient and
+        extensible server that provides HTTP services in sync with the current HTTP
+        standards.
+      service:
+        type: murano
+        format: package
+        package_name: io.murano.docker.DockerApacheHttpServerPPC64LE
+      release:
+        - Mitaka
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Docker Standalone Host ppc64le
+        - name: Docker Interfaces Library
+      hash: 54f86c293c656564257c588dc2b8c7e6
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.docker.DockerApacheHttpServerPPC64LE.zip"
+    -
       name: Docker Crate
       tags: ['app']
       provided_by:
