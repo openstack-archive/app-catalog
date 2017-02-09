@@ -1697,7 +1697,7 @@
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.IBMNodeJsPPC64LE.zip"
     -
-      name: Jenkins ppc64le
+      name: Jenkins ppc64le (standalone)
       tags: ['app']
       provided_by:
         name: Alexander Bochkarev
@@ -1717,7 +1717,7 @@
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.JenkinsPPC64LE.zip"
     -
-      name: Maven ppc64le
+      name: Maven ppc64le (standalone)
       tags: ['app']
       provided_by:
         name: Alexander Bochkarev
@@ -1924,7 +1924,7 @@
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.databases.RedisPPC64LE.zip"
     -
-      name: Travis ppc64le
+      name: Travis ppc64le (standalone)
       tags: ['app']
       provided_by:
         name: Alexander Bochkarev
@@ -3849,6 +3849,278 @@
       hash: e958895a54bb00756bdd8cdf62eea947
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/org.openstack.ci_cd_pipeline_murano_app.ZuulNodepoolHelper.zip"
+    -
+      name: CiCdEnvironment ppc64le
+      tags: ['app']
+      provided_by:
+        name: Alexander Bochkarev
+        href: "mailto:abochkarev@mirantis.com"
+        company: Mirantis, Inc.
+      description: The One-click CI/CD installer.
+      service:
+        type: murano
+        format: package
+        package_name: org.openstack.ci_cd_pipeline_murano_app.CiCdEnvironmentPPC64LE
+      release:
+        - Mitaka
+      license: Multi-licensed OpenSource
+      depends:
+        - name: PuppetPPC64LE
+        - name: SystemConfigPPC64LE
+        - name: OpenLDAPPPC64LE
+        - name: JenkinsPPC64LE
+        - name: GerritPPC64LE
+        - name: ZuulPPC64LE
+        - name: NodepoolPPC64LE
+        - name: MavenPPC64LE
+        - name: TravisPPC64LE
+        - name: ZuulNodepoolHelperPPC64LE
+        - name: CiCdUtilsPPC64LE
+      hash: 9248ba86e7591a3f15ff3d7d757ddc81
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/org.openstack.ci_cd_pipeline_murano_app.CiCdEnvironmentPPC64LE.zip"
+    -
+      name: Puppet ppc64le
+      tags: ['app']
+      provided_by:
+        name: Alexander Bochkarev
+        href: "mailto:abochkarev@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+        Puppet is an open-source configuration management tool. It runs on
+        many Unix-like systems as well as on Microsoft Windows, and includes
+        its own declarative language to describe system configuration.
+      service:
+        type: murano
+        format: package
+        package_name: org.openstack.ci_cd_pipeline_murano_app.puppet.PuppetPPC64LE
+      release:
+        - Mitaka
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Ubuntu 16.04 ppc64le (pre-installed murano-agent)
+      hash: 0b5fd0d1ccbd828c0e413b251c5fb595
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/org.openstack.ci_cd_pipeline_murano_app.puppet.PuppetPPC64LE.zip"
+    -
+      name: System Config ppc64le
+      tags: ['app']
+      provided_by:
+        name: Alexander Bochkarev
+        href: "mailto:abochkarev@mirantis.com"
+        company: Mirantis, Inc.
+      description: Tools for opaas environment.
+      service:
+        type: murano
+        format: package
+        package_name: org.openstack.ci_cd_pipeline_murano_app.puppet.SystemConfigPPC64LE
+      release:
+        - Mitaka
+      license: Multi-licensed OpenSource
+      depends:
+        - name: PuppetPPC64LE
+      hash: 2dec1f11143c29e970837a69258e95ca
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/org.openstack.ci_cd_pipeline_murano_app.puppet.SystemConfigPPC64LE.zip"
+    -
+      name: OpenLDAP ppc64le
+      tags: ['app']
+      provided_by:
+        name: Alexander Bochkarev
+        href: "mailto:abochkarev@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+        OpenLDAP is an open source implementation of the Lightweight
+        Directory Access Protocol.
+      service:
+        type: murano
+        format: package
+        package_name: org.openstack.ci_cd_pipeline_murano_app.OpenLDAPPPC64LE
+      release:
+        - Mitaka
+      license: Multi-licensed OpenSource
+      depends:
+        - name: PuppetPPC64LE
+      hash: d71a8de9b828042e7b32c499eeeb7c01
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/org.openstack.ci_cd_pipeline_murano_app.OpenLDAPPPC64LE.zip"
+    -
+      name: Gerrit ppc64le
+      tags: ['app']
+      provided_by:
+        name: Alexander Bochkarev
+        href: "mailto:abochkarev@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+        Gerrit it's an application written in Java which provides web based code
+        review and repository management for the Git version control system.
+      service:
+        type: murano
+        format: package
+        package_name: org.openstack.ci_cd_pipeline_murano_app.GerritPPC64LE
+      release:
+        - Mitaka
+      license: Multi-licensed OpenSource
+      depends:
+        - name: PuppetPPC64LE
+        - name: SystemConfigPPC64LE
+        - name: OpenLDAPPPC64LE
+      hash: e26b0c04afa43defcd6e2b4fdb58d8e5
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/org.openstack.ci_cd_pipeline_murano_app.GerritPPC64LE.zip"
+    -
+      name: Jenkins ppc64le
+      tags: ['app']
+      provided_by:
+        name: Alexander Bochkarev
+        href: "mailto:abochkarev@mirantis.com"
+        company: Mirantis, Inc.
+      description: Jenkins is an open source continuous integration tool written in Java.
+      service:
+        type: murano
+        format: package
+        package_name: org.openstack.ci_cd_pipeline_murano_app.JenkinsPPC64LE
+      release:
+        - Mitaka
+      license: Multi-licensed OpenSource
+      depends:
+        - name: PuppetPPC64LE
+        - name: SystemConfigPPC64LE
+        - name: OpenLDAPPPC64LE
+        - name: GerritPPC64LE
+      hash: 94ab95de075bd6b3a07a00cc06116d69
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/org.openstack.ci_cd_pipeline_murano_app.JenkinsPPC64LE.zip"
+    -
+      name: Zuul ppc64le
+      tags: ['app']
+      provided_by:
+        name: Alexander Bochkarev
+        href: "mailto:abochkarev@mirantis.com"
+        company: Mirantis, Inc.
+      description: Zuul is a pipeline oriented project gating and automation system.
+      service:
+        type: murano
+        format: package
+        package_name: org.openstack.ci_cd_pipeline_murano_app.ZuulPPC64LE
+      release:
+        - Mitaka
+      license: Multi-licensed OpenSource
+      depends:
+        - name: PuppetPPC64LE
+        - name: SystemConfigPPC64LE
+        - name: GerritPPC64LE
+      hash: 761bb15834098fad0b0909aaeed2127e
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/org.openstack.ci_cd_pipeline_murano_app.ZuulPPC64LE.zip"
+    -
+      name: Nodepool ppc64le
+      tags: ['app']
+      provided_by:
+        name: Alexander Bochkarev
+        href: "mailto:abochkarev@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+        Nodepool is a system for launching single-use test nodes on demand based on
+        images built with cached data. It is designed to work with any OpenStack
+        based cloud, and is part of a suite of tools that form a comprehensive
+        test system including Jenkins and Zuul.
+      service:
+        type: murano
+        format: package
+        package_name: org.openstack.ci_cd_pipeline_murano_app.NodepoolPPC64LE
+      release:
+        - Mitaka
+      license: Multi-licensed OpenSource
+      depends:
+        - name: PuppetPPC64LE
+        - name: SystemConfigPPC64LE
+        - name: JenkinsPPC64LE
+        - name: ZuulPPC64LE
+      hash: 957eba5d4f1dd63e92f829885fd5d785
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/org.openstack.ci_cd_pipeline_murano_app.NodepoolPPC64LE.zip"
+    -
+      name: Maven ppc64le
+      tags: ['app']
+      provided_by:
+        name: Alexander Bochkarev
+        href: "mailto:abochkarev@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+        Maven is a software project management and comprehension tool. Based on the concept
+        of a project object model (POM), Maven can manage a project's build, reporting and
+        documentation from a central piece of information.
+      service:
+        type: murano
+        format: package
+        package_name: org.openstack.ci_cd_pipeline_murano_app.MavenPPC64LE
+      release:
+        - Mitaka
+      license: Multi-licensed OpenSource
+      depends:
+        - name: PuppetPPC64LE
+      hash: 00bf8b57515cb337d3e91134af33350a
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/org.openstack.ci_cd_pipeline_murano_app.MavenPPC64LE.zip"
+    -
+      name: Travis ppc64le
+      tags: ['app']
+      provided_by:
+        name: Alexander Bochkarev
+        href: "mailto:abochkarev@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+        Travis CI is a hosted, distributed continuous integration service used to build
+        and test software projects hosted at GitHub.
+      service:
+        type: murano
+        format: package
+        package_name: org.openstack.ci_cd_pipeline_murano_app.TravisPPC64LE
+      release:
+        - Mitaka
+      license: Multi-licensed OpenSource
+      depends:
+        - name: PuppetPPC64LE
+      hash: 1a2ebbd05f0f878a6eb0c6c200186a24
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/org.openstack.ci_cd_pipeline_murano_app.TravisPPC64LE.zip"
+    -
+      name: ZuulNodepoolHelper ppc64le
+      tags: ['app']
+      provided_by:
+        name: Alexander Bochkarev
+        href: "mailto:abochkarev@mirantis.com"
+        company: Mirantis, Inc.
+      description: Zuul and Nodepool Install Helper for CI/CD application.
+      service:
+        type: murano
+        format: package
+        package_name: org.openstack.ci_cd_pipeline_murano_app.ZuulNodepoolHelperPPC64LE
+      release:
+        - Mitaka
+      license: Multi-licensed OpenSource
+      hash: d28c00c0738558f689501835887fff88
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/org.openstack.ci_cd_pipeline_murano_app.ZuulNodepoolHelperPPC64LE.zip"
+    -
+      name: CiCdUtils ppc64le
+      tags: ['app']
+      provided_by:
+        name: Alexander Bochkarev
+        href: "mailto:abochkarev@mirantis.com"
+        company: Mirantis, Inc.
+      description: Library for opaas environment.
+      service:
+        type: murano
+        format: package
+        package_name: org.openstack.ci_cd_pipeline_murano_app.utils.CiCdUtilsPPC64LE
+      release:
+        - Mitaka
+      license: Multi-licensed OpenSource
+      hash: bc07c6c38a841c9a3249025891bd8bb6
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/org.openstack.ci_cd_pipeline_murano_app.utils.CiCdUtilsPPC64LE.zip"
     -
       name: MagnumBayApp
       tags: ['app']
