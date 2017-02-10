@@ -253,21 +253,6 @@
       attributes:
         url: http://storage.apps.openstack.org/images/ubuntu-16.04-ppc64le-docker.qcow2
     -
-      name: Ubuntu 16.04 ppc64le (pre-installed Kubernetes and murano-agent)
-      provided_by:
-        name: Andrii Bubyr
-        href: mailto:abubyr@mirantis.com
-        company: Mirantis, Inc.
-      description: Ubuntu 16.04 ppc64le with kubernetes and murano-agent pre-installed
-      service:
-        type: glance
-        disk_format: qcow2
-        container_format: bare
-      license: Multi-licensed OpenSource
-      hash: 29cecdb7e065b8a1a50404d5849f124c
-      attributes:
-        url: http://storage.apps.openstack.org/images/ubuntu-16.04-ppc64le-kubernetes.qcow2
-    -
       name: Ubuntu Trusty 14
       tags: ['app']
       provided_by:
@@ -2303,53 +2288,6 @@
         "Source URL": "https://github.com/openstack/murano-apps"
         Documentation: "https://github.com/openstack/k8s-docker-suite-app-murano/tree/master/Kubernetes/README.rst"
     -
-      name: Kubernetes Cluster ppc64le
-      provided_by:
-        name: Alexander Bochkarev
-        href: "mailto:abochkarev@mirantis.com"
-        company: Mirantis, Inc.
-      description: >
-        Kubernetes is an open source system for managing containerized
-        applications across multiple hosts, providing basic mechanisms
-        for deployment, maintenance, and scaling of applications.
-
-        Kubernetes application; deploys a Kubernetes cluster with 3 different
-        node types:
-          * 1 master node VM running the Kubernetes API
-          * 1 or more minion nodes to be used to host user applications
-          * 0 or more gateway nodes running HAProxy to route external
-              traffic to provide access to  services running
-              in the Kubernetes cluster.
-
-        This application deploys all Kubernetes prerequisites, builds the
-        etcd cluster and the flannel networking cluster and then configures
-        Kubernetes API and other services, as appropriate for each node type.
-
-        The application also provides API access to other applications, so
-        they can create/delete Kubernetes services and Pods/Replication
-        Controllers from its JSON definitions.
-
-        This application uses image with follow components:
-            * etcd v3.0.14;
-            * kubernetes v1.6.0-alpha.1 (ppc64le);
-            * flannel v0.5.5;
-            * Go v1.6.4;
-            * confd v0.12.1;
-            * docker v1.12.0;
-      service:
-        type: murano
-        format: package
-        package_name: com.mirantis.docker.kubernetes.KubernetesClusterPPC64LE
-      release:
-        - Mitaka
-      license: Multi-licensed OpenSource
-      depends:
-        - name: Docker Interfaces Library
-        - name: Ubuntu 16.04 ppc64le (pre-installed Kubernetes and murano-agent)
-      hash: 4aaaededfe085b3d741a3c433f727b7d
-      attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/com.mirantis.docker.kubernetes.KubernetesClusterPPC64LE.zip"
-    -
       name: Kubernetes Pod
       provided_by:
         name: Stan Lagun
@@ -2409,55 +2347,6 @@
         "Package URL": "http://storage.apps.openstack.org/apps/com.mirantis.docker.kubernetes.KubernetesPod.zip"
         "Source URL": "https://github.com/openstack/murano-apps"
         Documentation: "https://github.com/openstack/k8s-docker-suite-app-murano/tree/master/Kubernetes/README.rst"
-    -
-      name: Kubernetes Pod ppc64le
-      provided_by:
-        name: Alexander Bochkarev
-        href: "mailto:abochkarev@mirantis.com"
-        company: Mirantis, Inc.
-      description: >
-        Application representing a Kubernetes Pod on a given Kubernetes Cluster
-
-        This Pod is a co-located set of docker containers which are deployed
-        together on a single node and share single network space. Containers
-        within a single pod can access each other using 127.0.0.1 (localhost).
-        Kubernetes treats Pods as an indivisible deployment unit.
-
-        This application also encapsulates Kubernetes Replication Controller.
-        User needs to provide a count of replicas; if the number is greater
-        than zero, the Replication Controller is created automatically with
-        the desired number of replicas.
-
-        The Replication Controller creates clones of the Pod (copies with the
-        same container list). If a  Pod dies for any reason (for example, due
-        to hosting minion failure) Replication Controller will create
-        additional Pod replicas on available resources.
-
-        The Kubernetes Pod provides an API to the host docker container that
-        is compatible with Docker Standalone Host so that any Docker
-        Application can be hosted on any one of them.
-
-        Depended application - "Kubernetes Cluster" uses image with follow
-        components:
-            * etcd v3.0.14;
-            * kubernetes v1.6.0-alpha.1 (ppc64le);
-            * flannel v0.5.5;
-            * Go v1.6.4;
-            * confd v0.12.1;
-            * docker v1.12.0;
-      service:
-        type: murano
-        format: package
-        package_name: com.mirantis.docker.kubernetes.KubernetesPodPPC64LE
-      release:
-        - Mitaka
-      license: Multi-licensed OpenSource
-      depends:
-        - name: Docker Interfaces Library
-        - name: Kubernetes Cluster ppc64le
-      hash: 79289a0b5e033ad15f08ad5e41662df4
-      attributes:
-        "Package URL": "http://storage.apps.openstack.org/apps/com.mirantis.docker.kubernetes.KubernetesPodPPC64LE.zip"
     -
       name: Docker Container
       tags: ['app']
@@ -2531,9 +2420,8 @@
       license: Multi-licensed OpenSource
       depends:
         - name: Docker Standalone Host ppc64le
-        - name: Kubernetes Pod ppc64le
         - name: Docker Interfaces Library
-      hash: f2f5950283b70852c47da3507bf358b0
+      hash: 2ed53203730171bc2de4f4148f2d44f6
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.docker.DockerAppPPC64LE.zip"
     -
@@ -2556,10 +2444,9 @@
         - Mitaka
       license: Multi-licensed OpenSource
       depends:
-        - name: Kubernetes Cluster ppc64le
         - name: Docker Standalone Host ppc64le
         - name: Docker Interfaces Library
-      hash: f5519b13286346215b715b391c84e0a8
+      hash: 5d5b927d8b2965064a8560679e389cdd
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.docker.DockerApacheHttpServerPPC64LE.zip"
     -
@@ -3218,10 +3105,9 @@
         - Mitaka
       license: Multi-licensed OpenSource
       depends:
-        - name: Kubernetes Cluster ppc64le
         - name: Docker Standalone Host ppc64le
         - name: Docker Interfaces Library
-      hash: 4ed9aec43a34cab6ea0d28fdc14069f2
+      hash: ce86cba2f35a4b7b913770f5e35dc940
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.docker.DockerNginxPPC64LE.zip"
     -
@@ -3396,10 +3282,9 @@
         - Mitaka
       license: Multi-licensed OpenSource
       depends:
-        - name: Kubernetes Cluster ppc64le
         - name: Docker Standalone Host ppc64le
         - name: Docker Interfaces Library
-      hash: da2503e648a9899a927c8a883164c014
+      hash: f0cc81331aa94f30c51d1b22914f6b7c
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.docker.DockerTomcatPPC64LE.zip"
     -
