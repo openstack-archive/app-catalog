@@ -2556,9 +2556,10 @@
         - Mitaka
       license: Multi-licensed OpenSource
       depends:
+        - name: Kubernetes Cluster ppc64le
         - name: Docker Standalone Host ppc64le
         - name: Docker Interfaces Library
-      hash: 54f86c293c656564257c588dc2b8c7e6
+      hash: f5519b13286346215b715b391c84e0a8
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.docker.DockerApacheHttpServerPPC64LE.zip"
     -
@@ -3217,9 +3218,10 @@
         - Mitaka
       license: Multi-licensed OpenSource
       depends:
+        - name: Kubernetes Cluster ppc64le
         - name: Docker Standalone Host ppc64le
         - name: Docker Interfaces Library
-      hash: c62df6729e6e6285463754c861900419
+      hash: 4ed9aec43a34cab6ea0d28fdc14069f2
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.docker.DockerNginxPPC64LE.zip"
     -
@@ -3394,9 +3396,10 @@
         - Mitaka
       license: Multi-licensed OpenSource
       depends:
+        - name: Kubernetes Cluster ppc64le
         - name: Docker Standalone Host ppc64le
         - name: Docker Interfaces Library
-      hash: 186815da40e6ac3c2f3243f92708d9c1
+      hash: da2503e648a9899a927c8a883164c014
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.docker.DockerTomcatPPC64LE.zip"
     -
