@@ -1542,7 +1542,7 @@
       license: Multi-licensed OpenSource
       depends:
         - name: Ubuntu 16.04 ppc64le (pre-installed murano-agent)
-      hash: 67eb1d393e685c6d5bf3dfcaf6631d6a
+      hash: d30817f67a591237ed2eb24e85b45693
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.ApacheHttpServerPPC64LE.zip"
     -
@@ -1693,7 +1693,7 @@
       license: Multi-licensed OpenSource
       depends:
         - name: Ubuntu 16.04 ppc64le (pre-installed murano-agent)
-      hash: 239ec2ddf0a4b2cbe407daf042d0eb9b
+      hash: 047e76116d1a44f228209398ffa955ae
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/io.murano.apps.IBMNodeJsPPC64LE.zip"
     -
