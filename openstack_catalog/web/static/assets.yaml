@@ -224,11 +224,7 @@
         name: Andrii Bubyr
         href: mailto:abubyr@mirantis.com
         company: Mirantis, Inc.
-      description: >
-                  Ubuntu 16.04 ppc64le with murano-agent pre-installed
-                  used by Murano applications that does not rely on
-                  pre-installed software in the image and instead provision
-                  applications using murano-agent.
+      description: Ubuntu 16.04 ppc64le with murano-agent pre-installed
       service:
         type: glance
         disk_format: qcow2
@@ -386,6 +382,21 @@
       hash: c2ebde45f03aa35c6d996c3de984a9d6
       attributes:
         url: http://cloud.centos.org/centos/7/images/CentOS-7-x86_64-GenericCloud-1608.qcow2
+    -
+      name: Centos 7 ppc64le (pre-installed murano-agent)
+      provided_by:
+        name: Andrii Bubyr
+        href: mailto:abubyr@mirantis.com
+        company: Mirantis, Inc.
+      description: Centos 7 ppc64le with murano-agent pre-installed
+      service:
+        type: glance
+        disk_format: qcow2
+        container_format: bare
+      license: Multi-licensed OpenSource
+      hash: af16644e47de1793a4d3e2f68913a648
+      attributes:
+        url: http://storage.apps.openstack.org/images/centos-7-ppc64le-m-agent.qcow2
     -
       name: CirrOS
       tags: ['app']
@@ -1674,6 +1685,31 @@
       attributes:
         "Package URL": "http://storage.apps.openstack.org/apps/com.example.paas.CloudFoundry.zip"
         "Source URL": "https://github.com/openstack/murano-apps/tree/master/CloudFoundry/package"
+    -
+      name: EDB Postgres Advanced Server ppc64le
+      tags: ['app']
+      provided_by:
+        name: Alexander Bochkarev
+        href: "mailto:abochkarev@mirantis.com"
+        company: Mirantis, Inc.
+      description: >
+        EDB Postgres Advanced Server is EDB’s enhanced Postgres database
+        designed to meet the needs of the digital enterprise. EDB Advanced
+        Server incorporates all of PostgreSQL’s features with additional
+        enterprise-class functionality for enhanced performance and security
+        requirements for enterprise workloads.
+      service:
+        type: murano
+        format: package
+        package_name: io.murano.databases.EDBPPC64LE
+      release:
+        - Mitaka
+      license: Multi-licensed OpenSource
+      depends:
+        - name: Centos 7 ppc64le (pre-installed murano-agent)
+      hash: dfacb76b893228a568058eb7da195a76
+      attributes:
+        "Package URL": "http://storage.apps.openstack.org/apps/io.murano.databases.EDBPPC64LE.zip"
     -
       name: IBM NodeJs ppc64le
       tags: ['app']
